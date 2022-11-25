@@ -1,4 +1,5 @@
 ﻿using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 
@@ -132,6 +133,16 @@ namespace CCXT.Simple.Exchanges
         public decimal ExchangeRate()
         {
             return (usd_btc_price > 0.0m ? btc_krw_price / usd_btc_price : 0.0m) * this.FiatVSCoinRate;
+        }
+
+        public string ToQueryString2(Dictionary<string, string> args)
+        {
+            return String.Join("&", args.Select(a => $"{a.Key}={Uri.EscapeDataString((a.Value ?? "").ToString())}"));
+        }
+
+        public string ConvertHexString(byte[] buffer)
+        {
+            return BitConverter.ToString(buffer).Replace("-", "");
         }
     }
 }

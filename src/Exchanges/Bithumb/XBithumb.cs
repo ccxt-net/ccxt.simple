@@ -1,7 +1,13 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Net;
+using System.Net.Http.Json;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json.Nodes;
 
 namespace CCXT.Simple.Exchanges.Bithumb
 {
@@ -35,15 +41,17 @@ namespace CCXT.Simple.Exchanges.Bithumb
             get;
             set;
         }
-        
+
         public string ExchangeName { get; set; } = "bithumb";
+
+        public string ExchangeUrl = "https://api.bithumb.com";
 
         public bool Alive
         {
             get;
             set;
         }
-        
+
         public string ApiKey
         {
             get;
@@ -70,7 +78,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                 if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
                 {
                     _queue_info = new QueueInfo
-                    {                        
+                    {
                         name = ExchangeName,
                         symbols = new List<QueueSymbol>()
                     };
@@ -82,7 +90,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                 {
                     _queue_info.symbols.Clear();
 
-                    using HttpResponseMessage _k_response = await _wc.GetAsync("https://api.bithumb.com/public/ticker/ALL_KRW");
+                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jobject = JObject.Parse(_k_jstring);
 
@@ -102,7 +110,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         });
                     }
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.bithumb.com/public/ticker/ALL_BTC");
+                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
                     var _b_jstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jobject = JObject.Parse(_b_jstring);
 
@@ -149,7 +157,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bithumb.com/public/assetsstatus/ALL");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -198,7 +206,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bithumb.com/public/ticker/" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -223,7 +231,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bithumb.com/public/orderbook/" + symbol + "?count=30");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/" + symbol + "?count=30");
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -266,14 +274,14 @@ namespace CCXT.Simple.Exchanges.Bithumb
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _k_response = await _wc.GetAsync("https://api.bithumb.com/public/orderbook/ALL_KRW?count=1");
+                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_KRW?count=1");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jobject = JObject.Parse(_k_jstring);
                     var _k_data = _k_jobject["data"].ToObject<JObject>();
 
                     await Task.Delay(100);
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.bithumb.com/public/orderbook/ALL_BTC?count=1");
+                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_BTC?count=1");
                     var _b_jstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jobject = JObject.Parse(_b_jstring);
                     var _b_data = _b_jobject["data"].ToObject<JObject>();
@@ -339,14 +347,14 @@ namespace CCXT.Simple.Exchanges.Bithumb
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _k_response = await _wc.GetAsync("https://api.bithumb.com/public/ticker/ALL_KRW");
+                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_tstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jstring = _k_tstring.Substring(24, _k_tstring.Length - 25);
                     var _k_jobject = JObject.Parse(_k_jstring);
 
                     await Task.Delay(100);
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.bithumb.com/public/ticker/ALL_BTC");
+                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
                     var _b_tstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jstring = _b_tstring.Substring(24, _b_tstring.Length - 25);
                     var _b_jobject = JObject.Parse(_b_jstring);
@@ -430,6 +438,117 @@ namespace CCXT.Simple.Exchanges.Bithumb
         ValueTask<bool> IExchange.GetVolumes(Tickers tickers)
         {
             throw new NotImplementedException();
+        }
+
+        private HMACSHA512 __encryptor = null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public HMACSHA512 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA512(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        private FormUrlEncodedContent CreatePostRequestAsync(HttpClient client, string endpoint, Dictionary<string, string> args)
+        {
+            var _post_data = mainXchg.ToQueryString2(args);
+
+            var _nonce = CUnixTime.NowMilli.ToString();
+
+            var _sign_data = $"{endpoint};{_post_data};{_nonce}";
+            var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
+
+            var _signature = Convert.ToBase64String(Encoding.UTF8.GetBytes(mainXchg.ConvertHexString(_sign_hash).ToLower()));
+            {
+                client.DefaultRequestHeaders.Add("api-client-type", "2");
+                client.DefaultRequestHeaders.Add("Api-Sign", _signature);
+                client.DefaultRequestHeaders.Add("Api-Nonce", _nonce);
+                client.DefaultRequestHeaders.Add("Api-Key", ApiKey);
+            }
+
+            return new FormUrlEncodedContent(args);
+        }
+        
+        private (bool success, string message) ParsingResponse(string json_content)
+        {
+            var _result = (success: false, message: "");
+
+            var _json_result = JsonConvert.DeserializeObject<JToken>(json_content);
+
+            var _json_status = _json_result.SelectToken("status");
+            if (_json_status != null)
+            {
+                var _status_code = _json_status.Value<int>();
+                if (_status_code != 0)
+                {
+                    var _json_message = _json_result.SelectToken("message");
+                    if (_json_message != null)
+                        _result.message = _json_message.Value<string>();
+                }
+                else
+                    _result.success = true;
+            }
+
+            return _result;
+        }
+
+        public async ValueTask<(bool success, string message, string orderId)> CreateLimitOrderAsync(string base_name, string quote_name, decimal quantity, decimal price, SideType sideType)
+        {
+            var _result = (success: false, message: "", orderId: "");
+
+            try
+            {
+                var _endpoint = "/trade/place";
+
+                var _args = new Dictionary<string, string>();
+                {
+                    _args.Add("endpoint", _endpoint);
+                    _args.Add("order_currency", base_name);
+                    _args.Add("payment_currency", quote_name);
+                    _args.Add("units", $"{quantity}");
+                    _args.Add("price", $"{price}");
+                    _args.Add("type", sideType == SideType.Bid ? "bid" : "ask");
+                }
+
+                using (var _client = new HttpClient())
+                {
+                    var _content = this.CreatePostRequestAsync(_client, _endpoint, _args);
+
+                    var _response = await _client.PostAsync($"{ExchangeUrl}{_endpoint}", _content);
+                    if (_response.StatusCode == HttpStatusCode.OK)
+                    {
+                        var _json_content = await _response.Content.ReadAsStringAsync();
+                        
+                        var _json_result = this.ParsingResponse(_json_content);
+                        if (_json_result.success)
+                        {
+                            var _json_data = JsonConvert.DeserializeObject<PlaceOrders>(_json_content);
+                            if (_json_data.success)
+                            {
+                                _result.orderId = _json_data.orderId;
+                                _result.success = true;
+                            }
+                        }
+                        else
+                        {
+                            _result.message = _json_result.message;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1219);
+            }
+
+            return _result;
         }
     }
 }
