@@ -3,7 +3,7 @@ using CCXT.Simple.Exchanges.Bithumb;
 
 var _exchange = new Exchange();
 
-var _bithumb = new XBithumb(_exchange);
+var _bithumb = new XBithumb(_exchange, "", "");
 await _bithumb.VerifyCoinNames();
 
 var _symbols = _exchange.GetSymbols(_bithumb.ExchangeName);

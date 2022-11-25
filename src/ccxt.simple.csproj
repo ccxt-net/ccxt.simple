@@ -31,22 +31,22 @@
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Include="..\..\docs\ccxt.simple.api.png">
+	  <None Include="..\docs\ccxt.simple.api.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="..\..\LICENSE.txt">
+	  <None Include="..\LICENSE.txt">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="..\..\README.md">
+	  <None Include="..\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 		<PackageReference Include="GraphQL.Client" Version="5.1.0" />
 		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
 	</ItemGroup>
