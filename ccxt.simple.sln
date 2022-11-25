@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CE2A5455-330A-4032-A60D-5005CAF4B125}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ccxt.simple", "src\share\ccxt.simple.csproj", "{109065AF-D448-46FE-9F35-E6D22A92F362}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F43A869-5572-41ED-AECF-E762EFA75058}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		LICENSE = LICENSE
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{BD060379-51BD-40C9-9B57-DA65393CAD0E}"
+	ProjectSection(SolutionItems) = preProject
+		docs\ccxt.simple.api.png = docs\ccxt.simple.api.png
+		docs\ccxt.simple.ico = docs\ccxt.simple.ico
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{32218F06-F35E-40F5-9F78-AB9E33C03174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5CFF9EB6-24F9-4119-812E-FEF29D600887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bithumb", "samples\bithumb\bithumb.csproj", "{4A66A4F7-FB69-4E79-99E2-C732856FA623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{109065AF-D448-46FE-9F35-E6D22A92F362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109065AF-D448-46FE-9F35-E6D22A92F362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109065AF-D448-46FE-9F35-E6D22A92F362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109065AF-D448-46FE-9F35-E6D22A92F362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{109065AF-D448-46FE-9F35-E6D22A92F362} = {CE2A5455-330A-4032-A60D-5005CAF4B125}
+		{4A66A4F7-FB69-4E79-99E2-C732856FA623} = {5CFF9EB6-24F9-4119-812E-FEF29D600887}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A43CE4D-B9B0-41CE-82A0-0D2F87CA10E5}
+	EndGlobalSection
+EndGlobal

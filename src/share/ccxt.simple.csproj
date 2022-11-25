@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<AssemblyName>CCXT.Simple</AssemblyName>
+		<RootNamespace>CCXT.Simple</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<Title>CryptoCurrency eXchange Trading Library for .NET</Title>
+		<Product>CCXT</Product>
+		<Company>ODINSOFT</Company>
+		<Description>CCXT.SIMPLE – CryptoCurrency eXchange Trading Library for .NET</Description>
+		<Copyright>Copyright OdinSoft Co., Ltd. 2015~2022</Copyright>
+		<AssemblyTitle>CCXT.SIMPLE</AssemblyTitle>
+		<Authors>SEONG AHN LEE</Authors>
+		<PackageId>CCXT.SIMPLE</PackageId>
+		<PackageTags>bitcoin;cryptocurrency;exchange;trading;market-data;ccxt;exchange-markets;altcoin;api;arbitrage;bot;crypto;e-commerce;invest;library;strategy;trade;merchant;cryptocoin;korean</PackageTags>
+		<PackageProjectUrl>https://github.com/ccxt.net/ccxt.simple</PackageProjectUrl>
+		<PackageIcon>ccxt.simple.api.png</PackageIcon>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>1.0.1</Version>
+		<AssemblyVersion>1.0.1.1</AssemblyVersion>
+		<FileVersion>1.0.1.1</FileVersion>
+		<PackageReleaseNotes>ccxt.net의 간단한 버전(simple version) 입니다. </PackageReleaseNotes>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/ccxt.net/ccxt.simple</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\..\docs\ccxt.simple.api.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="GraphQL.Client" Version="5.1.0" />
+		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
+	</ItemGroup>
+</Project>
