@@ -96,7 +96,8 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     foreach (JProperty s in _k_jobject["data"].Children())
                     {
-                        if (!((JObject)s.Value).ContainsKey("opening_price"))
+                       var _o = s.Value;
+                        if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
                             continue;
 
                         var _symbol = s.Name;
@@ -116,7 +117,8 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     foreach (JProperty s in _b_jobject["data"].Children())
                     {
-                        if (!((JObject)s.Value).ContainsKey("opening_price"))
+                        var _o = s.Value;
+                        if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
                             continue;
 
                         var _symbol = s.Name;
