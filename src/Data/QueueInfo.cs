@@ -2,6 +2,12 @@
 {
     public class QueueInfo
     {
+        public string title
+        {
+            get;
+            set;
+        }
+
         public string name
         {
             get;

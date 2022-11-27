@@ -1,28 +1,25 @@
 ﻿namespace CCXT.Simple.Exchanges.Bithumb
 {
-    public class Orderbook
+    public class WsOrderbookItem
     {
-        public Orderbook()
-        {
-            this.asks = new List<OrderbookItem>();
-            this.bids = new List<OrderbookItem>();
-        }
-
-        public List<OrderbookItem> asks
+        /// <summary>
+        /// coin symbol
+        /// </summary>
+        public string symbol
         {
             get;
             set;
         }
 
-        public List<OrderbookItem> bids
+        /// <summary>
+        /// 
+        /// </summary>
+        public string orderType
         {
             get;
             set;
         }
-    }
 
-    public class OrderbookItem
-    {
         /// <summary>
         /// 
         /// </summary>

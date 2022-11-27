@@ -1,13 +1,13 @@
 ﻿namespace CCXT.Simple.Exchanges.Crypto
 {
-    public class Header
+    public class CRHeader
     {
         public long id { get; set; }
         public int code { get; set; }
         public string method { get; set; }
     }
 
-    public class Datum
+    public class CRDatum
     {
         public decimal h { get; set; }
         public decimal l { get; set; }
@@ -24,17 +24,17 @@
         public long t { get; set; }
     }
 
-    public class TickerResult
+    public class CRTickerResult
     {
         public string channel { get; set; }
         public string instrument_name { get; set; }
         public string subscription { get; set; }
         public int id { get; set; }
-        public List<Datum> data { get; set; }
+        public List<CRDatum> data { get; set; }
     }
 
-    public class Ticker : Header
+    public class CRTicker : CRHeader
     {
-        public TickerResult result { get; set; }
+        public CRTickerResult result { get; set; }
     }
 }

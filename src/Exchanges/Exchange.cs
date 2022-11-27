@@ -1,5 +1,4 @@
 ﻿using CCXT.Simple.Data;
-using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 
@@ -41,6 +40,8 @@ namespace CCXT.Simple.Exchanges
             this.FiatVSCoinRate = 1;
 
             this.exchangeCs = new ConcurrentDictionary<string, QueueInfo>();
+            this.exchangeQs = new ConcurrentDictionary<string, ConcurrentDictionary<string, ConcurrentQueue<Tickers>>>();
+            this.loggerQs = new ConcurrentDictionary<string, ConcurrentQueue<XLogger>>();
         }
 
         public event EventHandler<MessageEventArgs> MessageEvent;
@@ -51,6 +52,22 @@ namespace CCXT.Simple.Exchanges
         {
             get;
             set;
+        }
+        public ConcurrentDictionary<string, ConcurrentDictionary<string, ConcurrentQueue<Tickers>>> exchangeQs
+        {
+            get;
+            set;
+        }
+
+        public ConcurrentDictionary<string, ConcurrentQueue<XLogger>> loggerQs
+        {
+            get;
+            set;
+        }
+
+        public int ApiCallDelaySeconds
+        {
+            get; set;
         }
 
         public decimal Volume24hBase
@@ -70,20 +87,17 @@ namespace CCXT.Simple.Exchanges
 
         public string UserAgent
         {
-            get;
-            set;
+            get; set;
         }
 
         public decimal usd_btc_price
         {
-            get;
-            set;
+            get; set;
         }
 
         public decimal btc_krw_price
         {
-            get;
-            set;
+            get; set;
         }
 
         public void OnMessageEvent(string exchange, Exception ex, int error_no)

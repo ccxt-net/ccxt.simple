@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace CCXT.Simple.Exchanges.Gate
 {
-    public class XGate : IExchange
+    public class XGateIO : IExchange
     {
         /*
 		 * Gate Support Markets: USDT, BTC
@@ -14,21 +14,42 @@ namespace CCXT.Simple.Exchanges.Gate
 		 * 
 		 */
 
-        public XGate(Exchange mainXchg)
+        public XGateIO(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
+        {
+            get;
+            set;
+        }
+        
+        public string ExchangeName { get; set; } = "gate";
+
+        public bool Alive
         {
             get;
             set;
         }
 
-        
-        public string ExchangeName { get; set; } = "gate";
+        public string ApiKey
+        {
+            get;
+            set;
+        }
 
-        public bool Alive
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -170,7 +191,7 @@ namespace CCXT.Simple.Exchanges.Gate
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.Ticker>>(_jstring, json_settings);
+                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.GTTicker>>(_jstring, json_settings);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {

@@ -15,12 +15,16 @@ namespace CCXT.Simple.Exchanges.Crypto
 		 *
 		 */
 
-        public XCrypto(Exchange mainXchg)
+        public XCrypto(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -30,6 +34,24 @@ namespace CCXT.Simple.Exchanges.Crypto
         public string ExchangeName { get; set; } = "crypto";
 
         public bool Alive
+        {
+            get;
+            set;
+        }
+
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -109,63 +131,66 @@ namespace CCXT.Simple.Exchanges.Crypto
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
-                    var _jdata = _jobject["result"]["data"].ToObject<JArray>();
-
-                    for (var i = 0; i < tickers.items.Count; i++)
+                    if (_jobject.Value<int>("code") == 0)
                     {
-                        var _ticker = tickers.items[i];
-                        if (_ticker.symbol == "X")
-                            continue;
+                        var _jdata = _jobject["result"]["data"].ToObject<JArray>();
 
-                        var _jitem = _jdata.SingleOrDefault(x => x["i"].ToString() == _ticker.symbol);
-                        if (_jitem != null)
+                        for (var i = 0; i < tickers.items.Count; i++)
                         {
-                            var _last_price = _jitem.Value<decimal>("a");
-                            {
-                                var _ask_price = _jitem.Value<decimal>("k");
-                                var _bid_price = _jitem.Value<decimal>("b");
+                            var _ticker = tickers.items[i];
+                            if (_ticker.symbol == "X")
+                                continue;
 
-                                if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
+                            var _jitem = _jdata.SingleOrDefault(x => x["i"].ToString() == _ticker.symbol);
+                            if (_jitem != null)
+                            {
+                                var _last_price = _jitem.Value<decimal>("a");
                                 {
-                                    _ticker.lastPrice = _last_price * tickers.exchgRate;
-                                    _ticker.askPrice = _ask_price * tickers.exchgRate;
-                                    _ticker.bidPrice = _bid_price * tickers.exchgRate;
+                                    var _ask_price = _jitem.Value<decimal>("k");
+                                    var _bid_price = _jitem.Value<decimal>("b");
+
+                                    if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
+                                    {
+                                        _ticker.lastPrice = _last_price * tickers.exchgRate;
+                                        _ticker.askPrice = _ask_price * tickers.exchgRate;
+                                        _ticker.bidPrice = _bid_price * tickers.exchgRate;
+                                    }
+                                    else if (_ticker.quoteName == "BTC")
+                                    {
+                                        _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
+                                        _ticker.askPrice = _ask_price * mainXchg.btc_krw_price;
+                                        _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
+                                    }
                                 }
-                                else if (_ticker.quoteName == "BTC")
+
+                                var _volume = _jitem.Value<decimal>("vv");      // The total 24h traded volume value (in USD)
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
-                                    _ticker.askPrice = _ask_price * mainXchg.btc_krw_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
+                                    var _prev_volume24h = _ticker.previous24h;
+                                    var _next_timestamp = _ticker.timestamp + 60 * 1000;
+
+                                    _volume *= tickers.exchgRate;
+                                    _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
+
+                                    var _curr_timestamp = _jitem.Value<long>("t");
+                                    if (_curr_timestamp > _next_timestamp)
+                                    {
+                                        _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);
+
+                                        _ticker.timestamp = _curr_timestamp;
+                                        _ticker.previous24h = _volume;
+                                    }
                                 }
                             }
-
-                            var _volume = _jitem.Value<decimal>("vv");      // The total 24h traded volume value (in USD)
+                            else
                             {
-                                var _prev_volume24h = _ticker.previous24h;
-                                var _next_timestamp = _ticker.timestamp + 60 * 1000;
-
-                                _volume *= tickers.exchgRate;
-                                _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
-
-                                var _curr_timestamp = _jitem.Value<long>("t");
-                                if (_curr_timestamp > _next_timestamp)
-                                {
-                                    _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);
-
-                                    _ticker.timestamp = _curr_timestamp;
-                                    _ticker.previous24h = _volume;
-                                }
+                                this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1712);
+                                _ticker.symbol = "X";
                             }
                         }
-                        else
-                        {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1712);
-                            _ticker.symbol = "X";
-                        }
+
+                        _result = true;
                     }
                 }
-
-                _result = true;
             }
             catch (Exception ex)
             {

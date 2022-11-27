@@ -4,10 +4,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using System.Net;
-using System.Net.Http.Json;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json.Nodes;
 
 namespace CCXT.Simple.Exchanges.Bithumb
 {
@@ -28,15 +26,16 @@ namespace CCXT.Simple.Exchanges.Bithumb
 		 *     초과 요청을 보내면 API 사용이 일시적으로 제한됩니다. (Public - 1분 / Private info - 5분 / Private trade - 10분)
 		 */
 
-        public XBithumb(Exchange mainXchg, string apiKey, string secretKey)
+        public XBithumb(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
 
             this.ApiKey = apiKey;
             this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -59,6 +58,12 @@ namespace CCXT.Simple.Exchanges.Bithumb
         }
 
         public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -225,9 +230,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
             return _result;
         }
 
-        public async ValueTask<Bithumb.Orderbook> GetOrderbook(string symbol)
+        public async ValueTask<Bithumb.RaOrderbook> GetOrderbook(string symbol)
         {
-            var _result = new Bithumb.Orderbook();
+            var _result = new Bithumb.RaOrderbook();
 
             try
             {
@@ -239,7 +244,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     var _asks = _jobject["data"].Value<JArray>("asks");
                     _result.asks.AddRange(
-                        _asks.Select(x => new Bithumb.OrderbookItem
+                        _asks.Select(x => new Bithumb.RaOrderbookItem
                         {
                             price = x.Value<decimal>("price"),
                             quantity = x.Value<decimal>("quantity")
@@ -248,7 +253,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     var _bids = _jobject["data"].Value<JArray>("bids");
                     _result.bids.AddRange(
-                        _bids.Select(x => new Bithumb.OrderbookItem
+                        _bids.Select(x => new Bithumb.RaOrderbookItem
                         {
                             price = x.Value<decimal>("price"),
                             quantity = x.Value<decimal>("quantity")

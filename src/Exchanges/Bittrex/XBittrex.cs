@@ -15,12 +15,16 @@ namespace CCXT.Simple.Exchanges.Bittrex
 		 * 
 		 */
 
-        public XBittrex(Exchange mainXchg)
+        public XBittrex(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -30,6 +34,24 @@ namespace CCXT.Simple.Exchanges.Bittrex
         public string ExchangeName { get; set; } = "bittrex";
 
         public bool Alive
+        {
+            get;
+            set;
+        }
+
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -45,7 +67,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                 if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
                 {
                     _queue_info = new QueueInfo
-                    {                        
+                    {
                         name = ExchangeName,
                         symbols = new List<QueueSymbol>()
                     };

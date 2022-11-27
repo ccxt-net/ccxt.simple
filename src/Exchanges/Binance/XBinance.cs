@@ -42,15 +42,16 @@ namespace CCXT.Simple.Exchanges.Binance
 		 * }
 		 */
 
-        public XBinance(Exchange mainXchg, string apiKey, string secretKey)
+        public XBinance(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
 
             this.ApiKey = apiKey;
             this.SecretKey = secretKey;
+            this.PassPhrase= passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -63,6 +64,7 @@ namespace CCXT.Simple.Exchanges.Binance
             get;
             set;
         }
+
         public string ApiKey
         {
             get;
@@ -70,6 +72,12 @@ namespace CCXT.Simple.Exchanges.Binance
         }
 
         public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -89,7 +97,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
                 {
                     _queue_info = new QueueInfo
-                    {                        
+                    {
                         name = ExchangeName,
                         symbols = new List<QueueSymbol>()
                     };

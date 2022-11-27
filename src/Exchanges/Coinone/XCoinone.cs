@@ -20,12 +20,16 @@ namespace CCXT.Simple.Exchanges.Coinone
 		 *
 		 */
 
-        public XCoinone(Exchange mainXchg)
+        public XCoinone(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -35,6 +39,24 @@ namespace CCXT.Simple.Exchanges.Coinone
         public string ExchangeName { get; set; } = "coinone";
 
         public bool Alive
+        {
+            get;
+            set;
+        }
+
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -236,7 +258,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.coinone.co.kr/public/v2/ticker_new/KRW");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jdata = JsonConvert.DeserializeObject<Tickers>(_jstring);
+                    var _jdata = JsonConvert.DeserializeObject<COTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {

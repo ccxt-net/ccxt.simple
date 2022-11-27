@@ -1,27 +1,27 @@
-﻿namespace CCXT.Simple.Data
+﻿namespace CCXT.Simple.Exchanges.Bithumb
 {
-    public class Orderbook
+    public class RaOrderbook
     {
-        public Orderbook()
+        public RaOrderbook()
         {
-            this.asks = new List<OrderbookItem>();
-            this.bids = new List<OrderbookItem>();
+            this.asks = new List<RaOrderbookItem>();
+            this.bids = new List<RaOrderbookItem>();
         }
 
-        public List<OrderbookItem> asks
+        public List<RaOrderbookItem> asks
         {
             get;
             set;
         }
 
-        public List<OrderbookItem> bids
+        public List<RaOrderbookItem> bids
         {
             get;
             set;
         }
     }
 
-    public class OrderbookItem
+    public class RaOrderbookItem
     {
         /// <summary>
         /// 

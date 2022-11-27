@@ -24,21 +24,42 @@ namespace CCXT.Simple.Exchanges.Upbit
 		 *     REST API 요청 수 제한: 분당 600회, 초당 10회 (종목, 캔들, 체결, 티커, 호가별)
 		 */
 
-        public XUpbit(Exchange mainXchg)
+        public XUpbit(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
+        {
+            get;
+            set;
+        }
+        
+        public string ExchangeName { get; set; } = "upbit";
+
+        public bool Alive
         {
             get;
             set;
         }
 
-        
-        public string ExchangeName { get; set; } = "upbit";
+        public string ApiKey
+        {
+            get;
+            set;
+        }
 
-        public bool Alive
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
@@ -70,7 +91,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.upbit.com/v1/market/all?isDetails=true");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Upbit.Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
                     _queue_info.symbols.Clear();
 

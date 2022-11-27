@@ -15,21 +15,42 @@ namespace CCXT.Simple.Exchanges.Kucoin
 		 *
 		 */
 
-        public XKucoin(Exchange mainXchg)
+        public XKucoin(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
+        {
+            get;
+            set;
+        }
+        
+        public string ExchangeName { get; set; } = "kucoin";
+
+        public bool Alive
         {
             get;
             set;
         }
 
-        
-        public string ExchangeName { get; set; } = "kucoin";
+        public string ApiKey
+        {
+            get;
+            set;
+        }
 
-        public bool Alive
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;

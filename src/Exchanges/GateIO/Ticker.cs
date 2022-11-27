@@ -1,6 +1,6 @@
 ﻿namespace CCXT.Simple.Exchanges.Gate
 {
-    public class Ticker
+    public class GTTicker
     {
         public string currency_pair { get; set; }
         public decimal last { get; set; }

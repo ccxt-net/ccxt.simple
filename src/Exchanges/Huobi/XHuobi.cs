@@ -19,21 +19,42 @@ namespace CCXT.Simple.Exchanges.Huobi
 		 *     Market data interface is limited by IP: no more than 10 times within 1 sec
 		 */
 
-        public XHuobi(Exchange mainXchg)
+        public XHuobi(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
         }
 
-        
         public string ExchangeName { get; set; } = "huobi";
 
         public bool Alive
+        {
+            get;
+            set;
+        }
+
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;

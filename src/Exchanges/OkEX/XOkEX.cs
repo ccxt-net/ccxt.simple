@@ -16,16 +16,16 @@ namespace CCXT.Simple.Exchanges.Okex
 		 *
 		 */
 
-        public XOKEx(Exchange mainXchg, string apiKey, string secretKey, string passPharase)
+        public XOKEx(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
 
             this.ApiKey = apiKey;
             this.SecretKey = secretKey; 
-            this.Passphrase = passPharase;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -39,19 +39,19 @@ namespace CCXT.Simple.Exchanges.Okex
             set;
         }
 
-        private string ApiKey
+        public string ApiKey
         {
             get;
             set;
         }
 
-        private string Passphrase
+        public string PassPhrase
         {
             get;
             set;
         }
 
-        private string SecretKey
+        public string SecretKey
         {
             get;
             set;
@@ -212,7 +212,7 @@ namespace CCXT.Simple.Exchanges.Okex
             client.DefaultRequestHeaders.Add("OK-ACCESS-KEY", this.ApiKey);
             client.DefaultRequestHeaders.Add("OK-ACCESS-SIGN", _signature);
             client.DefaultRequestHeaders.Add("OK-ACCESS-TIMESTAMP", _timestamp);
-            client.DefaultRequestHeaders.Add("OK-ACCESS-PASSPHRASE", this.Passphrase);
+            client.DefaultRequestHeaders.Add("OK-ACCESS-PASSPHRASE", this.PassPhrase);
         }
 
         /// <summary>

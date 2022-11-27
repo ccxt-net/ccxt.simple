@@ -22,16 +22,16 @@ namespace CCXT.Simple.Exchanges.Coinbase
 		 *         We throttle private endpoints by profile ID: 15 requests per second, up to 30 requests per second in bursts.
 		 */
 
-        public XCoinbase(Exchange mainXchg, string apiKey, string secretKey, string passPharase)
+        public XCoinbase(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
 
             this.ApiKey = apiKey;
             this.SecretKey = secretKey;
-            this.Passphrase = passPharase;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
@@ -51,7 +51,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             set;
         }
 
-        public string Passphrase
+        public string PassPhrase
         {
             get;
             set;
@@ -202,7 +202,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             client.DefaultRequestHeaders.Add("CB-ACCESS-KEY", this.ApiKey);
             client.DefaultRequestHeaders.Add("CB-ACCESS-SIGN", _signature);
             client.DefaultRequestHeaders.Add("CB-ACCESS-TIMESTAMP", _timestamp.ToString());
-            client.DefaultRequestHeaders.Add("CB-ACCESS-PASSPHRASE", this.Passphrase);
+            client.DefaultRequestHeaders.Add("CB-ACCESS-PASSPHRASE", this.PassPhrase);
         }
 
         /// <summary>

@@ -18,21 +18,42 @@ namespace CCXT.Simple.Exchanges.Korbit
 		 *
 		 */
 
-        public XKorbit(Exchange mainXchg)
+        public XKorbit(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
+
+            this.ApiKey = apiKey;
+            this.SecretKey = secretKey;
+            this.PassPhrase = passPhrase;
         }
 
-        private Exchange mainXchg
+        public Exchange mainXchg
         {
             get;
             set;
         }
 
-        
         public string ExchangeName { get; set; } = "korbit";
 
         public bool Alive
+        {
+            get;
+            set;
+        }
+
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string SecretKey
+        {
+            get;
+            set;
+        }
+
+        public string PassPhrase
         {
             get;
             set;
