@@ -59,6 +59,8 @@ namespace CCXT.Simple.Exchanges.Binance
 
         public string ExchangeName { get; set; } = "binance";
 
+        public string ExchangeUrl { get; set; } = "https://api.binance.com";
+
         public bool Alive
         {
             get;
@@ -120,13 +122,15 @@ namespace CCXT.Simple.Exchanges.Binance
                         if (_symbol.EndsWith("USDT") || _symbol.EndsWith("BUSD") || _symbol.EndsWith("BTC"))
                         {
                             var _len = _symbol.EndsWith("BTC") ? 3 : 4;
+                            var _base = _symbol.Substring(0, _symbol.Length - _len);
+                            var _quote = _symbol.Substring(_symbol.Length - _len);
 
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = _symbol,
-                                name = _symbol,
-                                baseName = _symbol.Substring(0, _symbol.Length - _len),
-                                quoteName = _symbol.Substring(_symbol.Length - _len)
+                                compName = _base,
+                                baseName = _base,
+                                quoteName = _quote
                             });
                         }
                     }

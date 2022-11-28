@@ -33,6 +33,8 @@ namespace CCXT.Simple.Exchanges.Bittrex
         
         public string ExchangeName { get; set; } = "bittrex";
 
+        public string ExchangeUrl { get; set; } = "https://api.bittrex.com";
+
         public bool Alive
         {
             get;
@@ -92,7 +94,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.symbol,
-                                name = s.symbol,
+                                compName = s.baseCurrencySymbol,
                                 baseName = s.baseCurrencySymbol,
                                 quoteName = _quote
                             });

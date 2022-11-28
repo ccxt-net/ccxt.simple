@@ -33,6 +33,8 @@ namespace CCXT.Simple.Exchanges.Okex
 
         public string ExchangeName { get; set; } = "okex";
 
+        public string ExchangeUrl { get; set; } = "https://api.okex.com";
+
         public bool Alive
         {
             get;
@@ -90,16 +92,18 @@ namespace CCXT.Simple.Exchanges.Okex
 
                     foreach (var s in _jarray)
                     {
-                        var _quote_name = s.Value<string>("quoteCcy");
+                        var _base = s.Value<string>("baseCcy");
+                        var _quote = s.Value<string>("quoteCcy");
 
-                        if (_quote_name == "USDT" || _quote_name == "BTC")
+                        if (_quote == "USDT" || _quote == "BTC")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.Value<string>("instId"),
-                                tickSize = s.Value<decimal>("tickSz"),
-                                baseName = s.Value<string>("baseCcy"),
-                                quoteName = _quote_name
+                                compName = _base,
+                                baseName = _base,
+                                quoteName = _quote,
+                                tickSize = s.Value<decimal>("tickSz")
                             });
                         }
                     }

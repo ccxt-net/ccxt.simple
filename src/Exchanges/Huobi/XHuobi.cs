@@ -36,6 +36,8 @@ namespace CCXT.Simple.Exchanges.Huobi
 
         public string ExchangeName { get; set; } = "huobi";
 
+        public string ExchangeUrl { get; set; } = "https://api.huobi.pro";
+
         public bool Alive
         {
             get;
@@ -97,16 +99,18 @@ namespace CCXT.Simple.Exchanges.Huobi
                         if (_symbol_partition != "main")
                             continue;
 
-                        var _quote_name = s.Value<string>("quote-currency");
+                        var _base = s.Value<string>("base-currency");
+                        var _quote = s.Value<string>("quote-currency");
 
-                        if (_quote_name == "usdt" || _quote_name == "btc")
+                        if (_quote == "usdt" || _quote == "btc")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.Value<string>("symbol"),
-                                tickSize = s.Value<decimal>("price-precision"),
-                                baseName = s.Value<string>("base-currency").ToUpper(),
-                                quoteName = _quote_name.ToUpper()
+                                compName = _base.ToUpper(),
+                                baseName = _base.ToUpper(),
+                                quoteName = _quote.ToUpper(),
+                                tickSize = s.Value<decimal>("price-precision")
                             });
                         }
                     }

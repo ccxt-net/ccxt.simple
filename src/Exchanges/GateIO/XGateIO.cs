@@ -29,7 +29,9 @@ namespace CCXT.Simple.Exchanges.Gate
             set;
         }
         
-        public string ExchangeName { get; set; } = "gate";
+        public string ExchangeName { get; set; } = "gateio";
+
+        public string ExchangeUrl { get; set; } = "https://api.gateio.ws";
 
         public bool Alive
         {
@@ -92,9 +94,10 @@ namespace CCXT.Simple.Exchanges.Gate
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.id,
-                                tickSize = s.min_quote_amount,
+                                compName = s.@base,
                                 baseName = s.@base,
-                                quoteName = s.quote
+                                quoteName = s.quote,
+                                tickSize = s.min_quote_amount
                             });
                         }
                     }

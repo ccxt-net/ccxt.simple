@@ -34,9 +34,10 @@ namespace CCXT.Simple.Exchanges.Coinone
             get;
             set;
         }
-
         
         public string ExchangeName { get; set; } = "coinone";
+
+        public string ExchangeUrl { get; set; } = "https://api.coinone.co.kr";
 
         public bool Alive
         {
@@ -88,6 +89,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://tb.coinone.co.kr/api/v1/tradepair/");
                     var _jstring = await _response.Content.ReadAsStringAsync();
+
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["tradepairs"].ToObject<JArray>();
 
@@ -101,10 +103,10 @@ namespace CCXT.Simple.Exchanges.Coinone
                         _queue_info.symbols.Add(new QueueSymbol
                         {
                             symbol = $"{_base_name}-{_quote_name}",
-                            name = $"{_base_name}/{_quote_name}",
-                            tickSize = s.Value<decimal>("price_unit"),
+                            compName = _base_name,
                             baseName = _base_name,
-                            quoteName = _quote_name
+                            quoteName = _quote_name,
+                            tickSize = s.Value<decimal>("price_unit")
                         });
                     }
                 }

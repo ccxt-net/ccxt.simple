@@ -41,6 +41,8 @@ namespace CCXT.Simple.Exchanges.Bybit
         
         public string ExchangeName { get; set; } = "bybit";
 
+        public string ExchangeUrl { get; set; } = "https://api.bybit.com";
+
         public bool Alive
         {
             get;
@@ -97,16 +99,17 @@ namespace CCXT.Simple.Exchanges.Bybit
 
                     foreach (var s in _jarray)
                     {
-                        var _quote_name = s.Value<string>("quote_currency");
+                        var _base = s.Value<string>("base_currency");
+                        var _quote = s.Value<string>("quote_currency");
 
-                        if (_quote_name == "USDT" || _quote_name == "USD")
+                        if (_quote == "USDT" || _quote == "USD")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.Value<string>("name"),
-                                name = s.Value<string>("name"),
-                                baseName = s.Value<string>("base_currency"),
-                                quoteName = _quote_name,
+                                compName = _base,
+                                baseName = _base,
+                                quoteName = _quote,
 
                                 minPrice = s["price_filter"].Value<decimal>("min_price"),
                                 maxPrice = s["price_filter"].Value<decimal>("max_price"),

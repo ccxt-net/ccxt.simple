@@ -43,7 +43,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
         public string ExchangeName { get; set; } = "bithumb";
 
-        public string ExchangeUrl = "https://api.bithumb.com";
+        public string ExchangeUrl { get; set; } = "https://api.bithumb.com";
 
         public bool Alive
         {
@@ -105,13 +105,13 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
                             continue;
 
-                        var _symbol = s.Name;
+                        var _base = s.Name;
 
                         _queue_info.symbols.Add(new QueueSymbol
                         {
-                            symbol = $"{_symbol}_KRW",
-                            name = $"{_symbol}/KRW",
-                            baseName = _symbol,
+                            symbol = $"{_base}_KRW",
+                            compName = _base,
+                            baseName = _base,
                             quoteName = "KRW"
                         });
                     }
@@ -126,13 +126,13 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
                             continue;
 
-                        var _symbol = s.Name;
+                        var _base = s.Name;
 
                         _queue_info.symbols.Add(new QueueSymbol
                         {
-                            symbol = $"{_symbol}_BTC",
-                            name = $"{_symbol}/BTC",
-                            baseName = _symbol,
+                            symbol = $"{_base}_BTC",
+                            compName = _base,
+                            baseName = _base,
                             quoteName = "BTC"
                         });
                     }

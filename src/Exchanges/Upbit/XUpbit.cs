@@ -41,6 +41,8 @@ namespace CCXT.Simple.Exchanges.Upbit
         
         public string ExchangeName { get; set; } = "upbit";
 
+        public string ExchangeUrl { get; set; } = "https://api.upbit.com";
+
         public bool Alive
         {
             get;
@@ -103,13 +105,17 @@ namespace CCXT.Simple.Exchanges.Upbit
                         if (_pairs.Length < 2)
                             continue;
 
-                        if (_pairs[0] == "KRW" || _pairs[0] == "BTC" || _pairs[0] == "USDT")
+                        var _base = _pairs[1];
+                        var _quote = _pairs[0];
+
+                        if (_quote == "KRW" || _quote == "BTC" || _quote == "USDT")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = _symbol,
-                                baseName = _pairs[1],
-                                quoteName = _pairs[0]
+                                compName = _base,
+                                baseName = _base,
+                                quoteName = _quote
                             });
                         }
                     }

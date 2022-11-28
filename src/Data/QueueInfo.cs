@@ -32,7 +32,13 @@
             set;
         }
 
-        public string name
+        public string compName
+        {
+            get;
+            set;
+        }
+        
+        public string dispName
         {
             get;
             set;

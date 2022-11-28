@@ -32,6 +32,8 @@ namespace CCXT.Simple.Exchanges.Kucoin
         
         public string ExchangeName { get; set; } = "kucoin";
 
+        public string ExchangeUrl { get; set; } = "https://api.kucoin.com";
+
         public bool Alive
         {
             get;
@@ -102,10 +104,10 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = _symbol,
-                                name = s.Value<string>("name"),
-                                tickSize = s.Value<decimal>("priceIncrement"),
+                                compName = _base_name,
                                 baseName = _base_name,
-                                quoteName = _quote_name
+                                quoteName = _quote_name,
+                                tickSize = s.Value<decimal>("priceIncrement")
                             });
                         }
                     }

@@ -35,6 +35,8 @@ namespace CCXT.Simple.Exchanges.Korbit
 
         public string ExchangeName { get; set; } = "korbit";
 
+        public string ExchangeUrl { get; set; } = "https://api.korbit.co.kr";
+
         public bool Alive
         {
             get;
@@ -97,6 +99,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         _queue_info.symbols.Add(new QueueSymbol
                         {
                             symbol = _symbol,
+                            compName = _pairs[0].ToUpper(),
                             baseName = _pairs[0].ToUpper(),
                             quoteName = _pairs[1].ToUpper()
                         });

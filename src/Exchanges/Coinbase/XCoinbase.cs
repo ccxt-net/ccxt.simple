@@ -38,6 +38,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
         }
         
         public string ExchangeName { get; set; } = "coinbase";
+        public string ExchangeUrl { get; set; } = "https://api.pro.coinbase.com";
 
         public bool Alive
         {
@@ -101,7 +102,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.id,
-                                name = s.display_name,
+                                compName = s.base_currency,
                                 baseName = s.base_currency,
                                 quoteName = s.quote_currency
                             });

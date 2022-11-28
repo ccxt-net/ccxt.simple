@@ -30,8 +30,9 @@ namespace CCXT.Simple.Exchanges.Crypto
             set;
         }
 
-        
         public string ExchangeName { get; set; } = "crypto";
+
+        public string ExchangeUrl { get; set; } = "https://api.crypto.com";
 
         public bool Alive
         {
@@ -96,10 +97,10 @@ namespace CCXT.Simple.Exchanges.Crypto
                             _queue_info.symbols.Add(new QueueSymbol
                             {
                                 symbol = s.instrument_name,
-                                name = s.instrument_name,
-                                tickSize = s.min_quantity,
+                                compName = s.base_currency,
                                 baseName = s.base_currency,
-                                quoteName = s.quote_currency
+                                quoteName = s.quote_currency,
+                                tickSize = s.min_quantity
                             });
                         }
                     }

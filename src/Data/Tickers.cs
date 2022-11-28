@@ -12,11 +12,6 @@
             this.items = (new Ticker[no_coins]).ToList();
         }
 
-        public Tickers(string exchange, List<string> symbols)
-            : this(exchange, symbols.Count, symbols.ToArray())
-        {
-        }
-
         public Tickers(string exchange, List<QueueSymbol> symbols)
             : this(exchange, symbols.Count)
         {
@@ -25,26 +20,10 @@
                 this.items[i] = new Ticker
                 {
                     symbol = symbols[i].symbol,
+                    compName = symbols[i].compName,
+                    dispName = symbols[i].dispName,
                     baseName = symbols[i].baseName,
                     quoteName = symbols[i].quoteName,
-
-                    active = true,
-                    deposit = true,
-                    withdraw = true,
-
-                    orderbook = new Orderbook()
-                };
-            }
-        }
-
-        public Tickers(string exchange, int no_coins, string[] symbols)
-            : this(exchange, no_coins)
-        {
-            for (var i = 0; i < no_coins; i++)
-            {
-                this.items[i] = new Ticker
-                {
-                    symbol = symbols[i],
 
                     active = true,
                     deposit = true,
@@ -104,6 +83,18 @@
         /// coin symbol
         /// </summary>
         public string symbol
+        {
+            get;
+            set;
+        }
+
+        public string compName
+        {
+            get;
+            set;
+        }
+
+        public string dispName
         {
             get;
             set;

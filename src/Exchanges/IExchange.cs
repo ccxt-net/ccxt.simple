@@ -8,6 +8,8 @@ namespace CCXT.Simple.Exchanges
 
         //ExchangeTitle { get; set; }
         string ExchangeName { get; set; }
+        string ExchangeUrl { get; set; }
+
         bool Alive { get; set; }
 
         string ApiKey { get; set; }
