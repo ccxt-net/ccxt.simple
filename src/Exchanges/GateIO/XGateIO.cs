@@ -1,6 +1,8 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
+using System;
+using System.Security.Claims;
 
 namespace CCXT.Simple.Exchanges.Gate
 {
@@ -133,40 +135,57 @@ namespace CCXT.Simple.Exchanges.Gate
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.Currency>>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == s.currency);
+                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = s.currency,
-                                active = !s.trade_disabled,
-                                deposit = !s.deposit_disabled,
-                                withdraw = !s.withdraw_disabled,
+                                currency = c.currency,
+                                active = !c.trade_disabled,
+                                deposit = !c.deposit_disabled,
+                                withdraw = !c.withdraw_disabled,
                                 networks = new List<WNetwork>()
                             };
 
                             states.states.Add(_state);
                         }
-
-                        var _network = new WNetwork
+                        else
                         {
-                            name = s.currency + "-" + s.chain,
-                            network = s.chain,
-                            protocol = "",
+                            _state.active = !c.trade_disabled;
+                            _state.deposit = !c.deposit_disabled;
+                            _state.withdraw = !c.withdraw_disabled;
+                        }
 
-                            deposit = !s.deposit_disabled,
-                            withdraw = !s.withdraw_disabled,
+                        var _name = c.currency + "-" + c.chain;
 
-                            withdrawFee = 0,
-                            minWithdrawal = 0,
-                            maxWithdrawal = 0,
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
+                        {
+                            _network = new WNetwork
+                            {
+                                name = _name,
+                                network = c.chain,
+                                protocol = c.chain,
 
-                            minConfirm = 0
-                        };
+                                deposit = !c.deposit_disabled,
+                                withdraw = !c.withdraw_disabled,
 
-                        _state.networks.Add(_network);
+                                withdrawFee = 0,
+                                minWithdrawal = 0,
+                                maxWithdrawal = 0,
+
+                                minConfirm = 0
+                            };
+
+                            _state.networks.Add(_network);
+                        }
+                        else
+                        {
+                            _network.deposit = !c.deposit_disabled;
+                            _network.withdraw = !c.withdraw_disabled;
+                        }
                     }
                 }
 

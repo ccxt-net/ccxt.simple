@@ -1,6 +1,10 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Xml.Linq;
 
 namespace CCXT.Simple.Exchanges.Kucoin
 {
@@ -127,6 +131,37 @@ namespace CCXT.Simple.Exchanges.Kucoin
             return _result;
         }
 
+        private HMACSHA256 __encryptor = null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public HMACSHA256 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        private void CreateSignature(HttpClient client, string endpoint)
+        {
+            var _timestamp = CUnixTime.NowMilli.ToString();
+
+            var _sign_data = _timestamp + "GET" + endpoint;
+            var _sign_hash = Convert.ToBase64String(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data)));
+            var _sign_pass = Convert.ToBase64String(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(this.PassPhrase)));
+
+            client.DefaultRequestHeaders.Add("KC-API-SIGN", _sign_hash);
+            client.DefaultRequestHeaders.Add("KC-API-TIMESTAMP", _timestamp);
+            client.DefaultRequestHeaders.Add("KC-API-KEY", this.ApiKey);
+            client.DefaultRequestHeaders.Add("KC-API-PASSPHRASE", _sign_pass);
+            client.DefaultRequestHeaders.Add("KC-API-KEY-VERSION", "2");
+        }
+
         /// <summary>
         ///
         /// </summary>
@@ -139,46 +174,54 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/currencies");
+                    var _end_point = "/api/v1/currencies";
+
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}{_end_point}");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _jarray = _jobject.Value<JArray>("data");
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray.data)
                     {
-                        var _currency = s.Value<string>("currency");
-
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
+                                currency = c.currency,
                                 active = true,
-
-                                deposit = s.Value<bool>("isDepositEnabled"),
-                                withdraw = s.Value<bool>("isWithdrawEnabled"),
-
+                                deposit = c.isDepositEnabled,
+                                withdraw = c.isWithdrawEnabled,
                                 networks = new List<WNetwork>()
                             };
 
                             states.states.Add(_state);
                         }
-
-                        _state.networks.Add(new WNetwork
+                        else
                         {
-                            name = _currency,
-                            //network = s.Value<string>("currency"),
-                            //protocol = s.Value<string>("currency"),
+                            _state.deposit = c.isDepositEnabled;
+                            _state.withdraw = c.isWithdrawEnabled;
+                        }
 
-                            deposit = s.Value<bool>("isDepositEnabled"),
-                            withdraw = s.Value<bool>("isWithdrawEnabled"),
+                        var _name = c.currency + "-" + c.name;
 
-                            minWithdrawal = s.Value<decimal>("withdrawalMinSize"),
-                            withdrawFee = s.Value<decimal>("withdrawalMinFee"),
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
+                        {
+                            _state.networks.Add(new WNetwork
+                            {
+                                name = _name,
+                                network = c.name,
+                                protocol = "",
 
-                            minConfirm = s.Value<int>("confirms")
-                        });
+                                deposit = c.isDepositEnabled,
+                                withdraw = c.isWithdrawEnabled,
+
+                                minWithdrawal = c.withdrawalMinSize,
+                                withdrawFee = c.withdrawalMinFee,
+
+                                minConfirm = c.confirms
+                            });
+                        }
                     }
                 }
 

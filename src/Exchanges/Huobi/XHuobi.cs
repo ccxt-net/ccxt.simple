@@ -1,5 +1,6 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 
@@ -144,48 +145,59 @@ namespace CCXT.Simple.Exchanges.Huobi
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/v2/reference/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _jarray = _jobject.Value<JArray>("data");
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray.data)
                     {
-                        var _wallet_state = s.Value<string>("instStatus");
-                        if (_wallet_state != "normarl")
-                            continue;
-
-                        var _currency = s.Value<string>("currency");
-
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
-                                active = true
+                                currency = c.currency,
+                                active = c.instStatus == "normarl",
+                                deposit = true,
+                                withdraw = true,
+                                networks = new List<WNetwork>()
                             };
 
                             states.states.Add(_state);
                         }
-
-                        foreach (var n in s["chains"])
+                        else
                         {
-                            var _network = new WNetwork
+                            _state.active = c.instStatus == "normarl";
+                        }
+
+                        foreach (var n in c.chains)
+                        {
+                            var _name = n.displayName + "-" + n.baseChain;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
                             {
-                                name = n.Value<string>("chain"),
-                                network = n.Value<string>("baseChain"),
-                                protocol = n.Value<string>("baseChainProtocol"),
+                                _network = new WNetwork
+                                {
+                                    name = _name,
+                                    network = n.baseChain,
+                                    protocol = n.baseChainProtocol,
 
-                                deposit = n.Value<string>("depositStatus") == "allowed",
-                                withdraw = n.Value<string>("withdrawStatus") == "allowed",
+                                    deposit = n.depositStatus == "allowed",
+                                    withdraw = n.withdrawStatus == "allowed",
 
-                                withdrawFee = n.Value<decimal>("transactFeeWithdraw"),
-                                minWithdrawal = n.Value<decimal>("minWithdrawAmt"),
-                                maxWithdrawal = n.Value<decimal>("maxWithdrawAmt"),
+                                    withdrawFee = n.transactFeeWithdraw,
+                                    minWithdrawal = n.minWithdrawAmt,
+                                    maxWithdrawal = n.maxWithdrawAmt,
 
-                                minConfirm = n.Value<int>("numOfConfirmations")
-                            };
+                                    minConfirm = n.numOfConfirmations
+                                };
 
-                            _state.networks.Add(_network);
+                                _state.networks.Add(_network);
+                            }
+                            else
+                            {
+                                _network.deposit = n.depositStatus == "allowed";
+                                _network.withdraw = n.withdrawStatus == "allowed";
+                            }
                         }
                     }
                 }

@@ -2,6 +2,7 @@
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Xml.Linq;
 
 namespace CCXT.Simple.Exchanges.Bittrex
 {
@@ -126,17 +127,17 @@ namespace CCXT.Simple.Exchanges.Bittrex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.bittrex.com/v3/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Bittrex.Currency>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Currency>>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == s.symbol);
+                        var _state = states.states.SingleOrDefault(x => x.currency == c.symbol);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = s.symbol,
-                                active = s.status == "ONLINE",
+                                currency = c.symbol,
+                                active = c.status == "ONLINE",
                                 deposit = true,
                                 withdraw = true,
                                 networks = new List<WNetwork>()
@@ -144,34 +145,44 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
                             states.states.Add(_state);
                         }
+                        else
+                        {
+                            _state.active = c.status == "ONLINE";
+                        }
 
-                        var _cointype = s.coinType;
-                        var _protocol = s.name;
-                        if (s.coinType.StartsWith("ETH_"))
+                        var _cointype = c.coinType;
+                        var _protocol = c.name;
+                        if (c.coinType.StartsWith("ETH_"))
                         {
                             _cointype = "ETH";
-                            if (s.notice.Contains("ERC-20"))
+                            if (c.notice.Contains("ERC-20"))
                                 _protocol = "ERC20";
                         }
 
-                        var _network = new WNetwork
+                        var _name = c.symbol + "-" + _cointype;
+
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
                         {
-                            name = s.symbol + "-" + s.coinType,
-                            network = _cointype,
-                            protocol = _protocol,
+                            _network = new WNetwork
+                            {
+                                name = _name,
+                                network = _cointype,
+                                protocol = _protocol,
 
-                            deposit = true,
-                            withdraw = true,
-                            
-                            withdrawFee = s.txFee,
-                            minWithdrawal = 0,
-                            maxWithdrawal = 0,
+                                deposit = true,
+                                withdraw = true,
 
-                            minConfirm = s.minConfirmations,
-                            arrivalTime = 0
-                        };
+                                withdrawFee = c.txFee,
+                                minWithdrawal = 0,
+                                maxWithdrawal = 0,
 
-                        _state.networks.Add(_network);
+                                minConfirm = c.minConfirmations,
+                                arrivalTime = 0
+                            };
+
+                            _state.networks.Add(_network);
+                        }
                     }
                 }
 

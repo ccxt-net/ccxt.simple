@@ -20,9 +20,9 @@
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.2</Version>
-		<AssemblyVersion>1.0.2.2</AssemblyVersion>
-		<FileVersion>1.0.2.2</FileVersion>
+		<Version>1.0.3</Version>
+		<AssemblyVersion>1.0.3.3</AssemblyVersion>
+		<FileVersion>1.0.3.3</FileVersion>
 		<PackageReleaseNotes>ccxt.net의 간단한 버전(simple version) 입니다. </PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

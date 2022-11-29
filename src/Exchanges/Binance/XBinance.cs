@@ -111,7 +111,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/price");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Binance.Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
                     _queue_info.symbols.Clear();
 
@@ -150,8 +150,6 @@ namespace CCXT.Simple.Exchanges.Binance
             return _result;
         }
 
-        private string[] _not_main_nets = { "ETH", "BSC", "BNB", "TRX" };
-
         /// <summary>
         ///
         /// </summary>
@@ -168,47 +166,66 @@ namespace CCXT.Simple.Exchanges.Binance
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/sapi/v1/capital/config/getall?" + _args);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JArray.Parse(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray)
                     {
-                        var _currency = s.Value<string>("coin");
-
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = states.states.SingleOrDefault(x => x.currency == c.coin);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
-                                active = s.Value<bool>("trading"),
-                                deposit = s.Value<bool>("depositAllEnable"),
-                                withdraw = s.Value<bool>("withdrawAllEnable"),
+                                currency = c.coin,
+                                active = c.trading,
+                                deposit = c.depositAllEnable,
+                                withdraw = c.withdrawAllEnable,
                                 networks = new List<WNetwork>()
                             };
 
                             states.states.Add(_state);
                         }
-
-                        foreach (var n in s["networkList"])
+                        else
                         {
-                            var _network = new WNetwork
+                            _state.active = c.trading;
+                            _state.deposit= c.depositAllEnable;
+                            _state.withdraw = c.withdrawAllEnable;
+                        }
+
+                        foreach (var n in c.networkList)
+                        {
+                            var _name = n.coin + "-" + n.network;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
                             {
-                                name = _currency + "-" + n.Value<string>("network"),
-                                network = n.Value<string>("network"),
-                                protocol = n.Value<string>("name"),
+                                var _protocol = n.network;
+                                if (n.network == "ETH" && n.name.Contains("ERC20"))
+                                    _protocol = "ERC20";
 
-                                deposit = n.Value<bool>("depositEnable"),
-                                withdraw = n.Value<bool>("withdrawEnable"),
+                                _network = new WNetwork
+                                {
+                                    name = _name,
+                                    network = n.network,
+                                    protocol = _protocol,
 
-                                withdrawFee = n.Value<decimal>("withdrawFee"),
-                                minWithdrawal = n.Value<decimal>("withdrawMin"),
-                                maxWithdrawal = n.Value<decimal>("withdrawMax"),
+                                    deposit = n.depositEnable,
+                                    withdraw = n.withdrawEnable,
 
-                                minConfirm = n.Value<int>("minConfirm"),
-                                arrivalTime = n.Value<int>("estimatedArrivalTime")
-                            };
+                                    withdrawFee = n.withdrawFee,
+                                    minWithdrawal = n.withdrawMin,
+                                    maxWithdrawal = n.withdrawMax,
 
-                            _state.networks.Add(_network);
+                                    minConfirm = n.minConfirm,
+                                    arrivalTime = n.estimatedArrivalTime
+                                };
+
+                                _state.networks.Add(_network);
+                            }
+                            else
+                            {
+                                _network.deposit = n.depositEnable;
+                                _network.withdraw = n.withdrawEnable;
+                            }
                         }
                     }
                 }

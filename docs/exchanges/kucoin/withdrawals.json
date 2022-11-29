@@ -1,0 +1,26 @@
+{
+    "code": "200000",
+    "data": {
+        "currentPage": 1,
+        "pageSize": 50,
+        "totalNum": 1,
+        "totalPage": 1,
+        "items": [
+            {
+                "id": "618a38b91e885200012f12ae",
+                "currency": "USDT",
+                "chain": "trx",
+                "status": "SUCCESS",
+                "address": "TSf2FHCxGBfonNiWv5DGV6i66jNqGzgg4F",
+                "memo": "",
+                "isInner": false,
+                "amount": "5354.79441900",
+                "fee": "1.00000000",
+                "walletTxId": "75399d4fec0fd7575d9e04fee428b1120eb2c2019966766d6a01a129250241af",
+                "createdAt": 1636448441000,
+                "updatedAt": 1636448465000,
+                "remark": ""
+            }
+        ]
+    }
+}

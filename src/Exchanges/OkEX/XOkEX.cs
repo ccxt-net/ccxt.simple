@@ -1,5 +1,6 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -139,12 +140,11 @@ namespace CCXT.Simple.Exchanges.Okex
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/asset/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["data"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray.data)
                     {
-                        var _currency = s.Value<string>("ccy");
+                        var _currency = c.ccy;
 
                         var _state = states.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
@@ -153,31 +153,47 @@ namespace CCXT.Simple.Exchanges.Okex
                             {
                                 currency = _currency,
                                 active = true,
-
-                                deposit = s.Value<bool>("canDep"),
-                                withdraw = s.Value<bool>("canWd"),
-
+                                deposit = c.canDep,
+                                withdraw = c.canWd,
                                 networks = new List<WNetwork>()
                             };
 
                             states.states.Add(_state);
                         }
-
-                        _state.networks.Add(new WNetwork
+                        else
                         {
-                            name = s.Value<string>("chain"),
-                            //network = s.Value<string>("chain"),
-                            protocol = s.Value<string>("chain"),
+                            _state.deposit = c.canDep;
+                            _state.withdraw = c.canWd;
+                        }
 
-                            deposit = s.Value<bool>("canDep"),
-                            withdraw = s.Value<bool>("canWd"),
+                        var _name = c.chain;
 
-                            withdrawFee = s.Value<decimal>("maxFee"),
-                            minWithdrawal = s.Value<decimal>("minWd"),
-                            maxWithdrawal = s.Value<decimal>("maxWd"),
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
+                        {
+                            var _splits = c.chain.Split('-');
 
-                            minConfirm = s.Value<int>("minDepArrivalConfirm")
-                        });
+                            _state.networks.Add(new WNetwork
+                            {
+                                name = _name,
+                                network = c.ccy,
+                                protocol = _splits.Length > 1 ? _splits[1] : c.chain,
+
+                                deposit = c.canDep,
+                                withdraw = c.canWd,
+
+                                withdrawFee = c.maxFee,
+                                minWithdrawal = c.minWd,
+                                maxWithdrawal = c.maxWd,
+
+                                minConfirm = c.minDepArrivalConfirm
+                            });
+                        }
+                        else
+                        {
+                            _network.deposit = c.canDep;
+                            _network.withdraw = c.canWd;
+                        }
                     }
                 }
 
