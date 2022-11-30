@@ -34,7 +34,7 @@ namespace CCXT.Simple.Exchanges.Okex
 
         public string ExchangeName { get; set; } = "okex";
 
-        public string ExchangeUrl { get; set; } = "https://api.okex.com";
+        public string ExchangeUrl { get; set; } = "https://www.okex.com";
 
         public bool Alive
         {
