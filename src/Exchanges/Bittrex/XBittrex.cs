@@ -2,7 +2,6 @@
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Xml.Linq;
 
 namespace CCXT.Simple.Exchanges.Bittrex
 {
@@ -80,7 +79,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bittrex.com/v3/markets");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Bittrex.Market>>(_jstring);
 
@@ -125,7 +124,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bittrex.com/v3/currencies");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Currency>>(_jstring);
 
@@ -207,7 +206,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bittrex.com/v3/markets/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jdata = JArray.Parse(_jstring);
 
@@ -265,7 +264,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bittrex.com/v3/markets/summaries");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets/summaries");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jdata = JArray.Parse(_jstring);
 

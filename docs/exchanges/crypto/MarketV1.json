@@ -1,0 +1,3506 @@
+{
+    "code": "0",
+    "msg": "suc",
+    "data": [
+        {
+            "symbol": "RSR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RSR",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PERP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PERP",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MATIC_BTC",
+            "count_coin": "BTC",
+            "base_coin": "MATIC",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MATIC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MATIC",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SHIB_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SHIB",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GRT_BTC",
+            "count_coin": "BTC",
+            "base_coin": "GRT",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GRT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GRT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "C98_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "C98",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AIOZ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AIOZ",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "REEF_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "REEF",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MC",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CUDOS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CUDOS",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "QI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "QI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ANKR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ANKR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GTC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GTC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "VET_BTC",
+            "count_coin": "BTC",
+            "base_coin": "VET",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "VET_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VET",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FIL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FIL",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "KNC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "KNC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CHESS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CHESS",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ICP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ICP",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "UNFI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "UNFI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "LPT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LPT",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "THETA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "THETA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "OP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OP",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BADGER_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BADGER",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "LRC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LRC",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HERO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HERO",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "QI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "QI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FORTH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FORTH",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "LSK_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LSK",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "QNT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "QNT",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "COMP_BTC",
+            "count_coin": "BTC",
+            "base_coin": "COMP",
+            "price_precision": 7,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "COMP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "COMP",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "LTC_BTC",
+            "count_coin": "BTC",
+            "base_coin": "LTC",
+            "price_precision": 7,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "LTC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LTC",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "GLMR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "GLMR",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GLMR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GLMR",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GLM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GLM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SC",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SHIB_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SHIB",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CUDOS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CUDOS",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "T_USDT",
+            "count_coin": "USDT",
+            "base_coin": "T",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ZRX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ZRX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "REN_USDT",
+            "count_coin": "USDT",
+            "base_coin": "REN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ICX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ICX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SUPER_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SUPER",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "REP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "REP",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "YFI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "YFI",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "JASMY_BTC",
+            "count_coin": "BTC",
+            "base_coin": "JASMY",
+            "price_precision": 11,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "JASMY_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "JASMY",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "COTI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "COTI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "UNFI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "UNFI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "REQ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "REQ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "VRA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VRA",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POWR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "POWR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ASTR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ASTR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CHR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CHR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CHZ_BTC",
+            "count_coin": "BTC",
+            "base_coin": "CHZ",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CHZ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CHZ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "USDT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "USDT",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CTSI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CTSI",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MATIC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MATIC",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "UNI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "UNI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "KSM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "KSM",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "EGLD_USDT",
+            "count_coin": "USDT",
+            "base_coin": "EGLD",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "QUICK_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "QUICK",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "HOT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "HOT",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SPELL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SPELL",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CKB_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CKB",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BCH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BCH",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "VVS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VVS",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "NMR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "NMR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "DIA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DIA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ZIL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ZIL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MBL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MBL",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AXS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AXS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "EPX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "EPX",
+            "price_precision": 8,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "IMX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "IMX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BOSON_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BOSON",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CKB_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CKB",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MDT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MDT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POND_USDT",
+            "count_coin": "USDT",
+            "base_coin": "POND",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "IDEX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "IDEX",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RAD_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RAD",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MOVR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MOVR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "MOVR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "MOVR",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "MOVR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MOVR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "FXS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FXS",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "WBTC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "WBTC",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "RBN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RBN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CQT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CQT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FITFI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FITFI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CRO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "CRO",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CRO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CRO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WOO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "WOO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "KP3R_USDT",
+            "count_coin": "USDT",
+            "base_coin": "KP3R",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "CRV_BTC",
+            "count_coin": "BTC",
+            "base_coin": "CRV",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CRV_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CRV",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RAD_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RAD",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "WAVES_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "WAVES",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "HNT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HNT",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "HOD_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HOD",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "REN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "REN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "REP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "REP",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "REQ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "REQ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HOT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HOT",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EGLD_BTC",
+            "count_coin": "BTC",
+            "base_coin": "EGLD",
+            "price_precision": 7,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "EGLD_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "EGLD",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "ALPHA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ALPHA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LOKA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LOKA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MKR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MKR",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "MLN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MLN",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ALICE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ALICE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CVX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CVX",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "MMF_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MMF",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XRP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "XRP",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "KAVA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "KAVA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SAND_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SAND",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MANA_BTC",
+            "count_coin": "BTC",
+            "base_coin": "MANA",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MANA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MANA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AUTO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AUTO",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "STORJ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "STORJ",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RLC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RLC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RLY_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RLY",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LUNA2_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LUNA2",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "VVS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "VVS",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FET_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FET",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CELR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CELR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MASK_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MASK",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ELON_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ELON",
+            "price_precision": 11,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AERGO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "AERGO",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AERGO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AERGO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LRC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LRC",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MTD_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MTD",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "INJ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "INJ",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GHST_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GHST",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "TFUEL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "TFUEL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PGALA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PGALA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "QTUM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "QTUM",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "DAI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DAI",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RARE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RARE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RARI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RARI",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "DAR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "DAR",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DAR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DAR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OGN_USDT",
+            "count_coin": "USDT",
+            "base_coin": "OGN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WEMIX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "WEMIX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ATOM_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ATOM",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ATOM_CRO",
+            "count_coin": "CRO",
+            "base_coin": "ATOM",
+            "price_precision": 2,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ATOM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ATOM",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "MXC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MXC",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "YGG_USDT",
+            "count_coin": "USDT",
+            "base_coin": "YGG",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RSR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RSR",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "QRDO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "QRDO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PERP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PERP",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "POLYX_USDC",
+            "count_coin": "USDC",
+            "base_coin": "POLYX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "WOO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "WOO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FORTH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FORTH",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "VRA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "VRA",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FTM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FTM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DGB_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DGB",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HBAR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "HBAR",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HBAR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HBAR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MKR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MKR",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "POLS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "POLS",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ICP_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ICP",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ICP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ICP",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ICX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ICX",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ICX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ICX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DIA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DIA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POND_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "POND",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "KP3R_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KP3R",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "DYDX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DYDX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GMX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GMX",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "BICO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BICO",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "TFUEL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "TFUEL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GRT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GRT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WAXP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "WAXP",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "NEAR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "NEAR",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ALICE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ALICE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BIFI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BIFI",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "PGALA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PGALA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "C98_USDT",
+            "count_coin": "USDT",
+            "base_coin": "C98",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "NEAR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "NEAR",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "NEAR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "NEAR",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "NEO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "NEO",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "NEO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "NEO",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "BAND_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BAND",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "DOT_BTC",
+            "count_coin": "BTC",
+            "base_coin": "DOT",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "DOT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DOT",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "RUNE_BTC",
+            "count_coin": "BTC",
+            "base_coin": "RUNE",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RUNE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RUNE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "XNO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "XNO",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ILV_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ILV",
+            "price_precision": 7,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "ILV_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ILV",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "SNT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SNT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SUSHI_BTC",
+            "count_coin": "BTC",
+            "base_coin": "SUSHI",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SUSHI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SUSHI",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AIOZ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AIOZ",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "IMX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "IMX",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "IMX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "IMX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SC",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POWR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "POWR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "INJ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "INJ",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SDN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SDN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "APE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "APE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "1INCH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "1INCH",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AAVE_BTC",
+            "count_coin": "BTC",
+            "base_coin": "AAVE",
+            "price_precision": 7,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "AAVE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AAVE",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "FARM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FARM",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "NKN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "NKN",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "API3_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "API3",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SNX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SNX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "REEF_USDT",
+            "count_coin": "USDT",
+            "base_coin": "REEF",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DOGE_BTC",
+            "count_coin": "BTC",
+            "base_coin": "DOGE",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DOGE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DOGE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BICO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BICO",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MBL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MBL",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "IQ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "IQ",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DERC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DERC",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "NMR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "NMR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ASTR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ASTR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PYR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PYR",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SKL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SKL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LDO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LDO",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SLP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SLP",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AAVE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AAVE",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "RLC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RLC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "LINK_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LINK",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "KAVA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KAVA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SNT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SNT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SNX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "SNX",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SNX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SNX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "NEO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "NEO",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "DYDX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "DYDX",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "DYDX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "DYDX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SOL_BTC",
+            "count_coin": "BTC",
+            "base_coin": "SOL",
+            "price_precision": 7,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "SOL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SOL",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "LINK_BTC",
+            "count_coin": "BTC",
+            "base_coin": "LINK",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "LINK_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LINK",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "AURORA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AURORA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RARE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RARE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OMG_USDT",
+            "count_coin": "USDT",
+            "base_coin": "OMG",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SPS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SPS",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TONIC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "TONIC",
+            "price_precision": 11,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "IOTX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "IOTX",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XLM_BTC",
+            "count_coin": "BTC",
+            "base_coin": "XLM",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XLM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "XLM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FLOW_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FLOW",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BNT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BNT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SPELL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SPELL",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ERN_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ERN",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "XNO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "XNO",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "APT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "APT",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "RARI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RARI",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "FITFI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FITFI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TRB_USDT",
+            "count_coin": "USDT",
+            "base_coin": "TRB",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "KLAY_USDT",
+            "count_coin": "USDT",
+            "base_coin": "KLAY",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "STG_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "STG",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TONIC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "TONIC",
+            "price_precision": 11,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "COMP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "COMP",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "STX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "STX",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "STX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "STX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PAXG_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PAXG",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "DOT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DOT",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "CQT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CQT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EFI_BTC",
+            "count_coin": "BTC",
+            "base_coin": "EFI",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EFI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "EFI",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LSK_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LSK",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "XRP_BTC",
+            "count_coin": "BTC",
+            "base_coin": "XRP",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XRP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "XRP",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WBTC_BTC",
+            "count_coin": "BTC",
+            "base_coin": "WBTC",
+            "price_precision": 4,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "WBTC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "WBTC",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "OCEAN_USDT",
+            "count_coin": "USDT",
+            "base_coin": "OCEAN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AUTO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AUTO",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "STRAX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "STRAX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "IOTX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "IOTX",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XTZ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "XTZ",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ANKR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ANKR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SOL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SOL",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "DAI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DAI",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MULTI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MULTI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "METIS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "METIS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "RADAR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RADAR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ELF_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ELF",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALCX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ALCX",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "PAXG_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PAXG",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "ENJ_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ENJ",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ENJ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ENJ",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "XYO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "XYO",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ENS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ENS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "CVX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CVX",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "QNT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "QNT",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "EOS_BTC",
+            "count_coin": "BTC",
+            "base_coin": "EOS",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "EOS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "EOS",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AGLD_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AGLD",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALGO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ALGO",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALGO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ALGO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EPX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "EPX",
+            "price_precision": 8,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "T_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "T",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OGN_BTC",
+            "count_coin": "BTC",
+            "base_coin": "OGN",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OGN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OGN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ERN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ERN",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "KLAY_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KLAY",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DAR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DAR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RLY_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RLY",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ETC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ETC",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "JOE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "JOE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AVAX_BTC",
+            "count_coin": "BTC",
+            "base_coin": "AVAX",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "AVAX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AVAX",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ETH_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ETH",
+            "price_precision": 6,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "ETH_CRO",
+            "count_coin": "CRO",
+            "base_coin": "ETH",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "ETH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ETH",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "GODS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GODS",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BTC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BTC",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "GLMR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GLMR",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "OLE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OLE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TRU_USDT",
+            "count_coin": "USDT",
+            "base_coin": "TRU",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OMG_BTC",
+            "count_coin": "BTC",
+            "base_coin": "OMG",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "OMG_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OMG",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "PLA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PLA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ONE_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ONE",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ONE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ONE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "METIS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "METIS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "ONT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ONT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ENJ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ENJ",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CHR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CHR",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TRIBE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "TRIBE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BOSON_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BOSON",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GTC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GTC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "YFI_BTC",
+            "count_coin": "BTC",
+            "base_coin": "YFI",
+            "price_precision": 5,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "YFI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "YFI",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "BOND_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BOND",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "OP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "OP",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "STX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "STX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "YGG_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "YGG",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SAND_BTC",
+            "count_coin": "BTC",
+            "base_coin": "SAND",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SAND_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SAND",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "XYO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "XYO",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HBAR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "HBAR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ORN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ORN",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "FLOW_BTC",
+            "count_coin": "BTC",
+            "base_coin": "FLOW",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "FLOW_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FLOW",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ONE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ONE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ACA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ACA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ACH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ACH",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HIGH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "HIGH",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "LTC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "LTC",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "ADA_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ADA",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ADA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ADA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "VOXEL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "VOXEL",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WAXP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "WAXP",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ACA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ACA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LOKA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LOKA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CRO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CRO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "VELO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VELO",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALPHA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ALPHA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CRPT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CRPT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "TRB_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "TRB",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "CHZ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CHZ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XTZ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "XTZ",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "TRU_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "TRU",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "NKN_USDT",
+            "count_coin": "USDT",
+            "base_coin": "NKN",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ENS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ENS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "VOXEL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VOXEL",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FLUX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FLUX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "OXT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OXT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ETHW_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ETHW",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "SKL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SKL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FER_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FER",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FET_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FET",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MANA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MANA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CHESS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CHESS",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AKT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AKT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CTSI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CTSI",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ALI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ACH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ACH",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FLUX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "FLUX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "STRAX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "STRAX",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "API3_USDT",
+            "count_coin": "USDT",
+            "base_coin": "API3",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "STORJ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "STORJ",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BADGER_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BADGER",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CRV_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CRV",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AMP_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AMP",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FIL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FIL",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "VET_USDT",
+            "count_coin": "USDT",
+            "base_coin": "VET",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OSMO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OSMO",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SUPER_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "SUPER",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BAL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BAL",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "TRIBE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "TRIBE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "APE_BTC",
+            "count_coin": "BTC",
+            "base_coin": "APE",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "APE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "APE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BAND_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BAND",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "APT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "APT",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "WAVES_USDT",
+            "count_coin": "USDT",
+            "base_coin": "WAVES",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "1INCH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "1INCH",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "RUNE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RUNE",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AVAX_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AVAX",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "CSPR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "CSPR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "VTHO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "VTHO",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ONT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ONT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ATOM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ATOM",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "DOGE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DOGE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GALA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GALA",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "MULTI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MULTI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "GAL_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GAL",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AURORA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AURORA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "SPS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SPS",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "HIGH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "HIGH",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BAT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BAT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "KNC_BTC",
+            "count_coin": "BTC",
+            "base_coin": "KNC",
+            "price_precision": 9,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "KNC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KNC",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AXS_BTC",
+            "count_coin": "BTC",
+            "base_coin": "AXS",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "AXS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AXS",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "AGLD_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AGLD",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GARI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GARI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FTM_BTC",
+            "count_coin": "BTC",
+            "base_coin": "FTM",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "FTM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FTM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "QTUM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "QTUM",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MASK_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MASK",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "PLA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PLA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ZBC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ZBC",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OCEAN_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OCEAN",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "JASMY_USDT",
+            "count_coin": "USDT",
+            "base_coin": "JASMY",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OXT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "OXT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ETC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ETC",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "KRL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KRL",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "JOE_USDT",
+            "count_coin": "USDT",
+            "base_coin": "JOE",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "KSM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "KSM",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "FXS_BTC",
+            "count_coin": "BTC",
+            "base_coin": "FXS",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "FXS_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "FXS",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "AUDIO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AUDIO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ELON_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ELON",
+            "price_precision": 11,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AERGO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AERGO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POLS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "POLS",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ZED_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ZED",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AMP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "AMP",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RADAR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RADAR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "SUSHI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SUSHI",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BAL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BAL",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "BAT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BAT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ETHW_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ETHW",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "UMA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "UMA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ETH_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ETH",
+            "price_precision": 2,
+            "amount_precision": 4
+        },
+        {
+            "symbol": "UMA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "UMA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "PRQ_BTC",
+            "count_coin": "BTC",
+            "base_coin": "PRQ",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PRQ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PRQ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AUDIO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "AUDIO",
+            "price_precision": 9,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "AUDIO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AUDIO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RNDR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "RNDR",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "MINA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "MINA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "QUICK_USDT",
+            "count_coin": "USDT",
+            "base_coin": "QUICK",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "UNI_BTC",
+            "count_coin": "BTC",
+            "base_coin": "UNI",
+            "price_precision": 8,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "UNI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "UNI",
+            "price_precision": 4,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "BCH_BTC",
+            "count_coin": "BTC",
+            "base_coin": "BCH",
+            "price_precision": 7,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "BCH_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BCH",
+            "price_precision": 2,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "ZIL_BTC",
+            "count_coin": "BTC",
+            "base_coin": "ZIL",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ZIL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ZIL",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "THETA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "THETA",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ARPA_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ARPA",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ALGO_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ALGO",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "POLYX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "POLYX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MDT_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MDT",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "ADA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ADA",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PENDLE_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PENDLE",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GAL_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GAL",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "CSPR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "CSPR",
+            "price_precision": 10,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "CSPR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CSPR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "COTI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "COTI",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MXC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MXC",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "OOKI_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "OOKI",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EOS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "EOS",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "PYR_BTC",
+            "count_coin": "BTC",
+            "base_coin": "PYR",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "PYR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "PYR",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "ILV_USDT",
+            "count_coin": "USDT",
+            "base_coin": "ILV",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "ZRX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "ZRX",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BLZ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BLZ",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "RNDR_USDT",
+            "count_coin": "USDT",
+            "base_coin": "RNDR",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "AR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "AR",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "SLP_USDT",
+            "count_coin": "USDT",
+            "base_coin": "SLP",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LUNC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LUNC",
+            "price_precision": 8,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "LDO_BTC",
+            "count_coin": "BTC",
+            "base_coin": "LDO",
+            "price_precision": 8,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "LDO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "LDO",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "BNT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BNT",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "XLM_USDT",
+            "count_coin": "USDT",
+            "base_coin": "XLM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "MINA_USDT",
+            "count_coin": "USDT",
+            "base_coin": "MINA",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GLM_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GLM",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "DERC_USDT",
+            "count_coin": "USDT",
+            "base_coin": "DERC",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "PRQ_USDT",
+            "count_coin": "USDT",
+            "base_coin": "PRQ",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GMT_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GMT",
+            "price_precision": 5,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GMX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GMX",
+            "price_precision": 3,
+            "amount_precision": 2
+        },
+        {
+            "symbol": "CELR_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "CELR",
+            "price_precision": 6,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "EFI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "EFI",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "GODS_USDT",
+            "count_coin": "USDT",
+            "base_coin": "GODS",
+            "price_precision": 5,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "WEMIX_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "WEMIX",
+            "price_precision": 4,
+            "amount_precision": 1
+        },
+        {
+            "symbol": "GNO_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "GNO",
+            "price_precision": 3,
+            "amount_precision": 3
+        },
+        {
+            "symbol": "BTC_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "BTC",
+            "price_precision": 2,
+            "amount_precision": 5
+        },
+        {
+            "symbol": "IQ_USD",
+            "count_coin": "USD_Stable_Coin",
+            "base_coin": "IQ",
+            "price_precision": 7,
+            "amount_precision": 0
+        },
+        {
+            "symbol": "BIFI_USDT",
+            "count_coin": "USDT",
+            "base_coin": "BIFI",
+            "price_precision": 2,
+            "amount_precision": 3
+        }
+    ]
+}

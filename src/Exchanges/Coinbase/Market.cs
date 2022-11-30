@@ -1,5 +1,8 @@
 ﻿namespace CCXT.Simple.Exchanges.Coinbase
 {
+    /// <summary>
+    /// https://coinbase.com/api/v3/brokerage/products
+    /// </summary>
     public class Market
     {
         public string id { get; set; }

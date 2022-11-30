@@ -86,7 +86,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/symbols");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["data"].ToObject<JArray>();
@@ -245,7 +245,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/orderbook/level1?symbol=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -274,7 +274,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/market/allTickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -332,7 +332,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/market/allTickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -399,7 +399,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/market/allTickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -467,7 +467,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.kucoin.com/api/v1/market/allTickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 

@@ -37,6 +37,8 @@ namespace CCXT.Simple.Exchanges.Korbit
 
         public string ExchangeUrl { get; set; } = "https://api.korbit.co.kr";
 
+        public string ExchangeGqUrl { get; set; } = "https://ajax.korbit.co.kr";
+
         public bool Alive
         {
             get;
@@ -85,7 +87,7 @@ namespace CCXT.Simple.Exchanges.Korbit
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker/detailed/all");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -130,7 +132,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 states.exchange = ExchangeName;
 
-                var graphQLClient = new GraphQLHttpClient("https://ajax.korbit.co.kr/graphql", new SystemTextJsonSerializer());
+                var graphQLClient = new GraphQLHttpClient($"{ExchangeGqUrl}/graphql", new SystemTextJsonSerializer());
 
                 var graphQLRequest = new GraphQLRequest
                 {
@@ -191,7 +193,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker?currency_pair=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?currency_pair=" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -220,7 +222,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker/detailed/all");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -268,7 +270,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker/detailed/all");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -319,7 +321,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker/detailed/all");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -383,7 +385,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.korbit.co.kr/v1/ticker/detailed/all");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 

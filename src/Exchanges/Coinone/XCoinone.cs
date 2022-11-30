@@ -38,6 +38,7 @@ namespace CCXT.Simple.Exchanges.Coinone
         public string ExchangeName { get; set; } = "coinone";
 
         public string ExchangeUrl { get; set; } = "https://api.coinone.co.kr";
+        public string ExchangeUrlTb { get; set; } = "https://tb.coinone.co.kr";
 
         public bool Alive
         {
@@ -87,7 +88,7 @@ namespace CCXT.Simple.Exchanges.Coinone
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://tb.coinone.co.kr/api/v1/tradepair/");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/tradepair/");
                     var _jstring = await _response.Content.ReadAsStringAsync();
 
                     var _jobject = JObject.Parse(_jstring);
@@ -138,7 +139,7 @@ namespace CCXT.Simple.Exchanges.Coinone
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://tb.coinone.co.kr/api/v1/coin/");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/coin/");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["coins"].ToObject<JArray>();
@@ -188,7 +189,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.coinone.co.kr/ticker?currency=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/ticker?currency=" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -218,7 +219,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.coinone.co.kr/orderbook?currency=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/orderbook?currency=" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -258,7 +259,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.coinone.co.kr/public/v2/ticker_new/KRW");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/v2/ticker_new/KRW");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jdata = JsonConvert.DeserializeObject<COTickers>(_jstring);
 

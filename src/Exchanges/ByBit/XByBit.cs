@@ -90,7 +90,7 @@ namespace CCXT.Simple.Exchanges.Bybit
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bybit.com/v2/public/symbols");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["result"].ToObject<JArray>();
@@ -149,7 +149,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.bybit.com/v2/public/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<BookTickers>(_jstring);
 

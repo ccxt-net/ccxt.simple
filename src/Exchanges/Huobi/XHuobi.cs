@@ -87,7 +87,7 @@ namespace CCXT.Simple.Exchanges.Huobi
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/v1/common/symbols");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/common/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["data"].ToObject<JArray>();
@@ -143,7 +143,7 @@ namespace CCXT.Simple.Exchanges.Huobi
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/v2/reference/currencies");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/reference/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
@@ -271,7 +271,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/market/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/market/tickers");
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jstring = _tstring
                                         .Substring(9, _tstring.Length - 44)
@@ -339,7 +339,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/market/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/market/tickers");
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jstring = _tstring
                                         .Substring(9, _tstring.Length - 44)
@@ -406,7 +406,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.huobi.pro/market/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/market/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
                     var _jdata = _jobject["data"].ToObject<JArray>();

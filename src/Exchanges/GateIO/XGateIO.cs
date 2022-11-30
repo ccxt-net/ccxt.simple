@@ -81,7 +81,7 @@ namespace CCXT.Simple.Exchanges.GateIO
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/currency_pairs");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currency_pairs");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.Market>>(_jstring);
 
@@ -129,7 +129,7 @@ namespace CCXT.Simple.Exchanges.GateIO
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/currencies");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.Currency>>(_jstring);
 
@@ -203,7 +203,7 @@ namespace CCXT.Simple.Exchanges.GateIO
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring, mainXchg.JsonSettings);
 

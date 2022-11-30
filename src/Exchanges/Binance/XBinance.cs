@@ -109,7 +109,7 @@ namespace CCXT.Simple.Exchanges.Binance
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/price");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/price");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
@@ -164,7 +164,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 {
                     var _args = this.CreateSignature(_wc);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/sapi/v1/capital/config/getall?" + _args);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/sapi/v1/capital/config/getall?" + _args);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -277,7 +277,7 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr?symbol=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/24hr?symbol=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
 
                     var _jobject = JObject.Parse(_jstring);
@@ -302,7 +302,7 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -358,7 +358,7 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/bookTicker");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/bookTicker");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _tickers = JsonConvert.DeserializeObject<List<BookTicker>>(_jstring);
 
@@ -416,7 +416,7 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -482,7 +482,7 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 

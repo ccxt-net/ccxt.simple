@@ -38,7 +38,8 @@ namespace CCXT.Simple.Exchanges.Coinbase
         }
         
         public string ExchangeName { get; set; } = "coinbase";
-        public string ExchangeUrl { get; set; } = "https://api.pro.coinbase.com";
+        public string ExchangeUrl { get; set; } = "https://api.exchange.coinbase.com";
+        public string ExchangeUrlPro { get; set; } = "https://api.pro.coinbase.com";
 
         public bool Alive
         {
@@ -89,7 +90,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                 {
                     _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.pro.coinbase.com/products");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/products");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Coinbase.Market>>(_jstring);
 
@@ -138,9 +139,10 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
                 using (var _wc = new HttpClient())
                 {
-                    this.CreateSignature(_wc);
+                    var _endpoint = "/coinbase-accounts";
+                    this.CreateSignature(_wc, "GET", _endpoint);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.exchange.coinbase.com/coinbase-accounts");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}{_endpoint}");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JArray.Parse(_jstring);
 
@@ -192,11 +194,11 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
         }
 
-        private void CreateSignature(HttpClient client)
+        private void CreateSignature(HttpClient client, string method, string endpoint)
         {
             var _timestamp = CUnixTime.Now;
 
-            var _post_data = $"{_timestamp}GET/coinbase-accounts";
+            var _post_data = $"{_timestamp}{method}{endpoint}";
             var _signature = Convert.ToBase64String(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_post_data)));
 
             client.DefaultRequestHeaders.Add("USER-AGENT", mainXchg.UserAgent);
@@ -217,13 +219,11 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
             try
             {
-                using (var _request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri("https://api.pro.coinbase.com"), $"/products/{_ticker.symbol}/ticker")))
+                using (var _wc = new HttpClient())
                 {
-                    _request.Headers.Add("User-Agent", mainXchg.UserAgent);
+                    _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
-                    using var _client = new HttpClient();
-
-                    var _response = await _client.SendAsync(_request);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlPro}/products/{_ticker.symbol}/ticker");
                     if (_response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         var _tstring = await _response.Content.ReadAsStringAsync();

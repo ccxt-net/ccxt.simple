@@ -42,6 +42,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         public string ExchangeName { get; set; } = "upbit";
 
         public string ExchangeUrl { get; set; } = "https://api.upbit.com";
+        public string ExchangeUrlCc { get; set; } = "https://ccx.upbit.com";
 
         public bool Alive
         {
@@ -91,7 +92,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.upbit.com/v1/market/all?isDetails=true");
+                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/v1/market/all?isDetails=true");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -147,7 +148,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _b_response = await _wc.GetAsync("https://ccx.upbit.com/api/v1/status/wallet");
+                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JArray.Parse(_jstring);
 
@@ -210,7 +211,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + symbol);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarket = JsonConvert.DeserializeObject<Market>(_jstring);
 
@@ -240,7 +241,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
@@ -293,7 +294,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
@@ -356,7 +357,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 

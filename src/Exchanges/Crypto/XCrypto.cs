@@ -81,31 +81,34 @@ namespace CCXT.Simple.Exchanges.Crypto
 
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.crypto.com/v2/public/get-instruments");
-                    var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
-
-                    _queue_info.symbols.Clear();
-
-                    foreach (var s in _jarray.result.instruments)
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/get-instruments");
+                    if (_response.IsSuccessStatusCode)
                     {
-                        s.quote_currency = s.quote_currency.Split('_')[0].Split(' ')[0];
+                        var _jstring = await _response.Content.ReadAsStringAsync();
+                        var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
 
-                        if (s.quote_currency == "USDT" || s.quote_currency == "USD" || s.quote_currency == "BTC")
+                        _queue_info.symbols.Clear();
+
+                        foreach (var s in _jarray.result.instruments)
                         {
-                            _queue_info.symbols.Add(new QueueSymbol
+                            s.quote_currency = s.quote_currency.Split('_')[0].Split(' ')[0];
+
+                            if (s.quote_currency == "USDT" || s.quote_currency == "USD" || s.quote_currency == "BTC")
                             {
-                                symbol = s.instrument_name,
-                                compName = s.base_currency,
-                                baseName = s.base_currency,
-                                quoteName = s.quote_currency,
-                                tickSize = s.min_quantity
-                            });
+                                _queue_info.symbols.Add(new QueueSymbol
+                                {
+                                    symbol = s.instrument_name,
+                                    compName = s.base_currency,
+                                    baseName = s.base_currency,
+                                    quoteName = s.quote_currency,
+                                    tickSize = s.min_quantity
+                                });
+                            }
                         }
+
+                        _result = true;
                     }
                 }
-
-                _result = true;
             }
             catch (Exception ex)
             {
@@ -127,7 +130,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync("https://api.crypto.com/v2/public/get-ticker");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/get-ticker");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jticker = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 

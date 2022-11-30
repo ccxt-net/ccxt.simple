@@ -14,7 +14,7 @@ namespace CCXT.Simple.Exchanges.Okex
         public string instId { get; set; }
         public string instType { get; set; }
         public string lever { get; set; }
-        public long listTime { get; set; }
+        public string listTime { get; set; }
         public decimal lotSz { get; set; }
         public decimal maxIcebergSz { get; set; }
         public decimal maxLmtSz { get; set; }
