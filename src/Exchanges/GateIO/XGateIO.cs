@@ -1,10 +1,8 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
-using System;
-using System.Security.Claims;
 
-namespace CCXT.Simple.Exchanges.Gate
+namespace CCXT.Simple.Exchanges.GateIO
 {
     public class XGateIO : IExchange
     {
@@ -85,7 +83,7 @@ namespace CCXT.Simple.Exchanges.Gate
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/currency_pairs");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.Market>>(_jstring);
 
                     _queue_info.symbols.Clear();
 
@@ -133,7 +131,7 @@ namespace CCXT.Simple.Exchanges.Gate
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.Currency>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.Currency>>(_jstring);
 
                     foreach (var c in _jarray)
                     {
@@ -197,12 +195,6 @@ namespace CCXT.Simple.Exchanges.Gate
             }
         }
 
-        private JsonSerializerSettings json_settings = new JsonSerializerSettings
-        {
-            NullValueHandling = NullValueHandling.Ignore,
-            MissingMemberHandling = MissingMemberHandling.Ignore
-        };
-
         public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
@@ -213,7 +205,7 @@ namespace CCXT.Simple.Exchanges.Gate
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.gateio.ws/api/v4/spot/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Gate.GTTicker>>(_jstring, json_settings);
+                    var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring, mainXchg.JsonSettings);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {

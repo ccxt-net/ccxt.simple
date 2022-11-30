@@ -1,6 +1,6 @@
 ﻿namespace CCXT.Simple.Exchanges.Crypto
 {
-    public class Instrument
+    public class MarketInstrument
     {
         public string instrument_name { get; set; }
         public string quote_currency { get; set; }
@@ -16,9 +16,10 @@
         public decimal min_price { get; set; }
         public long last_update_date { get; set; }
     }
-    public class Result
+
+    public class MarketResult
     {
-        public List<Instrument> instruments { get; set; }
+        public List<MarketInstrument> instruments { get; set; }
     }
 
     public class Market
@@ -26,6 +27,6 @@
         public int id { get; set; }
         public string method { get; set; }
         public int code { get; set; }
-        public Result result { get; set; }
+        public MarketResult result { get; set; }
     }
 }

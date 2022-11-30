@@ -86,25 +86,24 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/public/instruments?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["data"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
                     _queue_info.symbols.Clear();
 
-                    foreach (var s in _jarray)
+                    foreach (var s in _jarray.data)
                     {
-                        var _base = s.Value<string>("baseCcy");
-                        var _quote = s.Value<string>("quoteCcy");
+                        var _base = s.baseCcy;
+                        var _quote = s.quoteCcy;
 
                         if (_quote == "USDT" || _quote == "BTC")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
-                                symbol = s.Value<string>("instId"),
+                                symbol = s.instId,
                                 compName = _base,
                                 baseName = _base,
                                 quoteName = _quote,
-                                tickSize = s.Value<decimal>("tickSz")
+                                tickSize = s.tickSz
                             });
                         }
                     }
@@ -140,7 +139,7 @@ namespace CCXT.Simple.Exchanges.Okex
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/asset/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
                     foreach (var c in _jarray.data)
                     {
@@ -249,10 +248,11 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/market/ticker?instId=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
-                    var _jdata = _jobject["data"].ToObject<JArray>();
-                    _result = _jobject[0].Value<decimal>("last");
+                    var _jitem = _jtickers.data.SingleOrDefault(x => x.instId == symbol);
+                    if (_jitem != null)
+                        _result = _jitem.last;
                 }
             }
             catch (Exception ex)
@@ -278,9 +278,7 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-
-                    var _jdata = _jobject["data"].ToObject<JArray>();
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -288,10 +286,10 @@ namespace CCXT.Simple.Exchanges.Okex
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jdata.SingleOrDefault(x => x["instId"].ToString() == _ticker.symbol);
+                        var _jitem = _jtickers.data.SingleOrDefault(x => x.instId == _ticker.symbol);
                         if (_jitem != null)
                         {
-                            var _last_price = _jitem.Value<decimal>("last");
+                            var _last_price = _jitem.last;
                             {
                                 if (_ticker.quoteName == "USDT")
                                 {
@@ -336,9 +334,7 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-
-                    var _jdata = _jobject["data"].ToObject<JArray>();
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -346,13 +342,13 @@ namespace CCXT.Simple.Exchanges.Okex
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jdata.SingleOrDefault(x => x["instId"].ToString() == _ticker.symbol);
+                        var _jitem = _jtickers.data.SingleOrDefault(x => x.instId == _ticker.symbol);
                         if (_jitem != null)
                         {
-                            var _last_price = _jitem.Value<decimal>("last");
+                            var _last_price = _jitem.last;
                             {
-                                var _ask_price = _jitem.Value<decimal>("askPx");
-                                var _bid_price = _jitem.Value<decimal>("bidPx");
+                                var _ask_price = _jitem.askPx;
+                                var _bid_price = _jitem.bidPx;
 
                                 if (_ticker.quoteName == "USDT")
                                 {
@@ -369,8 +365,8 @@ namespace CCXT.Simple.Exchanges.Okex
                                     _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
                                 }
 
-                                _ticker.askQty = _jitem.Value<decimal>("askSz");
-                                _ticker.bidQty = _jitem.Value<decimal>("bidSz");
+                                _ticker.askQty = _jitem.askSz;
+                                _ticker.bidQty = _jitem.bidSz;
                             }
                         }
                         else
@@ -406,9 +402,7 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-
-                    var _jdata = _jobject["data"].ToObject<JArray>();
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -416,10 +410,10 @@ namespace CCXT.Simple.Exchanges.Okex
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jdata.SingleOrDefault(x => x["instId"].ToString() == _ticker.symbol);
+                        var _jitem = _jtickers.data.SingleOrDefault(x => x.instId == _ticker.symbol);
                         if (_jitem != null)
                         {
-                            var _volume = _jitem.Value<decimal>("volCcy24h");
+                            var _volume = _jitem.volCcy24h;
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -474,9 +468,7 @@ namespace CCXT.Simple.Exchanges.Okex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://www.okex.com/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-
-                    var _jdata = _jobject["data"].ToObject<JArray>();
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -484,13 +476,13 @@ namespace CCXT.Simple.Exchanges.Okex
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jdata.SingleOrDefault(x => x["instId"].ToString() == _ticker.symbol);
+                        var _jitem = _jtickers.data.SingleOrDefault(x => x.instId == _ticker.symbol);
                         if (_jitem != null)
                         {
-                            var _last_price = _jitem.Value<decimal>("last");
+                            var _last_price = _jitem.last;
                             {
-                                var _ask_price = _jitem.Value<decimal>("askPx");
-                                var _bid_price = _jitem.Value<decimal>("bidPx");
+                                var _ask_price = _jitem.askPx;
+                                var _bid_price = _jitem.bidPx;
 
                                 if (_ticker.quoteName == "USDT")
                                 {
@@ -507,11 +499,11 @@ namespace CCXT.Simple.Exchanges.Okex
                                     _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
                                 }
 
-                                _ticker.askQty = _jitem.Value<decimal>("askSz");
-                                _ticker.bidQty = _jitem.Value<decimal>("bidSz");
+                                _ticker.askQty = _jitem.askSz;
+                                _ticker.bidQty = _jitem.bidSz;
                             }
 
-                            var _volume = _jitem.Value<decimal>("volCcy24h");
+                            var _volume = _jitem.volCcy24h;
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;

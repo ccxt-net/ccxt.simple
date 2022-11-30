@@ -304,7 +304,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _tickers = JsonConvert.DeserializeObject<List<Ticker24h>>(_jstring);
+                    var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -312,7 +312,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jticker = _tickers.Where(x => x.symbol == _ticker.symbol).FirstOrDefault();
+                        var _jticker = _jtickers.Where(x => x.symbol == _ticker.symbol).FirstOrDefault();
                         if (_jticker != null)
                         {
                             if (_ticker.quoteName == "USDT" || _ticker.quoteName == "BUSD")
@@ -417,18 +417,8 @@ namespace CCXT.Simple.Exchanges.Binance
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
-                    var _tstring = await _response.Content.ReadAsStringAsync();
-                    var _jstring = _tstring
-                                        .Substring(1, _tstring.Length - 2)
-                                        .Replace("\"symbol\":\"", "")
-                                        .Replace("\",\"priceChange\"", ":{priceChange\"")
-                                        .Replace("\":", ":")
-                                        .Replace("\",\"", "\",")
-                                        .Replace(",\"", ",")
-                                        .Replace("},{", "},")
-                                        + "}";
-
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -436,9 +426,10 @@ namespace CCXT.Simple.Exchanges.Binance
                         if (_ticker.symbol == "X")
                             continue;
 
-                        if (_jobject.ContainsKey(_ticker.symbol))
+                        var _jitem = _jtickers.SingleOrDefault(x => x.symbol == _ticker.symbol);
+                        if (_jitem != null)
                         {
-                            var _volume = _jobject[_ticker.symbol].Value<decimal>("quoteVolume");
+                            var _volume = _jitem.quoteVolume;
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -493,7 +484,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.binance.com/api/v3/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _tickers = JsonConvert.DeserializeObject<List<Ticker24h>>(_jstring);
+                    var _jtickers = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -501,7 +492,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jticker = _tickers.Where(x => x.symbol == _ticker.symbol).FirstOrDefault();
+                        var _jticker = _jtickers.Where(x => x.symbol == _ticker.symbol).FirstOrDefault();
                         if (_jticker != null)
                         {
                             var _last_price = _jticker.lastPrice;

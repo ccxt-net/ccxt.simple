@@ -483,11 +483,11 @@ namespace CCXT.Simple.Exchanges.Bithumb
             return new FormUrlEncodedContent(args);
         }
         
-        private (bool success, string message) ParsingResponse(string json_content)
+        private (bool success, string message) ParsingResponse(string jstring)
         {
             var _result = (success: false, message: "");
 
-            var _json_result = JsonConvert.DeserializeObject<JToken>(json_content);
+            var _json_result = JsonConvert.DeserializeObject<JToken>(jstring);
 
             var _json_status = _json_result.SelectToken("status");
             if (_json_status != null)
@@ -531,12 +531,12 @@ namespace CCXT.Simple.Exchanges.Bithumb
                     var _response = await _client.PostAsync($"{ExchangeUrl}{_endpoint}", _content);
                     if (_response.StatusCode == HttpStatusCode.OK)
                     {
-                        var _json_content = await _response.Content.ReadAsStringAsync();
+                        var _jstring = await _response.Content.ReadAsStringAsync();
                         
-                        var _json_result = this.ParsingResponse(_json_content);
+                        var _json_result = this.ParsingResponse(_jstring);
                         if (_json_result.success)
                         {
-                            var _json_data = JsonConvert.DeserializeObject<PlaceOrders>(_json_content);
+                            var _json_data = JsonConvert.DeserializeObject<PlaceOrders>(_jstring);
                             if (_json_data.success)
                             {
                                 _result.orderId = _json_data.orderId;

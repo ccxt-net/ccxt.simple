@@ -1,4 +1,4 @@
-﻿namespace CCXT.Simple.Exchanges.Gate
+﻿namespace CCXT.Simple.Exchanges.GateIO
 {
     public class Market
     {

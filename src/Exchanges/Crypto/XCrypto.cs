@@ -1,6 +1,5 @@
 ﻿using CCXT.Simple.Data;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace CCXT.Simple.Exchanges.Crypto
 {
@@ -84,7 +83,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.crypto.com/v2/public/get-instruments");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<Exchanges.Crypto.Market>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
 
                     _queue_info.symbols.Clear();
 
@@ -130,11 +129,11 @@ namespace CCXT.Simple.Exchanges.Crypto
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.crypto.com/v2/public/get-ticker");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jticker = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
-                    if (_jobject.Value<int>("code") == 0)
+                    if (_jticker.code == 0)
                     {
-                        var _jdata = _jobject["result"]["data"].ToObject<JArray>();
+                        var _jdata = _jticker.result.data;
 
                         for (var i = 0; i < tickers.items.Count; i++)
                         {
@@ -142,13 +141,13 @@ namespace CCXT.Simple.Exchanges.Crypto
                             if (_ticker.symbol == "X")
                                 continue;
 
-                            var _jitem = _jdata.SingleOrDefault(x => x["i"].ToString() == _ticker.symbol);
+                            var _jitem = _jdata.SingleOrDefault(x => x.i == _ticker.symbol);
                             if (_jitem != null)
                             {
-                                var _last_price = _jitem.Value<decimal>("a");
+                                var _last_price = _jitem.a;
                                 {
-                                    var _ask_price = _jitem.Value<decimal>("k");
-                                    var _bid_price = _jitem.Value<decimal>("b");
+                                    var _ask_price = _jitem.k;
+                                    var _bid_price = _jitem.b;
 
                                     if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
                                     {
@@ -164,7 +163,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                                     }
                                 }
 
-                                var _volume = _jitem.Value<decimal>("vv");      // The total 24h traded volume value (in USD)
+                                var _volume = _jitem.vv;      // The total 24h traded volume value (in USD)
                                 {
                                     var _prev_volume24h = _ticker.previous24h;
                                     var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -172,7 +171,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                                     _volume *= tickers.exchgRate;
                                     _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
-                                    var _curr_timestamp = _jitem.Value<long>("t");
+                                    var _curr_timestamp = _jitem.t;
                                     if (_curr_timestamp > _next_timestamp)
                                     {
                                         _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);

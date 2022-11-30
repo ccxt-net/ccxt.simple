@@ -93,7 +93,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     using HttpResponseMessage _b_response = await _wc.GetAsync("https://api.upbit.com/v1/market/all?isDetails=true");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
                     _queue_info.symbols.Clear();
 
@@ -211,13 +211,10 @@ namespace CCXT.Simple.Exchanges.Upbit
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + symbol);
-                    var _ticker = await _response.Content.ReadAsStringAsync();
-                    var _jstring = _ticker.Substring(1, _ticker.Length - 2);
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jmarket = JsonConvert.DeserializeObject<Market>(_jstring);
 
-                    var _jobject = JObject.Parse(_jstring);
-                    _result = _jobject.Value<decimal>("trade_price");
-
-                    Debug.Assert(_result != 0.0m);
+                    _result = _jmarket.trade_price;
                 }
             }
             catch (Exception ex)
@@ -244,13 +241,8 @@ namespace CCXT.Simple.Exchanges.Upbit
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
-                    var _tstring = await _response.Content.ReadAsStringAsync();
-                    var _j_array = _tstring
-                                        .Substring(1, _tstring.Length - 2)
-                                        .Replace("},{", "}/{")
-                                        .Split('/');
-
-                    var _offset = 0;
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -258,10 +250,11 @@ namespace CCXT.Simple.Exchanges.Upbit
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jobject = JObject.Parse(_j_array[_offset++]);
-
-                        var _price = _jobject.Value<decimal>("trade_price");
+                        var _jitem = _jmarkets.SingleOrDefault(x => x.market == _ticker.symbol);
+                        if (_jitem != null)
                         {
+                            var _price = _jitem.trade_price;
+
                             if (_ticker.symbol == "KRW-BTC")
                                 this.mainXchg.OnKrwPriceEvent(_price);
 
@@ -301,13 +294,8 @@ namespace CCXT.Simple.Exchanges.Upbit
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
-                    var _tstring = await _response.Content.ReadAsStringAsync();
-                    var _j_array = _tstring
-                                        .Substring(1, _tstring.Length - 2)
-                                        .Replace("},{", "}/{")
-                                        .Split('/');
-
-                    var _offset = 0;
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -315,11 +303,12 @@ namespace CCXT.Simple.Exchanges.Upbit
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jobject = JObject.Parse(_j_array[_offset++]);
-
-                        // UTC 0시 부터 누적 거래액
-                        var _volume = _jobject.Value<decimal>("acc_trade_price");
+                        var _jitem = _jmarkets.SingleOrDefault(x => x.market == _ticker.symbol);
+                        if (_jitem != null)
                         {
+                            // UTC 0시 부터 누적 거래액
+                            var _volume = _jitem.acc_trade_price;
+
                             var _prev_volume24h = _ticker.previous24h;
                             var _next_timestamp = _ticker.timestamp + 60 * 1000;
 
@@ -330,7 +319,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                             _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
-                            var _curr_timestamp = _jobject.Value<long>("timestamp");
+                            var _curr_timestamp = _jitem.timestamp;
                             if (_curr_timestamp > _next_timestamp)
                             {
                                 _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);
@@ -368,23 +357,18 @@ namespace CCXT.Simple.Exchanges.Upbit
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.upbit.com/v1/ticker?markets=" + _request);
-                    var _tickers = await _response.Content.ReadAsStringAsync();
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
-                    var _data = _tickers
-                                    .Substring(1, _tickers.Length - 2)
-                                    .Replace("},{", "}/{")
-                                    .Split('/');
-
-                    foreach (var d in _data)
+                    foreach (var m in _jmarkets)
                     {
-                        var _jobject = JObject.Parse(d);
-                        var _coin_name = _jobject.Value<string>("market");
+                        var _coin_name = m.market;
 
                         var _ticker = tickers.items.Find(x => x.symbol == _coin_name);
                         if (_ticker == null)
                             continue;
 
-                        var _price = _jobject.Value<decimal>("trade_price");
+                        var _price = m.trade_price;
                         {
                             if (_ticker.quoteName == "KRW")
                             {
@@ -404,7 +388,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                         }
 
                         // UTC 0시 부터 누적 거래액
-                        var _volume = _jobject.Value<decimal>("acc_trade_price");
+                        var _volume = m.acc_trade_price;
                         {
                             var _prev_volume24h = _ticker.previous24h;
                             var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -416,7 +400,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                             _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
-                            var _curr_timestamp = _jobject.Value<long>("timestamp");
+                            var _curr_timestamp = m.timestamp;
                             if (_curr_timestamp > _next_timestamp)
                             {
                                 _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);

@@ -1,4 +1,5 @@
 ﻿using CCXT.Simple.Data;
+using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 
@@ -64,6 +65,12 @@ namespace CCXT.Simple.Exchanges
             get;
             set;
         }
+
+        public JsonSerializerSettings JsonSettings = new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore
+        };
 
         public int ApiCallDelaySeconds
         {

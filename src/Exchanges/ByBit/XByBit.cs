@@ -150,8 +150,8 @@ namespace CCXT.Simple.Exchanges.Bybit
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync("https://api.bybit.com/v2/public/tickers");
-                    var _tstring = await _response.Content.ReadAsStringAsync();
-                    var _tickers = JsonConvert.DeserializeObject<BookTickers>(_tstring);
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jtickers = JsonConvert.DeserializeObject<BookTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -159,7 +159,7 @@ namespace CCXT.Simple.Exchanges.Bybit
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jobject = _tickers.result.Find(x => x.symbol == _ticker.symbol);
+                        var _jobject = _jtickers.result.Find(x => x.symbol == _ticker.symbol);
                         if (_jobject != null)
                         {
                             if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
