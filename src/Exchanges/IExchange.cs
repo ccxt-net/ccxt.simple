@@ -17,7 +17,7 @@ namespace CCXT.Simple.Exchanges
         string SecretKey { get; set; }
 
         ValueTask<bool> VerifyCoinNames();
-        ValueTask CheckState(WStates states);
+        ValueTask CheckState(Tickers tickers);
 
         ValueTask<bool> GetBookTickers(Tickers tickers);
         ValueTask<bool> GetMarkets(Tickers tickers);

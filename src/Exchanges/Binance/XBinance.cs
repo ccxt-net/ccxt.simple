@@ -154,11 +154,11 @@ namespace CCXT.Simple.Exchanges.Binance
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -170,7 +170,7 @@ namespace CCXT.Simple.Exchanges.Binance
 
                     foreach (var c in _jarray)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == c.coin);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.coin);
                         if (_state == null)
                         {
                             _state = new WState
@@ -182,7 +182,7 @@ namespace CCXT.Simple.Exchanges.Binance
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

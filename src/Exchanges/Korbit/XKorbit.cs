@@ -126,12 +126,10 @@ namespace CCXT.Simple.Exchanges.Korbit
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
-
                 var graphQLClient = new GraphQLHttpClient($"{ExchangeGqUrl}/graphql", new SystemTextJsonSerializer());
 
                 var graphQLRequest = new GraphQLRequest
@@ -155,16 +153,18 @@ namespace CCXT.Simple.Exchanges.Korbit
                 {
                     var _currency = c.acronym.ToUpper();
 
-                    var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                    var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                     if (_state == null)
                     {
-                        states.states.Add(new WState
+                        _state = new WState
                         {
                             currency = _currency,
                             active = true,
                             deposit = c.services.deposit,
                             withdraw = c.services.withdrawal
-                        });
+                        };
+
+                        tickers.states.Add(_state);
                     }
                     else
                     {

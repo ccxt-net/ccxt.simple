@@ -166,11 +166,11 @@ namespace CCXT.Simple.Exchanges.Kucoin
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -182,7 +182,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                     foreach (var c in _jarray.data)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
@@ -194,7 +194,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

@@ -203,7 +203,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             return _result;
         }
 
-        ValueTask IExchange.CheckState(WStates states)
+        ValueTask IExchange.CheckState(Tickers tickers)
         {
             throw new NotImplementedException();
         }

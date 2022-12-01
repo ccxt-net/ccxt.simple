@@ -135,11 +135,11 @@ namespace CCXT.Simple.Exchanges.Huobi
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -149,7 +149,7 @@ namespace CCXT.Simple.Exchanges.Huobi
 
                     foreach (var c in _jarray.data)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
@@ -161,7 +161,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

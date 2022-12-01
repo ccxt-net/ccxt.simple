@@ -10,6 +10,7 @@
         {
             this.exchange = exchange;
             this.items = (new Ticker[no_coins]).ToList();
+            this.states = new List<WState>();
         }
 
         public Tickers(string exchange, List<QueueSymbol> symbols)
@@ -71,6 +72,12 @@
         }
 
         public List<Ticker> items
+        {
+            get;
+            set;
+        }
+
+        public List<WState> states
         {
             get;
             set;

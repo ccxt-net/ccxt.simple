@@ -156,12 +156,10 @@ namespace CCXT.Simple.Exchanges.Bithumb
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
@@ -174,16 +172,18 @@ namespace CCXT.Simple.Exchanges.Bithumb
                     {
                         var _currency = s.Name;
 
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
                         {
-                            states.states.Add(new WState
+                            _state = new WState
                             {
                                 currency = _currency,
                                 active = true,
                                 deposit = s.Value.Value<int>("deposit_status") > 0,
                                 withdraw = s.Value.Value<int>("withdrawal_status") > 0
-                            });
+                            };
+
+                            tickers.states.Add(_state);
                         }
                         else
                         {

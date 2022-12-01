@@ -121,12 +121,10 @@ namespace CCXT.Simple.Exchanges.GateIO
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
@@ -135,7 +133,7 @@ namespace CCXT.Simple.Exchanges.GateIO
 
                     foreach (var c in _jarray)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
@@ -147,7 +145,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

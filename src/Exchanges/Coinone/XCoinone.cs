@@ -131,12 +131,10 @@ namespace CCXT.Simple.Exchanges.Coinone
         /// </summary>
         /// <param name="states"></param>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/coin/");
@@ -148,16 +146,18 @@ namespace CCXT.Simple.Exchanges.Coinone
                     {
                         var _currency = s.Value<string>("symbol");
 
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
                         {
-                            states.states.Add(new WState
+                            _state = new WState
                             {
                                 currency = _currency,
                                 active = s.Value<bool>("is_activate"),
                                 deposit = s.Value<bool>("is_deposit"),
                                 withdraw = s.Value<bool>("is_withdraw")
-                            });
+                            };
+
+                            tickers.states.Add(_state);
                         }
                         else
                         {
@@ -249,9 +249,8 @@ namespace CCXT.Simple.Exchanges.Coinone
         ///
         /// </summary>
         /// <param name="tickers"></param>
-        /// <param name="wstates"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetMarkets(Data.Tickers tickers, WStates wstates)
+        public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
 
@@ -314,22 +313,22 @@ namespace CCXT.Simple.Exchanges.Coinone
             return _result;
         }
 
-        ValueTask<bool> IExchange.GetBookTickers(Data.Tickers tickers)
+        ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetMarkets(Data.Tickers tickers)
+        ValueTask<bool> IExchange.GetMarkets(Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetTickers(Data.Tickers tickers)
+        ValueTask<bool> IExchange.GetTickers(Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetVolumes(Data.Tickers tickers)
+        ValueTask<bool> IExchange.GetVolumes(Tickers tickers)
         {
             throw new NotImplementedException();
         }

@@ -129,13 +129,13 @@ namespace CCXT.Simple.Exchanges.Coinbase
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> CheckState(WStates states)
+        public async ValueTask<bool> CheckState(Tickers tickers)
         {
             var _result = false;
 
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -150,16 +150,18 @@ namespace CCXT.Simple.Exchanges.Coinbase
                     {
                         var _currency = s.Value<string>("currency");
 
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
                         {
-                            states.states.Add(new WState
+                            _state = new WState
                             {
                                 currency = _currency,
                                 active = s.Value<bool>("active"),
                                 deposit = true,
                                 withdraw = true
-                            });
+                            };
+
+                            tickers.states.Add(_state);
                         }
                         else
                         {
@@ -281,7 +283,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             return _result;
         }
 
-        ValueTask IExchange.CheckState(WStates states)
+        ValueTask IExchange.CheckState(Tickers tickers)
         {
             throw new NotImplementedException();
         }

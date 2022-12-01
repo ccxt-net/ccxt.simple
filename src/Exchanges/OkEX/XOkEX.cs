@@ -127,12 +127,10 @@ namespace CCXT.Simple.Exchanges.Okex
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
-
                 using (var _wc = new HttpClient())
                 {
                     this.CreateSignature(_wc);
@@ -145,7 +143,7 @@ namespace CCXT.Simple.Exchanges.Okex
                     {
                         var _currency = c.ccy;
 
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
                         {
                             _state = new WState
@@ -157,7 +155,7 @@ namespace CCXT.Simple.Exchanges.Okex
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

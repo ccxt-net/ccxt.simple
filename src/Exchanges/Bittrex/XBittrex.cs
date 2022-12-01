@@ -116,11 +116,11 @@ namespace CCXT.Simple.Exchanges.Bittrex
             return _result;
         }
 
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -130,7 +130,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
                     foreach (var c in _jarray)
                     {
-                        var _state = states.states.SingleOrDefault(x => x.currency == c.symbol);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.symbol);
                         if (_state == null)
                         {
                             _state = new WState
@@ -142,7 +142,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_state);
+                            tickers.states.Add(_state);
                         }
                         else
                         {

@@ -140,11 +140,11 @@ namespace CCXT.Simple.Exchanges.Upbit
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(WStates states)
+        public async ValueTask CheckState(Tickers tickers)
         {
             try
             {
-                states.exchange = ExchangeName;
+                
 
                 using (var _wc = new HttpClient())
                 {
@@ -167,10 +167,10 @@ namespace CCXT.Simple.Exchanges.Upbit
                         var _deposit = _wallet_state == "working" || _wallet_state == "deposit_only";
                         var _withdraw = _wallet_state == "working" || _wallet_state == "withdraw_only";
 
-                        var _state = states.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
                         {
-                            var _wstate = new WState
+                            _state = new WState
                             {
                                 currency = _currency,
                                 active = _active,
@@ -186,7 +186,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                                 networks = new List<WNetwork>()
                             };
 
-                            states.states.Add(_wstate);
+                            tickers.states.Add(_state);
                         }
                     }
                 }
