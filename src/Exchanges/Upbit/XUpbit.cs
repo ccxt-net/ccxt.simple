@@ -1,6 +1,7 @@
 ﻿using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Diagnostics;
 
 namespace CCXT.Simple.Exchanges.Upbit
@@ -44,35 +45,17 @@ namespace CCXT.Simple.Exchanges.Upbit
         public string ExchangeUrl { get; set; } = "https://api.upbit.com";
         public string ExchangeUrlCc { get; set; } = "https://ccx.upbit.com";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -140,12 +123,12 @@ namespace CCXT.Simple.Exchanges.Upbit
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
-                
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
@@ -173,8 +156,8 @@ namespace CCXT.Simple.Exchanges.Upbit
                             _state = new WState
                             {
                                 currency = _currency,
-                                active = _active,
 
+                                active = _active,
                                 deposit = _deposit,
                                 withdraw = _withdraw,
 
@@ -188,7 +171,26 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                             tickers.states.Add(_state);
                         }
+                        else
+                        {
+                            _state.active = _active;
+                            _state.deposit = _deposit;
+                            _state.withdraw = _withdraw;
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
+                        }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 2316);
@@ -197,6 +199,8 @@ namespace CCXT.Simple.Exchanges.Upbit
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 2317);
             }
+
+            return _result;
         }
 
         /// <summary>

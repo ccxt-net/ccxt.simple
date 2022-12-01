@@ -33,35 +33,17 @@ namespace CCXT.Simple.Exchanges.GateIO
 
         public string ExchangeUrl { get; set; } = "https://api.gateio.ws";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -121,8 +103,10 @@ namespace CCXT.Simple.Exchanges.GateIO
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
                 using (var _wc = new HttpClient())
@@ -154,6 +138,17 @@ namespace CCXT.Simple.Exchanges.GateIO
                             _state.withdraw = !c.withdraw_disabled;
                         }
 
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
+                        }
+
                         var _name = c.currency + "-" + c.chain;
 
                         var _network = _state.networks.SingleOrDefault(x => x.name == _name);
@@ -183,6 +178,8 @@ namespace CCXT.Simple.Exchanges.GateIO
                             _network.withdraw = !c.withdraw_disabled;
                         }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1806);
@@ -191,6 +188,8 @@ namespace CCXT.Simple.Exchanges.GateIO
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 1807);
             }
+
+            return _result;
         }
 
         public async ValueTask<bool> GetMarkets(Tickers tickers)

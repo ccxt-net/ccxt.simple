@@ -48,7 +48,7 @@ namespace CCXT.Simple.Exchanges.Binance
 
             this.ApiKey = apiKey;
             this.SecretKey = secretKey;
-            this.PassPhrase= passPhrase;
+            this.PassPhrase = passPhrase;
         }
 
         public Exchange mainXchg
@@ -61,35 +61,17 @@ namespace CCXT.Simple.Exchanges.Binance
 
         public string ExchangeUrl { get; set; } = "https://api.binance.com";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -154,12 +136,12 @@ namespace CCXT.Simple.Exchanges.Binance
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
-                
-
                 using (var _wc = new HttpClient())
                 {
                     var _args = this.CreateSignature(_wc);
@@ -187,8 +169,19 @@ namespace CCXT.Simple.Exchanges.Binance
                         else
                         {
                             _state.active = c.trading;
-                            _state.deposit= c.depositAllEnable;
+                            _state.deposit = c.depositAllEnable;
                             _state.withdraw = c.withdrawAllEnable;
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
                         }
 
                         foreach (var n in c.networkList)
@@ -228,6 +221,8 @@ namespace CCXT.Simple.Exchanges.Binance
                             }
                         }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1116);
@@ -236,6 +231,8 @@ namespace CCXT.Simple.Exchanges.Binance
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 1117);
             }
+
+            return _result;
         }
 
         private HMACSHA256 __encryptor = null;
@@ -440,7 +437,7 @@ namespace CCXT.Simple.Exchanges.Binance
                                     _volume *= mainXchg.btc_krw_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
-                            
+
                                 var _curr_timestamp = CUnixTime.NowMilli;
                                 if (_curr_timestamp > _next_timestamp)
                                 {

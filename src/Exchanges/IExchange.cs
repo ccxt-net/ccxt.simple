@@ -16,8 +16,10 @@ namespace CCXT.Simple.Exchanges
         string PassPhrase { get; set; }
         string SecretKey { get; set; }
 
-        ValueTask<bool> VerifyCoinNames();
-        ValueTask CheckState(Tickers tickers);
+        Tickers Tickers { get; set; }
+
+        ValueTask<bool> VerifySymbols();
+        ValueTask<bool> VerifyStates(Tickers tickers);
 
         ValueTask<bool> GetBookTickers(Tickers tickers);
         ValueTask<bool> GetMarkets(Tickers tickers);

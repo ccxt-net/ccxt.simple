@@ -45,35 +45,17 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
         public string ExchangeUrl { get; set; } = "https://api.bithumb.com";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -156,8 +138,10 @@ namespace CCXT.Simple.Exchanges.Bithumb
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
                 using (var _wc = new HttpClient())
@@ -180,7 +164,8 @@ namespace CCXT.Simple.Exchanges.Bithumb
                                 currency = _currency,
                                 active = true,
                                 deposit = s.Value.Value<int>("deposit_status") > 0,
-                                withdraw = s.Value.Value<int>("withdrawal_status") > 0
+                                withdraw = s.Value.Value<int>("withdrawal_status") > 0,
+                                networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
@@ -190,7 +175,20 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             _state.deposit = s.Value.Value<int>("deposit_status") > 0;
                             _state.withdraw = s.Value.Value<int>("withdrawal_status") > 0;
                         }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
+                        }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1212);
@@ -199,6 +197,8 @@ namespace CCXT.Simple.Exchanges.Bithumb
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 1213);
             }
+
+            return _result;
         }
 
         /// <summary>

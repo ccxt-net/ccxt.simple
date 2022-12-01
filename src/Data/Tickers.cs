@@ -221,6 +221,15 @@
         /// <summary>
         /// 
         /// </summary>
+        public bool network
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public long timestamp
         {
             get;

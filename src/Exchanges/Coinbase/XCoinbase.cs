@@ -41,35 +41,17 @@ namespace CCXT.Simple.Exchanges.Coinbase
         public string ExchangeUrl { get; set; } = "https://api.exchange.coinbase.com";
         public string ExchangeUrlPro { get; set; } = "https://api.pro.coinbase.com";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -129,14 +111,12 @@ namespace CCXT.Simple.Exchanges.Coinbase
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
             var _result = false;
 
             try
             {
-                
-
                 using (var _wc = new HttpClient())
                 {
                     var _endpoint = "/coinbase-accounts";
@@ -158,7 +138,8 @@ namespace CCXT.Simple.Exchanges.Coinbase
                                 currency = _currency,
                                 active = s.Value<bool>("active"),
                                 deposit = true,
-                                withdraw = true
+                                withdraw = true,
+                                networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
@@ -166,6 +147,17 @@ namespace CCXT.Simple.Exchanges.Coinbase
                         else
                         {
                             _state.active = s.Value<bool>("active");
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
                         }
                     }
                 }
@@ -281,11 +273,6 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
 
             return _result;
-        }
-
-        ValueTask IExchange.CheckState(Tickers tickers)
-        {
-            throw new NotImplementedException();
         }
 
         ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)

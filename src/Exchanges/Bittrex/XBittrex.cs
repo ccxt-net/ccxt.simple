@@ -35,31 +35,13 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
         public string ExchangeUrl { get; set; } = "https://api.bittrex.com";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
-
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -116,12 +98,12 @@ namespace CCXT.Simple.Exchanges.Bittrex
             return _result;
         }
 
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
-                
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/currencies");
@@ -147,6 +129,17 @@ namespace CCXT.Simple.Exchanges.Bittrex
                         else
                         {
                             _state.active = c.status == "ONLINE";
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
                         }
 
                         var _cointype = c.coinType;
@@ -183,6 +176,8 @@ namespace CCXT.Simple.Exchanges.Bittrex
                             _state.networks.Add(_network);
                         }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1306);
@@ -191,6 +186,8 @@ namespace CCXT.Simple.Exchanges.Bittrex
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 1307);
             }
+
+            return _result;
         }
 
         /// <summary>

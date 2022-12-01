@@ -40,35 +40,17 @@ namespace CCXT.Simple.Exchanges.Coinone
         public string ExchangeUrl { get; set; } = "https://api.coinone.co.kr";
         public string ExchangeUrlTb { get; set; } = "https://tb.coinone.co.kr";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -131,8 +113,10 @@ namespace CCXT.Simple.Exchanges.Coinone
         /// </summary>
         /// <param name="states"></param>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
                 using (var _wc = new HttpClient())
@@ -154,7 +138,8 @@ namespace CCXT.Simple.Exchanges.Coinone
                                 currency = _currency,
                                 active = s.Value<bool>("is_activate"),
                                 deposit = s.Value<bool>("is_deposit"),
-                                withdraw = s.Value<bool>("is_withdraw")
+                                withdraw = s.Value<bool>("is_withdraw"),
+                                networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
@@ -165,7 +150,20 @@ namespace CCXT.Simple.Exchanges.Coinone
                             _state.deposit = s.Value<bool>("is_deposit");
                             _state.withdraw = s.Value<bool>("is_withdraw");
                         }
+
+                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
+                        }
                     }
+
+                    _result = true;
                 }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1612);
@@ -174,6 +172,8 @@ namespace CCXT.Simple.Exchanges.Coinone
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 1613);
             }
+
+            return _result;
         }
 
         /// <summary>

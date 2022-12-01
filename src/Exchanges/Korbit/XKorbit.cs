@@ -39,35 +39,17 @@ namespace CCXT.Simple.Exchanges.Korbit
 
         public string ExchangeGqUrl { get; set; } = "https://ajax.korbit.co.kr";
 
-        public bool Alive
-        {
-            get;
-            set;
-        }
-
-        public string ApiKey
-        {
-            get;
-            set;
-        }
-
-        public string SecretKey
-        {
-            get;
-            set;
-        }
-
-        public string PassPhrase
-        {
-            get;
-            set;
-        }
+        public bool Alive { get; set; }
+        public string ApiKey { get; set; }
+        public string SecretKey { get; set; }
+        public string PassPhrase { get; set; }
+        public Tickers Tickers { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyCoinNames()
+        public async ValueTask<bool> VerifySymbols()
         {
             var _result = false;
 
@@ -126,8 +108,10 @@ namespace CCXT.Simple.Exchanges.Korbit
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask CheckState(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
+            var _result = false;
+
             try
             {
                 var graphQLClient = new GraphQLHttpClient($"{ExchangeGqUrl}/graphql", new SystemTextJsonSerializer());
@@ -161,7 +145,8 @@ namespace CCXT.Simple.Exchanges.Korbit
                             currency = _currency,
                             active = true,
                             deposit = c.services.deposit,
-                            withdraw = c.services.withdrawal
+                            withdraw = c.services.withdrawal,
+                            networks = new List<WNetwork>()
                         };
 
                         tickers.states.Add(_state);
@@ -171,7 +156,20 @@ namespace CCXT.Simple.Exchanges.Korbit
                         _state.deposit = c.services.deposit;
                         _state.withdraw = c.services.withdrawal;
                     }
+
+                    var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                    if (_t_items != null)
+                    {
+                        foreach (var t in _t_items)
+                        {
+                            t.active = _state.active;
+                            t.deposit = _state.deposit;
+                            t.withdraw = _state.withdraw;
+                        }
+                    }
                 }
+
+                _result = true;
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 2012);
             }
@@ -179,6 +177,8 @@ namespace CCXT.Simple.Exchanges.Korbit
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 2013);
             }
+
+            return _result;
         }
 
         /// <summary>
