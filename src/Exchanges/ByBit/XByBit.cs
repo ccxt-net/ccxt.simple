@@ -60,17 +60,6 @@ namespace CCXT.Simple.Exchanges.Bybit
 
             try
             {
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out var _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/symbols");
@@ -78,7 +67,7 @@ namespace CCXT.Simple.Exchanges.Bybit
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["result"].ToObject<JArray>();
 
-                    _queue_info.symbols.Clear();
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {

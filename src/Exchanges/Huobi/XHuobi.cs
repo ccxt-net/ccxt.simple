@@ -55,18 +55,6 @@ namespace CCXT.Simple.Exchanges.Huobi
 
             try
             {
-                var _queue_info = (QueueInfo)null;
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {                        
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/common/symbols");
@@ -74,7 +62,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["data"].ToObject<JArray>();
 
-                    _queue_info.symbols.Clear();
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
                     foreach (JToken s in _jarray)
                     {
@@ -298,10 +286,10 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _price * mainXchg.btc_krw_price;
+                                    _ticker.lastPrice = _price * mainXchg.krw_btc_price;
 
-                                    _ticker.askPrice = _price * mainXchg.btc_krw_price;
-                                    _ticker.bidPrice = _price * mainXchg.btc_krw_price;
+                                    _ticker.askPrice = _price * mainXchg.krw_btc_price;
+                                    _ticker.bidPrice = _price * mainXchg.krw_btc_price;
                                 }
                             }
                         }
@@ -363,7 +351,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.btc_krw_price;
+                                    _volume *= mainXchg.krw_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -434,10 +422,10 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.btc_krw_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
                                 }
                             }
 
@@ -449,7 +437,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.btc_krw_price;
+                                    _volume *= mainXchg.krw_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

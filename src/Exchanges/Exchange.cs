@@ -1,4 +1,5 @@
-﻿using CCXT.Simple.Data;
+﻿using CCXT.Simple.Base;
+using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
@@ -41,8 +42,12 @@ namespace CCXT.Simple.Exchanges
             this.FiatVSCoinRate = 1;
 
             this.exchangeCs = new ConcurrentDictionary<string, QueueInfo>();
+            this.exchangeTs = new ConcurrentDictionary<string, Tickers>();
             this.exchangeQs = new ConcurrentDictionary<string, ConcurrentDictionary<string, ConcurrentQueue<Tickers>>>();
             this.loggerQs = new ConcurrentDictionary<string, ConcurrentQueue<XLogger>>();
+
+            this.exchangeBs = new ConcurrentDictionary<string, CompData>();
+            this.exchangesNs = new ConcurrentDictionary<string, ChainData>();
         }
 
         public event EventHandler<MessageEventArgs> MessageEvent;
@@ -54,6 +59,13 @@ namespace CCXT.Simple.Exchanges
             get;
             set;
         }
+
+        public ConcurrentDictionary<string, Tickers> exchangeTs
+        {
+            get;
+            set;
+        }
+
         public ConcurrentDictionary<string, ConcurrentDictionary<string, ConcurrentQueue<Tickers>>> exchangeQs
         {
             get;
@@ -61,6 +73,18 @@ namespace CCXT.Simple.Exchanges
         }
 
         public ConcurrentDictionary<string, ConcurrentQueue<XLogger>> loggerQs
+        {
+            get;
+            set;
+        }
+
+        public ConcurrentDictionary<string, CompData> exchangeBs
+        {
+            get;
+            set;
+        }
+
+        public ConcurrentDictionary<string, ChainData> exchangesNs
         {
             get;
             set;
@@ -102,7 +126,7 @@ namespace CCXT.Simple.Exchanges
             get; set;
         }
 
-        public decimal btc_krw_price
+        public decimal krw_btc_price
         {
             get; set;
         }
@@ -130,22 +154,107 @@ namespace CCXT.Simple.Exchanges
         {
             if (price > 0)
             {
-                this.btc_krw_price = price;
+                this.krw_btc_price = price;
                 KrwPriceEvent?.Invoke(this, new PriceEventArgs(price));
             }
         }
 
-        public List<QueueSymbol> GetSymbols(string exchange_name)
+        public ConcurrentDictionary<string, ConcurrentQueue<Tickers>> GetXQueues(string exchange_name)
         {
-            var _result = new List<QueueSymbol>();
+            var _result = (ConcurrentDictionary<string, ConcurrentQueue<Tickers>>)null;
 
-            var _comparer = new QueueSymbolComparer();
-
-            foreach (var e in this.exchangeCs)
+            if (!this.exchangeQs.ContainsKey(exchange_name))
             {
-                if (e.Value.name == exchange_name)
-                    _result.AddRange(e.Value.symbols.Where(x => x.symbol != "X").Except(_result, _comparer));
+                _result = new ConcurrentDictionary<string, ConcurrentQueue<Tickers>>();
+                this.exchangeQs.TryAdd(exchange_name, _result);
             }
+            else
+            {
+                _result = this.exchangeQs[exchange_name];
+            }
+
+            return _result;
+        }
+
+        public QueueInfo GetQInfors(string exchange_name)
+        {
+            var _result = (QueueInfo)null;
+
+            if (!this.exchangeCs.ContainsKey(exchange_name))
+            {
+                _result = new QueueInfo
+                {
+                    exchange = exchange_name,
+                    symbols = new List<QueueSymbol>()
+                };
+
+                this.exchangeCs.TryAdd(exchange_name, _result);
+            }
+            else
+            {
+                _result = this.exchangeCs[exchange_name];
+            }
+
+            return _result;
+        }
+
+        public Tickers GetTickers(string exchange_name)
+        {
+            var _result = (Tickers)null;
+
+            if (!this.exchangeTs.ContainsKey(exchange_name))
+            {
+                var _infor = this.GetQInfors(exchange_name);
+                _result = new Tickers(exchange_name, _infor.symbols);
+
+                this.exchangeTs.TryAdd(exchange_name, _result);
+            }
+            else
+            {
+                _result = this.exchangeTs[exchange_name];
+            }
+
+            return _result;
+        }
+
+        public async ValueTask<bool> UpdateProtocols(Tickers tickers)
+        {
+            var _result = false;
+
+            if (this.exchangesNs.ContainsKey(tickers.exchange))
+            {
+                var _chain_data = this.exchangesNs[tickers.exchange];
+                if (_chain_data.items.Count > 0)
+                {
+                    foreach (var c in _chain_data.items)
+                    {
+                        var _states = tickers.states.Where(x => x.currency == c.baseName);
+                        if (_states.Count() > 0)
+                        {
+                            foreach (var t in _states)
+                            {
+                                foreach (var n in c.networks)
+                                {
+                                    if (!t.networks.Exists(x => x.network == n.network && x.protocol == n.protocol))
+                                        t.networks.Add(new WNetwork
+                                        {
+                                            name = $"{t.currency}-{n.network}",
+                                            network = n.network,
+                                            protocol = n.protocol,
+
+                                            deposit = t.deposit,
+                                            withdraw = t.withdraw
+                                        });
+                                }
+                            }
+                        }
+                    }
+
+                    _result = true;
+                }
+            }
+
+            await Task.Delay(0);
 
             return _result;
         }
@@ -153,7 +262,7 @@ namespace CCXT.Simple.Exchanges
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public decimal ExchangeRate()
         {
-            return (usd_btc_price > 0.0m ? btc_krw_price / usd_btc_price : 0.0m) * this.FiatVSCoinRate;
+            return (usd_btc_price > 0.0m ? krw_btc_price / usd_btc_price : 0.0m) * this.FiatVSCoinRate;
         }
 
         public string ToQueryString2(Dictionary<string, string> args)

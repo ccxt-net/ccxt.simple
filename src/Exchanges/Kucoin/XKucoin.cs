@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Xml.Linq;
 
 namespace CCXT.Simple.Exchanges.Kucoin
 {
@@ -54,35 +53,22 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                var _queue_info = (QueueInfo)null;
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {                        
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/symbols");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v2/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["data"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    _queue_info.symbols.Clear();
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
-                    foreach (JToken s in _jarray)
+                    foreach (var s in _jarray.data)
                     {
-                        var _quote_name = s.Value<string>("quoteCurrency");
+                        var _quote_name = s.quoteCurrency;
 
                         if (_quote_name == "USDT" || _quote_name == "BTC")
                         {
-                            var _symbol = s.Value<string>("symbol");
-                            var _base_name = s.Value<string>("baseCurrency");
+                            var _symbol = s.symbol;
+                            var _base_name = s.baseCurrency;
 
                             if (_base_name != _symbol.Split('-')[0])
                                 _base_name = _symbol.Split('-')[0];
@@ -93,7 +79,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 compName = _base_name,
                                 baseName = _base_name,
                                 quoteName = _quote_name,
-                                tickSize = s.Value<decimal>("priceIncrement")
+                                tickSize = s.priceIncrement
                             });
                         }
                     }
@@ -160,7 +146,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}{_end_point}");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
                     foreach (var c in _jarray.data)
                     {
@@ -294,7 +280,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
                                 }
                             }
                         }
@@ -358,10 +344,10 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.btc_krw_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
                                 }
                             }
                         }
@@ -419,7 +405,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.btc_krw_price;
+                                    _volume *= mainXchg.krw_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -493,10 +479,10 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.btc_krw_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.btc_krw_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.btc_krw_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
                                 }
                             }
 
@@ -508,7 +494,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.btc_krw_price;
+                                    _volume *= mainXchg.krw_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

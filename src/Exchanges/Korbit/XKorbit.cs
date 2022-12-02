@@ -55,25 +55,13 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                var _queue_info = (QueueInfo)null;
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {                        
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
-                    _queue_info.symbols.Clear();
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
                     foreach (var s in _jobject)
                     {

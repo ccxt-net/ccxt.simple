@@ -61,25 +61,13 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                var _queue_info = (QueueInfo)null;
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
-                    _queue_info.symbols.Clear();
-
                     using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jobject = JObject.Parse(_k_jstring);
+
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
                     foreach (JProperty s in _k_jobject["data"].Children())
                     {
@@ -316,11 +304,11 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             var _bid = _b_data[_pairs[0]]["bids"][0];
                             var _ask = _b_data[_pairs[0]]["asks"][0];
 
-                            Debug.Assert(this.mainXchg.btc_krw_price != 0.0m);
+                            Debug.Assert(this.mainXchg.krw_btc_price != 0.0m);
 
-                            _ticker.askPrice = _ask.Value<decimal>("price") * mainXchg.btc_krw_price;
+                            _ticker.askPrice = _ask.Value<decimal>("price") * mainXchg.krw_btc_price;
                             _ticker.askQty = _ask.Value<decimal>("quantity");
-                            _ticker.bidPrice = _bid.Value<decimal>("price") * mainXchg.btc_krw_price;
+                            _ticker.bidPrice = _bid.Value<decimal>("price") * mainXchg.krw_btc_price;
                             _ticker.bidQty = _bid.Value<decimal>("quantity");
                         }
                         else
@@ -399,14 +387,14 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         else if (_pairs[1] == "BTC" && _b_jobject.ContainsKey(_pairs[0]))
                         {
                             var _price = _b_jobject[_pairs[0]].Value<decimal>("closing_price");
-                            _ticker.lastPrice = _price * mainXchg.btc_krw_price;
+                            _ticker.lastPrice = _price * mainXchg.krw_btc_price;
 
                             var _volume = _b_jobject[_pairs[0]].Value<decimal>("acc_trade_value");
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
 
-                                _volume *= mainXchg.btc_krw_price;
+                                _volume *= mainXchg.krw_btc_price;
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
                                 var _curr_timestamp = CUnixTime.NowMilli;

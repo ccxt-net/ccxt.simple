@@ -56,18 +56,6 @@ namespace CCXT.Simple.Exchanges.Coinone
 
             try
             {
-                var _queue_info = (QueueInfo)null;
-                if (!this.mainXchg.exchangeCs.TryGetValue(ExchangeName, out _queue_info))
-                {
-                    _queue_info = new QueueInfo
-                    {                        
-                        name = ExchangeName,
-                        symbols = new List<QueueSymbol>()
-                    };
-
-                    this.mainXchg.exchangeCs.TryAdd(ExchangeName, _queue_info);
-                }
-
                 using (var _wc = new HttpClient())
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/tradepair/");
@@ -76,7 +64,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["tradepairs"].ToObject<JArray>();
 
-                    _queue_info.symbols.Clear();
+                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
                     foreach (JToken s in _jarray)
                     {
@@ -211,9 +199,9 @@ namespace CCXT.Simple.Exchanges.Coinone
         /// </summary>
         /// <param name="symbol"></param>
         /// <returns></returns>
-        public async ValueTask<(Market best_ask, Market best_bid)> GetOrderbook(string symbol)
+        public async ValueTask<(OrderbookItem best_ask, OrderbookItem best_bid)> GetOrderbook(string symbol)
         {
-            var _result = (best_ask: new Market(), best_bid: new Market());
+            var _result = (best_ask: new OrderbookItem(), best_bid: new OrderbookItem());
 
             try
             {
@@ -225,12 +213,12 @@ namespace CCXT.Simple.Exchanges.Coinone
 
                     if (_jobject.Value<string>("result") == "success")
                     {
-                        var _asks = _jobject["ask"].ToObject<List<Market>>();
+                        var _asks = _jobject["ask"].ToObject<List<OrderbookItem>>();
                         {
                             _result.best_ask = _asks.OrderBy(x => x.price).First();
                         }
 
-                        var _bids = _jobject["bid"].ToObject<List<Market>>();
+                        var _bids = _jobject["bid"].ToObject<List<OrderbookItem>>();
                         {
                             _result.best_bid = _bids.OrderBy(x => x.price).Last();
                         }
@@ -260,7 +248,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/v2/ticker_new/KRW");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jdata = JsonConvert.DeserializeObject<COTickers>(_jstring);
+                    var _jdata = JsonConvert.DeserializeObject<Markets>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -274,8 +262,8 @@ namespace CCXT.Simple.Exchanges.Coinone
                             var _price = _jitem.last;
                             {
                                 _ticker.lastPrice = _price;
-                                _ticker.askPrice = _jitem.best_asks[0].price;
-                                _ticker.bidPrice = _jitem.best_bids[0].price;
+                                _ticker.askPrice = _jitem.best_asks.Count > 0 ? _jitem.best_asks[0].price : 0;
+                                _ticker.bidPrice = _jitem.best_bids.Count > 0 ? _jitem.best_bids[0].price : 0;
                             }
 
                             var _volume = _jitem.quote_volume;
