@@ -1,0 +1,75 @@
+{
+    "code": "200000",
+    "data": {
+        "currency": "BTC",
+        "name": "BTC",
+        "fullName": "Bitcoin",
+        "precision": 8,
+        "confirms": null,
+        "contractAddress": null,
+        "isMarginEnabled": true,
+        "isDebitEnabled": true,
+        "chains": [
+            {
+                "chainName": "BTC",
+                "chain": "btc",
+                "withdrawalMinSize": "0.001",
+                "withdrawalMinFee": "0.0005",
+                "isWithdrawEnabled": true,
+                "isDepositEnabled": true,
+                "confirms": 2,
+                "contractAddress": ""
+            },
+            {
+                "chainName": "OPTIMISM",
+                "chain": "optimism",
+                "withdrawalMinSize": "0.0005",
+                "withdrawalMinFee": "0.0001",
+                "isWithdrawEnabled": false,
+                "isDepositEnabled": false,
+                "confirms": 80,
+                "contractAddress": ""
+            },
+            {
+                "chainName": "KCC",
+                "chain": "kcc",
+                "withdrawalMinSize": "0.0008",
+                "withdrawalMinFee": "0.00002",
+                "isWithdrawEnabled": true,
+                "isDepositEnabled": true,
+                "confirms": 20,
+                "contractAddress": ""
+            },
+            {
+                "chainName": "TRC20",
+                "chain": "trx",
+                "withdrawalMinSize": "0.0005",
+                "withdrawalMinFee": "0.0001",
+                "isWithdrawEnabled": false,
+                "isDepositEnabled": false,
+                "confirms": 1,
+                "contractAddress": ""
+            },
+            {
+                "chainName": "ARBITRUM",
+                "chain": "arbitrum",
+                "withdrawalMinSize": "0.0005",
+                "withdrawalMinFee": "0.0001",
+                "isWithdrawEnabled": false,
+                "isDepositEnabled": false,
+                "confirms": 600,
+                "contractAddress": ""
+            },
+            {
+                "chainName": "BTC-Segwit",
+                "chain": "bech32",
+                "withdrawalMinSize": "0.0008",
+                "withdrawalMinFee": "0.0005",
+                "isWithdrawEnabled": false,
+                "isDepositEnabled": true,
+                "confirms": 2,
+                "contractAddress": ""
+            }
+        ]
+    }
+}

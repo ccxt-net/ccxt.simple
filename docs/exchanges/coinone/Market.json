@@ -1,0 +1,4653 @@
+{
+    "result": "success",
+    "error_code": "0",
+    "server_time": 1669971423649,
+    "tickers": [
+        {
+            "quote_currency": "krw",
+            "target_currency": "inj",
+            "timestamp": 1669971420000,
+            "high": "2308.0",
+            "low": "2021.0",
+            "first": "2308.0",
+            "last": "2202.0",
+            "quote_volume": "22134.5479",
+            "target_volume": "10.2832",
+            "best_asks": [
+                {
+                    "price": "2248.0",
+                    "qty": "598.5945"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2202.0",
+                    "qty": "4.0689"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "flux",
+            "timestamp": 1669971420002,
+            "high": "822.0",
+            "low": "822.0",
+            "first": "822.0",
+            "last": "822.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "821.0",
+                    "qty": "40.2854"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "648.0",
+                    "qty": "2000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ever",
+            "timestamp": 1669971420000,
+            "high": "51.3",
+            "low": "49.82",
+            "first": "51.3",
+            "last": "50.49",
+            "quote_volume": "444240049.5602",
+            "target_volume": "8821186.4013",
+            "best_asks": [
+                {
+                    "price": "50.91",
+                    "qty": "13217.8504"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "50.26",
+                    "qty": "340.69"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ibp",
+            "timestamp": 1669971422987,
+            "high": "0.857",
+            "low": "0.81",
+            "first": "0.854",
+            "last": "0.827",
+            "quote_volume": "148273479.8903",
+            "target_volume": "178340742.3348",
+            "best_asks": [
+                {
+                    "price": "0.829",
+                    "qty": "30408.1532"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.825",
+                    "qty": "7085.5233"
+                }
+            ],
+            "id": "1669971422987001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "uos",
+            "timestamp": 1669971420001,
+            "high": "200.2",
+            "low": "200.2",
+            "first": "200.2",
+            "last": "200.2",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "438.7",
+                    "qty": "58.536"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "200.1",
+                    "qty": "25.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "iotx",
+            "timestamp": 1669971420001,
+            "high": "31.38",
+            "low": "31.38",
+            "first": "31.38",
+            "last": "31.38",
+            "quote_volume": "49900.206",
+            "target_volume": "1590.1914",
+            "best_asks": [
+                {
+                    "price": "31.09",
+                    "qty": "43277.6013"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "30.0",
+                    "qty": "170.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "msb",
+            "timestamp": 1669971420001,
+            "high": "38.77",
+            "low": "34.9",
+            "first": "35.22",
+            "last": "35.0",
+            "quote_volume": "1138575859.025",
+            "target_volume": "31422678.8743",
+            "best_asks": [
+                {
+                    "price": "35.01",
+                    "qty": "157.098"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "35.0",
+                    "qty": "176.5211"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "noa",
+            "timestamp": 1669971420001,
+            "high": "14.72",
+            "low": "13.0",
+            "first": "13.08",
+            "last": "13.14",
+            "quote_volume": "107344947.9243",
+            "target_volume": "7937006.2826",
+            "best_asks": [
+                {
+                    "price": "13.14",
+                    "qty": "105.8304"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "13.03",
+                    "qty": "5000.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "icx",
+            "timestamp": 1669971420000,
+            "high": "261.4",
+            "low": "250.2",
+            "first": "261.4",
+            "last": "250.2",
+            "quote_volume": "19177232.7623",
+            "target_volume": "73917.78",
+            "best_asks": [
+                {
+                    "price": "249.8",
+                    "qty": "17041.8286"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "248.0",
+                    "qty": "980.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "data",
+            "timestamp": 1669971420001,
+            "high": "35.03",
+            "low": "35.03",
+            "first": "35.03",
+            "last": "35.03",
+            "quote_volume": "350300.0",
+            "target_volume": "10000.0",
+            "best_asks": [
+                {
+                    "price": "35.03",
+                    "qty": "498.1609"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "33.71",
+                    "qty": "44952.4343"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "clv",
+            "timestamp": 1669971420000,
+            "high": "131.9",
+            "low": "73.8",
+            "first": "90.6",
+            "last": "131.9",
+            "quote_volume": "13706423.1894",
+            "target_volume": "170967.3084",
+            "best_asks": [
+                {
+                    "price": "131.3",
+                    "qty": "12350.3408"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "87.7",
+                    "qty": "1474.8213"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "stnd",
+            "timestamp": 1669971420001,
+            "high": "39.5",
+            "low": "31.26",
+            "first": "39.5",
+            "last": "38.97",
+            "quote_volume": "1960796.5823",
+            "target_volume": "55976.6157",
+            "best_asks": [
+                {
+                    "price": "38.96",
+                    "qty": "3625.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "31.68",
+                    "qty": "20000.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "jst",
+            "timestamp": 1669971420002,
+            "high": "28.9",
+            "low": "28.9",
+            "first": "28.9",
+            "last": "28.9",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "34.68",
+                    "qty": "5187.2108"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "28.95",
+                    "qty": "7895.2604"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "tom",
+            "timestamp": 1669971420000,
+            "high": "69000.0",
+            "low": "63100.0",
+            "first": "63800.0",
+            "last": "63400.0",
+            "quote_volume": "254391686.25",
+            "target_volume": "3959.6161",
+            "best_asks": [
+                {
+                    "price": "63500.0",
+                    "qty": "0.0866"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "63400.0",
+                    "qty": "0.5903"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mlk",
+            "timestamp": 1669971420002,
+            "high": "368.0",
+            "low": "355.1",
+            "first": "355.1",
+            "last": "355.2",
+            "quote_volume": "3110115.0696",
+            "target_volume": "8576.4092",
+            "best_asks": [
+                {
+                    "price": "363.0",
+                    "qty": "1798.418"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "355.2",
+                    "qty": "87.127"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pxl",
+            "timestamp": 1669971420001,
+            "high": "0.108",
+            "low": "0.075",
+            "first": "0.095",
+            "last": "0.09",
+            "quote_volume": "2930323.5886",
+            "target_volume": "34076468.1223",
+            "best_asks": [
+                {
+                    "price": "0.091",
+                    "qty": "210054.945"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.077",
+                    "qty": "258187.635"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "kdag",
+            "timestamp": 1669971420000,
+            "high": "224.4",
+            "low": "150.0",
+            "first": "224.4",
+            "last": "224.0",
+            "quote_volume": "156717.3913",
+            "target_volume": "987.1396",
+            "best_asks": [
+                {
+                    "price": "224.0",
+                    "qty": "1269.3315"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "123.9",
+                    "qty": "40.5"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mta",
+            "timestamp": 1669971420000,
+            "high": "54.7",
+            "low": "46.6",
+            "first": "54.5",
+            "last": "53.3",
+            "quote_volume": "269958.7018",
+            "target_volume": "5051.3925",
+            "best_asks": [
+                {
+                    "price": "53.9",
+                    "qty": "2402.0931"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "46.6",
+                    "qty": "297.3953"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "aoa",
+            "timestamp": 1669971420000,
+            "high": "0.2969",
+            "low": "0.25",
+            "first": "0.2969",
+            "last": "0.2899",
+            "quote_volume": "2106301.5281",
+            "target_volume": "8352517.7139",
+            "best_asks": [
+                {
+                    "price": "0.2899",
+                    "qty": "46215.9357"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.2082",
+                    "qty": "65832.5236"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "snx",
+            "timestamp": 1669971420000,
+            "high": "2357.0",
+            "low": "2357.0",
+            "first": "2357.0",
+            "last": "2357.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "2311.0",
+                    "qty": "582.9002"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2200.0",
+                    "qty": "2.2731"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "lbxc",
+            "timestamp": 1669971420001,
+            "high": "0.1448",
+            "low": "0.1111",
+            "first": "0.1343",
+            "last": "0.1361",
+            "quote_volume": "41450875.8003",
+            "target_volume": "305401846.5585",
+            "best_asks": [
+                {
+                    "price": "0.1408",
+                    "qty": "37500.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.1211",
+                    "qty": "2350501.0265"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pure",
+            "timestamp": 1669971420001,
+            "high": "26.12",
+            "low": "23.08",
+            "first": "24.2",
+            "last": "23.39",
+            "quote_volume": "1214137669.9765",
+            "target_volume": "49620031.7574",
+            "best_asks": [
+                {
+                    "price": "23.4",
+                    "qty": "235.0427"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "23.39",
+                    "qty": "235.1432"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "hint",
+            "timestamp": 1669971420002,
+            "high": "0.768",
+            "low": "0.752",
+            "first": "0.768",
+            "last": "0.752",
+            "quote_volume": "92098.1321",
+            "target_volume": "122002.7764",
+            "best_asks": [
+                {
+                    "price": "0.768",
+                    "qty": "18710.2304"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.752",
+                    "qty": "102837.6842"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pha",
+            "timestamp": 1669971420000,
+            "high": "355.4",
+            "low": "355.4",
+            "first": "355.4",
+            "last": "355.4",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "354.6",
+                    "qty": "1074.5815"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "196.4",
+                    "qty": "25.1902"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "fncy",
+            "timestamp": 1669971420000,
+            "high": "120.6",
+            "low": "120.6",
+            "first": "120.6",
+            "last": "120.6",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [],
+            "best_bids": [],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "xlm",
+            "timestamp": 1669971420002,
+            "high": "120.5",
+            "low": "116.1",
+            "first": "119.9",
+            "last": "117.5",
+            "quote_volume": "167712153.5954",
+            "target_volume": "1413147.5986",
+            "best_asks": [
+                {
+                    "price": "117.8",
+                    "qty": "11204.7094"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "117.6",
+                    "qty": "11193.1368"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ftm",
+            "timestamp": 1669971420001,
+            "high": "345.6",
+            "low": "284.1",
+            "first": "317.1",
+            "last": "332.4",
+            "quote_volume": "8794340.0",
+            "target_volume": "27174.1821",
+            "best_asks": [
+                {
+                    "price": "332.4",
+                    "qty": "543.2152"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "288.8",
+                    "qty": "1324.9679"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "uma",
+            "timestamp": 1669971420002,
+            "high": "2350.0",
+            "low": "2350.0",
+            "first": "2350.0",
+            "last": "2350.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "2436.0",
+                    "qty": "2.1769"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2236.0",
+                    "qty": "2.56"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "wiken",
+            "timestamp": 1669971420504,
+            "high": "7.58",
+            "low": "5.8",
+            "first": "6.34",
+            "last": "6.44",
+            "quote_volume": "8298620.483",
+            "target_volume": "1184332.3509",
+            "best_asks": [
+                {
+                    "price": "6.43",
+                    "qty": "1030.7932"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5.8",
+                    "qty": "5948.144"
+                }
+            ],
+            "id": "1669971420504001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ach",
+            "timestamp": 1669971420001,
+            "high": "13.5",
+            "low": "13.13",
+            "first": "13.29",
+            "last": "13.36",
+            "quote_volume": "8202246.1307",
+            "target_volume": "615672.7255",
+            "best_asks": [
+                {
+                    "price": "14.75",
+                    "qty": "4934.9827"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "13.36",
+                    "qty": "28.3235"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "comp",
+            "timestamp": 1669971420002,
+            "high": "51000.0",
+            "low": "51000.0",
+            "first": "51000.0",
+            "last": "51000.0",
+            "quote_volume": "61200.0",
+            "target_volume": "1.2",
+            "best_asks": [
+                {
+                    "price": "50650.0",
+                    "qty": "115.4165"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "48700.0",
+                    "qty": "0.15"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "gala",
+            "timestamp": 1669971420000,
+            "high": "35.0",
+            "low": "33.06",
+            "first": "34.68",
+            "last": "33.56",
+            "quote_volume": "19379601.1962",
+            "target_volume": "575765.2706",
+            "best_asks": [
+                {
+                    "price": "33.67",
+                    "qty": "7980.0263"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "33.57",
+                    "qty": "92110.9224"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "npt",
+            "timestamp": 1669971420001,
+            "high": "1038.0",
+            "low": "1018.0",
+            "first": "1028.0",
+            "last": "1018.0",
+            "quote_volume": "23715.6516",
+            "target_volume": "23.0697",
+            "best_asks": [
+                {
+                    "price": "1038.0",
+                    "qty": "2.9658"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1018.0",
+                    "qty": "3.1585"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mvc",
+            "timestamp": 1669971420001,
+            "high": "4.3",
+            "low": "4.3",
+            "first": "4.3",
+            "last": "4.3",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "5.589",
+                    "qty": "7357.1987"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.021",
+                    "qty": "1250.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cbk",
+            "timestamp": 1669971420000,
+            "high": "607.0",
+            "low": "607.0",
+            "first": "607.0",
+            "last": "607.0",
+            "quote_volume": "58419.9259",
+            "target_volume": "96.2437",
+            "best_asks": [
+                {
+                    "price": "829.0",
+                    "qty": "231.7209"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "609.0",
+                    "qty": "1546.1101"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "zil",
+            "timestamp": 1669971420001,
+            "high": "30.59",
+            "low": "30.36",
+            "first": "30.56",
+            "last": "30.59",
+            "quote_volume": "2220063.9429",
+            "target_volume": "72802.9192",
+            "best_asks": [
+                {
+                    "price": "30.74",
+                    "qty": "43826.1569"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "29.9",
+                    "qty": "334.4481"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "matic",
+            "timestamp": 1669971420001,
+            "high": "1277.0",
+            "low": "1211.0",
+            "first": "1235.0",
+            "last": "1235.0",
+            "quote_volume": "165095521.911",
+            "target_volume": "132173.3285",
+            "best_asks": [
+                {
+                    "price": "1236.0",
+                    "qty": "1149.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1233.0",
+                    "qty": "2903.226"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "fil",
+            "timestamp": 1669971420000,
+            "high": "6035.0",
+            "low": "5880.0",
+            "first": "5925.0",
+            "last": "5970.0",
+            "quote_volume": "349502377.5605",
+            "target_volume": "58753.5584",
+            "best_asks": [
+                {
+                    "price": "5970.0",
+                    "qty": "501.8014"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5955.0",
+                    "qty": "242.7597"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "crv",
+            "timestamp": 1669971420001,
+            "high": "905.0",
+            "low": "905.0",
+            "first": "905.0",
+            "last": "905.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "862.0",
+                    "qty": "1568.4791"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "602.0",
+                    "qty": "16.6112"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pica",
+            "timestamp": 1669971420002,
+            "high": "7.0",
+            "low": "5.761",
+            "first": "5.761",
+            "last": "6.868",
+            "quote_volume": "74678315.6281",
+            "target_volume": "11596098.6459",
+            "best_asks": [
+                {
+                    "price": "6.598",
+                    "qty": "35000.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.253",
+                    "qty": "159923.2368"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ldn",
+            "timestamp": 1669971420000,
+            "high": "102.6",
+            "low": "58.0",
+            "first": "77.3",
+            "last": "75.7",
+            "quote_volume": "2473733313.3845",
+            "target_volume": "33674834.6684",
+            "best_asks": [
+                {
+                    "price": "75.8",
+                    "qty": "72.5594"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "75.7",
+                    "qty": "72.6552"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mts",
+            "timestamp": 1669971420002,
+            "high": "8.219",
+            "low": "6.818",
+            "first": "7.351",
+            "last": "6.898",
+            "quote_volume": "264250373.6659",
+            "target_volume": "36950840.912",
+            "best_asks": [
+                {
+                    "price": "7.282",
+                    "qty": "321303.7155"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.898",
+                    "qty": "51589.471"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "wemix",
+            "timestamp": 1669971420002,
+            "high": "1177.0",
+            "low": "630.0",
+            "first": "680.0",
+            "last": "921.0",
+            "quote_volume": "197281729.5119",
+            "target_volume": "221585.8896",
+            "best_asks": [
+                {
+                    "price": "961.0",
+                    "qty": "187.8272"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "920.0",
+                    "qty": "1244.8034"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "map",
+            "timestamp": 1669971420000,
+            "high": "10.0",
+            "low": "9.41",
+            "first": "10.0",
+            "last": "9.41",
+            "quote_volume": "2246490.332",
+            "target_volume": "230107.6951",
+            "best_asks": [
+                {
+                    "price": "13.08",
+                    "qty": "40417.6501"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "9.6",
+                    "qty": "12186.9298"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "band",
+            "timestamp": 1669971420000,
+            "high": "3129.0",
+            "low": "2717.0",
+            "first": "2818.0",
+            "last": "2753.0",
+            "quote_volume": "36793036.0494",
+            "target_volume": "12431.7088",
+            "best_asks": [
+                {
+                    "price": "2926.0",
+                    "qty": "457.8025"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2778.0",
+                    "qty": "700.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "hibs",
+            "timestamp": 1669971420000,
+            "high": "1.488",
+            "low": "1.104",
+            "first": "1.25",
+            "last": "1.111",
+            "quote_volume": "36087799.8552",
+            "target_volume": "28014049.8764",
+            "best_asks": [
+                {
+                    "price": "1.22",
+                    "qty": "99747.71"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.01",
+                    "qty": "150000.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "lit",
+            "timestamp": 1669971420001,
+            "high": "982.0",
+            "low": "982.0",
+            "first": "982.0",
+            "last": "982.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "1588.0",
+                    "qty": "190.9754"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1098.0",
+                    "qty": "4.5995"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ipx",
+            "timestamp": 1669971420001,
+            "high": "1.319",
+            "low": "1.12",
+            "first": "1.319",
+            "last": "1.12",
+            "quote_volume": "407530.218",
+            "target_volume": "317258.7365",
+            "best_asks": [
+                {
+                    "price": "1.275",
+                    "qty": "228320.7345"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.073",
+                    "qty": "21996.7641"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "basic",
+            "timestamp": 1669971420000,
+            "high": "1.315",
+            "low": "1.315",
+            "first": "1.315",
+            "last": "1.315",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "1.632",
+                    "qty": "76036.7647"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.315",
+                    "qty": "27548.1596"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "uni",
+            "timestamp": 1669971420002,
+            "high": "8040.0",
+            "low": "7615.0",
+            "first": "7615.0",
+            "last": "7980.0",
+            "quote_volume": "1647277.461",
+            "target_volume": "206.9312",
+            "best_asks": [
+                {
+                    "price": "7980.0",
+                    "qty": "165.0218"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "7620.0",
+                    "qty": "0.7"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "hot",
+            "timestamp": 1669971420002,
+            "high": "2.262",
+            "low": "2.209",
+            "first": "2.262",
+            "last": "2.233",
+            "quote_volume": "419780.7365",
+            "target_volume": "188314.4768",
+            "best_asks": [
+                {
+                    "price": "2.213",
+                    "qty": "402941.2295"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.801",
+                    "qty": "949530.0349"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "isdt",
+            "timestamp": 1669971423144,
+            "high": "0.305",
+            "low": "0.2883",
+            "first": "0.305",
+            "last": "0.2888",
+            "quote_volume": "464950.9591",
+            "target_volume": "1583492.4933",
+            "best_asks": [
+                {
+                    "price": "0.3045",
+                    "qty": "274555.791"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.2891",
+                    "qty": "182759.307"
+                }
+            ],
+            "id": "1669971423144001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "link",
+            "timestamp": 1669971421071,
+            "high": "10570.0",
+            "low": "10100.0",
+            "first": "10210.0",
+            "last": "10190.0",
+            "quote_volume": "531885835.644",
+            "target_volume": "51598.836",
+            "best_asks": [
+                {
+                    "price": "10190.0",
+                    "qty": "336.2585"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "10170.0",
+                    "qty": "189.472"
+                }
+            ],
+            "id": "1669971421071001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mov",
+            "timestamp": 1669971420001,
+            "high": "5.499",
+            "low": "5.499",
+            "first": "5.499",
+            "last": "5.499",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "5.5",
+                    "qty": "26288.9739"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.031",
+                    "qty": "2480.774"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dvi",
+            "timestamp": 1669971420001,
+            "high": "25.0",
+            "low": "24.22",
+            "first": "25.0",
+            "last": "24.22",
+            "quote_volume": "1839970.4549",
+            "target_volume": "74368.4322",
+            "best_asks": [
+                {
+                    "price": "26.84",
+                    "qty": "12315.2757"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "24.06",
+                    "qty": "8542.1051"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "lzm",
+            "timestamp": 1669971422908,
+            "high": "59.9",
+            "low": "53.72",
+            "first": "56.63",
+            "last": "59.9",
+            "quote_volume": "2906034.0581",
+            "target_volume": "50794.6696",
+            "best_asks": [
+                {
+                    "price": "60.0",
+                    "qty": "88.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "54.16",
+                    "qty": "1366.2721"
+                }
+            ],
+            "id": "1669971422908001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "vsys",
+            "timestamp": 1669971420003,
+            "high": "1.5",
+            "low": "1.481",
+            "first": "1.5",
+            "last": "1.481",
+            "quote_volume": "369247.5303",
+            "target_volume": "249044.8882",
+            "best_asks": [
+                {
+                    "price": "1.55",
+                    "qty": "5000.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.313",
+                    "qty": "443532.2321"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "nfup",
+            "timestamp": 1669971420001,
+            "high": "1.754",
+            "low": "1.526",
+            "first": "1.7",
+            "last": "1.753",
+            "quote_volume": "14090646.8374",
+            "target_volume": "8439822.8476",
+            "best_asks": [
+                {
+                    "price": "1.753",
+                    "qty": "1547252.4789"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.568",
+                    "qty": "59618.5944"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bmp",
+            "timestamp": 1669971420000,
+            "high": "0.2475",
+            "low": "0.2403",
+            "first": "0.2474",
+            "last": "0.2403",
+            "quote_volume": "1213049.0616",
+            "target_volume": "4998916.3104",
+            "best_asks": [
+                {
+                    "price": "0.2462",
+                    "qty": "159399.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.2403",
+                    "qty": "438318.1589"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sxp",
+            "timestamp": 1669971420000,
+            "high": "347.0",
+            "low": "333.1",
+            "first": "333.1",
+            "last": "347.0",
+            "quote_volume": "6895892.4281",
+            "target_volume": "19994.5218",
+            "best_asks": [
+                {
+                    "price": "342.0",
+                    "qty": "3940.4916"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "338.6",
+                    "qty": "665.99"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ont",
+            "timestamp": 1669971420000,
+            "high": "249.0",
+            "low": "248.0",
+            "first": "249.0",
+            "last": "248.0",
+            "quote_volume": "24751.9031",
+            "target_volume": "99.7214",
+            "best_asks": [
+                {
+                    "price": "249.7",
+                    "qty": "5397.6158"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "210.0",
+                    "qty": "23.8142"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "egg",
+            "timestamp": 1669971420001,
+            "high": "7.781",
+            "low": "7.601",
+            "first": "7.647",
+            "last": "7.781",
+            "quote_volume": "14220432.0707",
+            "target_volume": "1843290.0054",
+            "best_asks": [
+                {
+                    "price": "7.789",
+                    "qty": "80.5698"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "7.78",
+                    "qty": "3794.4147"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bit",
+            "timestamp": 1669971420000,
+            "high": "544.1",
+            "low": "544.1",
+            "first": "544.1",
+            "last": "544.1",
+            "quote_volume": "5441.0",
+            "target_volume": "10.0",
+            "best_asks": [
+                {
+                    "price": "544.1",
+                    "qty": "20.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "365.1",
+                    "qty": "47.143"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mbl",
+            "timestamp": 1669971423078,
+            "high": "3.397",
+            "low": "3.351",
+            "first": "3.397",
+            "last": "3.351",
+            "quote_volume": "383373.8277",
+            "target_volume": "113904.2109",
+            "best_asks": [
+                {
+                    "price": "3.397",
+                    "qty": "527.8187"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.351",
+                    "qty": "100000.0"
+                }
+            ],
+            "id": "1669971423078001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "zrx",
+            "timestamp": 1669971421155,
+            "high": "255.1",
+            "low": "255.1",
+            "first": "255.1",
+            "last": "255.1",
+            "quote_volume": "10369.815",
+            "target_volume": "40.65",
+            "best_asks": [
+                {
+                    "price": "372.4",
+                    "qty": "45.9529"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "251.7",
+                    "qty": "21.0"
+                }
+            ],
+            "id": "1669971421155001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "stpt",
+            "timestamp": 1669971420002,
+            "high": "53.98",
+            "low": "43.0",
+            "first": "43.0",
+            "last": "53.98",
+            "quote_volume": "220883.82",
+            "target_volume": "5109.0",
+            "best_asks": [
+                {
+                    "price": "53.98",
+                    "qty": "5177.4821"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "35.02",
+                    "qty": "32454.8093"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ada",
+            "timestamp": 1669971420002,
+            "high": "432.5",
+            "low": "418.9",
+            "first": "426.7",
+            "last": "422.2",
+            "quote_volume": "544511001.038",
+            "target_volume": "1279564.0327",
+            "best_asks": [
+                {
+                    "price": "422.5",
+                    "qty": "10408.7544"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "422.0",
+                    "qty": "11787.7142"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "idv",
+            "timestamp": 1669971420001,
+            "high": "1.968",
+            "low": "1.678",
+            "first": "1.968",
+            "last": "1.717",
+            "quote_volume": "1537713.6986",
+            "target_volume": "842188.7669",
+            "best_asks": [
+                {
+                    "price": "1.96",
+                    "qty": "5000.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.721",
+                    "qty": "40753.3182"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "auction",
+            "timestamp": 1669971420000,
+            "high": "7240.0",
+            "low": "7240.0",
+            "first": "7240.0",
+            "last": "7240.0",
+            "quote_volume": "195331.58",
+            "target_volume": "26.9795",
+            "best_asks": [
+                {
+                    "price": "7240.0",
+                    "qty": "0.0001"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6135.0",
+                    "qty": "6.6859"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pci",
+            "timestamp": 1669971420002,
+            "high": "330.0",
+            "low": "318.3",
+            "first": "321.9",
+            "last": "325.3",
+            "quote_volume": "5637402.1543",
+            "target_volume": "17526.7256",
+            "best_asks": [
+                {
+                    "price": "328.5",
+                    "qty": "204.7763"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "325.3",
+                    "qty": "42.4453"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "btt",
+            "timestamp": 1669971420001,
+            "high": "0.001",
+            "low": "0.0009",
+            "first": "0.0009",
+            "last": "0.0009",
+            "quote_volume": "443611.7776",
+            "target_volume": "468736126.1913",
+            "best_asks": [
+                {
+                    "price": "0.001",
+                    "qty": "46660286672.1179"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.0009",
+                    "qty": "28332894772.1766"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bzrx",
+            "timestamp": 1669971420003,
+            "high": "53.8",
+            "low": "47.61",
+            "first": "51.65",
+            "last": "47.61",
+            "quote_volume": "85389.9812",
+            "target_volume": "1687.2439",
+            "best_asks": [
+                {
+                    "price": "53.78",
+                    "qty": "3713.5552"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "47.61",
+                    "qty": "4325.7924"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "prom",
+            "timestamp": 1669971420000,
+            "high": "7595.0",
+            "low": "7590.0",
+            "first": "7590.0",
+            "last": "7590.0",
+            "quote_volume": "217022.273",
+            "target_volume": "28.591",
+            "best_asks": [
+                {
+                    "price": "7590.0",
+                    "qty": "5.62"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5000.0",
+                    "qty": "2.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "spa",
+            "timestamp": 1669971420002,
+            "high": "8.97",
+            "low": "8.97",
+            "first": "8.97",
+            "last": "8.97",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "8.96",
+                    "qty": "39356.0484"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "8.01",
+                    "qty": "100000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ksm",
+            "timestamp": 1669971420003,
+            "high": "40550.0",
+            "low": "40550.0",
+            "first": "40550.0",
+            "last": "40550.0",
+            "quote_volume": "8110.0",
+            "target_volume": "0.2",
+            "best_asks": [
+                {
+                    "price": "40300.0",
+                    "qty": "11.0388"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "38000.0",
+                    "qty": "43.7757"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ksc",
+            "timestamp": 1669971420002,
+            "high": "7.114",
+            "low": "6.308",
+            "first": "6.354",
+            "last": "6.448",
+            "quote_volume": "1599053072.945",
+            "target_volume": "245902423.7027",
+            "best_asks": [
+                {
+                    "price": "6.501",
+                    "qty": "38772.903"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.404",
+                    "qty": "1714.81"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "fis",
+            "timestamp": 1669971420003,
+            "high": "412.7",
+            "low": "412.7",
+            "first": "412.7",
+            "last": "412.7",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "470.0",
+                    "qty": "35.9678"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "384.9",
+                    "qty": "184.2163"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "qtcon",
+            "timestamp": 1669971422391,
+            "high": "1.365",
+            "low": "1.287",
+            "first": "1.324",
+            "last": "1.287",
+            "quote_volume": "30303165.455",
+            "target_volume": "22897539.4513",
+            "best_asks": [
+                {
+                    "price": "1.302",
+                    "qty": "38325.8061"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.2",
+                    "qty": "12789.3028"
+                }
+            ],
+            "id": "1669971422391001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "xtz",
+            "timestamp": 1669971420001,
+            "high": "1379.0",
+            "low": "1338.0",
+            "first": "1370.0",
+            "last": "1369.0",
+            "quote_volume": "7813748.4403",
+            "target_volume": "5750.6454",
+            "best_asks": [
+                {
+                    "price": "1368.0",
+                    "qty": "191.13"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1364.0",
+                    "qty": "20.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bch",
+            "timestamp": 1669971420002,
+            "high": "151700.0",
+            "low": "146200.0",
+            "first": "150900.0",
+            "last": "148000.0",
+            "quote_volume": "136756009.17",
+            "target_volume": "917.6475",
+            "best_asks": [
+                {
+                    "price": "148100.0",
+                    "qty": "19.0457"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "147800.0",
+                    "qty": "4.7288"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sol",
+            "timestamp": 1669971421994,
+            "high": "18830.0",
+            "low": "17940.0",
+            "first": "18740.0",
+            "last": "18210.0",
+            "quote_volume": "254283943.49",
+            "target_volume": "13881.0521",
+            "best_asks": [
+                {
+                    "price": "18210.0",
+                    "qty": "90.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "18180.0",
+                    "qty": "100.2556"
+                }
+            ],
+            "id": "1669971421994001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ern",
+            "timestamp": 1669971420000,
+            "high": "3700.0",
+            "low": "2486.0",
+            "first": "3700.0",
+            "last": "2486.0",
+            "quote_volume": "279858.0618",
+            "target_volume": "105.5612",
+            "best_asks": [
+                {
+                    "price": "3650.0",
+                    "qty": "244.3723"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2542.0",
+                    "qty": "500.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "get",
+            "timestamp": 1669971420002,
+            "high": "1008.0",
+            "low": "802.0",
+            "first": "1008.0",
+            "last": "802.0",
+            "quote_volume": "95905.8822",
+            "target_volume": "106.5",
+            "best_asks": [
+                {
+                    "price": "2174.0",
+                    "qty": "12.7549"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "865.0",
+                    "qty": "8.4437"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ctsi",
+            "timestamp": 1669971420000,
+            "high": "145.0",
+            "low": "145.0",
+            "first": "145.0",
+            "last": "145.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "154.9",
+                    "qty": "756.9039"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "145.2",
+                    "qty": "10000.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "eth",
+            "timestamp": 1669971420002,
+            "high": "1754000.0",
+            "low": "1704000.0",
+            "first": "1737000.0",
+            "last": "1713000.0",
+            "quote_volume": "5380482230.6",
+            "target_volume": "3123.2557",
+            "best_asks": [
+                {
+                    "price": "1714000.0",
+                    "qty": "28.9048"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1712000.0",
+                    "qty": "17.6963"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "we",
+            "timestamp": 1669971421946,
+            "high": "22000.0",
+            "low": "19700.0",
+            "first": "20750.0",
+            "last": "19845.0",
+            "quote_volume": "1467270500.524",
+            "target_volume": "69278.2253",
+            "best_asks": [
+                {
+                    "price": "20000.0",
+                    "qty": "5.7071"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "19700.0",
+                    "qty": "16.3355"
+                }
+            ],
+            "id": "1669971421946001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "temco",
+            "timestamp": 1669971420001,
+            "high": "2.541",
+            "low": "2.541",
+            "first": "2.541",
+            "last": "2.541",
+            "quote_volume": "30005.9982",
+            "target_volume": "11808.7362",
+            "best_asks": [
+                {
+                    "price": "2.537",
+                    "qty": "3572.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2.053",
+                    "qty": "88638.5374"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "clbk",
+            "timestamp": 1669971420000,
+            "high": "3.856",
+            "low": "3.56",
+            "first": "3.626",
+            "last": "3.724",
+            "quote_volume": "15404669.4384",
+            "target_volume": "4172129.1976",
+            "best_asks": [
+                {
+                    "price": "3.782",
+                    "qty": "29367.2688"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.71",
+                    "qty": "1543.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "eos",
+            "timestamp": 1669971420002,
+            "high": "1275.0",
+            "low": "1238.0",
+            "first": "1269.0",
+            "last": "1249.0",
+            "quote_volume": "441773083.8241",
+            "target_volume": "351142.397",
+            "best_asks": [
+                {
+                    "price": "1249.0",
+                    "qty": "98.9348"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1247.0",
+                    "qty": "1412.5862"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "trix",
+            "timestamp": 1669971420002,
+            "high": "0.468",
+            "low": "0.4475",
+            "first": "0.4475",
+            "last": "0.4645",
+            "quote_volume": "29267613.4441",
+            "target_volume": "64054920.4955",
+            "best_asks": [
+                {
+                    "price": "0.4646",
+                    "qty": "17695.3771"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.4585",
+                    "qty": "108833.5869"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "tmtg",
+            "timestamp": 1669971422035,
+            "high": "0.1175",
+            "low": "0.1067",
+            "first": "0.1103",
+            "last": "0.1164",
+            "quote_volume": "5499105.8254",
+            "target_volume": "50535447.6575",
+            "best_asks": [
+                {
+                    "price": "0.1164",
+                    "qty": "5960374.548"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.107",
+                    "qty": "2647551.5867"
+                }
+            ],
+            "id": "1669971422035001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "xpn",
+            "timestamp": 1669971420513,
+            "high": "1.689",
+            "low": "1.332",
+            "first": "1.559",
+            "last": "1.685",
+            "quote_volume": "6254476.7991",
+            "target_volume": "3996980.3975",
+            "best_asks": [
+                {
+                    "price": "1.684",
+                    "qty": "29691.2114"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.336",
+                    "qty": "37425.1497"
+                }
+            ],
+            "id": "1669971420513001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "orbs",
+            "timestamp": 1669971420000,
+            "high": "33.57",
+            "low": "33.56",
+            "first": "33.57",
+            "last": "33.56",
+            "quote_volume": "16980.6616",
+            "target_volume": "505.8898",
+            "best_asks": [
+                {
+                    "price": "39.45",
+                    "qty": "4456.289"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "33.57",
+                    "qty": "4980.9572"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "onx",
+            "timestamp": 1669971420001,
+            "high": "69.5",
+            "low": "65.2",
+            "first": "69.5",
+            "last": "69.5",
+            "quote_volume": "17689.0842",
+            "target_volume": "257.7835",
+            "best_asks": [
+                {
+                    "price": "69.5",
+                    "qty": "2854.5203"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "63.7",
+                    "qty": "586.3852"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ren",
+            "timestamp": 1669971420922,
+            "high": "144.7",
+            "low": "136.0",
+            "first": "144.7",
+            "last": "136.0",
+            "quote_volume": "756870.0231",
+            "target_volume": "5554.2495",
+            "best_asks": [
+                {
+                    "price": "138.2",
+                    "qty": "9780.668"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "100.1",
+                    "qty": "2246.2465"
+                }
+            ],
+            "id": "1669971420922001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "knc",
+            "timestamp": 1669971420002,
+            "high": "920.0",
+            "low": "883.0",
+            "first": "920.0",
+            "last": "883.0",
+            "quote_volume": "4771247.146",
+            "target_volume": "5312.8078",
+            "best_asks": [
+                {
+                    "price": "890.0",
+                    "qty": "1515.5802"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "843.0",
+                    "qty": "510.5192"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bat",
+            "timestamp": 1669971420000,
+            "high": "319.0",
+            "low": "310.0",
+            "first": "319.0",
+            "last": "310.0",
+            "quote_volume": "1789952.9409",
+            "target_volume": "5688.0181",
+            "best_asks": [
+                {
+                    "price": "313.1",
+                    "qty": "655.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "310.0",
+                    "qty": "1609.6838"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "atom",
+            "timestamp": 1669971420002,
+            "high": "14200.0",
+            "low": "13600.0",
+            "first": "14030.0",
+            "last": "13760.0",
+            "quote_volume": "223501007.446",
+            "target_volume": "16105.9378",
+            "best_asks": [
+                {
+                    "price": "13780.0",
+                    "qty": "420.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "13760.0",
+                    "qty": "470.4595"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "thn",
+            "timestamp": 1669971421343,
+            "high": "4.599",
+            "low": "4.29",
+            "first": "4.599",
+            "last": "4.29",
+            "quote_volume": "1316686.0105",
+            "target_volume": "298826.3683",
+            "best_asks": [
+                {
+                    "price": "4.499",
+                    "qty": "25339.4722"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.11",
+                    "qty": "55221.0381"
+                }
+            ],
+            "id": "1669971421343001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mana",
+            "timestamp": 1669971420002,
+            "high": "554.6",
+            "low": "536.3",
+            "first": "547.5",
+            "last": "552.0",
+            "quote_volume": "57896476.7183",
+            "target_volume": "106092.0634",
+            "best_asks": [
+                {
+                    "price": "551.0",
+                    "qty": "1605.643"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "549.7",
+                    "qty": "3000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "kai",
+            "timestamp": 1669971420000,
+            "high": "10.46",
+            "low": "10.46",
+            "first": "10.46",
+            "last": "10.46",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "10.19",
+                    "qty": "660.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "8.0",
+                    "qty": "882.8593"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "gom2",
+            "timestamp": 1669971420001,
+            "high": "6.2",
+            "low": "5.7",
+            "first": "6.108",
+            "last": "6.2",
+            "quote_volume": "1167696.9971",
+            "target_volume": "191844.3812",
+            "best_asks": [
+                {
+                    "price": "6.24",
+                    "qty": "19468.9038"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5.8",
+                    "qty": "14518.502"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "tari",
+            "timestamp": 1669971420001,
+            "high": "36650.0",
+            "low": "34270.0",
+            "first": "36010.0",
+            "last": "34470.0",
+            "quote_volume": "1099476220.94",
+            "target_volume": "31040.2043",
+            "best_asks": [
+                {
+                    "price": "34550.0",
+                    "qty": "29.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "34410.0",
+                    "qty": "0.1464"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "nft",
+            "timestamp": 1669971421013,
+            "high": "0.0007",
+            "low": "0.0006",
+            "first": "0.0007",
+            "last": "0.0006",
+            "quote_volume": "1878952.6985",
+            "target_volume": "2856117355.0974",
+            "best_asks": [
+                {
+                    "price": "0.0007",
+                    "qty": "14556957564.8595"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.0006",
+                    "qty": "113976067185.5568"
+                }
+            ],
+            "id": "1669971421013001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cbank",
+            "timestamp": 1669971421558,
+            "high": "4.474",
+            "low": "4.096",
+            "first": "4.133",
+            "last": "4.297",
+            "quote_volume": "97049353.0172",
+            "target_volume": "22900605.6859",
+            "best_asks": [
+                {
+                    "price": "4.329",
+                    "qty": "110143.1924"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.26",
+                    "qty": "2600.0"
+                }
+            ],
+            "id": "1669971421558001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "trcl",
+            "timestamp": 1669971420000,
+            "high": "2.4",
+            "low": "1.961",
+            "first": "2.051",
+            "last": "2.157",
+            "quote_volume": "19870776.6992",
+            "target_volume": "9292791.7811",
+            "best_asks": [
+                {
+                    "price": "2.157",
+                    "qty": "24473.5418"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.992",
+                    "qty": "25100.4016"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sku",
+            "timestamp": 1669971420610,
+            "high": "29.48",
+            "low": "17.51",
+            "first": "29.47",
+            "last": "18.0",
+            "quote_volume": "1616211.6902",
+            "target_volume": "72112.6595",
+            "best_asks": [
+                {
+                    "price": "25.34",
+                    "qty": "764.1476"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "18.0",
+                    "qty": "16369.7358"
+                }
+            ],
+            "id": "1669971420610001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cvx",
+            "timestamp": 1669971420001,
+            "high": "5620.0",
+            "low": "5295.0",
+            "first": "5555.0",
+            "last": "5395.0",
+            "quote_volume": "1677334.772",
+            "target_volume": "308.7253",
+            "best_asks": [
+                {
+                    "price": "5395.0",
+                    "qty": "132.3043"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5285.0",
+                    "qty": "252.1856"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "drm",
+            "timestamp": 1669971420002,
+            "high": "6.894",
+            "low": "6.477",
+            "first": "6.616",
+            "last": "6.546",
+            "quote_volume": "1216636.4473",
+            "target_volume": "182367.125",
+            "best_asks": [
+                {
+                    "price": "6.546",
+                    "qty": "64.768"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.477",
+                    "qty": "2758.9602"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dao",
+            "timestamp": 1669971420003,
+            "high": "1540.0",
+            "low": "1183.0",
+            "first": "1183.0",
+            "last": "1539.0",
+            "quote_volume": "1198151.0946",
+            "target_volume": "1010.8373",
+            "best_asks": [
+                {
+                    "price": "1479.0",
+                    "qty": "498.0218"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1106.0",
+                    "qty": "1395.3137"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "fet",
+            "timestamp": 1669971420001,
+            "high": "83.0",
+            "low": "83.0",
+            "first": "83.0",
+            "last": "83.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "130.3",
+                    "qty": "767.4597"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "82.1",
+                    "qty": "61.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "btc",
+            "timestamp": 1669971423154,
+            "high": "23453000.0",
+            "low": "22700000.0",
+            "first": "23148000.0",
+            "last": "22769000.0",
+            "quote_volume": "14365350859.1",
+            "target_volume": "625.2631",
+            "best_asks": [
+                {
+                    "price": "22772000.0",
+                    "qty": "2.416"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "22767000.0",
+                    "qty": "0.3329"
+                }
+            ],
+            "id": "1669971423154001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "six",
+            "timestamp": 1669971420000,
+            "high": "59.97",
+            "low": "55.03",
+            "first": "55.03",
+            "last": "59.97",
+            "quote_volume": "79184.6765",
+            "target_volume": "1391.3924",
+            "best_asks": [
+                {
+                    "price": "59.97",
+                    "qty": "49916.3916"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "55.06",
+                    "qty": "91.0642"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "orbr",
+            "timestamp": 1669971422804,
+            "high": "23000.0",
+            "low": "20000.0",
+            "first": "21410.0",
+            "last": "20920.0",
+            "quote_volume": "1763536491.277",
+            "target_volume": "82130.1869",
+            "best_asks": [
+                {
+                    "price": "20950.0",
+                    "qty": "0.3"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "20300.0",
+                    "qty": "20.0"
+                }
+            ],
+            "id": "1669971422804001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sklay",
+            "timestamp": 1669971420001,
+            "high": "298.2",
+            "low": "279.1",
+            "first": "298.2",
+            "last": "279.5",
+            "quote_volume": "362442.7699",
+            "target_volume": "1285.9611",
+            "best_asks": [
+                {
+                    "price": "297.7",
+                    "qty": "18.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "279.5",
+                    "qty": "142.3065"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "arpa",
+            "timestamp": 1669971420001,
+            "high": "36.8",
+            "low": "36.8",
+            "first": "36.8",
+            "last": "36.8",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "45.09",
+                    "qty": "152.007"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "34.68",
+                    "qty": "32802.6039"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "lina",
+            "timestamp": 1669971420794,
+            "high": "8.35",
+            "low": "8.35",
+            "first": "8.35",
+            "last": "8.35",
+            "quote_volume": "1352186.1234",
+            "target_volume": "161938.4579",
+            "best_asks": [
+                {
+                    "price": "8.43",
+                    "qty": "159605.5993"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.22",
+                    "qty": "135246.0956"
+                }
+            ],
+            "id": "1669971420794001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bnt",
+            "timestamp": 1669971420000,
+            "high": "408.0",
+            "low": "408.0",
+            "first": "408.0",
+            "last": "408.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "499.8",
+                    "qty": "32.0772"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "408.8",
+                    "qty": "2100.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "wncg",
+            "timestamp": 1669971420285,
+            "high": "92.1",
+            "low": "85.3",
+            "first": "92.1",
+            "last": "89.9",
+            "quote_volume": "4151125.7732",
+            "target_volume": "45560.4677",
+            "best_asks": [
+                {
+                    "price": "89.6",
+                    "qty": "12170.4253"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "81.2",
+                    "qty": "12999.0379"
+                }
+            ],
+            "id": "1669971420285001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ogn",
+            "timestamp": 1669971420000,
+            "high": "145.0",
+            "low": "145.0",
+            "first": "145.0",
+            "last": "145.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "144.5",
+                    "qty": "9366.9457"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "100.0",
+                    "qty": "922.4979"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "hum",
+            "timestamp": 1669971420003,
+            "high": "115.0",
+            "low": "111.3",
+            "first": "115.0",
+            "last": "115.0",
+            "quote_volume": "1044014.98",
+            "target_volume": "9251.8354",
+            "best_asks": [
+                {
+                    "price": "115.0",
+                    "qty": "254.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "109.9",
+                    "qty": "13572.5636"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "asm",
+            "timestamp": 1669971420001,
+            "high": "17.0",
+            "low": "17.0",
+            "first": "17.0",
+            "last": "17.0",
+            "quote_volume": "18600.9988",
+            "target_volume": "1094.1764",
+            "best_asks": [
+                {
+                    "price": "17.0",
+                    "qty": "917.9859"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "15.53",
+                    "qty": "1165.45"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "trx",
+            "timestamp": 1669971420000,
+            "high": "74.54",
+            "low": "72.38",
+            "first": "73.8",
+            "last": "72.87",
+            "quote_volume": "921506527.9737",
+            "target_volume": "12563691.6833",
+            "best_asks": [
+                {
+                    "price": "72.91",
+                    "qty": "7476.7868"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "72.85",
+                    "qty": "73727.9073"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ilv",
+            "timestamp": 1669971420000,
+            "high": "76600.0",
+            "low": "76600.0",
+            "first": "76600.0",
+            "last": "76600.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "65500.0",
+                    "qty": "0.1336"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "56150.0",
+                    "qty": "0.4443"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ksp",
+            "timestamp": 1669971420000,
+            "high": "906.0",
+            "low": "873.0",
+            "first": "885.0",
+            "last": "873.0",
+            "quote_volume": "24225994.5421",
+            "target_volume": "27180.4186",
+            "best_asks": [
+                {
+                    "price": "895.0",
+                    "qty": "61.0777"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "874.0",
+                    "qty": "6.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mch",
+            "timestamp": 1669971420002,
+            "high": "74.94",
+            "low": "62.78",
+            "first": "73.72",
+            "last": "65.01",
+            "quote_volume": "1946143377.0588",
+            "target_volume": "27678067.9585",
+            "best_asks": [
+                {
+                    "price": "66.86",
+                    "qty": "4879.4445"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "65.0",
+                    "qty": "3326.3906"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "avax",
+            "timestamp": 1669971420000,
+            "high": "17770.0",
+            "low": "17300.0",
+            "first": "17630.0",
+            "last": "17690.0",
+            "quote_volume": "36011557.247",
+            "target_volume": "2051.2717",
+            "best_asks": [
+                {
+                    "price": "17700.0",
+                    "qty": "100.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "17680.0",
+                    "qty": "100.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mnr",
+            "timestamp": 1669971420002,
+            "high": "3.106",
+            "low": "3.0",
+            "first": "3.072",
+            "last": "3.036",
+            "quote_volume": "165025440.2783",
+            "target_volume": "54109817.5974",
+            "best_asks": [
+                {
+                    "price": "3.057",
+                    "qty": "253101.3839"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.018",
+                    "qty": "2000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "btr",
+            "timestamp": 1669971420001,
+            "high": "39.97",
+            "low": "38.24",
+            "first": "38.24",
+            "last": "39.94",
+            "quote_volume": "115584805.7919",
+            "target_volume": "2974191.1797",
+            "best_asks": [
+                {
+                    "price": "39.97",
+                    "qty": "1762.3594"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "38.02",
+                    "qty": "2343.0566"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "stpl",
+            "timestamp": 1669971420001,
+            "high": "2.436",
+            "low": "2.067",
+            "first": "2.172",
+            "last": "2.149",
+            "quote_volume": "18983188.0012",
+            "target_volume": "8901156.4134",
+            "best_asks": [
+                {
+                    "price": "2.148",
+                    "qty": "27103.8207"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2.07",
+                    "qty": "95000.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "hard",
+            "timestamp": 1669971420000,
+            "high": "188.5",
+            "low": "188.5",
+            "first": "188.5",
+            "last": "188.5",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "239.4",
+                    "qty": "376.1033"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "175.9",
+                    "qty": "4000.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "asta",
+            "timestamp": 1669971420000,
+            "high": "0.895",
+            "low": "0.559",
+            "first": "0.626",
+            "last": "0.625",
+            "quote_volume": "156426428.7244",
+            "target_volume": "223475823.507",
+            "best_asks": [
+                {
+                    "price": "0.627",
+                    "qty": "136074.0169"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.625",
+                    "qty": "156065.1703"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "rush",
+            "timestamp": 1669971420002,
+            "high": "5.396",
+            "low": "5.006",
+            "first": "5.297",
+            "last": "5.023",
+            "quote_volume": "1799220297.0605",
+            "target_volume": "348333734.0241",
+            "best_asks": [
+                {
+                    "price": "5.025",
+                    "qty": "1094.5274"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "5.024",
+                    "qty": "68870.7314"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "axs",
+            "timestamp": 1669971420000,
+            "high": "9440.0",
+            "low": "9070.0",
+            "first": "9290.0",
+            "last": "9150.0",
+            "quote_volume": "24766957.294",
+            "target_volume": "2660.7517",
+            "best_asks": [
+                {
+                    "price": "9250.0",
+                    "qty": "66.8817"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "9210.0",
+                    "qty": "52.5277"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bsv",
+            "timestamp": 1669971420001,
+            "high": "57800.0",
+            "low": "55500.0",
+            "first": "57800.0",
+            "last": "55500.0",
+            "quote_volume": "1407516.14",
+            "target_volume": "25.3463",
+            "best_asks": [
+                {
+                    "price": "60700.0",
+                    "qty": "0.3295"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "55000.0",
+                    "qty": "25.3022"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bal",
+            "timestamp": 1669971420002,
+            "high": "8390.0",
+            "low": "8390.0",
+            "first": "8390.0",
+            "last": "8390.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "8330.0",
+                    "qty": "161.1652"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "7115.0",
+                    "qty": "202.462"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "isr",
+            "timestamp": 1669971420002,
+            "high": "4.3",
+            "low": "4.002",
+            "first": "4.002",
+            "last": "4.3",
+            "quote_volume": "432238.1511",
+            "target_volume": "103408.3155",
+            "best_asks": [
+                {
+                    "price": "4.494",
+                    "qty": "31662.6382"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.01",
+                    "qty": "188787.3927"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "xec",
+            "timestamp": 1669971420002,
+            "high": "0.0399",
+            "low": "0.0387",
+            "first": "0.0399",
+            "last": "0.0393",
+            "quote_volume": "27733885.0031",
+            "target_volume": "707115347.1339",
+            "best_asks": [
+                {
+                    "price": "0.0395",
+                    "qty": "7070204.6912"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.039",
+                    "qty": "3088688.9828"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "neo",
+            "timestamp": 1669971420001,
+            "high": "9330.0",
+            "low": "9080.0",
+            "first": "9330.0",
+            "last": "9220.0",
+            "quote_volume": "1744538.746",
+            "target_volume": "189.7243",
+            "best_asks": [
+                {
+                    "price": "9220.0",
+                    "qty": "332.1384"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "9150.0",
+                    "qty": "26.15"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "pib",
+            "timestamp": 1669971420001,
+            "high": "0.4164",
+            "low": "0.3852",
+            "first": "0.4096",
+            "last": "0.4157",
+            "quote_volume": "56170591.6335",
+            "target_volume": "136805304.4488",
+            "best_asks": [
+                {
+                    "price": "0.4164",
+                    "qty": "117163.7087"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.4002",
+                    "qty": "58415.4035"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "gas",
+            "timestamp": 1669971420001,
+            "high": "2602.0",
+            "low": "2602.0",
+            "first": "2602.0",
+            "last": "2602.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "3448.0",
+                    "qty": "48.5378"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2112.0",
+                    "qty": "200.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "baas",
+            "timestamp": 1669971420000,
+            "high": "0.772",
+            "low": "0.7157",
+            "first": "0.739",
+            "last": "0.7157",
+            "quote_volume": "41168233.4567",
+            "target_volume": "56253120.2867",
+            "best_asks": [
+                {
+                    "price": "0.7163",
+                    "qty": "12848.4437"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.7157",
+                    "qty": "572472.0256"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dia",
+            "timestamp": 1669971420001,
+            "high": "446.7",
+            "low": "446.7",
+            "first": "446.7",
+            "last": "446.7",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "899.8",
+                    "qty": "218.9886"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "449.8",
+                    "qty": "4418.2889"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cos",
+            "timestamp": 1669971420001,
+            "high": "7.21",
+            "low": "7.21",
+            "first": "7.21",
+            "last": "7.21",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "9.549",
+                    "qty": "1793.7655"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.531",
+                    "qty": "767.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dot",
+            "timestamp": 1669971420607,
+            "high": "7420.0",
+            "low": "7205.0",
+            "first": "7260.0",
+            "last": "7370.0",
+            "quote_volume": "203458216.7875",
+            "target_volume": "27837.7994",
+            "best_asks": [
+                {
+                    "price": "7385.0",
+                    "qty": "375.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "7370.0",
+                    "qty": "375.0"
+                }
+            ],
+            "id": "1669971420607001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "soc",
+            "timestamp": 1669971420001,
+            "high": "3.977",
+            "low": "3.977",
+            "first": "3.977",
+            "last": "3.977",
+            "quote_volume": "263675.0999",
+            "target_volume": "66300.0",
+            "best_asks": [
+                {
+                    "price": "3.977",
+                    "qty": "4344.3519"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.885",
+                    "qty": "71965.1779"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mev",
+            "timestamp": 1669971420000,
+            "high": "16.2",
+            "low": "14.72",
+            "first": "15.21",
+            "last": "15.13",
+            "quote_volume": "68328634.9061",
+            "target_volume": "4479053.2539",
+            "best_asks": [
+                {
+                    "price": "16.47",
+                    "qty": "5604.7485"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "14.7",
+                    "qty": "1000.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "grt",
+            "timestamp": 1669971420001,
+            "high": "82.4",
+            "low": "82.4",
+            "first": "82.4",
+            "last": "82.4",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "87.2",
+                    "qty": "15482.0639"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "82.5",
+                    "qty": "800.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cro",
+            "timestamp": 1669971420000,
+            "high": "91.9",
+            "low": "91.9",
+            "first": "91.9",
+            "last": "91.9",
+            "quote_volume": "36568.5905",
+            "target_volume": "397.9172",
+            "best_asks": [
+                {
+                    "price": "91.8",
+                    "qty": "10522.0846"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "80.1",
+                    "qty": "203.446"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "att",
+            "timestamp": 1669971422375,
+            "high": "1.011",
+            "low": "0.988",
+            "first": "0.994",
+            "last": "0.988",
+            "quote_volume": "260254481.8234",
+            "target_volume": "260460608.6998",
+            "best_asks": [
+                {
+                    "price": "0.99",
+                    "qty": "46825.0414"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.988",
+                    "qty": "4137.3142"
+                }
+            ],
+            "id": "1669971422375001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "btg",
+            "timestamp": 1669971420003,
+            "high": "20160.0",
+            "low": "20160.0",
+            "first": "20160.0",
+            "last": "20160.0",
+            "quote_volume": "91173.6",
+            "target_volume": "4.5225",
+            "best_asks": [
+                {
+                    "price": "20160.0",
+                    "qty": "0.329"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "16550.0",
+                    "qty": "27.003"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "soba",
+            "timestamp": 1669971420001,
+            "high": "0.0428",
+            "low": "0.031",
+            "first": "0.0399",
+            "last": "0.0369",
+            "quote_volume": "10946450.4117",
+            "target_volume": "301010821.3914",
+            "best_asks": [
+                {
+                    "price": "0.0369",
+                    "qty": "2429403.2488"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.0327",
+                    "qty": "14875117.4543"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "tomoe",
+            "timestamp": 1669971420000,
+            "high": "516.0",
+            "low": "516.0",
+            "first": "516.0",
+            "last": "516.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "515.3",
+                    "qty": "496.6277"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "381.0",
+                    "qty": "13.2"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "1inch",
+            "timestamp": 1669971420001,
+            "high": "700.0",
+            "low": "675.0",
+            "first": "700.0",
+            "last": "675.0",
+            "quote_volume": "896800.9347",
+            "target_volume": "1296.5176",
+            "best_asks": [
+                {
+                    "price": "738.2",
+                    "qty": "7.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "670.0",
+                    "qty": "44.69"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "klay",
+            "timestamp": 1669971420003,
+            "high": "261.5",
+            "low": "253.0",
+            "first": "255.2",
+            "last": "260.0",
+            "quote_volume": "1358148930.8563",
+            "target_volume": "5286157.7379",
+            "best_asks": [
+                {
+                    "price": "260.2",
+                    "qty": "25940.1901"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "258.9",
+                    "qty": "8566.9194"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "orc",
+            "timestamp": 1669971420000,
+            "high": "125.6",
+            "low": "121.0",
+            "first": "121.1",
+            "last": "121.2",
+            "quote_volume": "19411065.7731",
+            "target_volume": "157765.2337",
+            "best_asks": [
+                {
+                    "price": "123.0",
+                    "qty": "3455.4212"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "121.1",
+                    "qty": "45.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ankr",
+            "timestamp": 1669971420000,
+            "high": "34.99",
+            "low": "27.94",
+            "first": "30.42",
+            "last": "28.97",
+            "quote_volume": "18162877.7741",
+            "target_volume": "628920.3604",
+            "best_asks": [
+                {
+                    "price": "29.35",
+                    "qty": "13313.0056"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "28.92",
+                    "qty": "46195.4931"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "redi",
+            "timestamp": 1669971420000,
+            "high": "0.765",
+            "low": "0.7003",
+            "first": "0.7119",
+            "last": "0.7077",
+            "quote_volume": "172661896.4363",
+            "target_volume": "240495846.7296",
+            "best_asks": [
+                {
+                    "price": "0.7099",
+                    "qty": "1803431.4807"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.706",
+                    "qty": "10000.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "drc",
+            "timestamp": 1669971421429,
+            "high": "4.255",
+            "low": "3.344",
+            "first": "4.162",
+            "last": "3.401",
+            "quote_volume": "1335357196.5259",
+            "target_volume": "346269432.0686",
+            "best_asks": [
+                {
+                    "price": "3.402",
+                    "qty": "3808.6458"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.4",
+                    "qty": "10672.3033"
+                }
+            ],
+            "id": "1669971421429001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "iota",
+            "timestamp": 1669971420002,
+            "high": "289.7",
+            "low": "283.3",
+            "first": "287.7",
+            "last": "283.3",
+            "quote_volume": "14368967.7688",
+            "target_volume": "50089.2476",
+            "best_asks": [
+                {
+                    "price": "285.0",
+                    "qty": "4735.6621"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "282.9",
+                    "qty": "723.5525"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "myce",
+            "timestamp": 1669971420001,
+            "high": "0.1372",
+            "low": "0.1254",
+            "first": "0.137",
+            "last": "0.137",
+            "quote_volume": "3274700.1041",
+            "target_volume": "24045479.9015",
+            "best_asks": [
+                {
+                    "price": "0.1369",
+                    "qty": "296153.7911"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "0.1277",
+                    "qty": "46985.1213"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "qtum",
+            "timestamp": 1669971420000,
+            "high": "3020.0",
+            "low": "2940.0",
+            "first": "3009.0",
+            "last": "2967.0",
+            "quote_volume": "4277239.0553",
+            "target_volume": "1419.7106",
+            "best_asks": [
+                {
+                    "price": "2985.0",
+                    "qty": "5.3418"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "2976.0",
+                    "qty": "507.9248"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sand",
+            "timestamp": 1669971420001,
+            "high": "812.0",
+            "low": "775.0",
+            "first": "788.0",
+            "last": "800.0",
+            "quote_volume": "389164753.0382",
+            "target_volume": "492424.2663",
+            "best_asks": [
+                {
+                    "price": "801.0",
+                    "qty": "1832.6045"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "799.0",
+                    "qty": "2027.8624"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "abl",
+            "timestamp": 1669971421040,
+            "high": "8.987",
+            "low": "8.3",
+            "first": "8.352",
+            "last": "8.427",
+            "quote_volume": "29692383.4234",
+            "target_volume": "3541616.6956",
+            "best_asks": [
+                {
+                    "price": "8.48",
+                    "qty": "730.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "8.3",
+                    "qty": "18552.9964"
+                }
+            ],
+            "id": "1669971421040001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bel",
+            "timestamp": 1669971420002,
+            "high": "628.2",
+            "low": "619.6",
+            "first": "625.8",
+            "last": "628.2",
+            "quote_volume": "5635923.3182",
+            "target_volume": "9045.4315",
+            "best_asks": [
+                {
+                    "price": "637.4",
+                    "qty": "2386.6924"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "500.0",
+                    "qty": "710.7987"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "lbl",
+            "timestamp": 1669971420000,
+            "high": "8.48",
+            "low": "3.936",
+            "first": "5.0",
+            "last": "5.3",
+            "quote_volume": "17167259.0267",
+            "target_volume": "3418795.5196",
+            "best_asks": [
+                {
+                    "price": "5.5",
+                    "qty": "31204.2998"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "4.5",
+                    "qty": "89288.888"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "cru",
+            "timestamp": 1669971420001,
+            "high": "982.0",
+            "low": "982.0",
+            "first": "982.0",
+            "last": "982.0",
+            "quote_volume": "10001.8664",
+            "target_volume": "10.1852",
+            "best_asks": [
+                {
+                    "price": "980.0",
+                    "qty": "149.3302"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "699.0",
+                    "qty": "2000.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "kava",
+            "timestamp": 1669971420001,
+            "high": "1250.0",
+            "low": "1207.0",
+            "first": "1243.0",
+            "last": "1220.0",
+            "quote_volume": "23539782.6651",
+            "target_volume": "19117.3153",
+            "best_asks": [
+                {
+                    "price": "1215.0",
+                    "qty": "3079.5232"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1205.0",
+                    "qty": "1108.9993"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "etc",
+            "timestamp": 1669971420000,
+            "high": "27320.0",
+            "low": "25980.0",
+            "first": "26990.0",
+            "last": "26230.0",
+            "quote_volume": "1128654942.516",
+            "target_volume": "42328.1117",
+            "best_asks": [
+                {
+                    "price": "26250.0",
+                    "qty": "63.9376"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "26220.0",
+                    "qty": "63.534"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bora",
+            "timestamp": 1669971420002,
+            "high": "214.2",
+            "low": "205.0",
+            "first": "209.6",
+            "last": "210.0",
+            "quote_volume": "10292279.3102",
+            "target_volume": "49558.8241",
+            "best_asks": [
+                {
+                    "price": "212.1",
+                    "qty": "14925.5035"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "205.8",
+                    "qty": "10000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "don",
+            "timestamp": 1669971420001,
+            "high": "17840.0",
+            "low": "17100.0",
+            "first": "17520.0",
+            "last": "17200.0",
+            "quote_volume": "7216372291.376",
+            "target_volume": "412575.6694",
+            "best_asks": [
+                {
+                    "price": "17200.0",
+                    "qty": "52.5406"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "17170.0",
+                    "qty": "23.6158"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ong",
+            "timestamp": 1669971420000,
+            "high": "444.7",
+            "low": "444.7",
+            "first": "444.7",
+            "last": "444.7",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "443.9",
+                    "qty": "212.221"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "257.0",
+                    "qty": "3913.4612"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dad",
+            "timestamp": 1669971420000,
+            "high": "25.7",
+            "low": "25.7",
+            "first": "25.7",
+            "last": "25.7",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "32.9",
+                    "qty": "673.5532"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "25.71",
+                    "qty": "195.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "flow",
+            "timestamp": 1669971420000,
+            "high": "1512.0",
+            "low": "1450.0",
+            "first": "1512.0",
+            "last": "1462.0",
+            "quote_volume": "6719405.2896",
+            "target_volume": "4570.6388",
+            "best_asks": [
+                {
+                    "price": "1478.0",
+                    "qty": "183.1756"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1465.0",
+                    "qty": "374.6609"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "doge",
+            "timestamp": 1669971420000,
+            "high": "143.1",
+            "low": "130.5",
+            "first": "139.6",
+            "last": "133.2",
+            "quote_volume": "5630485289.0123",
+            "target_volume": "41123013.7571",
+            "best_asks": [
+                {
+                    "price": "133.3",
+                    "qty": "30000.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "133.1",
+                    "qty": "85460.5071"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "mega",
+            "timestamp": 1669971422407,
+            "high": "20.85",
+            "low": "17.72",
+            "first": "19.66",
+            "last": "18.11",
+            "quote_volume": "302407940.298",
+            "target_volume": "16063838.438",
+            "best_asks": [
+                {
+                    "price": "18.14",
+                    "qty": "577.8049"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "18.1",
+                    "qty": "19261.0709"
+                }
+            ],
+            "id": "1669971422407001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "celeb",
+            "timestamp": 1669971423278,
+            "high": "17.75",
+            "low": "16.4",
+            "first": "17.59",
+            "last": "16.8",
+            "quote_volume": "931078926.3643",
+            "target_volume": "53964849.8329",
+            "best_asks": [
+                {
+                    "price": "16.8",
+                    "qty": "1405.807"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "16.77",
+                    "qty": "2742.7254"
+                }
+            ],
+            "id": "1669971423278001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "reap",
+            "timestamp": 1669971420000,
+            "high": "30.97",
+            "low": "29.0",
+            "first": "30.47",
+            "last": "29.48",
+            "quote_volume": "1278014950.816",
+            "target_volume": "42448923.5225",
+            "best_asks": [
+                {
+                    "price": "29.49",
+                    "qty": "183.1118"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "29.47",
+                    "qty": "186.6305"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "nest",
+            "timestamp": 1669971421561,
+            "high": "32.02",
+            "low": "32.02",
+            "first": "32.02",
+            "last": "32.02",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "44.98",
+                    "qty": "27271.7723"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "31.31",
+                    "qty": "160.0"
+                }
+            ],
+            "id": "1669971421561001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sml",
+            "timestamp": 1669971420000,
+            "high": "19600.0",
+            "low": "11575.0",
+            "first": "13471.7",
+            "last": "17989.9",
+            "quote_volume": "1797350569.2956",
+            "target_volume": "124804.007",
+            "best_asks": [
+                {
+                    "price": "18000.5",
+                    "qty": "2.6501"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "17984.0",
+                    "qty": "13.4354"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sushi",
+            "timestamp": 1669971420000,
+            "high": "1890.0",
+            "low": "1818.0",
+            "first": "1890.0",
+            "last": "1832.0",
+            "quote_volume": "38375.3552",
+            "target_volume": "20.8888",
+            "best_asks": [
+                {
+                    "price": "1830.0",
+                    "qty": "736.0365"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1425.0",
+                    "qty": "4.0"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "srm",
+            "timestamp": 1669971420001,
+            "high": "372.0",
+            "low": "361.0",
+            "first": "372.0",
+            "last": "361.0",
+            "quote_volume": "2086553.5794",
+            "target_volume": "5639.8277",
+            "best_asks": [
+                {
+                    "price": "371.0",
+                    "qty": "19.7754"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "360.0",
+                    "qty": "18.0"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "sun",
+            "timestamp": 1669971420000,
+            "high": "7.19",
+            "low": "7.19",
+            "first": "7.19",
+            "last": "7.19",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "8.27",
+                    "qty": "13600.0774"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "6.8",
+                    "qty": "297784.0516"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "ckb",
+            "timestamp": 1669971422681,
+            "high": "3.32",
+            "low": "3.32",
+            "first": "3.32",
+            "last": "3.32",
+            "quote_volume": "233800.8235",
+            "target_volume": "70421.9349",
+            "best_asks": [
+                {
+                    "price": "6.086",
+                    "qty": "3010.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "3.25",
+                    "qty": "1538.7692"
+                }
+            ],
+            "id": "1669971422681001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "xrp",
+            "timestamp": 1669971420002,
+            "high": "544.9",
+            "low": "516.5",
+            "first": "540.8",
+            "last": "524.5",
+            "quote_volume": "9488320706.8699",
+            "target_volume": "17859832.3012",
+            "best_asks": [
+                {
+                    "price": "524.5",
+                    "qty": "14676.9151"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "524.2",
+                    "qty": "4188.6596"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "alpha",
+            "timestamp": 1669971420001,
+            "high": "121.1",
+            "low": "120.6",
+            "first": "121.0",
+            "last": "120.9",
+            "quote_volume": "4859201.0806",
+            "target_volume": "40168.3032",
+            "best_asks": [
+                {
+                    "price": "121.6",
+                    "qty": "99255.5832"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "120.9",
+                    "qty": "119.3613"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "bwo",
+            "timestamp": 1669971420000,
+            "high": "1279.8",
+            "low": "1189.1",
+            "first": "1205.1",
+            "last": "1209.3",
+            "quote_volume": "1383795152.324",
+            "target_volume": "1140284.7462",
+            "best_asks": [
+                {
+                    "price": "1216.5",
+                    "qty": "213.1396"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1197.4",
+                    "qty": "835.1428"
+                }
+            ],
+            "id": "1669971420000001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "dodo",
+            "timestamp": 1669971420003,
+            "high": "163.8",
+            "low": "150.0",
+            "first": "150.0",
+            "last": "160.9",
+            "quote_volume": "621141.2819",
+            "target_volume": "3902.7832",
+            "best_asks": [
+                {
+                    "price": "209.0",
+                    "qty": "2127.2328"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "147.6",
+                    "qty": "7413.9472"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "aave",
+            "timestamp": 1669971421876,
+            "high": "86900.0",
+            "low": "85100.0",
+            "first": "86900.0",
+            "last": "85100.0",
+            "quote_volume": "1320014.39",
+            "target_volume": "15.4981",
+            "best_asks": [
+                {
+                    "price": "85600.0",
+                    "qty": "30.7727"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "76200.0",
+                    "qty": "0.1312"
+                }
+            ],
+            "id": "1669971421876001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "omg",
+            "timestamp": 1669971420003,
+            "high": "1668.0",
+            "low": "1612.0",
+            "first": "1668.0",
+            "last": "1626.0",
+            "quote_volume": "3681921.9693",
+            "target_volume": "2222.6536",
+            "best_asks": [
+                {
+                    "price": "1650.0",
+                    "qty": "322.991"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1550.0",
+                    "qty": "4.0"
+                }
+            ],
+            "id": "1669971420003001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "tvk",
+            "timestamp": 1669971420002,
+            "high": "41.88",
+            "low": "41.88",
+            "first": "41.88",
+            "last": "41.88",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "55.88",
+                    "qty": "7921.5178"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "39.45",
+                    "qty": "1000.0"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "amo",
+            "timestamp": 1669971420001,
+            "high": "1.0",
+            "low": "1.0",
+            "first": "1.0",
+            "last": "1.0",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "1.293",
+                    "qty": "38611.2566"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "1.0",
+                    "qty": "1023275.0202"
+                }
+            ],
+            "id": "1669971420001001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "front",
+            "timestamp": 1669971420002,
+            "high": "241.5",
+            "low": "241.5",
+            "first": "241.5",
+            "last": "241.5",
+            "quote_volume": "0.0",
+            "target_volume": "0.0",
+            "best_asks": [
+                {
+                    "price": "260.7",
+                    "qty": "267.3001"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "247.4",
+                    "qty": "4585.4974"
+                }
+            ],
+            "id": "1669971420002001"
+        },
+        {
+            "quote_currency": "krw",
+            "target_currency": "handy",
+            "timestamp": 1669971422454,
+            "high": "18.49",
+            "low": "13.39",
+            "first": "17.97",
+            "last": "14.76",
+            "quote_volume": "487491963.3229",
+            "target_volume": "30412827.9352",
+            "best_asks": [
+                {
+                    "price": "15.1",
+                    "qty": "44000.0"
+                }
+            ],
+            "best_bids": [
+                {
+                    "price": "14.72",
+                    "qty": "7299.2549"
+                }
+            ],
+            "id": "1669971422454001"
+        }
+    ]
+}
