@@ -11,17 +11,22 @@ namespace CCXT.Simple.Exchanges
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if (reader.TokenType == JsonToken.Null)
+            var _result = 0m;
+
+            if (reader.TokenType != JsonToken.Null)
             {
-                return 0m;
-            }
-            else if (reader.TokenType == JsonToken.String)
-            {
-                if (String.IsNullOrEmpty(reader.Value.ToString()))
-                    return 0m;
+                if (reader.TokenType == JsonToken.String)
+                {
+                    if (!String.IsNullOrEmpty(reader.Value.ToString()))
+                        _result = Convert.ToDecimal(reader.Value);
+                }
+                else
+                {
+                    _result = Convert.ToDecimal(reader.Value);
+                }
             }
 
-            return Convert.ToDecimal(reader.Value);
+            return _result;
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

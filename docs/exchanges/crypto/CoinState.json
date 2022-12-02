@@ -1,0 +1,4928 @@
+{
+  "id": 1,
+  "method": "private/get-currency-networks",
+  "code": 0,
+  "result": {
+    "update_time": 1669888612000,
+    "currency_map": {
+      "AGLD": {
+        "full_name": "Adventure Gold",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 5.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MATIC": {
+        "full_name": "MATIC",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 25.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "APT": {
+        "full_name": "Aptos",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "APT",
+            "withdrawal_fee": 0.009,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.018,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "STG": {
+        "full_name": "Stargate Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 7.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SHIB": {
+        "full_name": "SHIBA INU",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 7000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 600000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1200000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "IOTX": {
+        "full_name": "IoTeX",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "IOTX",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "GLM": {
+        "full_name": "Golem",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 60.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 120.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "OLE": {
+        "full_name": "OpenLeverage",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 90.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 180.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BRZ": {
+        "full_name": "Brazilian Digital Token",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 160.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 320.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "RAY": {
+        "full_name": "Raydium",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 0.25,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "NEAR": {
+        "full_name": "NEAR Protocol",
+        "default_network": "NEAR",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "NEAR",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AUDIO": {
+        "full_name": "Audius",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 12.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 18.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "AIOZ": {
+        "full_name": "AIOZ Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "HNT": {
+        "full_name": "Helium",
+        "default_network": "HNT",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "HNT",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "STX": {
+        "full_name": "Stacks",
+        "default_network": "STX",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "STX",
+            "withdrawal_fee": 0.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FARM": {
+        "full_name": "Harvest Finance",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "QI": {
+        "full_name": "BENQI",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 7.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "XNO": {
+        "full_name": "Nano",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "NANO",
+            "withdrawal_fee": 0.008,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.016,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ZBC": {
+        "full_name": "Zebec Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 6.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SDN": {
+        "full_name": "Shiden Network",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "SDN",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "HOD": {
+        "full_name": "HoDooi.com",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 5.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DGB": {
+        "full_name": "DigiByte",
+        "default_network": "DGB",
+        "network_list": [
+          {
+            "network_id": "DGB",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RBN": {
+        "full_name": "Ribbon Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ZRX": {
+        "full_name": "0x",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 11.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 13.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "BCH": {
+        "full_name": "Bitcoin Cash",
+        "default_network": "BCH",
+        "network_list": [
+          {
+            "network_id": "BCH",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OMG": {
+        "full_name": "OMG Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.04,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BAND": {
+        "full_name": "Band Protocol",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "BAND",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 15
+          }
+        ]
+      },
+      "HOT": {
+        "full_name": "Holo",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 35.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 70.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 6000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ASTR": {
+        "full_name": "Astar",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ASTRC",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GMT": {
+        "full_name": "STEPN",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BTC": {
+        "full_name": "Bitcoin",
+        "default_network": "BTC",
+        "network_list": [
+          {
+            "network_id": "BTC",
+            "withdrawal_fee": 0.0005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.001,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "NKN": {
+        "full_name": "NKN",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 40.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 60.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "RSR": {
+        "full_name": "Reserve Rights",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3500.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 7000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "AR": {
+        "full_name": "Arweave",
+        "default_network": "AR",
+        "network_list": [
+          {
+            "network_id": "AR",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "REEF": {
+        "full_name": "Reef Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2200.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4400.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GMX": {
+        "full_name": "GMX",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "Arbitrum",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MIR": {
+        "full_name": "Mirror Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "LOKA": {
+        "full_name": "League of Kingdoms",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RADAR": {
+        "full_name": "DappRadar",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CVX": {
+        "full_name": "Convex Finance",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.9,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 1.8,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "WEMIX": {
+        "full_name": "WEMIX Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "KLAY",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ONE": {
+        "full_name": "Harmony",
+        "default_network": "ONE",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ONE",
+            "withdrawal_fee": 0.0008,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GNO": {
+        "full_name": "Gnosis",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.033,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.066,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ANKR": {
+        "full_name": "ANKR",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 250.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 500.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "QRDO": {
+        "full_name": "Qredo",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 5.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 11.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SUSHI": {
+        "full_name": "SushiSwap",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ALGO": {
+        "full_name": "Algorand",
+        "default_network": "ALGO",
+        "network_list": [
+          {
+            "network_id": "ALGO",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SC": {
+        "full_name": "Siacoin",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "SC",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "WBTC": {
+        "full_name": "Wrapped Bitcoin",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.00001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.0005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.001,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ONT": {
+        "full_name": "Ontology",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ONT",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 5
+          }
+        ]
+      },
+      "T": {
+        "full_name": "Threshold Network Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 150.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 300.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "VELO": {
+        "full_name": "Velo",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DIA": {
+        "full_name": "DIA",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "ACA": {
+        "full_name": "Acala",
+        "default_network": "ACA",
+        "network_list": [
+          {
+            "network_id": "ACA",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MANA": {
+        "full_name": "Decentraland",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.09,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.18,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 6.9,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 13.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ACH": {
+        "full_name": "Alchemy Pay",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 800.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1600.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MINA": {
+        "full_name": "Mina Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "MINA",
+            "withdrawal_fee": 1.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "VTHO": {
+        "full_name": "VeThor Token",
+        "default_network": "VET",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 45.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 90.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "VET",
+            "withdrawal_fee": 180.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 350.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CSPR": {
+        "full_name": "Casper",
+        "default_network": "CSPR",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CSPR",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DERC": {
+        "full_name": "DeRace",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SGB": {
+        "full_name": "Songbird",
+        "default_network": "SGB",
+        "network_list": [
+          {
+            "network_id": "SGB",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "NMR": {
+        "full_name": "Numeraire",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.77,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.54,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "MKR": {
+        "full_name": "Maker",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.0002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.004,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "WOO": {
+        "full_name": "WOO Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 70.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 140.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ICP": {
+        "full_name": "Internet Computer",
+        "default_network": "ICP",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.015,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.03,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ICP",
+            "withdrawal_fee": 0.000025,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ZED": {
+        "full_name": "ZED RUN",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "REN": {
+        "full_name": "REN",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 26.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "REP": {
+        "full_name": "Augur",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ADA": {
+        "full_name": "Cardano",
+        "default_network": "ADA",
+        "network_list": [
+          {
+            "network_id": "ADA",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRO",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.18,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.36,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ELF": {
+        "full_name": "aelf",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 30.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 150.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ICX": {
+        "full_name": "ICON",
+        "default_network": "ICX",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ICX",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "STORJ": {
+        "full_name": "STORJ",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 26.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "REQ": {
+        "full_name": "Request",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 85.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 170.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "RARI": {
+        "full_name": "Rarible",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "POLYX": {
+        "full_name": "Polymesh",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "POLYX",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RARE": {
+        "full_name": "SuperRare",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 35.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 70.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PAXG": {
+        "full_name": "PAX Gold",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.0002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.008,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.016,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PAX": {
+        "full_name": "Pax Dollar",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "KP3R": {
+        "full_name": "Keep3rV1",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DOGE": {
+        "full_name": "Dogecoin",
+        "default_network": "DOGE",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "DOGE",
+            "withdrawal_fee": 6.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ALPHA": {
+        "full_name": "Alpha Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 80.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 160.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "HBAR": {
+        "full_name": "Hedera",
+        "default_network": "HBAR",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "HBAR",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CHR": {
+        "full_name": "Chromia",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 50.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MLN": {
+        "full_name": "Enzyme",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.04,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "PRQ": {
+        "full_name": "PARSIQ",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 86.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 172.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "NANO": {
+        "full_name": "Nano",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "NANO",
+            "withdrawal_fee": 0.008,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.016,
+            "deposit_enabled": false,
+            "confirmation_required": 1
+          }
+        ]
+      },
+      "WAVES": {
+        "full_name": "WAVES",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "WAVES",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 10
+          }
+        ]
+      },
+      "ANML": {
+        "full_name": "Animal Concerts",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 100.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 200.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 5000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CHZ": {
+        "full_name": "Chiliz",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 11.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 22.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "XRP": {
+        "full_name": "XRP",
+        "default_network": "XRP",
+        "network_list": [
+          {
+            "network_id": "XRP",
+            "withdrawal_fee": 0.25,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PGALA": {
+        "full_name": "pGALA",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 75.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 150.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CTSI": {
+        "full_name": "Cartesi",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 30.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 60.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "JASMY": {
+        "full_name": "JasmyCoin",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1500.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CUDOS": {
+        "full_name": "Cudos",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1500.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SAND": {
+        "full_name": "The Sandbox",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.07,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.14,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.95,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 9.9,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "KAVA": {
+        "full_name": "Kava.io",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "KAVA",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 1
+          }
+        ]
+      },
+      "C98": {
+        "full_name": "Coin98",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "OSMO": {
+        "full_name": "Osmosis",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "OSMO",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OCEAN": {
+        "full_name": "Ocean Protocol",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 35.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 70.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "MMF": {
+        "full_name": "MMFinance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "UMA": {
+        "full_name": "UMA",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 13.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 26.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CRPT": {
+        "full_name": "Crypterium",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 40.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 80.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GARI": {
+        "full_name": "Gari Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "STRAX": {
+        "full_name": "Stratis",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "STRAX",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "GAL": {
+        "full_name": "Project Galaxy",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "TUSD": {
+        "full_name": "TrueUSD",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RGT": {
+        "full_name": "Rari Governance Token",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "THETA": {
+        "full_name": "THETA",
+        "default_network": "THETA",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.07,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.14,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "THETA",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ENJ": {
+        "full_name": "Enjin Coin",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 25.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GRT": {
+        "full_name": "The Graph",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 120.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 240.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "TFUEL": {
+        "full_name": "TFUEL",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "THETA",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "ORN": {
+        "full_name": "Orion Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ENS": {
+        "full_name": "Ethereum Name Service",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MASK": {
+        "full_name": "Mask Network",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "UNI": {
+        "full_name": "Uniswap",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AAVE": {
+        "full_name": "AAVE",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.004,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PERP": {
+        "full_name": "Perpetual Protocol",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 8.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "CKB": {
+        "full_name": "Nervos Network",
+        "default_network": "CKB",
+        "network_list": [
+          {
+            "network_id": "CKB",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 63.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BOND": {
+        "full_name": "BarnBridge",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "YFI": {
+        "full_name": "yearn.finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.00002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0e-5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.0009,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.0018,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "LUNC": {
+        "full_name": "Luna Classic",
+        "default_network": "LUNC",
+        "network_list": [
+          {
+            "network_id": "LUNC",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "XTZ": {
+        "full_name": "Tezos",
+        "default_network": "XTZ",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.06,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.12,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "XTZ",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AURORA": {
+        "full_name": "Aurora",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "LUNA2": {
+        "full_name": "Terra2",
+        "default_network": "LUNA2",
+        "network_list": [
+          {
+            "network_id": "LUNA2",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ELON": {
+        "full_name": "Dogelon Mars",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 190000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 380000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 9999999.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.9999998e7,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "EOS": {
+        "full_name": "EOS",
+        "default_network": "EOS",
+        "network_list": [
+          {
+            "network_id": "CRO",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "EOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BICO": {
+        "full_name": "Biconomy",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 8.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 17.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "SKL": {
+        "full_name": "SKALE Network",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 200.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 400.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "GTC": {
+        "full_name": "Gitcoin",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.7,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "YGG": {
+        "full_name": "Yield Guild Games",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ZIL": {
+        "full_name": "Zilliqa",
+        "default_network": "ZIL",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ZIL",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AXS": {
+        "full_name": "Axie Infinity",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.25,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "VRA": {
+        "full_name": "Verasity",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "EPS": {
+        "full_name": "Ellipsis",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "EPX": {
+        "full_name": "Ellipsis X",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 140.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 280.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 80.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 160.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FLOW": {
+        "full_name": "FLOW",
+        "default_network": "FLOW",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "FLOW",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "COMP": {
+        "full_name": "Compound",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.25,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SLP": {
+        "full_name": "Small Love Potion",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 11.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 22.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 980.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1960.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OOKI": {
+        "full_name": "Ooki Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 500.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RUNE": {
+        "full_name": "THORChain",
+        "default_network": "RUNE",
+        "network_list": [
+          {
+            "network_id": "BEP2",
+            "withdrawal_fee": 0.025,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "RUNE",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FORTH": {
+        "full_name": "Ampleforth Governance Token",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "GHST": {
+        "full_name": "Aavegotchi",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 5.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "DOT": {
+        "full_name": "Polkadot",
+        "default_network": "DOT",
+        "network_list": [
+          {
+            "network_id": "CRO",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.009,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.018,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "DOT",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "IQ": {
+        "full_name": "Everipedia",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "EOS",
+            "withdrawal_fee": 40.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 80.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 300.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 600.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "IDEX": {
+        "full_name": "IDEX",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 200.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 400.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "1INCH": {
+        "full_name": "1INCH",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 7.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CHESS": {
+        "full_name": "Tranchess",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AVAX": {
+        "full_name": "Avalanche",
+        "default_network": "AVAX",
+        "network_list": [
+          {
+            "network_id": "AVAX",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "UNFI": {
+        "full_name": "Unifi Protocol DAO",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.19,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.38,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FTM": {
+        "full_name": "Fantom",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 50.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "FTM",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "POWR": {
+        "full_name": "Power Ledger",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 55.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 110.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "ERN": {
+        "full_name": "Ethernity Chain",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 9.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "KNC": {
+        "full_name": "KyberNetwork",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.04,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "VOXEL": {
+        "full_name": "Voxies",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RLC": {
+        "full_name": "iExec RLC",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "TONIC": {
+        "full_name": "Tectonic",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 500000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1000000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ATOM": {
+        "full_name": "Cosmos",
+        "default_network": "ATOM",
+        "network_list": [
+          {
+            "network_id": "ATOM",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.02,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.04,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PENDLE": {
+        "full_name": "Pendle",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 250.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 500.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "QUICK": {
+        "full_name": "QuickSwap",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "LPT": {
+        "full_name": "Livepeer",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "BLZ": {
+        "full_name": "Bluzelle",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 120.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 240.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BOBA": {
+        "full_name": "Boba Network",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 25.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "BIFI": {
+        "full_name": "Beefy.Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.00015,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GODS": {
+        "full_name": "Gods Unchained",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 7.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MBL": {
+        "full_name": "MovieBloc",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ONT",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SNT": {
+        "full_name": "Status",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 2.5,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 400.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 800.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SNX": {
+        "full_name": "Synthetix",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 7.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 14.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RLY": {
+        "full_name": "Rally",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 18.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 25.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "API3": {
+        "full_name": "API3",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PYR": {
+        "full_name": "Vulcan Forged",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "WAXP": {
+        "full_name": "WAX",
+        "default_network": "WAXP",
+        "network_list": [
+          {
+            "network_id": "WAXP",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AKT": {
+        "full_name": "Akash Network",
+        "default_network": "AKT",
+        "network_list": [
+          {
+            "network_id": "AKT",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GLMR": {
+        "full_name": "Moonbeam",
+        "default_network": "GLMR",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "GLMR",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DAI": {
+        "full_name": "DAI",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "XYO": {
+        "full_name": "XYO Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.07,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.14,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1150.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2300.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SOL": {
+        "full_name": "Solana",
+        "default_network": "SOL",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.003,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.006,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 0.0005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.0025,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FER": {
+        "full_name": "Ferro Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 40.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 80.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FET": {
+        "full_name": "Fetch",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 30.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 60.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "DAR": {
+        "full_name": "Mines of Dalarnia",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ETC": {
+        "full_name": "Ethereum Classic",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETC",
+            "withdrawal_fee": 0.006,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.012,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CELR": {
+        "full_name": "Celer Network",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 3.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 7.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OGN": {
+        "full_name": "Origin Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 30.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 60.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ETH": {
+        "full_name": "Ethereum",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "Arbitrum",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.004,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.008,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "OP",
+            "withdrawal_fee": 0.0004,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MCO": {
+        "full_name": "MCO",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "NEO": {
+        "full_name": "NEO",
+        "default_network": "NEO",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "NEO",
+            "withdrawal_fee": 0e-8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "KLAY": {
+        "full_name": "Klaytn",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "KLAY",
+            "withdrawal_fee": 0.005,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.01,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "LRC": {
+        "full_name": "Loopring",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 38.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 76.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BADGER": {
+        "full_name": "Badger DAO",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "MTD": {
+        "full_name": "Minted",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MULTI": {
+        "full_name": "Multichain",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.015,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.03,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ALI": {
+        "full_name": "Alethea Artificial Liquid Intelligence Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 5.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 11.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 550.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OGV": {
+        "full_name": "Origin Dollar Governance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 350.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 700.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "HIGH": {
+        "full_name": "Highstreet",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "VET": {
+        "full_name": "VeChain",
+        "default_network": "VET",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "VET",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "TRB": {
+        "full_name": "Tellor",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "FITFI": {
+        "full_name": "Step App",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "USDT": {
+        "full_name": "Tether USD",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BNT": {
+        "full_name": "Bancor",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "OXT": {
+        "full_name": "Orchid Protocol",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 70.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 140.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "ILV": {
+        "full_name": "Illuvium",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.04,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "VVS": {
+        "full_name": "VVS Finance",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 6000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 400000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 800000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "TRU": {
+        "full_name": "TrueFi",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 135.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 270.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "MC": {
+        "full_name": "Merit Circle",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SPS": {
+        "full_name": "Splinterlands",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 3.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 6.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MDT": {
+        "full_name": "Measurable Data Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 400.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 800.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "GUSD": {
+        "full_name": "Gemini Dollar",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "JOE": {
+        "full_name": "JOE",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AERGO": {
+        "full_name": "Aergo",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 90.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 180.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "AMP": {
+        "full_name": "Amp",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2100.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 4200.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "LSK": {
+        "full_name": "Lisk",
+        "default_network": "LSK",
+        "network_list": [
+          {
+            "network_id": "LSK",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "KEEP": {
+        "full_name": "Keep Network",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 40.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 80.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "CQT": {
+        "full_name": "Covalent",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "AUTO": {
+        "full_name": "Auto",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.00047,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 9.4e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "IMX": {
+        "full_name": "Immutable X",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 8.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 16.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ANC": {
+        "full_name": "Anchor Protocol",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": null,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "LTC": {
+        "full_name": "Litecoin",
+        "default_network": "LTC",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.004,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "LTC",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "USDC": {
+        "full_name": "USDC",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "Arbitrum",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "AVAXC",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.8,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "EGLD": {
+        "full_name": "Elrond eGold",
+        "default_network": "EGLD",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "EGLD",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "METIS": {
+        "full_name": "Metis",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SPELL": {
+        "full_name": "Spell Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 50.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 4000.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 8000.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FXS": {
+        "full_name": "Frax Share",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.6,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.2,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "CRO": {
+        "full_name": "Cronos",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRO",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 50.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BOSON": {
+        "full_name": "Boson Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "INJ": {
+        "full_name": "Injective Protocol",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.05,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.1,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 3.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "PLA": {
+        "full_name": "PlayDapp",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 12.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 24.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "KRL": {
+        "full_name": "KRYLL",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 25.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "CRV": {
+        "full_name": "Curve DAO Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.08,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.16,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "NU": {
+        "full_name": "NuCypher",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 25.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 50.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "TRIBE": {
+        "full_name": "Tribe",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 50.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 100.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "EFI": {
+        "full_name": "Efinity",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.4,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.8,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 70.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 140.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "DYDX": {
+        "full_name": "dYdX",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.04,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.08,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 12.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 24.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FLUX": {
+        "full_name": "Flux",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ANY": {
+        "full_name": "Anyswap",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 4.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "SRM": {
+        "full_name": "Serum",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "SOL",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "POND": {
+        "full_name": "Marlin",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 6.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 800.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1600.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "QNT": {
+        "full_name": "Quant",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.004,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.014,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.028,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "LDO": {
+        "full_name": "Lido DAO",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.06,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.12,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 9.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 18.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ALICE": {
+        "full_name": "MyNeighborAlice",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 1.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "XLM": {
+        "full_name": "Stellar Lumens",
+        "default_network": "XLM",
+        "network_list": [
+          {
+            "network_id": "CRO",
+            "withdrawal_fee": 0.001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.002,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.89,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.78,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "XLM",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 200.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "LINK": {
+        "full_name": "Chainlink",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.013,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.026,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.45,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.9,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "HERO": {
+        "full_name": "Metahero",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "QTUM": {
+        "full_name": "QTUM",
+        "default_network": "QTUM",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.03,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.06,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "QTUM",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ETHW": {
+        "full_name": "Ethereum PoW",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETHW",
+            "withdrawal_fee": 0.0001,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0e-4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "OP": {
+        "full_name": "Optimism",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "OP",
+            "withdrawal_fee": 0.75,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "SUPER": {
+        "full_name": "SuperFarm",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 35.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 70.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "MATIC",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "POLS": {
+        "full_name": "Polkastarter",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 5.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "KSM": {
+        "full_name": "Kusama",
+        "default_network": "KSM",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.002,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.004,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "KSM",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "FIL": {
+        "full_name": "Filecoin",
+        "default_network": "FIL",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.02,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "FIL",
+            "withdrawal_fee": 0.01,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.03,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "POLY": {
+        "full_name": "Polymath",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 15.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 30.0,
+            "deposit_enabled": false,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "RNDR": {
+        "full_name": "Render Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.15,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.3,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 6.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 12.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BAL": {
+        "full_name": "Balancer",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.41,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 8
+          }
+        ]
+      },
+      "GALA": {
+        "full_name": "Gala",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 1.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 2.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 104.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 208.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "RAD": {
+        "full_name": "Radicle",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 3.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 7.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "BAT": {
+        "full_name": "Basic Attention Token",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.3,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.6,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 14.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "APE": {
+        "full_name": "ApeCoin",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.1,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.2,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 2.5,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 5.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MXC": {
+        "full_name": "MXC",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.7,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 1.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 205.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 410.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "MOVR": {
+        "full_name": "Moonriver",
+        "default_network": "MOVR",
+        "network_list": [
+          {
+            "network_id": "MOVR",
+            "withdrawal_fee": 0.003,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.006,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "BUSD": {
+        "full_name": "Binance USD",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "BNB",
+            "withdrawal_fee": 5.0,
+            "withdraw_enabled": false,
+            "min_withdrawal_amount": 10.0,
+            "deposit_enabled": false,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "CRONOS",
+            "withdrawal_fee": 0.2,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.4,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          },
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 10.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 20.0,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      },
+      "ARPA": {
+        "full_name": "ARPA Chain",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 400.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 800.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "COTI": {
+        "full_name": "COTI",
+        "default_network": null,
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 140.0,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 280.0,
+            "deposit_enabled": true,
+            "confirmation_required": 12
+          }
+        ]
+      },
+      "ALCX": {
+        "full_name": "Alchemix",
+        "default_network": "ETH",
+        "network_list": [
+          {
+            "network_id": "ETH",
+            "withdrawal_fee": 0.25,
+            "withdraw_enabled": true,
+            "min_withdrawal_amount": 0.5,
+            "deposit_enabled": true,
+            "confirmation_required": 0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -205,9 +205,10 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jmarket = JsonConvert.DeserializeObject<Market>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
 
-                    _result = _jmarket.trade_price;
+                    if (_jarray.Count > 0)
+                        _result = _jarray[0].trade_price;
                 }
             }
             catch (Exception ex)

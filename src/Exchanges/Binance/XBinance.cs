@@ -81,7 +81,7 @@ namespace CCXT.Simple.Exchanges.Binance
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/ticker/price");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
                     var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
@@ -136,7 +136,7 @@ namespace CCXT.Simple.Exchanges.Binance
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/sapi/v1/capital/config/getall?" + _args);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
                     foreach (var c in _jarray)
                     {

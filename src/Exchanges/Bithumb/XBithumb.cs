@@ -451,22 +451,20 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
         }
 
-        private FormUrlEncodedContent CreatePostRequestAsync(HttpClient client, string endpoint, Dictionary<string, string> args)
+        private FormUrlEncodedContent CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args)
         {
             var _post_data = mainXchg.ToQueryString2(args);
-
             var _nonce = CUnixTime.NowMilli.ToString();
 
             var _sign_data = $"{endpoint};{_post_data};{_nonce}";
             var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
 
             var _signature = Convert.ToBase64String(Encoding.UTF8.GetBytes(mainXchg.ConvertHexString(_sign_hash).ToLower()));
-            {
-                client.DefaultRequestHeaders.Add("api-client-type", "2");
-                client.DefaultRequestHeaders.Add("Api-Sign", _signature);
-                client.DefaultRequestHeaders.Add("Api-Nonce", _nonce);
-                client.DefaultRequestHeaders.Add("Api-Key", ApiKey);
-            }
+         
+            client.DefaultRequestHeaders.Add("api-client-type", "2");
+            client.DefaultRequestHeaders.Add("Api-Sign", _signature);
+            client.DefaultRequestHeaders.Add("Api-Nonce", _nonce);
+            client.DefaultRequestHeaders.Add("Api-Key", ApiKey);
 
             return new FormUrlEncodedContent(args);
         }
@@ -500,21 +498,21 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                var _endpoint = "/trade/place";
-
-                var _args = new Dictionary<string, string>();
-                {
-                    _args.Add("endpoint", _endpoint);
-                    _args.Add("order_currency", base_name);
-                    _args.Add("payment_currency", quote_name);
-                    _args.Add("units", $"{quantity}");
-                    _args.Add("price", $"{price}");
-                    _args.Add("type", sideType == SideType.Bid ? "bid" : "ask");
-                }
-
                 using (var _client = new HttpClient())
                 {
-                    var _content = this.CreatePostRequestAsync(_client, _endpoint, _args);
+                    var _endpoint = "/trade/place";
+
+                    var _args = new Dictionary<string, string>();
+                    {
+                        _args.Add("endpoint", _endpoint);
+                        _args.Add("order_currency", base_name);
+                        _args.Add("payment_currency", quote_name);
+                        _args.Add("units", $"{quantity}");
+                        _args.Add("price", $"{price}");
+                        _args.Add("type", sideType == SideType.Bid ? "bid" : "ask");
+                    }
+
+                    var _content = this.CreateSignature(_client, _endpoint, _args);
 
                     var _response = await _client.PostAsync($"{ExchangeUrl}{_endpoint}", _content);
                     if (_response.StatusCode == HttpStatusCode.OK)

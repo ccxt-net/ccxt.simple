@@ -1,6 +1,14 @@
-﻿using CCXT.Simple.Data;
-using CCXT.Simple.Exchanges.Korbit;
+﻿using CCXT.Simple.Base;
+using CCXT.Simple.Data;
+using CCXT.Simple.Exchanges.Bithumb;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CCXT.Simple.Exchanges.Crypto
 {
@@ -174,28 +182,135 @@ namespace CCXT.Simple.Exchanges.Crypto
             return _result;
         }
 
+        private HMACSHA256 __encryptor = null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public HMACSHA256 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        private Request CreateSignature(HttpClient client, int id, string endpoint, Dictionary<string, string> args = null)
+        {
+            if (args == null)
+                args = new Dictionary<string, string>();
+
+            var _post_data = mainXchg.ToQueryString2(args);
+            var _nonce = CUnixTime.NowMilli;
+
+            var _sign_data = $"{endpoint}{id}{this.ApiKey}{_post_data}{_nonce}";
+            var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
+
+            var _sign = Convert.ToHexString(_sign_hash).ToLower();
+
+            return new Request
+            { 
+                id = id,
+                api_key = this.ApiKey,
+                method = endpoint,
+                nonce = _nonce,
+                @params = args,
+                sig = _sign
+            };
+        }
+
         public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
             var _result = false;
 
             try
             {
-                await Task.Delay(100);
+                using (var _client = new HttpClient())
+                {
+                    var _endpoint = "private/get-currency-networks";
+                    var _request = this.CreateSignature(_client, 1, _endpoint);
 
-                //var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
-                //if (_t_items != null)
-                //{
-                //    foreach (var t in _t_items)
-                //    {
-                //        t.active = _state.active;
-                //        t.deposit = _state.deposit;
-                //        t.withdraw = _state.withdraw;
-                //    }
-                //}
+                    var _response = await _client.PostAsJsonAsync($"{ExchangeUrl}/v2/{_endpoint}", _request);
+                    if (_response.StatusCode == HttpStatusCode.OK)
+                    {
+                        var _jstring = await _response.Content.ReadAsStringAsync();
+                        var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring, mainXchg.JsonSettings);
+
+                        foreach (var m in _jarray.result.currency_map)
+                        {
+                            var _base_name = m.Key;
+                            var _c = JsonConvert.DeserializeObject<CurrencyMap>(m.Value.ToString());
+
+                            var _state = tickers.states.SingleOrDefault(x => x.currency == _base_name);
+                            if (_state == null)
+                            {
+                                _state = new WState
+                                {
+                                    currency = _base_name,
+                                    active = true,
+                                    deposit = true,
+                                    withdraw = true,
+                                    networks = new List<WNetwork>()
+                                };
+
+                                tickers.states.Add(_state);
+                            }
+
+                            var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                            if (_t_items != null)
+                            {
+                                foreach (var t in _t_items)
+                                {
+                                    t.active = _state.active;
+                                    t.deposit = _state.deposit;
+                                    t.withdraw = _state.withdraw;
+                                }
+                            }
+
+                            foreach (var n in _c.network_list)
+                            {
+                                var _name = _base_name + "-" + n.network_id;
+
+                                var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                                if (_network == null)
+                                {
+                                    var _protocol = n.network_id;
+                                    if (_protocol == "ETH")
+                                        _protocol = "ERC20";
+
+                                    _network = new WNetwork
+                                    {
+                                        name = _name,
+                                        network = n.network_id,
+                                        protocol = _protocol,
+
+                                        deposit = n.deposit_enabled,
+                                        withdraw = n.withdraw_enabled,
+
+                                        withdrawFee = n.withdrawal_fee,
+                                        minWithdrawal = n.min_withdrawal_amount,
+
+                                        minConfirm = n.confirmation_required
+                                    };
+
+                                    _state.networks.Add(_network);
+                                }
+                                else
+                                {
+                                    _network.deposit = n.deposit_enabled;
+                                    _network.withdraw = n.withdraw_enabled;
+                                }
+                            }
+                        }
+                    }
+
+                    _result = true;
+                }
 
                 this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1306);
-
-                _result = true;
             }
             catch (Exception ex)
             {
