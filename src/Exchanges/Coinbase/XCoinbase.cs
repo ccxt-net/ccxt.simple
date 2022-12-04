@@ -63,7 +63,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/products");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Coinbase.Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Coinbase.CoinInfor>>(_jstring);
 
                     var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
@@ -86,7 +86,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1512);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3401);
             }
             finally
             {
@@ -138,7 +138,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                             _state.active = s.Value<bool>("active");
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -155,7 +155,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1513);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3402);
             }
 
             return _result;
@@ -258,7 +258,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1514);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3403);
             }
 
             return _result;

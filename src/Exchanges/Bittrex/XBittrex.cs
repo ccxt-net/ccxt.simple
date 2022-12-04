@@ -76,7 +76,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1305);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3201);
             }
             finally
             {
@@ -119,7 +119,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                             _state.active = c.status == "ONLINE";
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -168,11 +168,11 @@ namespace CCXT.Simple.Exchanges.Bittrex
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1306);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3202);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1307);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3203);
             }
 
             return _result;
@@ -225,7 +225,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1308);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3204);
                             _ticker.symbol = "X";
                         }
                     }
@@ -235,7 +235,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1309);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3205);
             }
 
             return _result;
@@ -286,7 +286,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1310);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3206);
                             _ticker.symbol = "X";
                         }
                     }
@@ -296,7 +296,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1311);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3207);
             }
 
             return _result;

@@ -83,7 +83,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2211);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4101);
             }
             finally
             {
@@ -135,7 +135,7 @@ namespace CCXT.Simple.Exchanges.Okex
                             _state.withdraw = c.canWd;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -179,11 +179,11 @@ namespace CCXT.Simple.Exchanges.Okex
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 2212);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4102);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2213);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4103);
             }
 
             return _result;
@@ -242,7 +242,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2214);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4104);
             }
 
             return _result;
@@ -288,7 +288,7 @@ namespace CCXT.Simple.Exchanges.Okex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 2215);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4105);
                             _ticker.symbol = "X";
                         }
                     }
@@ -298,7 +298,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2216);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4106);
             }
 
             return _result;
@@ -356,7 +356,7 @@ namespace CCXT.Simple.Exchanges.Okex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 2217);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4107);
                             _ticker.symbol = "X";
                         }
                     }
@@ -366,7 +366,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2218);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4108);
             }
 
             return _result;
@@ -422,7 +422,7 @@ namespace CCXT.Simple.Exchanges.Okex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 2219);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4109);
                             _ticker.symbol = "X";
                         }
                     }
@@ -432,7 +432,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2220);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4110);
             }
 
             return _result;
@@ -512,7 +512,7 @@ namespace CCXT.Simple.Exchanges.Okex
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 2221);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4111);
                             _ticker.symbol = "X";
                         }
                     }
@@ -522,7 +522,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2222);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4112);
             }
 
             return _result;

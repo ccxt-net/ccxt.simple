@@ -102,7 +102,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1411);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3301);
             }
             finally
             {
@@ -167,7 +167,7 @@ namespace CCXT.Simple.Exchanges.Bybit
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1412);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3302);
                             _ticker.symbol = "X";
                         }
                     }
@@ -177,7 +177,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1413);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3303);
             }
 
             return _result;
@@ -191,7 +191,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             {
                 await Task.Delay(100);
 
-                //var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                //var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                 //if (_t_items != null)
                 //{
                 //    foreach (var t in _t_items)
@@ -202,13 +202,13 @@ namespace CCXT.Simple.Exchanges.Bybit
                 //    }
                 //}
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1306);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3304);
 
                 _result = true;
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1307);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3305);
             }
 
             return _result;

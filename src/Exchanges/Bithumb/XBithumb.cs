@@ -112,7 +112,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1211);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3101);
             }
             finally
             {
@@ -164,7 +164,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             _state.withdraw = s.Value.Value<int>("withdrawal_status") > 0;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -179,11 +179,11 @@ namespace CCXT.Simple.Exchanges.Bithumb
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1212);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3102);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1213);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3103);
             }
 
             return _result;
@@ -212,7 +212,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1214);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3104);
             }
 
             return _result;
@@ -251,7 +251,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1215);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3105);
             }
 
             return _result;
@@ -313,7 +313,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1216);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3106);
                             _ticker.symbol = "X";
                         }
                     }
@@ -323,7 +323,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1217);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3107);
             }
 
             return _result;
@@ -409,7 +409,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1218);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3108);
                             _ticker.symbol = "X";
                         }
                     }
@@ -419,7 +419,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1219);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3109);
             }
 
             return _result;
@@ -538,7 +538,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1219);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3110);
             }
 
             return _result;

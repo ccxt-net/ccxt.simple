@@ -91,7 +91,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1911);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3801);
             }
             finally
             {
@@ -119,13 +119,15 @@ namespace CCXT.Simple.Exchanges.Huobi
 
                     foreach (var c in _jarray.data)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _base_name = c.currency.ToUpper();
+
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == _base_name);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.currency,
-                                active = c.instStatus == "normarl",
+                                currency = _base_name,
+                                active = c.instStatus == "normal",
                                 deposit = true,
                                 withdraw = true,
                                 networks = new List<WNetwork>()
@@ -135,10 +137,10 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            _state.active = c.instStatus == "normarl";
+                            _state.active = c.instStatus == "normal";
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -151,7 +153,7 @@ namespace CCXT.Simple.Exchanges.Huobi
 
                         foreach (var n in c.chains)
                         {
-                            var _name = n.displayName + "-" + n.baseChain;
+                            var _name = n.chain;
 
                             var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                             if (_network == null)
@@ -159,8 +161,8 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 _network = new WNetwork
                                 {
                                     name = _name,
-                                    network = n.baseChain,
-                                    protocol = n.baseChainProtocol,
+                                    network = n.baseChain.IsNotEmpty(n.displayName).ToUpper(),
+                                    protocol = n.baseChainProtocol.IsNotEmpty(n.displayName).ToUpper(),
 
                                     deposit = n.depositStatus == "allowed",
                                     withdraw = n.withdrawStatus == "allowed",
@@ -185,11 +187,11 @@ namespace CCXT.Simple.Exchanges.Huobi
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 1912);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3802);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1913);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3803);
             }
 
             return _result;
@@ -214,7 +216,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1914);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3804);
             }
 
             return _result;
@@ -237,7 +239,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1915);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3805);
             }
 
             return _result;
@@ -295,7 +297,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1916);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3806);
                             _ticker.symbol = "X";
                         }
                     }
@@ -305,7 +307,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1917);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3807);
             }
 
             return _result;
@@ -367,7 +369,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1918);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3808);
                             _ticker.symbol = "X";
                         }
                     }
@@ -377,7 +379,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1919);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3809);
             }
 
             return _result;
@@ -453,7 +455,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 1920);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3810);
                             _ticker.symbol = "X";
                         }
                     }
@@ -463,7 +465,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 1921);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3811);
             }
 
             return _result;

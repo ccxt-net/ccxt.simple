@@ -17,6 +17,11 @@
             return !String.IsNullOrEmpty(s);
         }
 
+        public static string IsNotEmpty(this string s, string replace)
+        {
+            return !String.IsNullOrEmpty(s) ? s : replace;
+        }
+
         /// <summary>
         /// 연-월-일T시:분:초.Zone(yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffK) 형식으로 변환 합니다.
         /// </summary>

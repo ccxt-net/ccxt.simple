@@ -97,7 +97,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2315);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4201);
             }
             finally
             {
@@ -166,7 +166,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             _state.withdraw = _withdraw;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.baseName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
@@ -181,11 +181,11 @@ namespace CCXT.Simple.Exchanges.Upbit
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 2316);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4202);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2317);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4203);
             }
 
             return _result;
@@ -213,7 +213,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2318);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4204);
             }
 
             return _result;
@@ -266,7 +266,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2319);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4205);
             }
 
             return _result;
@@ -329,7 +329,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2321);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4206);
             }
 
             return _result;
@@ -410,7 +410,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 2322);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4207);
             }
 
             return _result;
