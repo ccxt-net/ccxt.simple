@@ -1,8 +1,8 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
-using CCXT.Simple.Exchanges.Korbit;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CCXT.Simple.Exchanges.Bybit
 {
@@ -48,7 +48,7 @@ namespace CCXT.Simple.Exchanges.Bybit
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -64,35 +64,34 @@ namespace CCXT.Simple.Exchanges.Bybit
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["result"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring, mainXchg.JsonSettings);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray.result)
                     {
-                        var _base = s.Value<string>("base_currency");
-                        var _quote = s.Value<string>("quote_currency");
+                        var _base = c.base_currency;
+                        var _quote = c.quote_currency;
 
                         if (_quote == "USDT" || _quote == "USD")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
-                                symbol = s.Value<string>("name"),
+                                symbol = c.name,
                                 compName = _base,
                                 baseName = _base,
                                 quoteName = _quote,
 
-                                minPrice = s["price_filter"].Value<decimal>("min_price"),
-                                maxPrice = s["price_filter"].Value<decimal>("max_price"),
-                                tickSize = s["price_filter"].Value<decimal>("tick_size"),
+                                minPrice = c.price_filter.min_price,
+                                maxPrice = c.price_filter.max_price,
+                                tickSize = c.price_filter.tick_size,
 
-                                minQty = s["lot_size_filter"].Value<decimal>("min_trading_qty"),
-                                maxQty = s["lot_size_filter"].Value<decimal>("max_trading_qty"),
-                                qtyStep = s["lot_size_filter"].Value<decimal>("qty_step"),
+                                minQty = c.lot_size_filter.min_trading_qty,
+                                maxQty = c.lot_size_filter.max_trading_qty,
+                                qtyStep = c.lot_size_filter.qty_step,
 
-                                makerFee = s.Value<decimal>("maker_fee"),
-                                takerFee = s.Value<decimal>("taker_fee")
+                                makerFee = c.maker_fee,
+                                takerFee = c.taker_fee
                             });
                         }
                     }
@@ -113,6 +112,128 @@ namespace CCXT.Simple.Exchanges.Bybit
         }
 
 
+        private HMACSHA256 __encryptor = null;
+
+        public HMACSHA256 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        public void CreateSignature(HttpClient client, Dictionary<string, string> args = null)
+        {
+            var _post_data = mainXchg.ToQueryString2(args);
+            var _nonce = CUnixTime.NowMilli;
+            var _recv_window = 5000;
+
+            var _sign_data = $"{_nonce}{this.ApiKey}{_recv_window}{_post_data}";
+            var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
+
+            //var _sign = Convert.ToBase64String(Encoding.UTF8.GetBytes(mainXchg.ConvertHexString(_sign_hash).ToLower()));
+            var _sign = mainXchg.ConvertHexString(_sign_hash).ToLower();
+
+            client.DefaultRequestHeaders.Add("X-BAPI-SIGN-TYPE", "2");
+            client.DefaultRequestHeaders.Add("X-BAPI-SIGN", _sign);
+            client.DefaultRequestHeaders.Add("X-BAPI-API-KEY", this.ApiKey);
+            client.DefaultRequestHeaders.Add("X-BAPI-TIMESTAMP", _nonce.ToString());
+            client.DefaultRequestHeaders.Add("X-BAPI-RECV-WINDOW", _recv_window.ToString());
+        }
+
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
+        {
+            var _result = false;
+
+            try
+            {
+                using (var _client = new HttpClient())
+                {
+                    var _end_point = "/asset/v3/private/coin-info/query";
+
+                    this.CreateSignature(_client);
+
+                    using HttpResponseMessage _response = await _client.GetAsync($"{ExchangeUrl}{_end_point}");
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring, mainXchg.JsonSettings);
+
+                    foreach (var c in _jarray.result.rows)
+                    {
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.coin);
+                        if (_state == null)
+                        {
+                            _state = new WState
+                            {
+                                currency = c.coin,
+                                active = true,
+                                deposit = true,
+                                withdraw = true,
+                                networks = new List<WNetwork>()
+                            };
+
+                            tickers.states.Add(_state);
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
+                            {
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
+                            }
+                        }
+
+                        foreach (var n in c.chains)
+                        {
+                            var _name = c.name + "-" + n.chain;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
+                            {
+                                _state.networks.Add(new WNetwork
+                                {
+                                    name = _name,
+                                    network = n.chain,
+                                    protocol = n.chainType,
+
+                                    deposit = n.chainDeposit == 1,
+                                    withdraw = n.chainWithdraw == 1,
+
+                                    minWithdrawal = n.withdrawMin,
+                                    withdrawFee = n.withdrawFee,
+                                    
+                                    minConfirm = n.confirmation != null ? n.confirmation.Value : 0
+                                });
+                            }
+                            else
+                            {
+                                _state.deposit = n.chainDeposit == 1;
+                                _state.withdraw = n.chainWithdraw == 1;
+                            }
+                        }
+                    }
+
+                    _result = true;
+                }
+
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3304);
+
+                _result = true;
+            }
+            catch (Exception ex)
+            {
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3305);
+            }
+
+            return _result;
+        }
+
+
         public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
@@ -123,7 +244,7 @@ namespace CCXT.Simple.Exchanges.Bybit
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jtickers = JsonConvert.DeserializeObject<BookTickers>(_jstring);
+                    var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -178,37 +299,6 @@ namespace CCXT.Simple.Exchanges.Bybit
             catch (Exception ex)
             {
                 this.mainXchg.OnMessageEvent(ExchangeName, ex, 3303);
-            }
-
-            return _result;
-        }
-
-        public async ValueTask<bool> VerifyStates(Tickers tickers)
-        {
-            var _result = false;
-
-            try
-            {
-                await Task.Delay(100);
-
-                //var _t_items = tickers.items.Where(x => x.compName == _state.currency);
-                //if (_t_items != null)
-                //{
-                //    foreach (var t in _t_items)
-                //    {
-                //        t.active = _state.active;
-                //        t.deposit = _state.deposit;
-                //        t.withdraw = _state.withdraw;
-                //    }
-                //}
-
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3304);
-
-                _result = true;
-            }
-            catch (Exception ex)
-            {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3305);
             }
 
             return _result;

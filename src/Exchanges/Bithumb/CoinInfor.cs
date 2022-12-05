@@ -1,22 +1,29 @@
-﻿namespace CCXT.Simple.Exchanges.Bithumb
-{
-    public class Datum
-    {
-        public string coinTypeCd { get; set; }
-        public string coinSymbolNm { get; set; }
-        public string coinNmKr { get; set; }
-        public string coinNmEn { get; set; }
-        public string networkType { get; set; }
-        public string outAvailableYn { get; set; }
-        public string scndAddrYn { get; set; }
-        public string scndAddrNmKr { get; set; }
-        public string scndAddrNmEn { get; set; }
-    }
+﻿using Newtonsoft.Json.Linq;
 
+namespace CCXT.Simple.Exchanges.Bithumb
+{
+    /// <summary>
+    /// https://api.bithumb.com/public/ticker/ALL_KRW
+    /// https://api.bithumb.com/public/ticker/ALL_BTC
+    /// </summary>
     public class CoinInfor
     {
-        public int error { get; set; }
-        public string message { get; set; }     
-        public List<Datum> data { get; set; }
+        public int status { get; set; }
+        public JObject data { get; set; }
+    }
+
+    public class CICurrency
+    {
+        public string opening_price { get; set; }
+        public string closing_price { get; set; }
+        public string min_price { get; set; }
+        public string max_price { get; set; }
+        public string units_traded { get; set; }
+        public string acc_trade_value { get; set; }
+        public string prev_closing_price { get; set; }
+        public string units_traded_24H { get; set; }
+        public string acc_trade_value_24H { get; set; }
+        public string fluctate_24H { get; set; }
+        public string fluctate_rate_24H { get; set; }
     }
 }

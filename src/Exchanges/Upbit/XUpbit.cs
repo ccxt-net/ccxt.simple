@@ -49,7 +49,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -67,7 +67,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -111,7 +111,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyStates(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -121,17 +121,17 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _jarray = JArray.Parse(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray)
                     {
-                        var _currency = s.Value<string>("currency");
+                        var _currency = c.currency;
 
-                        var _wallet_state = s.Value<string>("wallet_state");
-                        var _block_state = s.Value<string>("block_state");
-                        var _block_height = s.Value<string>("block_height") != null ? s.Value<long>("block_height") : 0;
-                        var _block_updated = s.Value<string>("block_updated_at") != null ? s.Value<DateTime>("block_updated_at") : DateTime.MinValue;
-                        var _block_elapsed = s.Value<string>("block_elapsed_minutes") != null ? s.Value<int>("block_elapsed_minutes") : 0;
+                        var _wallet_state = c.wallet_state;
+                        var _block_state = c.block_state;
+                        var _block_height = c.block_height != null ? c.block_height.Value : 0;
+                        var _block_updated = c.block_updated_at != null ? c.block_updated_at.Value : DateTime.MinValue;
+                        var _block_elapsed = c.block_elapsed_minutes != null ? c.block_elapsed_minutes.Value : 0;
 
                         // working, paused, withdraw_only, deposit_only, unsupported
                         var _active = _wallet_state != "unsupported";
@@ -205,7 +205,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     if (_jarray.Count > 0)
                         _result = _jarray[0].trade_price;
@@ -224,7 +224,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetTickers(Tickers tickers)
+        public async ValueTask<bool> GetTickers(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -236,7 +236,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -277,7 +277,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetVolumes(Tickers tickers)
+        public async ValueTask<bool> GetVolumes(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -289,7 +289,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -340,7 +340,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetMarkets(Tickers tickers)
+        public async ValueTask<bool> GetMarkets(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -352,7 +352,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jmarkets = JsonConvert.DeserializeObject<List<Market>>(_jstring);
+                    var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
                     foreach (var m in _jmarkets)
                     {
@@ -416,7 +416,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             return _result;
         }
 
-        ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)
+        ValueTask<bool> IExchange.GetBookTickers(Data.Tickers tickers)
         {
             throw new NotImplementedException();
         }

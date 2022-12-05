@@ -39,7 +39,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         public async ValueTask<bool> VerifySymbols()
         {
@@ -53,7 +53,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {

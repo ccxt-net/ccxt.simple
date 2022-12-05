@@ -16,8 +16,6 @@ namespace CCXT.Simple.Exchanges
         string PassPhrase { get; set; }
         string SecretKey { get; set; }
 
-        Tickers Tickers { get; set; }
-
         ValueTask<bool> VerifySymbols();
         ValueTask<bool> VerifyStates(Tickers tickers);
 

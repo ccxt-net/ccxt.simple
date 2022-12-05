@@ -65,7 +65,30 @@ namespace CCXT.Simple.Exchanges.Binance
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+
+        private HMACSHA256 __encryptor = null;
+
+        public HMACSHA256 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        public string CreateSignature(HttpClient client)
+        {
+            client.DefaultRequestHeaders.Add("USER-AGENT", mainXchg.UserAgent);
+            client.DefaultRequestHeaders.Add("X-MBX-APIKEY", this.ApiKey);
+
+            var _post_data = $"timestamp={CUnixTime.NowMilli}";
+            var _signature = BitConverter.ToString(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_post_data))).Replace("-", "");
+
+            return _post_data + $"&signature={_signature}";
+        }
 
         /// <summary>
         ///
@@ -83,7 +106,7 @@ namespace CCXT.Simple.Exchanges.Binance
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -179,9 +202,12 @@ namespace CCXT.Simple.Exchanges.Binance
                             var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                             if (_network == null)
                             {
-                                var _protocol = n.network;
-                                if (n.network == "ETH" && n.name.Contains("ERC20"))
-                                    _protocol = "ERC20";
+                                var _protocol = n.name;
+
+                                var _l_ndx = _protocol.IndexOf("(");
+                                var _r_ndx = _protocol.IndexOf(")");
+                                if (_l_ndx >= 0 && _r_ndx > _l_ndx)
+                                    _protocol = _protocol.Substring(_l_ndx + 1, _r_ndx - _l_ndx - 1);
 
                                 _network = new WNetwork
                                 {
@@ -221,33 +247,6 @@ namespace CCXT.Simple.Exchanges.Binance
             }
 
             return _result;
-        }
-
-        private HMACSHA256 __encryptor = null;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public HMACSHA256 Encryptor
-        {
-            get
-            {
-                if (__encryptor == null)
-                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
-
-                return __encryptor;
-            }
-        }
-
-        private string CreateSignature(HttpClient client)
-        {
-            client.DefaultRequestHeaders.Add("USER-AGENT", mainXchg.UserAgent);
-            client.DefaultRequestHeaders.Add("X-MBX-APIKEY", this.ApiKey);
-
-            var _post_data = $"timestamp={CUnixTime.NowMilli}";
-            var _signature = BitConverter.ToString(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_post_data))).Replace("-", "");
-
-            return _post_data + $"&signature={_signature}";
         }
 
         /// <summary>

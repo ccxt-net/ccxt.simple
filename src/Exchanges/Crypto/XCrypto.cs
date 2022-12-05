@@ -46,7 +46,7 @@ namespace CCXT.Simple.Exchanges.Crypto
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -66,7 +66,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
 
-                        var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                        var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                         foreach (var s in _jarray.result.instruments)
                         {
@@ -198,7 +198,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             }
         }
 
-        private Request CreateSignature(HttpClient client, int id, string endpoint, Dictionary<string, string> args = null)
+        public Request CreateSignature(HttpClient client, int id, string endpoint, Dictionary<string, string> args = null)
         {
             if (args == null)
                 args = new Dictionary<string, string>();

@@ -49,7 +49,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -65,11 +65,11 @@ namespace CCXT.Simple.Exchanges.Bithumb
                 {
                     using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
-                    var _k_jobject = JObject.Parse(_k_jstring);
+                    var _k_jarray = JsonConvert.DeserializeObject<CoinInfor>(_k_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
-                    foreach (JProperty s in _k_jobject["data"].Children())
+                    foreach (JProperty s in _k_jarray.data.Children())
                     {
                        var _o = s.Value;
                         if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
@@ -88,9 +88,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
                     var _b_jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _b_jobject = JObject.Parse(_b_jstring);
+                    var _b_jarray = JsonConvert.DeserializeObject<CoinInfor>(_b_jstring);
 
-                    foreach (JProperty s in _b_jobject["data"].Children())
+                    foreach (JProperty s in _b_jarray.data.Children())
                     {
                         var _o = s.Value;
                         if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
@@ -132,15 +132,16 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                var _cstring = await File.ReadAllTextAsync(@"Exchanges\Bithumb\CoinState.json");
+                var _carray = JsonConvert.DeserializeObject<CoinState>(_cstring);
+
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
+                    using HttpResponseMessage _response = await _client.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinAsset>(_jstring);
 
-                    var _jdata = _jobject["data"];
-
-                    foreach (JProperty s in _jdata.Children())
+                    foreach (JProperty s in _jarray.data.Children())
                     {
                         var _currency = s.Name;
 
@@ -172,6 +173,32 @@ namespace CCXT.Simple.Exchanges.Bithumb
                                 t.active = _state.active;
                                 t.deposit = _state.deposit;
                                 t.withdraw = _state.withdraw;
+                            }
+                        }
+
+                        // "networkType": "Mainnet", "networkType": "ERC-20", "networkType": "EOS-Dapp", "networkType": "OEP-4", "networkType": "BEP-20"
+                        var _n = _carray.data.SingleOrDefault(x => x.coinSymbolNm == _state.currency);
+                        if (_n != null)
+                        {
+                            var _name = _currency + "-" + _n.networkType;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
+                            {
+                                _state.networks.Add(new WNetwork
+                                {
+                                    name = _name,
+                                    network = _n.coinSymbolNm,
+                                    protocol = _n.networkType == "Mainnet" ? _n.coinSymbolNm : _n.networkType.Replace("-", ""),
+
+                                    deposit = _state.deposit,
+                                    withdraw = _state.withdraw
+                                });
+                            }
+                            else
+                            {
+                                _state.deposit = _state.deposit;
+                                _state.withdraw = _state.withdraw;
                             }
                         }
                     }
@@ -287,22 +314,20 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _pairs = _ticker.symbol.Split('_');
-
-                        if (_pairs[1] == "KRW" && _k_data.ContainsKey(_pairs[0]))
+                        if (_ticker.quoteName == "KRW" && _k_data.ContainsKey(_ticker.baseName))
                         {
-                            var _bid = _k_data[_pairs[0]]["bids"][0];
-                            var _ask = _k_data[_pairs[0]]["asks"][0];
+                            var _bid = _k_data[_ticker.baseName]["bids"][0];
+                            var _ask = _k_data[_ticker.baseName]["asks"][0];
 
                             _ticker.askPrice = _ask.Value<decimal>("price");
                             _ticker.askQty = _ask.Value<decimal>("quantity");
                             _ticker.bidPrice = _bid.Value<decimal>("price");
                             _ticker.bidQty = _bid.Value<decimal>("quantity");
                         }
-                        else if (_pairs[1] == "BTC" && _b_data.ContainsKey(_pairs[0]))
+                        else if (_ticker.quoteName == "BTC" && _b_data.ContainsKey(_ticker.baseName))
                         {
-                            var _bid = _b_data[_pairs[0]]["bids"][0];
-                            var _ask = _b_data[_pairs[0]]["asks"][0];
+                            var _bid = _b_data[_ticker.baseName]["bids"][0];
+                            var _ask = _b_data[_ticker.baseName]["asks"][0];
 
                             Debug.Assert(this.mainXchg.krw_btc_price != 0.0m);
 
@@ -360,14 +385,12 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _pairs = _ticker.symbol.Split('_');
-
-                        if (_pairs[1] == "KRW" && _k_jobject.ContainsKey(_pairs[0]))
+                        if (_ticker.quoteName == "KRW" && _k_jobject.ContainsKey(_ticker.baseName))
                         {
-                            var _price = _k_jobject[_pairs[0]].Value<decimal>("closing_price");
+                            var _price = _k_jobject[_ticker.baseName].Value<decimal>("closing_price");
                             _ticker.lastPrice = _price;
 
-                            var _volume = _k_jobject[_pairs[0]].Value<decimal>("acc_trade_value");
+                            var _volume = _k_jobject[_ticker.baseName].Value<decimal>("acc_trade_value");
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -384,12 +407,12 @@ namespace CCXT.Simple.Exchanges.Bithumb
                                 }
                             }
                         }
-                        else if (_pairs[1] == "BTC" && _b_jobject.ContainsKey(_pairs[0]))
+                        else if (_ticker.quoteName == "BTC" && _b_jobject.ContainsKey(_ticker.baseName))
                         {
-                            var _price = _b_jobject[_pairs[0]].Value<decimal>("closing_price");
+                            var _price = _b_jobject[_ticker.baseName].Value<decimal>("closing_price");
                             _ticker.lastPrice = _price * mainXchg.krw_btc_price;
 
-                            var _volume = _b_jobject[_pairs[0]].Value<decimal>("acc_trade_value");
+                            var _volume = _b_jobject[_ticker.baseName].Value<decimal>("acc_trade_value");
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -451,7 +474,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             }
         }
 
-        private FormUrlEncodedContent CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args)
+        public FormUrlEncodedContent CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args)
         {
             var _post_data = mainXchg.ToQueryString2(args);
             var _nonce = CUnixTime.NowMilli.ToString();

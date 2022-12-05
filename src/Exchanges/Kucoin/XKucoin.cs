@@ -41,7 +41,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -59,7 +59,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray.data)
                     {
@@ -115,7 +115,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
         }
 
-        private void CreateSignature(HttpClient client, string endpoint)
+        public void CreateSignature(HttpClient client, string endpoint)
         {
             var _timestamp = CUnixTime.NowMilli.ToString();
 

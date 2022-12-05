@@ -43,7 +43,7 @@ namespace CCXT.Simple.Exchanges.Huobi
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -62,7 +62,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["data"].ToObject<JArray>();
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (JToken s in _jarray)
                     {

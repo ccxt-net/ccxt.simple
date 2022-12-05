@@ -45,7 +45,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -65,7 +65,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -195,67 +195,6 @@ namespace CCXT.Simple.Exchanges.Coinbase
             return _result;
         }
 
-        //public async ValueTask<bool> VerifyStates(Tickers tickers)
-        //{
-        //    var _result = false;
-
-        //    try
-        //    {
-        //        using (var _wc = new HttpClient())
-        //        {
-        //            var _endpoint = "/coinbase-accounts";
-        //            this.CreateSignature(_wc, "GET", _endpoint);
-
-        //            using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}{_endpoint}");
-        //            var _jstring = await _response.Content.ReadAsStringAsync();
-        //            var _jarray = JArray.Parse(_jstring);
-
-        //            foreach (JToken s in _jarray)
-        //            {
-        //                var _currency = s.Value<string>("currency");
-
-        //                var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
-        //                if (_state == null)
-        //                {
-        //                    _state = new WState
-        //                    {
-        //                        currency = _currency,
-        //                        active = s.Value<bool>("active"),
-        //                        deposit = true,
-        //                        withdraw = true,
-        //                        networks = new List<WNetwork>()
-        //                    };
-
-        //                    tickers.states.Add(_state);
-        //                }
-        //                else
-        //                {
-        //                    _state.active = s.Value<bool>("active");
-        //                }
-
-        //                var _t_items = tickers.items.Where(x => x.compName == _state.currency);
-        //                if (_t_items != null)
-        //                {
-        //                    foreach (var t in _t_items)
-        //                    {
-        //                        t.active = _state.active;
-        //                        t.deposit = _state.deposit;
-        //                        t.withdraw = _state.withdraw;
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //        _result = true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        this.mainXchg.OnMessageEvent(ExchangeName, ex, 3402);
-        //    }
-
-        //    return _result;
-        //}
-
         private HMACSHA256 __encryptor = null;
 
         /// <summary>
@@ -272,7 +211,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
         }
 
-        private void CreateSignature(HttpClient client, string method, string endpoint)
+        public void CreateSignature(HttpClient client, string method, string endpoint)
         {
             var _timestamp = CUnixTime.Now;
 

@@ -40,7 +40,7 @@ namespace CCXT.Simple.Exchanges.Okex
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -58,7 +58,7 @@ namespace CCXT.Simple.Exchanges.Okex
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring, mainXchg.JsonSettings);
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray.data)
                     {
@@ -205,7 +205,7 @@ namespace CCXT.Simple.Exchanges.Okex
             }
         }
 
-        private void CreateSignature(HttpClient client)
+        public void CreateSignature(HttpClient client)
         {
             var _timestamp = CUnixTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss'.'fff'Z'");
 

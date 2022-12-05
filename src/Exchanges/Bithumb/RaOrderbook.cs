@@ -1,5 +1,8 @@
 ﻿namespace CCXT.Simple.Exchanges.Bithumb
 {
+    /// <summary>
+    /// https://api.bithumb.com/public/orderbook/ALL_KRW?count=1
+    /// </summary>
     public class RaOrderbook
     {
         public RaOrderbook()

@@ -44,7 +44,7 @@ namespace CCXT.Simple.Exchanges.Coinone
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        public Tickers Tickers { get; set; }
+        
 
         /// <summary>
         ///
@@ -64,7 +64,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["tradepairs"].ToObject<JArray>();
 
-                    var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
+                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
                     foreach (JToken s in _jarray)
                     {

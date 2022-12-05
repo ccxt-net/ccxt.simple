@@ -176,7 +176,7 @@ namespace CCXT.Simple.Exchanges
             return _result;
         }
 
-        public QueueInfo GetQInfors(string exchange_name)
+        public QueueInfo GetXInfors(string exchange_name)
         {
             var _result = (QueueInfo)null;
 
@@ -204,7 +204,7 @@ namespace CCXT.Simple.Exchanges
 
             if (!this.exchangeTs.ContainsKey(exchange_name))
             {
-                var _infor = this.GetQInfors(exchange_name);
+                var _infor = this.GetXInfors(exchange_name);
                 _result = new Tickers(exchange_name, _infor.symbols);
 
                 this.exchangeTs.TryAdd(exchange_name, _result);
@@ -267,7 +267,8 @@ namespace CCXT.Simple.Exchanges
 
         public string ToQueryString2(Dictionary<string, string> args)
         {
-            return String.Join("&", args.Select(a => $"{a.Key}={Uri.EscapeDataString((a.Value ?? "").ToString())}"));
+            return args != null ? String.Join("&", args.Select(a => $"{a.Key}={Uri.EscapeDataString((a.Value ?? "").ToString())}"))
+                                : "";
         }
 
         public string ConvertHexString(byte[] buffer)

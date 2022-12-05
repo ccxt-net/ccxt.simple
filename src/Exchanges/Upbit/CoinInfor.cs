@@ -1,5 +1,8 @@
 ﻿namespace CCXT.Simple.Exchanges.Upbit 
 {
+    /// <summary>
+    /// https://api.upbit.com/v1/market/all?isDetails=true
+    /// </summary>
     public class CoinInfor
     {
         public string market
