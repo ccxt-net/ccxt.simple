@@ -1,0 +1,5449 @@
+{
+    "retCode": 0,
+    "retMsg": "OK",
+    "result": {
+        "rows": [
+            {
+                "name": "AGLD",
+                "coin": "AGLD",
+                "remainAmount": "256400",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "6.76",
+                        "depositMin": "0",
+                        "withdrawMin": "13",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MATIC",
+                "coin": "MATIC",
+                "remainAmount": "1652850",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AGLA",
+                "coin": "AGLA",
+                "remainAmount": "12500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "APT",
+                "coin": "APT",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "APTOS",
+                        "confirmation": "1",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "APTOS",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DFI",
+                "coin": "DFI",
+                "remainAmount": "200000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "12",
+                        "depositMin": "0",
+                        "withdrawMin": "12",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ZAM",
+                "coin": "ZAM",
+                "remainAmount": "7500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "400",
+                        "depositMin": "0",
+                        "withdrawMin": "400",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "6",
+                        "depositMin": "0",
+                        "withdrawMin": "6",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "STG",
+                "coin": "STG",
+                "remainAmount": "400000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "15",
+                        "depositMin": "0",
+                        "withdrawMin": "15",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SHIB",
+                "coin": "SHIB",
+                "remainAmount": "41993281075",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "948251",
+                        "depositMin": "0",
+                        "withdrawMin": "1896502",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1500",
+                        "depositMin": "0",
+                        "withdrawMin": "1500",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KDA",
+                "coin": "KDA",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "KDA",
+                        "confirmation": "20",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "KDA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DFL",
+                "coin": "DFL",
+                "remainAmount": "3422500",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "NEAR",
+                "coin": "NEAR",
+                "remainAmount": "118000",
+                "chains": [
+                    {
+                        "chainType": "NEAR",
+                        "confirmation": "5",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "NEAR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "HNT",
+                "coin": "HNT",
+                "remainAmount": "49000",
+                "chains": [
+                    {
+                        "chainType": "HNT",
+                        "confirmation": "10",
+                        "withdrawFee": "0.05",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "HNT",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "STX",
+                "coin": "STX",
+                "remainAmount": "695000",
+                "chains": [
+                    {
+                        "chainType": "STX",
+                        "confirmation": "10",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "STX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "ZBC",
+                "coin": "ZBC",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "20",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DRIV",
+                "coin": "DRIV",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LFW",
+                "coin": "LFW",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "2.5",
+                        "depositMin": "0",
+                        "withdrawMin": "2.6",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DGB",
+                "coin": "DGB",
+                "remainAmount": "29100000",
+                "chains": [
+                    {
+                        "chainType": "DGB",
+                        "confirmation": "50",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.4",
+                        "chain": "DGB",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ZRX",
+                "coin": "ZRX",
+                "remainAmount": "490150",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "27",
+                        "depositMin": "0",
+                        "withdrawMin": "54",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BCH",
+                "coin": "BCH",
+                "remainAmount": "10000",
+                "chains": [
+                    {
+                        "chainType": "Bitcoin Cash",
+                        "confirmation": "6",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "BCH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CAKE",
+                "coin": "CAKE",
+                "remainAmount": "77500",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.016",
+                        "depositMin": "0",
+                        "withdrawMin": "0.032",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "OMG",
+                "coin": "OMG",
+                "remainAmount": "178300",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2.01",
+                        "depositMin": "0",
+                        "withdrawMin": "4.02",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "JST",
+                "coin": "JST",
+                "remainAmount": "7500000",
+                "chains": [
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CEL",
+                "coin": "CEL",
+                "remainAmount": "395000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "9.14",
+                        "depositMin": "0",
+                        "withdrawMin": "18",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    }
+                ]
+            },
+            {
+                "name": "HOT",
+                "coin": "HOT",
+                "remainAmount": "124000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2894",
+                        "depositMin": "0",
+                        "withdrawMin": "5788",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SUN",
+                "coin": "SUN",
+                "remainAmount": "28000000",
+                "chains": [
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "14",
+                        "depositMin": "0",
+                        "withdrawMin": "14",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GMT",
+                "coin": "GMT",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "0.25",
+                        "depositMin": "0",
+                        "withdrawMin": "0.25",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BTC",
+                "coin": "BTC",
+                "remainAmount": "5370",
+                "chains": [
+                    {
+                        "chainType": "BTC",
+                        "confirmation": "1",
+                        "withdrawFee": "0.0002",
+                        "depositMin": "0",
+                        "withdrawMin": "0.001",
+                        "chain": "BTC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TWT",
+                "coin": "TWT",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AR",
+                "coin": "AR",
+                "remainAmount": "35000",
+                "chains": [
+                    {
+                        "chainType": "AR",
+                        "confirmation": "55",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "0.5",
+                        "chain": "AR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GMX",
+                "coin": "GMX",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ARBI",
+                        "confirmation": "12",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "ARBI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XETA",
+                "coin": "XETA",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "20",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BTG",
+                "coin": "BTG",
+                "remainAmount": "26350",
+                "chains": [
+                    {
+                        "chainType": "BTG",
+                        "confirmation": "70",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.002",
+                        "chain": "BTG",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PSTAKE",
+                "coin": "PSTAKE",
+                "remainAmount": "750000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "40",
+                        "depositMin": "0",
+                        "withdrawMin": "40",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LGX",
+                "coin": "LGX",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MIX",
+                "coin": "MIX",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "3000",
+                        "depositMin": "0",
+                        "withdrawMin": "6000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "200",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BTT",
+                "coin": "BTT",
+                "remainAmount": "250000000000",
+                "chains": [
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "320000",
+                        "depositMin": "0",
+                        "withdrawMin": "320000",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WEMIX",
+                "coin": "WEMIX",
+                "remainAmount": "800000",
+                "chains": [
+                    {
+                        "chainType": "KLAY",
+                        "confirmation": "500",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "KLAY",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ONE",
+                "coin": "ONE",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ONE",
+                        "confirmation": "70",
+                        "withdrawFee": "0.002",
+                        "depositMin": "0",
+                        "withdrawMin": "60",
+                        "chain": "ONE",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ANKR",
+                "coin": "ANKR",
+                "remainAmount": "11465250",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "318",
+                        "depositMin": "0",
+                        "withdrawMin": "636",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GSTS",
+                "coin": "GSTS",
+                "remainAmount": "4000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "3",
+                        "depositMin": "0",
+                        "withdrawMin": "3",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SUSHI",
+                "coin": "SUSHI",
+                "remainAmount": "200000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2.3",
+                        "depositMin": "0",
+                        "withdrawMin": "4.6",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MPLX",
+                "coin": "MPLX",
+                "remainAmount": "1500000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "ALGO",
+                "coin": "ALGO",
+                "remainAmount": "833300",
+                "chains": [
+                    {
+                        "chainType": "ALGO",
+                        "confirmation": "60",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ALGO",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "SC",
+                "coin": "SC",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "SC",
+                        "confirmation": "20",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "SC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SD",
+                "coin": "SD",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WBTC",
+                "coin": "WBTC",
+                "remainAmount": "500",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.0006",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0006",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "T",
+                "coin": "T",
+                "remainAmount": "2900000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "200",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "THN",
+                "coin": "THN",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "3000",
+                        "depositMin": "0",
+                        "withdrawMin": "3000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CUSD",
+                "coin": "CUSD",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "CELO",
+                        "confirmation": "10",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CELO",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ACA",
+                "coin": "ACA",
+                "remainAmount": "13890000",
+                "chains": [
+                    {
+                        "chainType": "ACA",
+                        "confirmation": "30",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "ACA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MANA",
+                "coin": "MANA",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ACH",
+                "coin": "ACH",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "550",
+                        "depositMin": "0",
+                        "withdrawMin": "550",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RSS3",
+                "coin": "RSS3",
+                "remainAmount": "900000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "60",
+                        "depositMin": "0",
+                        "withdrawMin": "60",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BEL",
+                "coin": "BEL",
+                "remainAmount": "400000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "4"
+                    }
+                ]
+            },
+            {
+                "name": "RUN",
+                "coin": "RUN",
+                "remainAmount": "4170000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "",
+                        "withdrawFee": "50",
+                        "depositMin": "",
+                        "withdrawMin": "50",
+                        "chain": "SOL",
+                        "chainDeposit": "",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "JUV",
+                "coin": "JUV",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "MINA",
+                "coin": "MINA",
+                "remainAmount": "440000",
+                "chains": [
+                    {
+                        "chainType": "MINA",
+                        "confirmation": "20",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "2.5",
+                        "chain": "MINA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ACM",
+                "coin": "ACM",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "CO",
+                "coin": "CO",
+                "remainAmount": "12500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "STAT",
+                "coin": "STAT",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "Klaytn",
+                        "confirmation": "500",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "KLAY",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MKR",
+                "coin": "MKR",
+                "remainAmount": "1000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.0095",
+                        "depositMin": "0",
+                        "withdrawMin": "0.016",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "VPAD",
+                "coin": "VPAD",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "17.5",
+                        "depositMin": "0",
+                        "withdrawMin": "35",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WOO",
+                "coin": "WOO",
+                "remainAmount": "6000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "14",
+                        "depositMin": "0",
+                        "withdrawMin": "64",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ICP",
+                "coin": "ICP",
+                "remainAmount": "50000",
+                "chains": [
+                    {
+                        "chainType": "ICP",
+                        "confirmation": "1",
+                        "withdrawFee": "0.006",
+                        "depositMin": "0",
+                        "withdrawMin": "0.006",
+                        "chain": "ICP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "REN",
+                "coin": "REN",
+                "remainAmount": "1700000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "40",
+                        "depositMin": "0",
+                        "withdrawMin": "80",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "STRM",
+                "coin": "STRM",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MCRT",
+                "coin": "MCRT",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ADA",
+                "coin": "ADA",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ADA",
+                        "confirmation": "15",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "ADA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "ICX",
+                "coin": "ICX",
+                "remainAmount": "1172000",
+                "chains": [
+                    {
+                        "chainType": "ICX",
+                        "confirmation": "120",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.4",
+                        "chain": "ICX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ZEN",
+                "coin": "ZEN",
+                "remainAmount": "32850",
+                "chains": [
+                    {
+                        "chainType": "ZEN",
+                        "confirmation": "20",
+                        "withdrawFee": "0.002",
+                        "depositMin": "0",
+                        "withdrawMin": "0.004",
+                        "chain": "ZEN",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PAXG",
+                "coin": "PAXG",
+                "remainAmount": "250",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.015",
+                        "depositMin": "0",
+                        "withdrawMin": "0.015",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DOGE",
+                "coin": "DOGE",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "Dogecoin",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "25",
+                        "chain": "DOGE",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "HBAR",
+                "coin": "HBAR",
+                "remainAmount": "6000000",
+                "chains": [
+                    {
+                        "chainType": "HBAR",
+                        "confirmation": "1",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "HBAR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RVN",
+                "coin": "RVN",
+                "remainAmount": "12900000",
+                "chains": [
+                    {
+                        "chainType": "RVN",
+                        "confirmation": "200",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "RVN",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ELT",
+                "coin": "ELT",
+                "remainAmount": "115000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "650",
+                        "depositMin": "0",
+                        "withdrawMin": "650",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SYNR",
+                "coin": "SYNR",
+                "remainAmount": "5500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "300",
+                        "depositMin": "0",
+                        "withdrawMin": "300",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WAVES",
+                "coin": "WAVES",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "Waves",
+                        "confirmation": "100",
+                        "withdrawFee": "0.002",
+                        "depositMin": "0",
+                        "withdrawMin": "0.402",
+                        "chain": "WAVES",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CHZ",
+                "coin": "CHZ",
+                "remainAmount": "8000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "80",
+                        "depositMin": "0",
+                        "withdrawMin": "160",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "INTER",
+                "coin": "INTER",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "ROND",
+                "coin": "ROND",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XRP",
+                "coin": "XRP",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "XRP",
+                        "confirmation": "1",
+                        "withdrawFee": "0.25",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "XRP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "2"
+                    }
+                ]
+            },
+            {
+                "name": "JASMY",
+                "coin": "JASMY",
+                "remainAmount": "30000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "141",
+                        "depositMin": "0",
+                        "withdrawMin": "281",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FLOKI",
+                "coin": "FLOKI",
+                "remainAmount": "20000000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "100000",
+                        "depositMin": "0",
+                        "withdrawMin": "100000",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "300000",
+                        "depositMin": "0",
+                        "withdrawMin": "300000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FIDA",
+                "coin": "FIDA",
+                "remainAmount": "300000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "SAND",
+                "coin": "SAND",
+                "remainAmount": "1336850",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "17",
+                        "depositMin": "0",
+                        "withdrawMin": "34",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MMC",
+                "coin": "MMC",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "4",
+                        "depositMin": "0",
+                        "withdrawMin": "4",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "C98",
+                "coin": "C98",
+                "remainAmount": "385000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.079",
+                        "depositMin": "0",
+                        "withdrawMin": "0.16",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PSG",
+                "coin": "PSG",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "UMA",
+                "coin": "UMA",
+                "remainAmount": "110000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2.61",
+                        "depositMin": "0",
+                        "withdrawMin": "5.22",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PSP",
+                "coin": "PSP",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "22",
+                        "depositMin": "0",
+                        "withdrawMin": "44",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AVA",
+                "coin": "AVA",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "12",
+                        "depositMin": "0",
+                        "withdrawMin": "24",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "POSI",
+                "coin": "POSI",
+                "remainAmount": "2500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "0.5",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GAL",
+                "coin": "GAL",
+                "remainAmount": "20000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "0.5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SCRT",
+                "coin": "SCRT",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "SCRT",
+                        "confirmation": "30",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "SCRT",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "GAS",
+                "coin": "GAS",
+                "remainAmount": "3333333333",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "233333",
+                        "depositMin": "0",
+                        "withdrawMin": "466667",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DLC",
+                "coin": "DLC",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SIS",
+                "coin": "SIS",
+                "remainAmount": "600000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "8.75",
+                        "depositMin": "0",
+                        "withdrawMin": "17.5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AFC",
+                "coin": "AFC",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "THETA",
+                "coin": "THETA",
+                "remainAmount": "341000",
+                "chains": [
+                    {
+                        "chainType": "THETA",
+                        "confirmation": "12",
+                        "withdrawFee": "0.12",
+                        "depositMin": "0",
+                        "withdrawMin": "0.24",
+                        "chain": "THETA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ENJ",
+                "coin": "ENJ",
+                "remainAmount": "555550",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "16",
+                        "depositMin": "0",
+                        "withdrawMin": "22",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "INSUR",
+                "coin": "INSUR",
+                "remainAmount": "305000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "11.5",
+                        "depositMin": "0",
+                        "withdrawMin": "23",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ESNC",
+                "coin": "ESNC",
+                "remainAmount": "15000000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MELOS",
+                "coin": "MELOS",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "100",
+                        "depositMin": "0",
+                        "withdrawMin": "100",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GRT",
+                "coin": "GRT",
+                "remainAmount": "692400",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "39",
+                        "depositMin": "0",
+                        "withdrawMin": "78",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MIBR",
+                "coin": "MIBR",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "NEXO",
+                "coin": "NEXO",
+                "remainAmount": "579000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "13.51",
+                        "depositMin": "0",
+                        "withdrawMin": "27",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ENS",
+                "coin": "ENS",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.71",
+                        "depositMin": "0",
+                        "withdrawMin": "1.42",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MOVEZ",
+                "coin": "MOVEZ",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MASK",
+                "coin": "MASK",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PTU",
+                "coin": "PTU",
+                "remainAmount": "3500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WLKN",
+                "coin": "WLKN",
+                "remainAmount": "3000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "100",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ORT",
+                "coin": "ORT",
+                "remainAmount": "100000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "UNI",
+                "coin": "UNI",
+                "remainAmount": "95000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "1.16",
+                        "depositMin": "0",
+                        "withdrawMin": "2.02",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AAVE",
+                "coin": "AAVE",
+                "remainAmount": "4500",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.32",
+                        "depositMin": "0",
+                        "withdrawMin": "0.32",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KASTA",
+                "coin": "KASTA",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0.25",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PERP",
+                "coin": "PERP",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "3.21",
+                        "depositMin": "0",
+                        "withdrawMin": "6.42",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XDC",
+                "coin": "XDC",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "XDC",
+                        "confirmation": "32",
+                        "withdrawFee": "6.5",
+                        "depositMin": "0",
+                        "withdrawMin": "13",
+                        "chain": "XDC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MNZ",
+                "coin": "MNZ",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "20",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "YFI",
+                "coin": "YFI",
+                "remainAmount": "60",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.00082",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0016",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LUNC",
+                "coin": "LUNC",
+                "remainAmount": "3500000000",
+                "chains": [
+                    {
+                        "chainType": "Terra Classic",
+                        "confirmation": "30",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "5000",
+                        "chain": "LUNA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "XTZ",
+                "coin": "XTZ",
+                "remainAmount": "400000",
+                "chains": [
+                    {
+                        "chainType": "XTZ",
+                        "confirmation": "60",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "XTZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "LUNA",
+                "coin": "LUNA",
+                "remainAmount": "300000",
+                "chains": [
+                    {
+                        "chainType": "Terra",
+                        "confirmation": "30",
+                        "withdrawFee": "0.05",
+                        "depositMin": "0",
+                        "withdrawMin": "0.05",
+                        "chain": "LUNANEW",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "DEVT",
+                "coin": "DEVT",
+                "remainAmount": "333000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "18",
+                        "depositMin": "0",
+                        "withdrawMin": "36",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KMON",
+                "coin": "KMON",
+                "remainAmount": "13000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "OBX",
+                "coin": "OBX",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GM",
+                "coin": "GM",
+                "remainAmount": "10000000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "160000",
+                        "depositMin": "0",
+                        "withdrawMin": "160000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "EOS",
+                "coin": "EOS",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "EOS",
+                        "confirmation": "1",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "EOS",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    }
+                ]
+            },
+            {
+                "name": "GST",
+                "coin": "GST",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "8",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FORT",
+                "coin": "FORT",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RACA",
+                "coin": "RACA",
+                "remainAmount": "400000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "750",
+                        "depositMin": "0",
+                        "withdrawMin": "750",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "15000",
+                        "depositMin": "0",
+                        "withdrawMin": "15000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BIT",
+                "coin": "BIT",
+                "remainAmount": "80000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "13.43",
+                        "depositMin": "0",
+                        "withdrawMin": "8",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BICO",
+                "coin": "BICO",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2.5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SWEAT",
+                "coin": "SWEAT",
+                "remainAmount": "75000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "200",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "NEAR",
+                        "confirmation": "5",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "NEAR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LMR",
+                "coin": "LMR",
+                "remainAmount": "1400000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "",
+                        "withdrawFee": "80",
+                        "depositMin": "",
+                        "withdrawMin": "80",
+                        "chain": "ETH",
+                        "chainDeposit": "",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XEC",
+                "coin": "XEC",
+                "remainAmount": "9220000000",
+                "chains": [
+                    {
+                        "chainType": "XEC",
+                        "confirmation": "60",
+                        "withdrawFee": "10000",
+                        "depositMin": "0",
+                        "withdrawMin": "20000",
+                        "chain": "XEC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "2"
+                    }
+                ]
+            },
+            {
+                "name": "GCAKE",
+                "coin": "GCAKE",
+                "remainAmount": "1250000000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10000",
+                        "depositMin": "0",
+                        "withdrawMin": "10000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "100000",
+                        "depositMin": "0",
+                        "withdrawMin": "100000",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "100000",
+                        "depositMin": "0",
+                        "withdrawMin": "100000",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SOLO",
+                "coin": "SOLO",
+                "remainAmount": "1850000",
+                "chains": [
+                    {
+                        "chainType": "XRP",
+                        "confirmation": "1",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "0.6",
+                        "chain": "XRP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PEOPLE",
+                "coin": "PEOPLE",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PUMLX",
+                "coin": "PUMLX",
+                "remainAmount": "7500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AXS",
+                "coin": "AXS",
+                "remainAmount": "270000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.39",
+                        "depositMin": "0",
+                        "withdrawMin": "0.78",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ZIL",
+                "coin": "ZIL",
+                "remainAmount": "21530000",
+                "chains": [
+                    {
+                        "chainType": "ZIL",
+                        "confirmation": "15",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.4",
+                        "chain": "ZIL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CAPS",
+                "coin": "CAPS",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "600",
+                        "depositMin": "0",
+                        "withdrawMin": "600",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "20",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XEM",
+                "coin": "XEM",
+                "remainAmount": "8000000",
+                "chains": [
+                    {
+                        "chainType": "NEM",
+                        "confirmation": "10",
+                        "withdrawFee": "4",
+                        "depositMin": "0",
+                        "withdrawMin": "4",
+                        "chain": "NEM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "EUROC",
+                "coin": "EUROC",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "HOOK",
+                "coin": "HOOK",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "0.5",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GALFT",
+                "coin": "GALFT",
+                "remainAmount": "68500",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "DEFY",
+                "coin": "DEFY",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "OKSE",
+                "coin": "OKSE",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FLOW",
+                "coin": "FLOW",
+                "remainAmount": "200000",
+                "chains": [
+                    {
+                        "chainType": "FLOW",
+                        "confirmation": "20",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "FLOW",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SLG",
+                "coin": "SLG",
+                "remainAmount": "1500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "3",
+                        "depositMin": "0",
+                        "withdrawMin": "3",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "COMP",
+                "coin": "COMP",
+                "remainAmount": "2000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.068",
+                        "depositMin": "0",
+                        "withdrawMin": "0.14",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SLP",
+                "coin": "SLP",
+                "remainAmount": "15000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "439",
+                        "depositMin": "0",
+                        "withdrawMin": "878",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "HFT",
+                "coin": "HFT",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RUNE",
+                "coin": "RUNE",
+                "remainAmount": "212500",
+                "chains": [
+                    {
+                        "chainType": "BNB (BEP2)",
+                        "confirmation": "1",
+                        "withdrawFee": "0.038",
+                        "depositMin": "0",
+                        "withdrawMin": "0.076",
+                        "chain": "BNB",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KMA",
+                "coin": "KMA",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "KMA",
+                        "confirmation": "",
+                        "withdrawFee": "2",
+                        "depositMin": "",
+                        "withdrawMin": "4",
+                        "chain": "KMA",
+                        "chainDeposit": "",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FCD",
+                "coin": "FCD",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "0.3",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CMP",
+                "coin": "CMP",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "Caduceus",
+                        "confirmation": "100",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CMP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ECOX",
+                "coin": "ECOX",
+                "remainAmount": "1250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DOT",
+                "coin": "DOT",
+                "remainAmount": "450000",
+                "chains": [
+                    {
+                        "chainType": "DOT",
+                        "confirmation": "30",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "1.5",
+                        "chain": "DOT",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XWG",
+                "coin": "XWG",
+                "remainAmount": "13000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SFUND",
+                "coin": "SFUND",
+                "remainAmount": "125000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "1INCH",
+                "coin": "1INCH",
+                "remainAmount": "415000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "8.2",
+                        "depositMin": "0",
+                        "withdrawMin": "16.4",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AVAX",
+                "coin": "AVAX",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "AVAX",
+                        "confirmation": "1",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.11",
+                        "chain": "XAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "0.02",
+                        "depositMin": "0",
+                        "withdrawMin": "0.02",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GENE",
+                "coin": "GENE",
+                "remainAmount": "800000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "0.05",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "IZI",
+                "coin": "IZI",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "175",
+                        "depositMin": "0",
+                        "withdrawMin": "350",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "APEX",
+                "coin": "APEX",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "60",
+                        "depositMin": "0",
+                        "withdrawMin": "60",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "Arbitrum One",
+                        "confirmation": "12",
+                        "withdrawFee": "8",
+                        "depositMin": "0",
+                        "withdrawMin": "8",
+                        "chain": "ARBI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FTM",
+                "coin": "FTM",
+                "remainAmount": "555550",
+                "chains": [
+                    {
+                        "chainType": "FTM",
+                        "confirmation": "10",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "FTM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "14.5",
+                        "depositMin": "0",
+                        "withdrawMin": "29",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "AZY",
+                "coin": "AZY",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SAITAMA",
+                "coin": "SAITAMA",
+                "remainAmount": "150000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "200",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DOME",
+                "coin": "DOME",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "20",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FTT",
+                "coin": "FTT",
+                "remainAmount": "120000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.58",
+                        "depositMin": "0",
+                        "withdrawMin": "1.16",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ATOM",
+                "coin": "ATOM",
+                "remainAmount": "150000",
+                "chains": [
+                    {
+                        "chainType": "ATOM",
+                        "confirmation": "65",
+                        "withdrawFee": "0.005",
+                        "depositMin": "0",
+                        "withdrawMin": "0.015",
+                        "chain": "ATOM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "BOBA",
+                "coin": "BOBA",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "8",
+                        "depositMin": "0",
+                        "withdrawMin": "16",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GODS",
+                "coin": "GODS",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5.8",
+                        "depositMin": "0",
+                        "withdrawMin": "11.61",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SNX",
+                "coin": "SNX",
+                "remainAmount": "200000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "7.9",
+                        "depositMin": "0",
+                        "withdrawMin": "15",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MBS",
+                "coin": "MBS",
+                "remainAmount": "670000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "CULT",
+                "coin": "CULT",
+                "remainAmount": "50000000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "1000000",
+                        "depositMin": "0",
+                        "withdrawMin": "1000000",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KOK",
+                "coin": "KOK",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "8",
+                        "depositMin": "0",
+                        "withdrawMin": "8",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ROSE",
+                "coin": "ROSE",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ROSE",
+                        "confirmation": "30",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "ROSE",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "COT",
+                "coin": "COT",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "500",
+                        "depositMin": "0",
+                        "withdrawMin": "500",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WAXP",
+                "coin": "WAXP",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "WAX",
+                        "confirmation": "1",
+                        "withdrawFee": "15",
+                        "depositMin": "0",
+                        "withdrawMin": "15",
+                        "chain": "WAXP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GLMR",
+                "coin": "GLMR",
+                "remainAmount": "200000",
+                "chains": [
+                    {
+                        "chainType": "GLMR",
+                        "confirmation": "30",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "0.5",
+                        "chain": "GLMR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KON",
+                "coin": "KON",
+                "remainAmount": "60000000",
+                "chains": [
+                    {
+                        "chainType": "KON",
+                        "confirmation": "10",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "0",
+                        "chain": "KON",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GGM",
+                "coin": "GGM",
+                "remainAmount": "5300000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1.16",
+                        "depositMin": "0",
+                        "withdrawMin": "2.32",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XYM",
+                "coin": "XYM",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "XYM",
+                        "confirmation": "5",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "4",
+                        "chain": "XYM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "DAI",
+                "coin": "DAI",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.8",
+                        "depositMin": "0",
+                        "withdrawMin": "1.6",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "35",
+                        "depositMin": "0",
+                        "withdrawMin": "35",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "zkSync",
+                        "confirmation": "1",
+                        "withdrawFee": "3",
+                        "depositMin": "0",
+                        "withdrawMin": "3",
+                        "chain": "ZKSYNC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SOL",
+                "coin": "SOL",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0.01",
+                        "withdrawMin": "0.21",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ERTHA",
+                "coin": "ERTHA",
+                "remainAmount": "3000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SON",
+                "coin": "SON",
+                "remainAmount": "300000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "200",
+                        "depositMin": "0",
+                        "withdrawMin": "200",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CITY",
+                "coin": "CITY",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "ETC",
+                "coin": "ETC",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "Ethereum Classic",
+                        "confirmation": "150",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "ETC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SOS",
+                "coin": "SOS",
+                "remainAmount": "75000000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "6717850",
+                        "depositMin": "0",
+                        "withdrawMin": "13435700",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BNB",
+                "coin": "BNB",
+                "remainAmount": "2250",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.0005",
+                        "depositMin": "0",
+                        "withdrawMin": "0.001",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ETH",
+                "coin": "ETH",
+                "remainAmount": "10000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.0012",
+                        "depositMin": "0",
+                        "withdrawMin": "0.02",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "Arbitrum One",
+                        "confirmation": "12",
+                        "withdrawFee": "0.0003",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0003",
+                        "chain": "ARBI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.0003",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0003",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "zkSync",
+                        "confirmation": "1",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.001",
+                        "chain": "ZKSYNC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "Optimism",
+                        "confirmation": "30",
+                        "withdrawFee": "0.0003",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0003",
+                        "chain": "OP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "WWY",
+                "coin": "WWY",
+                "remainAmount": "25000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "70",
+                        "depositMin": "0",
+                        "withdrawMin": "70",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KLAY",
+                "coin": "KLAY",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "KLAY",
+                        "confirmation": "500",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "KLAY",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CELO",
+                "coin": "CELO",
+                "remainAmount": "230000",
+                "chains": [
+                    {
+                        "chainType": "CELO",
+                        "confirmation": "1",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.002",
+                        "chain": "CELO",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LRC",
+                "coin": "LRC",
+                "remainAmount": "512000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "12",
+                        "depositMin": "0",
+                        "withdrawMin": "24",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XAVA",
+                "coin": "XAVA",
+                "remainAmount": "125000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CHRP",
+                "coin": "CHRP",
+                "remainAmount": "50000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "50",
+                        "depositMin": "0",
+                        "withdrawMin": "50",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "QMALL",
+                "coin": "QMALL",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SIDUS",
+                "coin": "SIDUS",
+                "remainAmount": "10500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "300",
+                        "depositMin": "0",
+                        "withdrawMin": "600",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TAP",
+                "coin": "TAP",
+                "remainAmount": "12500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "MTK",
+                "coin": "MTK",
+                "remainAmount": "150000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "300",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DICE",
+                "coin": "DICE",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "Klaytn",
+                        "confirmation": "500",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "KLAY",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "1SOL",
+                "coin": "1SOL",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "4",
+                        "depositMin": "0",
+                        "withdrawMin": "4",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FITFI",
+                "coin": "FITFI",
+                "remainAmount": "100000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "2",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "STEP",
+                        "confirmation": "16",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "FITFI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "USDT",
+                "coin": "USDT",
+                "remainAmount": "75000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "4",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "Arbitrum One",
+                        "confirmation": "12",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ARBI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "0.8",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "zkSync",
+                        "confirmation": "1",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ZKSYNC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0.8",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "Optimism",
+                        "confirmation": "30",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "OP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "4"
+                    },
+                    {
+                        "chainType": "OMNI",
+                        "confirmation": "1",
+                        "withdrawFee": "",
+                        "depositMin": "0",
+                        "withdrawMin": "",
+                        "chain": "OMNI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "",
+                        "minAccuracy": "4"
+                    }
+                ]
+            },
+            {
+                "name": "BNT",
+                "coin": "BNT",
+                "remainAmount": "375000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "8.7",
+                        "depositMin": "0",
+                        "withdrawMin": "17",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "USDC.E",
+                "coin": "USDC.E",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "CAVAX",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "POKT",
+                "coin": "POKT",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "POKT",
+                        "confirmation": "4",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "POKT",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "VINU",
+                "coin": "VINU",
+                "remainAmount": "5000000000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10000000",
+                        "depositMin": "0",
+                        "withdrawMin": "10000000",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TRVL",
+                "coin": "TRVL",
+                "remainAmount": "1000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "60",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SEOR",
+                "coin": "SEOR",
+                "remainAmount": "8000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "3",
+                        "depositMin": "0",
+                        "withdrawMin": "3",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TRX",
+                "coin": "TRX",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "5",
+                        "depositMin": "1",
+                        "withdrawMin": "5",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "NFT",
+                "coin": "NFT",
+                "remainAmount": "250000000000",
+                "chains": [
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "50000",
+                        "depositMin": "0",
+                        "withdrawMin": "50000",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "IME",
+                "coin": "IME",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KCAL",
+                "coin": "KCAL",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "STEP",
+                        "confirmation": "16",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "FITFI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SHILL",
+                "coin": "SHILL",
+                "remainAmount": "557500",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "MV",
+                "coin": "MV",
+                "remainAmount": "2500000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "35",
+                        "depositMin": "0",
+                        "withdrawMin": "35",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "USTC",
+                "coin": "USTC",
+                "remainAmount": "36000000",
+                "chains": [
+                    {
+                        "chainType": "Terra Classic",
+                        "confirmation": "30",
+                        "withdrawFee": "0",
+                        "depositMin": "0",
+                        "withdrawMin": "100",
+                        "chain": "LUNA",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "25",
+                        "depositMin": "0",
+                        "withdrawMin": "25",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "MX",
+                "coin": "MX",
+                "remainAmount": "715000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "15",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DCR",
+                "coin": "DCR",
+                "remainAmount": "14000",
+                "chains": [
+                    {
+                        "chainType": "DCR",
+                        "confirmation": "12",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.02",
+                        "chain": "DCR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RAIN",
+                "coin": "RAIN",
+                "remainAmount": "696000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "54",
+                        "depositMin": "0",
+                        "withdrawMin": "108",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FAME",
+                "coin": "FAME",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "IMX",
+                "coin": "IMX",
+                "remainAmount": "3333300",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "2",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "REAL",
+                "coin": "REAL",
+                "remainAmount": "125000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "USDT.E",
+                "coin": "USDT.E",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CAVAX",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "USDD",
+                "coin": "USDD",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LTC",
+                "coin": "LTC",
+                "remainAmount": "10000",
+                "chains": [
+                    {
+                        "chainType": "LTC",
+                        "confirmation": "6",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "LTC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "USDC",
+                "coin": "USDC",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "Arbitrum One",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ARBI",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "TRC20",
+                        "confirmation": "20",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "TRX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "zkSync",
+                        "confirmation": "1",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ZKSYNC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    },
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "CWAR",
+                "coin": "CWAR",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "SOL",
+                        "confirmation": "200",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "SOL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "EGLD",
+                "coin": "EGLD",
+                "remainAmount": "8500",
+                "chains": [
+                    {
+                        "chainType": "EGLD",
+                        "confirmation": "6",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "EGLD",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "NXD",
+                "coin": "NXD",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "MATIC",
+                        "confirmation": "128",
+                        "withdrawFee": "0.3",
+                        "depositMin": "0",
+                        "withdrawMin": "0.3",
+                        "chain": "MATIC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SPELL",
+                "coin": "SPELL",
+                "remainAmount": "22593750",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "812",
+                        "depositMin": "0",
+                        "withdrawMin": "1624",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "STETH",
+                "coin": "STETH",
+                "remainAmount": "800",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.0135",
+                        "depositMin": "0",
+                        "withdrawMin": "0.0135",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LOOKS",
+                "coin": "LOOKS",
+                "remainAmount": "155000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KUNCI",
+                "coin": "KUNCI",
+                "remainAmount": "3000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "KRL",
+                "coin": "KRL",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "17.5",
+                        "depositMin": "0",
+                        "withdrawMin": "35",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "INJ",
+                "coin": "INJ",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CRV",
+                "coin": "CRV",
+                "remainAmount": "349650",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "20",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TRIBE",
+                "coin": "TRIBE",
+                "remainAmount": "772050",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "44.5",
+                        "depositMin": "0",
+                        "withdrawMin": "86",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "DYDX",
+                "coin": "DYDX",
+                "remainAmount": "250000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "15",
+                        "depositMin": "0",
+                        "withdrawMin": "15",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ETHF",
+                "coin": "ETHF",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ETHF",
+                        "confirmation": "",
+                        "withdrawFee": "0.005",
+                        "depositMin": "",
+                        "withdrawMin": "0.005",
+                        "chain": "ETHF",
+                        "chainDeposit": "",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "SRM",
+                "coin": "SRM",
+                "remainAmount": "225000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "3.53",
+                        "depositMin": "0",
+                        "withdrawMin": "7.06",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "6"
+                    }
+                ]
+            },
+            {
+                "name": "LING",
+                "coin": "LING",
+                "remainAmount": "150000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "QNT",
+                "coin": "QNT",
+                "remainAmount": "1700",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "0.098",
+                        "depositMin": "0",
+                        "withdrawMin": "0.2",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LDO",
+                "coin": "LDO",
+                "remainAmount": "390625",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "9",
+                        "depositMin": "0",
+                        "withdrawMin": "18",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CRAFT",
+                "coin": "CRAFT",
+                "remainAmount": "128900",
+                "chains": [
+                    {
+                        "chainType": "AVAXC",
+                        "confirmation": "120",
+                        "withdrawFee": "0.2",
+                        "depositMin": "0",
+                        "withdrawMin": "0.4",
+                        "chain": "CAVAX",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "XLM",
+                "coin": "XLM",
+                "remainAmount": "4000000",
+                "chains": [
+                    {
+                        "chainType": "Stellar Lumens",
+                        "confirmation": "1",
+                        "withdrawFee": "0.02",
+                        "depositMin": "0",
+                        "withdrawMin": "8",
+                        "chain": "XLM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "7"
+                    }
+                ]
+            },
+            {
+                "name": "CBX",
+                "coin": "CBX",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "18",
+                        "depositMin": "0",
+                        "withdrawMin": "36",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "LINK",
+                "coin": "LINK",
+                "remainAmount": "50000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "1.12",
+                        "depositMin": "0",
+                        "withdrawMin": "1.12",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PLT",
+                "coin": "PLT",
+                "remainAmount": "1562500",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "80",
+                        "depositMin": "0",
+                        "withdrawMin": "80",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "HERO",
+                "coin": "HERO",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "18",
+                        "depositMin": "0",
+                        "withdrawMin": "18",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "PLY",
+                "coin": "PLY",
+                "remainAmount": "20000000",
+                "chains": [
+                    {
+                        "chainType": "AURORA",
+                        "confirmation": "5",
+                        "withdrawFee": "6",
+                        "depositMin": "0",
+                        "withdrawMin": "6",
+                        "chain": "AURORA",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "QTUM",
+                "coin": "QTUM",
+                "remainAmount": "102000",
+                "chains": [
+                    {
+                        "chainType": "QTUM",
+                        "confirmation": "144",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.02",
+                        "chain": "QTUM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "ETHW",
+                "coin": "ETHW",
+                "remainAmount": "2000000",
+                "chains": [
+                    {
+                        "chainType": "ETHW",
+                        "confirmation": "50",
+                        "withdrawFee": "0.01",
+                        "depositMin": "0",
+                        "withdrawMin": "0.01",
+                        "chain": "ETHW",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "OP",
+                "coin": "OP",
+                "remainAmount": "5000000",
+                "chains": [
+                    {
+                        "chainType": "Optimism",
+                        "confirmation": "30",
+                        "withdrawFee": "0.1",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "OP",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "KSM",
+                "coin": "KSM",
+                "remainAmount": "4000",
+                "chains": [
+                    {
+                        "chainType": "KSM",
+                        "confirmation": "30",
+                        "withdrawFee": "0.21",
+                        "depositMin": "0",
+                        "withdrawMin": "0.21",
+                        "chain": "KSM",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FIL",
+                "coin": "FIL",
+                "remainAmount": "35100",
+                "chains": [
+                    {
+                        "chainType": "Filecoin",
+                        "confirmation": "910",
+                        "withdrawFee": "0.001",
+                        "depositMin": "0",
+                        "withdrawMin": "0.1",
+                        "chain": "FIL",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "OKG",
+                "coin": "OKG",
+                "remainAmount": "10000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "RNDR",
+                "coin": "RNDR",
+                "remainAmount": "65000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "4",
+                        "depositMin": "0",
+                        "withdrawMin": "8",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "GALA",
+                "coin": "GALA",
+                "remainAmount": "15000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "84",
+                        "depositMin": "0",
+                        "withdrawMin": "168",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "CTC",
+                "coin": "CTC",
+                "remainAmount": "500000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "FIU",
+                "coin": "FIU",
+                "remainAmount": "35000000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "10",
+                        "depositMin": "0",
+                        "withdrawMin": "10",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BAR",
+                "coin": "BAR",
+                "remainAmount": "100000",
+                "chains": [
+                    {
+                        "chainType": "CHZ",
+                        "confirmation": "12",
+                        "withdrawFee": "1",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "CHZ",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "0"
+                    }
+                ]
+            },
+            {
+                "name": "BAT",
+                "coin": "BAT",
+                "remainAmount": "2061000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "38",
+                        "depositMin": "0",
+                        "withdrawMin": "76",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "APE",
+                "coin": "APE",
+                "remainAmount": "125000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "5",
+                        "depositMin": "0",
+                        "withdrawMin": "5",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "TEL",
+                "coin": "TEL",
+                "remainAmount": "103000000",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "2404",
+                        "depositMin": "0",
+                        "withdrawMin": "4808",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "2"
+                    }
+                ]
+            },
+            {
+                "name": "MOVR",
+                "coin": "MOVR",
+                "remainAmount": "10000",
+                "chains": [
+                    {
+                        "chainType": "MOVR",
+                        "confirmation": "30",
+                        "withdrawFee": "0.005",
+                        "depositMin": "0",
+                        "withdrawMin": "0.005",
+                        "chain": "MOVR",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
+                "name": "BUSD",
+                "coin": "BUSD",
+                "remainAmount": "9500000",
+                "chains": [
+                    {
+                        "chainType": "BSC (BEP20)",
+                        "confirmation": "15",
+                        "withdrawFee": "0.5",
+                        "depositMin": "0",
+                        "withdrawMin": "1",
+                        "chain": "BSC",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    },
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "30",
+                        "depositMin": "0",
+                        "withdrawMin": "30",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "1",
+                        "minAccuracy": "8"
+                    }
+                ]
+            }
+        ]
+    },
+    "retExtInfo": {},
+    "time": 1670226421406
+}
