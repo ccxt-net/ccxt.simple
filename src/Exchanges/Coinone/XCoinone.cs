@@ -60,16 +60,14 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/tradepair/");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["tradepairs"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
                     var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
-                    foreach (JToken s in _jarray)
+                    foreach (var c in _jarray.tradepairs)
                     {
-                        var _base_name = s.Value<string>("target_coin_symbol");
-                        var _quote_name = s.Value<string>("base_coin_symbol");
+                        var _base_name = c.target_coin_symbol;
+                        var _quote_name = c.base_coin_symbol;
 
                         _queue_info.symbols.Add(new QueueSymbol
                         {
@@ -77,7 +75,8 @@ namespace CCXT.Simple.Exchanges.Coinone
                             compName = _base_name,
                             baseName = _base_name,
                             quoteName = _quote_name,
-                            tickSize = s.Value<decimal>("price_unit")
+
+                            tickSize = c.price_unit
                         });
                     }
                 }
@@ -111,22 +110,19 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlTb}/api/v1/coin/");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jobject = JObject.Parse(_jstring);
-                    var _jarray = _jobject["coins"].ToObject<JArray>();
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
-                    foreach (var s in _jarray)
+                    foreach (var c in _jarray.coins)
                     {
-                        var _currency = s.Value<string>("symbol");
-
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.symbol);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
-                                active = s.Value<bool>("is_activate"),
-                                deposit = s.Value<bool>("is_deposit"),
-                                withdraw = s.Value<bool>("is_withdraw"),
+                                currency = c.symbol,
+                                active = c.is_activate,
+                                deposit = c.is_deposit,
+                                withdraw = c.is_withdraw,
                                 networks = new List<WNetwork>()
                             };
 
@@ -134,9 +130,9 @@ namespace CCXT.Simple.Exchanges.Coinone
                         }
                         else
                         {
-                            _state.active = s.Value<bool>("is_activate");
-                            _state.deposit = s.Value<bool>("is_deposit");
-                            _state.withdraw = s.Value<bool>("is_withdraw");
+                            _state.active = c.is_activate;
+                            _state.deposit = c.is_deposit;
+                            _state.withdraw = c.is_withdraw;
                         }
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.currency);
@@ -148,6 +144,36 @@ namespace CCXT.Simple.Exchanges.Coinone
                                 t.deposit = _state.deposit;
                                 t.withdraw = _state.withdraw;
                             }
+                        }
+
+                        var _name = c.symbol + "-" + c.wallet_code;
+
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
+                        {
+      
+                            _network = new WNetwork
+                            {
+                                name = _name,
+                                network = c.network_type,
+                                protocol = c.token_type,
+
+                                deposit = _state.deposit,
+                                withdraw = _state.withdraw,
+
+                                depositFee = c.tx_deposit_fee,
+                                minConfirm = c.deposit_confirm_time_min,
+                                
+                                withdrawFee = c.tx_withdraw_fee,
+                                minWithdrawal = c.min_withdraw_amount
+                            };
+
+                            _state.networks.Add(_network);
+                        }
+                        else
+                        {
+                            _network.deposit = _state.deposit;
+                            _network.withdraw = _state.withdraw;
                         }
                     }
 
@@ -199,9 +225,9 @@ namespace CCXT.Simple.Exchanges.Coinone
         /// </summary>
         /// <param name="symbol"></param>
         /// <returns></returns>
-        public async ValueTask<(OrderbookItem best_ask, OrderbookItem best_bid)> GetOrderbook(string symbol)
+        public async ValueTask<(BestOrder best_ask, BestOrder best_bid)> GetOrderbook(string symbol)
         {
-            var _result = (best_ask: new OrderbookItem(), best_bid: new OrderbookItem());
+            var _result = (best_ask: new BestOrder(), best_bid: new BestOrder());
 
             try
             {
@@ -213,12 +239,12 @@ namespace CCXT.Simple.Exchanges.Coinone
 
                     if (_jobject.Value<string>("result") == "success")
                     {
-                        var _asks = _jobject["ask"].ToObject<List<OrderbookItem>>();
+                        var _asks = _jobject["ask"].ToObject<List<BestOrder>>();
                         {
                             _result.best_ask = _asks.OrderBy(x => x.price).First();
                         }
 
-                        var _bids = _jobject["bid"].ToObject<List<OrderbookItem>>();
+                        var _bids = _jobject["bid"].ToObject<List<BestOrder>>();
                         {
                             _result.best_bid = _bids.OrderBy(x => x.price).Last();
                         }
@@ -248,7 +274,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/v2/ticker_new/KRW");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jdata = JsonConvert.DeserializeObject<Markets>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -256,7 +282,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jdata.tickers.FirstOrDefault(x => x.target_currency.ToUpper() == _ticker.baseName);
+                        var _jitem = _jarray.tickers.FirstOrDefault(x => x.target_currency.ToUpper() == _ticker.baseName);
                         if (_jitem != null)
                         {
                             var _price = _jitem.last;

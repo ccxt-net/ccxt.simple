@@ -1,0 +1,29 @@
+{
+  currencies {
+    id
+    acronym
+    name
+    decimal: floatingPoint
+    confirmationCount
+    withdrawalMaxOut
+    withdrawalMaxPerRequest
+    withdrawalTxFee
+    withdrawalMinOut
+    services {
+      deposit
+      exchange
+      withdrawal
+      depositStatus
+      exchangeStatus
+      withdrawalStatus
+      brokerStatus
+    }
+    addressExtraProps {
+      extraAddressField
+      regexFormat
+      required
+    }
+    addressRegexFormat
+    type
+  }
+}

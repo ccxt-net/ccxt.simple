@@ -36,7 +36,8 @@ namespace CCXT.Simple.Exchanges.Kucoin
         public string ExchangeName { get; set; } = "kucoin";
 
         public string ExchangeUrl { get; set; } = "https://api.kucoin.com";
-
+        public string ExchangeWwUrl { get; set; } = "https://www.kucoin.com";
+        
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
@@ -142,9 +143,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    var _end_point = "/api/v1/currencies";
+                    var _end_point = "/_pxapi/pool-currency/currencies";
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}{_end_point}");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeWwUrl}{_end_point}");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
@@ -181,7 +182,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             }
                         }
 
-                        var _name = c.currency + "-" + c.name;
+                        var _name = c.currency + "-" + c.chainFullName;
 
                         var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                         if (_network == null)
@@ -189,16 +190,19 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _state.networks.Add(new WNetwork
                             {
                                 name = _name,
-                                network = c.name,
-                                protocol = "",
+                                network = c.chainFullName,
+                                protocol = c.chainName,
 
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
 
-                                minWithdrawal = c.withdrawalMinSize,
-                                withdrawFee = c.withdrawalMinFee,
+                                minWithdrawal = c.withdrawMinSize,
+                                withdrawFee = c.withdrawMinFee,
 
-                                minConfirm = c.confirms
+                                sellFee = c.makerFeeCoefficient,
+                                buyFee = c.takerFeeCoefficient,
+                                
+                                minConfirm = c.confirmationCount
                             });
                         }
                     }

@@ -1,10 +1,13 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
+using CCXT.Simple.Exchanges.Crypto;
 using GraphQL;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.SystemTextJson;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Net;
 
 namespace CCXT.Simple.Exchanges.Korbit
 {
@@ -38,6 +41,7 @@ namespace CCXT.Simple.Exchanges.Korbit
         public string ExchangeUrl { get; set; } = "https://api.korbit.co.kr";
 
         public string ExchangeGqUrl { get; set; } = "https://ajax.korbit.co.kr";
+        public string ExchangePpUrl { get; set; } = "https://portal-prod.korbit.co.kr";
 
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
@@ -92,11 +96,108 @@ namespace CCXT.Simple.Exchanges.Korbit
             return _result;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <returns></returns>
         public async ValueTask<bool> VerifyStates(Tickers tickers)
+        {
+            var _result = false;
+
+            try
+            {
+                using (var _client = new HttpClient())
+                {
+                    var _endpoint = "/api/korbit/v3/currencies";
+
+                    _client.DefaultRequestHeaders.Add("platform-identifier", "witcher_android");
+
+                    var _response = await _client.GetAsync($"{ExchangePpUrl}{_endpoint}");
+                    if (_response.StatusCode == HttpStatusCode.OK)
+                    {
+                        var _jstring = await _response.Content.ReadAsStringAsync();
+                        var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring, mainXchg.JsonSettings);
+
+                        foreach (var c in _jarray)
+                        {
+                            if (c.currency_type != "crypto")
+                                continue;
+
+                            var _state = tickers.states.SingleOrDefault(x => x.currency == c.symbol);
+                            if (_state == null)
+                            {
+                                _state = new WState
+                                {
+                                    currency = c.symbol,
+                                    active = true,
+                                    deposit = c.deposit_status == "launched",
+                                    withdraw = c.withdrawal_status == "launched",
+                                    networks = new List<WNetwork>()
+                                };
+
+                                tickers.states.Add(_state);
+                            }
+                            else
+                            {
+                                _state.deposit = c.deposit_status == "launched";
+                                _state.withdraw = c.withdrawal_status == "launched";
+                            }
+
+                            var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                            if (_t_items != null)
+                            {
+                                foreach (var t in _t_items)
+                                {
+                                    t.active = _state.active;
+                                    t.deposit = _state.deposit;
+                                    t.withdraw = _state.withdraw;
+                                }
+                            }
+
+                            var _name = c.symbol + "-" + c.currency_network;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
+                            {
+                                var _chain = c.symbol;
+                                var _protocol = (c.currency_network != null && c.currency_network != "Mainnet")
+                                              ? c.currency_network.Replace("-", "")
+                                              : c.symbol;
+
+                                _network = new WNetwork
+                                {
+                                    name = _name,
+                                    network = _chain,
+                                    protocol = _protocol,
+
+                                    deposit = _state.deposit,
+                                    withdraw = _state.withdraw,
+
+                                    withdrawFee = c.withdrawal_tx_fee,
+                                    minWithdrawal = c.withdrawal_min_amount,
+                                    maxWithdrawal = c.withdrawal_max_amount_per_request
+                                };
+
+                                _state.networks.Add(_network);
+                            }
+                            else
+                            {
+                                _network.deposit = _state.deposit;
+                                _network.withdraw = _state.withdraw;
+                            }
+                        }
+                    }
+
+                    _result = true;
+                }
+
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3902);
+            }
+            catch (Exception ex)
+            {
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3903);
+            }
+
+            return _result;
+        }
+
+        public async ValueTask<bool> VerifyStatesQL(Tickers tickers)
         {
             var _result = false;
 
@@ -120,7 +221,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                             }"
                 };
 
-                var graphQLResponse = await graphQLClient.SendQueryAsync<Exchanges.Korbit.State>(graphQLRequest);
+                var graphQLResponse = await graphQLClient.SendQueryAsync<CoinStateQL>(graphQLRequest);
                 foreach (var c in graphQLResponse.Data.currencies)
                 {
                     var _currency = c.acronym.ToUpper();
