@@ -1,4 +1,6 @@
-﻿namespace CCXT.Simple.Exchanges.Coinbase
+﻿using Newtonsoft.Json;
+
+namespace CCXT.Simple.Exchanges.Coinbase
 {
     /// <summary>
     /// https://api.exchange.coinbase.com/currencies
@@ -21,15 +23,19 @@
     {
         public string type { get; set; }
         public string symbol { get; set; }
-        public int network_confirmations { get; set; }
-        public int sort_order { get; set; }
+        public int? network_confirmations { get; set; }
+        public int? sort_order { get; set; }
         public string crypto_address_link { get; set; }
         public string crypto_transaction_link { get; set; }
         public List<string> push_payment_methods { get; set; }
         public List<object> group_types { get; set; }
         public string display_name { get; set; }
-        public long processing_time_seconds { get; set; }
+        public long? processing_time_seconds { get; set; }
+        
+        [JsonConverter(typeof(XDecimalNullConverter))]
         public decimal min_withdrawal_amount { get; set; }
+        
+        [JsonConverter(typeof(XDecimalNullConverter))]
         public decimal max_withdrawal_amount { get; set; }
     }
 
@@ -41,9 +47,13 @@
         public string contract_address { get; set; }
         public string crypto_address_link { get; set; }
         public string crypto_transaction_link { get; set; }
+        
+        [JsonConverter(typeof(XDecimalNullConverter))]
         public decimal min_withdrawal_amount { get; set; }
+
+        [JsonConverter(typeof(XDecimalNullConverter))]
         public decimal max_withdrawal_amount { get; set; }
         public int network_confirmations { get; set; }
-        public long processing_time_seconds { get; set; }
+        public int? processing_time_seconds { get; set; }
     }
 }

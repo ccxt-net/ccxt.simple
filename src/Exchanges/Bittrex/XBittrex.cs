@@ -51,7 +51,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.Bittrex.Market>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
                     var _queue_info = this.mainXchg.GetQInfors(ExchangeName);
 
@@ -96,7 +96,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Currency>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
                     foreach (var c in _jarray)
                     {
@@ -131,7 +131,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                         }
 
                         var _cointype = c.coinType;
-                        var _protocol = c.name;
+                        var _protocol = c.name.ToUpper();
                         if (c.coinType.StartsWith("ETH_"))
                         {
                             _cointype = "ETH";
