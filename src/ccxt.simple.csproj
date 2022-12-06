@@ -32,10 +32,14 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="Exchanges\Bithumb\CoinState.json" />
+	  <None Remove="Exchanges\Upbit\CoinState.json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Include="Exchanges\Bithumb\CoinState.json">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Exchanges\Upbit\CoinState.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
 	</ItemGroup>
 	<ItemGroup>
@@ -57,5 +61,6 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 		<PackageReference Include="GraphQL.Client" Version="5.1.0" />
 		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
 	</ItemGroup>
 </Project>

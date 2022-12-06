@@ -223,28 +223,36 @@ namespace CCXT.Simple.Exchanges
 
             if (this.exchangesNs.ContainsKey(tickers.exchange))
             {
-                var _chain_data = this.exchangesNs[tickers.exchange];
-                if (_chain_data.items.Count > 0)
+                var _xls_data = this.exchangesNs[tickers.exchange];
+                if (_xls_data.items.Count > 0)
                 {
-                    foreach (var c in _chain_data.items)
+                    foreach (var c in _xls_data.items)
                     {
                         var _states = tickers.states.Where(x => x.currency == c.baseName);
                         if (_states.Count() > 0)
                         {
-                            foreach (var t in _states)
+                            foreach (var s in _states)
                             {
                                 foreach (var n in c.networks)
                                 {
-                                    if (!t.networks.Exists(x => x.network == n.network && x.protocol == n.protocol))
-                                        t.networks.Add(new WNetwork
+                                    var _b = s.networks.FirstOrDefault(x => x.network == n.network && x.protocol == n.protocol);
+                                    if (_b == null)
+                                    {
+                                        s.networks.Add(new WNetwork
                                         {
-                                            name = $"{t.currency}-{n.network}",
+                                            name = $"{s.currency}-{n.network}",
                                             network = n.network,
                                             protocol = n.protocol,
 
-                                            deposit = t.deposit,
-                                            withdraw = t.withdraw
+                                            deposit = s.deposit,
+                                            withdraw = s.withdraw
                                         });
+                                    }
+                                    else
+                                    {
+                                        _b.deposit = s.deposit;
+                                        _b.withdraw = s.withdraw;
+                                    }
                                 }
                             }
                         }

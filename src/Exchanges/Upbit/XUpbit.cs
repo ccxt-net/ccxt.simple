@@ -1,8 +1,13 @@
-﻿using CCXT.Simple.Data;
+﻿using CCXT.Simple.Base;
+using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CCXT.Simple.Exchanges.Upbit
 {
@@ -44,7 +49,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
         public string ExchangeUrl { get; set; } = "https://api.upbit.com";
         public string ExchangeUrlCc { get; set; } = "https://ccx.upbit.com";
-
+        
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
@@ -107,51 +112,68 @@ namespace CCXT.Simple.Exchanges.Upbit
             return _result;
         }
 
+
+        public string CreateToken(long nonce)
+        {
+            var _payload = new JwtPayload
+            {
+                { "access_key", this.ApiKey },
+                { "nonce", nonce }
+            };
+            
+            var _security_key = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.Default.GetBytes(this.SecretKey));
+            var _credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(_security_key, "HS256");
+
+            var _header = new JwtHeader(_credentials);
+            var _security_token = new JwtSecurityToken(_header, _payload);
+
+            var _jwt_token = new JwtSecurityTokenHandler().WriteToken(_security_token);
+            return "Bearer " + _jwt_token;
+        }
+
         /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
-        public async ValueTask<bool> VerifyStates(Data.Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Tickers tickers)
         {
             var _result = false;
 
             try
             {
-                using (var _wc = new HttpClient())
+                var _jstring = await File.ReadAllTextAsync(@"Exchanges\Upbit\CoinState.json");
+
+                //using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
-                    var _jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
+                    //var _nonce = CUnixTime.NowMilli;
 
-                    foreach (var c in _jarray)
+                    //var _jwt = this.CreateToken(_nonce);
+                    //_client.DefaultRequestHeaders.Add("authorization", _jwt);
+
+                    //using HttpResponseMessage _b_response = await _client.GetAsync($"{ExchangeUrlCc}/api/v1/funds?nonce={_nonce}");
+                    //var _jstring = await _b_response.Content.ReadAsStringAsync();
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
+
+                    foreach (var c in _jarray.currencies)
                     {
-                        var _currency = c.currency;
-
-                        var _wallet_state = c.wallet_state;
-                        var _block_state = c.block_state;
-                        var _block_height = c.block_height != null ? c.block_height.Value : 0;
-                        var _block_updated = c.block_updated_at != null ? c.block_updated_at.Value : DateTime.MinValue;
-                        var _block_elapsed = c.block_elapsed_minutes != null ? c.block_elapsed_minutes.Value : 0;
+                        if (!c.is_coin)
+                            continue;
 
                         // working, paused, withdraw_only, deposit_only, unsupported
-                        var _active = _wallet_state != "unsupported";
-                        var _deposit = _wallet_state == "working" || _wallet_state == "deposit_only";
-                        var _withdraw = _wallet_state == "working" || _wallet_state == "withdraw_only";
+                        var _active = c.wallet_state != "unsupported";
+                        var _deposit = c.wallet_support.Exists(x => x == "deposit");
+                        var _withdraw = c.wallet_support.Exists(x => x == "withdraw");
 
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.code);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
+                                currency = c.code,
 
                                 active = _active,
                                 deposit = _deposit,
                                 withdraw = _withdraw,
-
-                                height = _block_height,
-                                updated = _block_updated,
-                                elapsed = _block_elapsed,
 
                                 travelRule = true,
                                 networks = new List<WNetwork>()
@@ -175,6 +197,29 @@ namespace CCXT.Simple.Exchanges.Upbit
                                 t.deposit = _state.deposit;
                                 t.withdraw = _state.withdraw;
                             }
+                        }
+
+                        var _name = c.code + "-" + c.net_type;
+
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
+                        {
+                            _state.networks.Add(new WNetwork
+                            {
+                                name = _name,
+                                network = c.code,
+                                protocol = (c.net_type == null || c.net_type == "메인넷") ? c.code : c.net_type.Replace("-", ""),
+
+                                withdrawFee = c.withdraw_fee,
+
+                                deposit = _state.deposit,
+                                withdraw = _state.withdraw
+                            });
+                        }
+                        else
+                        {
+                            _state.deposit = _state.deposit;
+                            _state.withdraw = _state.withdraw;
                         }
                     }
 
@@ -224,7 +269,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetTickers(Data.Tickers tickers)
+        public async ValueTask<bool> GetTickers(Tickers tickers)
         {
             var _result = false;
 
@@ -277,7 +322,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetVolumes(Data.Tickers tickers)
+        public async ValueTask<bool> GetVolumes(Tickers tickers)
         {
             var _result = false;
 
@@ -340,7 +385,7 @@ namespace CCXT.Simple.Exchanges.Upbit
         /// </summary>
         /// <param name="tickers"></param>
         /// <returns></returns>
-        public async ValueTask<bool> GetMarkets(Data.Tickers tickers)
+        public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
 
@@ -416,7 +461,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             return _result;
         }
 
-        ValueTask<bool> IExchange.GetBookTickers(Data.Tickers tickers)
+        ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)
         {
             throw new NotImplementedException();
         }

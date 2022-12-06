@@ -1,0 +1,1820 @@
+[
+  {
+    "currency": "BTC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 765967,
+    "block_updated_at": "2022-12-05T08:39:23.452+00:00",
+    "block_elapsed_minutes": 9,
+    "message": ""
+  },
+  {
+    "currency": "POWR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "OMG",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ETH",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ETC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16476798,
+    "block_updated_at": "2022-12-05T08:47:41.899+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "SNT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "REP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STORJ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MTL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "QTUM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2422064,
+    "block_updated_at": "2022-12-05T08:47:42.358+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XRP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 76216749,
+    "block_updated_at": "2022-12-05T08:47:42.418+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "BTG",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 767610,
+    "block_updated_at": "2022-12-05T08:28:37.793+00:00",
+    "block_elapsed_minutes": 19,
+    "message": ""
+  },
+  {
+    "currency": "WAVES",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 3412289,
+    "block_updated_at": "2022-12-05T08:46:55.706+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MANA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "WAXP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 217530364,
+    "block_updated_at": "2022-12-05T08:47:43.754+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ZRX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STEEM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 70026373,
+    "block_updated_at": "2022-12-05T08:47:42.135+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "SBD",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 70026373,
+    "block_updated_at": "2022-12-05T08:47:42.135+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "EOS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "BAT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BNT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "NMR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "DNT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "USDT",
+    "wallet_state": "unsupported",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": null
+  },
+  {
+    "currency": "CVC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "RLC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ADA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 8099900,
+    "block_updated_at": "2022-12-05T08:47:02.262+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "TRX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "NEO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2601170,
+    "block_updated_at": "2022-12-05T08:47:38.242+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "TUSD",
+    "wallet_state": "unsupported",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "LRC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ARK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 22351843,
+    "block_updated_at": "2022-12-05T08:47:01.581+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ARDR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2626116,
+    "block_updated_at": "2022-12-05T08:47:09.412+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "LSK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 20287608,
+    "block_updated_at": "2022-12-05T08:47:41.766+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XEM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 4009573,
+    "block_updated_at": "2022-12-05T08:44:40.031+00:00",
+    "block_elapsed_minutes": 3,
+    "message": ""
+  },
+  {
+    "currency": "GRS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 4368154,
+    "block_updated_at": "2022-12-05T08:47:27.491+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ICX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 58841175,
+    "block_updated_at": "2022-12-05T08:47:41.040+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XLM",
+    "wallet_state": "paused",
+    "block_state": "inactive",
+    "block_height": 43872090,
+    "block_updated_at": "2022-12-05T05:43:46.794+00:00",
+    "block_elapsed_minutes": 184,
+    "message": "월렛 점검"
+  },
+  {
+    "currency": "SC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 394374,
+    "block_updated_at": "2022-12-05T08:38:30.607+00:00",
+    "block_elapsed_minutes": 9,
+    "message": ""
+  },
+  {
+    "currency": "ONT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 15292974,
+    "block_updated_at": "2022-12-05T08:47:18.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "POLY",
+    "wallet_state": "paused",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "메인넷 지원에 따른 점검"
+  },
+  {
+    "currency": "ELF",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 122886630,
+    "block_updated_at": "2022-12-05T08:47:13.298+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "EOSDAC",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "DOGE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 4500464,
+    "block_updated_at": "2022-12-05T08:47:01.482+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "GAS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2601170,
+    "block_updated_at": "2022-12-05T08:47:38.242+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ZIL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2521413,
+    "block_updated_at": "2022-12-05T08:47:44.137+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "IOTA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 5053297,
+    "block_updated_at": "2022-12-05T08:47:41.881+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "LOOM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BCH",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 769631,
+    "block_updated_at": "2022-12-05T08:46:13.962+00:00",
+    "block_elapsed_minutes": 2,
+    "message": ""
+  },
+  {
+    "currency": "ADD",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "MFT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "IOST",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 233387320,
+    "block_updated_at": "2022-12-05T08:47:38.981+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "RFR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "IQ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ONG",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 15292974,
+    "block_updated_at": "2022-12-05T08:47:18.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "RVN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2568974,
+    "block_updated_at": "2022-12-05T08:47:34.844+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "DGB",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16234759,
+    "block_updated_at": "2022-12-05T08:46:53.755+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "UPP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ENJ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "HORUS",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "MEETONE",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "GO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 28737820,
+    "block_updated_at": "2022-12-05T08:47:39.501+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "CHL",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "BLACK",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 282101880,
+    "block_updated_at": "2022-12-05T08:47:38.884+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "KNC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "VET",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 13970709,
+    "block_updated_at": "2022-12-05T08:47:37.394+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "VTHO",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 13970709,
+    "block_updated_at": "2022-12-05T08:47:37.394+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "MOC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108733680,
+    "block_updated_at": "2022-12-05T08:47:38.038+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "BSV",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 768899,
+    "block_updated_at": "2022-12-05T08:43:37.933+00:00",
+    "block_elapsed_minutes": 4,
+    "message": ""
+  },
+  {
+    "currency": "SOLVE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "THETA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 18225223,
+    "block_updated_at": "2022-12-05T08:47:38.822+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XTZ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2942719,
+    "block_updated_at": "2022-12-05T08:47:32.276+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "DENT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "QKC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 1972194,
+    "block_updated_at": "2022-12-05T08:46:47.334+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "IOTX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 20912338,
+    "block_updated_at": "2022-12-05T08:47:40.793+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "BTT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "NKN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 4774597,
+    "block_updated_at": "2022-12-05T08:47:29.155+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "META",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 53826280,
+    "block_updated_at": "2022-12-05T08:47:40.969+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ANKR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "CRO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 8823695,
+    "block_updated_at": "2022-12-05T08:47:39.538+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "AERGO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "TFUEL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 18225223,
+    "block_updated_at": "2022-12-05T08:47:38.822+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "PLA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ORBS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BORA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108324110,
+    "block_updated_at": "2022-12-05T08:47:36.824+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ACN",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 37499003,
+    "block_updated_at": "2022-12-05T08:47:40.064+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "ATOM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 13120865,
+    "block_updated_at": "2022-12-05T08:47:38.422+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "TT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 118494980,
+    "block_updated_at": "2022-12-05T08:47:39.509+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "CRE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STPT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MKR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "DAI",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MBL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 15292974,
+    "block_updated_at": "2022-12-05T08:47:18.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "FX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "PROM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "CHR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "HBAR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": null,
+    "block_updated_at": "2022-12-05T08:47:25.731+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "WIN",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "MED",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 8319207,
+    "block_updated_at": "2022-12-05T08:47:41.349+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "MLK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108733680,
+    "block_updated_at": "2022-12-05T08:47:38.038+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "CHZ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "HIVE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 70254308,
+    "block_updated_at": "2022-12-05T08:47:42.061+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "HBD",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 70254308,
+    "block_updated_at": "2022-12-05T08:47:42.061+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XPR",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "OGN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "OBSR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108324110,
+    "block_updated_at": "2022-12-05T08:47:36.824+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "DKA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STMX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "AHT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108733680,
+    "block_updated_at": "2022-12-05T08:47:38.038+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "PCI",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 49542750,
+    "block_updated_at": "2022-12-05T08:47:14.362+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "KAVA",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 2632966,
+    "block_updated_at": "2022-12-05T08:47:41.737+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "**유의종목 지정"
+  },
+  {
+    "currency": "LINK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "JST",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "RVC",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 2555098,
+    "block_updated_at": "2022-12-05T08:46:14.472+00:00",
+    "block_elapsed_minutes": 2,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "DAD",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "TON",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "CTSI",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "DOT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 13221156,
+    "block_updated_at": "2022-12-05T08:47:35.963+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "ONIT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "COMP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SXP",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 2716075,
+    "block_updated_at": "2022-12-05T08:47:36.986+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "HUNT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "CRV",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ALGO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 25327302,
+    "block_updated_at": "2022-12-05T08:47:41.225+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "RSR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "OXT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MARO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 37498998,
+    "block_updated_at": "2022-12-05T08:47:40.079+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "SAND",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SUN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MVL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SRM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "QTCON",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "AQT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "AXS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STRAX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 1407807,
+    "block_updated_at": "2022-12-05T08:47:31.346+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "GLM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "FCT2",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 4582965,
+    "block_updated_at": "2022-12-05T08:47:40.585+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "SSX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 108324110,
+    "block_updated_at": "2022-12-05T08:47:36.824+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "XYM",
+    "wallet_state": "paused",
+    "block_state": "inactive",
+    "block_height": 1743884,
+    "block_updated_at": "2022-11-22T11:52:57.528+00:00",
+    "block_elapsed_minutes": 18535,
+    "message": "월렛 점검"
+  },
+  {
+    "currency": "FIL",
+    "wallet_state": "paused",
+    "block_state": "normal",
+    "block_height": 2383350,
+    "block_updated_at": "2022-12-05T08:44:33.536+00:00",
+    "block_elapsed_minutes": 3,
+    "message": "월렛 점검"
+  },
+  {
+    "currency": "UNI",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BASIC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "INJ",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "VAL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 3916994,
+    "block_updated_at": "2022-12-05T08:47:07.736+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "PSG",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 19908254,
+    "block_updated_at": "2022-12-05T08:47:40.448+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "JUV",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 19908254,
+    "block_updated_at": "2022-12-05T08:47:40.448+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "CBK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ONX",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "MIR",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "FOR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BFC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "LINA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "HUM",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STX",
+    "wallet_state": "working",
+    "block_state": "delayed",
+    "block_height": 85887,
+    "block_updated_at": "2022-12-05T08:34:07.419+00:00",
+    "block_elapsed_minutes": 14,
+    "message": ""
+  },
+  {
+    "currency": "CELO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16512400,
+    "block_updated_at": "2022-12-05T08:47:32.213+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "GRT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "LZM",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 108733680,
+    "block_updated_at": "2022-12-05T08:47:38.038+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "AUCTION",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "DON",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 233387320,
+    "block_updated_at": "2022-12-05T08:47:38.981+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "NEAR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 79957280,
+    "block_updated_at": "2022-12-05T08:47:22.357+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "DAWN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "FLOW",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 42184680,
+    "block_updated_at": "2022-12-05T08:47:12.219+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "PUNDIX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "STRK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "AAVE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SNX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "APENFT",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 46547360,
+    "block_updated_at": "2022-12-05T08:47:21.883+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "XEC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 769051,
+    "block_updated_at": "2022-12-05T08:40:29.741+00:00",
+    "block_elapsed_minutes": 7,
+    "message": ""
+  },
+  {
+    "currency": "MATIC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "USDP",
+    "wallet_state": "unsupported",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": null
+  },
+  {
+    "currency": "SGB",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 27222759,
+    "block_updated_at": "2022-12-05T08:47:11.567+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "1INCH",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "GTC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "LPT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "MASK",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "NU",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "RAD",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "RLY",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SOL",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 165026800,
+    "block_updated_at": "2022-12-05T08:47:32.552+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "QI",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 2422064,
+    "block_updated_at": "2022-12-05T08:47:40.433+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "AUDIO",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "IMX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "BOBA",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ENS",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "YGG",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "WEMIX",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 108324110,
+    "block_updated_at": "2022-12-05T08:47:36.824+00:00",
+    "block_elapsed_minutes": 0,
+    "message": "**유의종목 지정"
+  },
+  {
+    "currency": "OCEAN",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "ARPA",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "CTC",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "SOLO",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 76216749,
+    "block_updated_at": "2022-12-05T08:47:42.418+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "RNDR",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "API3",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "AVAX",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 23237790,
+    "block_updated_at": "2022-12-05T08:47:29.934+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "RAY",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 165026825,
+    "block_updated_at": "2022-12-05T08:47:44.930+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "T",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "REI",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 9087150,
+    "block_updated_at": "2022-12-05T08:47:40.214+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "AQUA",
+    "wallet_state": "paused",
+    "block_state": "inactive",
+    "block_height": 43872090,
+    "block_updated_at": "2022-12-05T05:43:46.794+00:00",
+    "block_elapsed_minutes": 184,
+    "message": "월렛 점검"
+  },
+  {
+    "currency": "AGLD",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "APE",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": ""
+  },
+  {
+    "currency": "GMT",
+    "wallet_state": "working",
+    "block_state": "normal",
+    "block_height": 165026825,
+    "block_updated_at": "2022-12-05T08:47:44.930+00:00",
+    "block_elapsed_minutes": 0,
+    "message": ""
+  },
+  {
+    "currency": "OGV",
+    "wallet_state": "withdraw_only",
+    "block_state": "normal",
+    "block_height": 16117500,
+    "block_updated_at": "2022-12-05T08:47:07.326+00:00",
+    "block_elapsed_minutes": 1,
+    "message": "에어드랍 코인"
+  },
+  {
+    "currency": "APT",
+    "wallet_state": "working",
+    "block_state": "delayed",
+    "block_height": 44580000,
+    "block_updated_at": "2022-12-05T08:44:58.614+00:00",
+    "block_elapsed_minutes": 3,
+    "message": ""
+  }
+]
