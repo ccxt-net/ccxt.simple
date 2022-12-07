@@ -52,15 +52,16 @@ namespace CCXT.Simple.Exchanges.Bitget
             }
         }
 
-        public string CreateSignature(HttpClient client)
+        public string CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args = null)
         {
-            client.DefaultRequestHeaders.Add("USER-AGENT", mainXchg.UserAgent);
-            client.DefaultRequestHeaders.Add("X-MBX-APIKEY", this.ApiKey);
+            var _timestamp = CUnixTime.NowMilli;
+            var _query_string = mainXchg.ToQueryString2(args);
 
-            var _post_data = $"timestamp={CUnixTime.NowMilli}";
-            var _signature = BitConverter.ToString(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_post_data))).Replace("-", "");
+            var _sign_data = $"{_timestamp}GET{endpoint}{_query_string}";
+            var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
 
-            return _post_data + $"&signature={_signature}";
+            var _signature = Convert.ToBase64String(_sign_hash);
+            return _signature;
         }
 
         /// <summary>
