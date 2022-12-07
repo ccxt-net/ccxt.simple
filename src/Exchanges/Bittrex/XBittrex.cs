@@ -148,7 +148,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                             {
                                 name = _name,
                                 network = _cointype,
-                                protocol = _protocol,
+                                chain = _protocol,
 
                                 deposit = true,
                                 withdraw = true,
@@ -178,11 +178,6 @@ namespace CCXT.Simple.Exchanges.Bittrex
             return _result;
         }
 
-        /// <summary>
-        /// Get Bittrex Tickers
-        /// </summary>
-        /// <param name="coin_names"></param>
-        /// <returns></returns>
         public async ValueTask<bool> GetTickers(Tickers tickers)
         {
             var _result = false;
@@ -217,9 +212,9 @@ namespace CCXT.Simple.Exchanges.Bittrex
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
                             }
                         }
@@ -270,7 +265,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                                 if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USDC" || _ticker.quoteName == "USD")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

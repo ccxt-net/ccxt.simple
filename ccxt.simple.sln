@@ -21,11 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{BD060379-5
 		docs\ccxt.simple.ico = docs\ccxt.simple.ico
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{32218F06-F35E-40F5-9F78-AB9E33C03174}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5CFF9EB6-24F9-4119-812E-FEF29D600887}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bithumb", "samples\bithumb\bithumb.csproj", "{4A66A4F7-FB69-4E79-99E2-C732856FA623}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bitget", "samples\bitget\bitget.csproj", "{1AB45E04-7269-4CBB-AD33-23F05C3BBD28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exchanges", "Exchanges", "{84454372-E406-4CE3-AA92-5DD61FD0C183}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bitget", "bitget", "{01F8A5E6-FD57-4F90-B3FE-4036EC01B4A4}"
+	ProjectSection(SolutionItems) = preProject
+		docs\exchanges\bitget\CoinInfor.json = docs\exchanges\bitget\CoinInfor.json
+		docs\exchanges\bitget\CoinState.json = docs\exchanges\bitget\CoinState.json
+		docs\exchanges\bitget\Tickers.json = docs\exchanges\bitget\Tickers.json
+		docs\exchanges\bitget\WsTicker.json = docs\exchanges\bitget\WsTicker.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +51,10 @@ Global
 		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A66A4F7-FB69-4E79-99E2-C732856FA623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +62,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{109065AF-D448-46FE-9F35-E6D22A92F362} = {CE2A5455-330A-4032-A60D-5005CAF4B125}
 		{4A66A4F7-FB69-4E79-99E2-C732856FA623} = {5CFF9EB6-24F9-4119-812E-FEF29D600887}
+		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28} = {5CFF9EB6-24F9-4119-812E-FEF29D600887}
+		{84454372-E406-4CE3-AA92-5DD61FD0C183} = {BD060379-51BD-40C9-9B57-DA65393CAD0E}
+		{01F8A5E6-FD57-4F90-B3FE-4036EC01B4A4} = {84454372-E406-4CE3-AA92-5DD61FD0C183}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A43CE4D-B9B0-41CE-82A0-0D2F87CA10E5}

@@ -191,7 +191,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             {
                                 name = _name,
                                 network = c.chainFullName,
-                                protocol = c.chainName,
+                                chain = c.chainName,
 
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
@@ -284,7 +284,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
                                 }
                             }
                         }
@@ -348,10 +348,10 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
                             }
                         }
@@ -409,7 +409,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -483,10 +483,10 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
                             }
 
@@ -498,7 +498,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

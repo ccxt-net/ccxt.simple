@@ -139,9 +139,9 @@ namespace CCXT.Simple.Exchanges.Crypto
                                     }
                                     else if (_ticker.quoteName == "BTC")
                                     {
-                                        _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
-                                        _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                        _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                        _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
+                                        _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                        _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                     }
                                 }
 
@@ -285,7 +285,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                                     {
                                         name = _name,
                                         network = n.network_id,
-                                        protocol = _protocol,
+                                        chain = _protocol,
 
                                         deposit = n.deposit_enabled,
                                         withdraw = n.withdraw_enabled,

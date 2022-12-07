@@ -148,7 +148,7 @@
         /// <summary>
         /// ERC20, BEP20, TRC20, etc...
         /// </summary>
-        public string protocol
+        public string chain
         {
             get;
             set;

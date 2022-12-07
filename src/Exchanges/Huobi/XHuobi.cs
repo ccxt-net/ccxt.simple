@@ -162,7 +162,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 {
                                     name = _name,
                                     network = n.baseChain.IsNotEmpty(n.displayName).ToUpper(),
-                                    protocol = n.baseChainProtocol.IsNotEmpty(n.displayName).ToUpper(),
+                                    chain = n.baseChainProtocol.IsNotEmpty(n.displayName).ToUpper(),
 
                                     deposit = n.depositStatus == "allowed",
                                     withdraw = n.withdrawStatus == "allowed",
@@ -288,10 +288,10 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _price * mainXchg.fiat_btc_price;
                                 }
                             }
                         }
@@ -353,7 +353,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -424,10 +424,10 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
                             }
 
@@ -439,7 +439,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

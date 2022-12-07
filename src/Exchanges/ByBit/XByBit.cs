@@ -195,11 +195,18 @@ namespace CCXT.Simple.Exchanges.Bybit
                             var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                             if (_network == null)
                             {
+                                var _chain = n.chainType;
+
+                                var _l_ndx = _chain.IndexOf("(");
+                                var _r_ndx = _chain.IndexOf(")");
+                                if (_l_ndx >= 0 && _r_ndx > _l_ndx)
+                                    _chain = _chain.Substring(_l_ndx + 1, _r_ndx - _l_ndx - 1);
+
                                 _state.networks.Add(new WNetwork
                                 {
                                     name = _name,
                                     network = n.chain,
-                                    protocol = n.chainType,
+                                    chain = _chain,
 
                                     deposit = n.chainDeposit == 1,
                                     withdraw = n.chainWithdraw == 1,

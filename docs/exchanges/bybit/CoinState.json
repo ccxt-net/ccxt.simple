@@ -2300,8 +2300,8 @@
                         "depositMin": "0",
                         "withdrawMin": "5000",
                         "chain": "LUNA",
-                        "chainDeposit": "1",
-                        "chainWithdraw": "1",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
                         "minAccuracy": "6"
                     }
                 ]
@@ -3959,6 +3959,24 @@
                 ]
             },
             {
+                "name": "MCT",
+                "coin": "MCT",
+                "remainAmount": "",
+                "chains": [
+                    {
+                        "chainType": "ERC20",
+                        "confirmation": "12",
+                        "withdrawFee": "",
+                        "depositMin": "0",
+                        "withdrawMin": "",
+                        "chain": "ETH",
+                        "chainDeposit": "1",
+                        "chainWithdraw": "",
+                        "minAccuracy": "8"
+                    }
+                ]
+            },
+            {
                 "name": "TAP",
                 "coin": "TAP",
                 "remainAmount": "12500000",
@@ -4415,8 +4433,8 @@
                         "depositMin": "0",
                         "withdrawMin": "100",
                         "chain": "LUNA",
-                        "chainDeposit": "1",
-                        "chainWithdraw": "1",
+                        "chainDeposit": "0",
+                        "chainWithdraw": "0",
                         "minAccuracy": "6"
                     },
                     {
@@ -5445,5 +5463,5 @@
         ]
     },
     "retExtInfo": {},
-    "time": 1670226421406
+    "time": 1670385591516
 }

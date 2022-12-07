@@ -208,7 +208,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             {
                                 name = _name,
                                 network = c.code,
-                                protocol = (c.net_type == null || c.net_type == "메인넷") ? c.code : c.net_type.Replace("-", ""),
+                                chain = (c.net_type == null || c.net_type == "메인넷") ? c.code : c.net_type.Replace("-", ""),
 
                                 withdrawFee = c.withdraw_fee,
 
@@ -300,7 +300,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             if (_ticker.quoteName == "USDT")
                                 _ticker.lastPrice = _price * tickers.exchgRate;
                             else if (_ticker.quoteName == "BTC")
-                                _ticker.lastPrice = _price * mainXchg.krw_btc_price;
+                                _ticker.lastPrice = _price * mainXchg.fiat_btc_price;
                             else
                                 _ticker.lastPrice = _price;
                         }
@@ -354,7 +354,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             if (_ticker.quoteName == "USDT")
                                 _volume *= tickers.exchgRate;
                             else if (_ticker.quoteName == "BTC")
-                                _volume *= mainXchg.krw_btc_price;
+                                _volume *= mainXchg.fiat_btc_price;
 
                             _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -422,7 +422,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             }
                             else if (_ticker.quoteName == "BTC")
                             {
-                                _ticker.lastPrice = _price * mainXchg.krw_btc_price;
+                                _ticker.lastPrice = _price * mainXchg.fiat_btc_price;
                             }
                         }
 
@@ -435,7 +435,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             if (_ticker.quoteName == "USDT")
                                 _volume *= tickers.exchgRate;
                             else if (_ticker.quoteName == "BTC")
-                                _volume *= mainXchg.krw_btc_price;
+                                _volume *= mainXchg.fiat_btc_price;
 
                             _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

@@ -10,7 +10,7 @@ namespace CCXT.Simple.Data
             set;
         }
 
-        public string protocol
+        public string chain
         {
             get;
             set;
@@ -45,7 +45,7 @@ namespace CCXT.Simple.Data
 
                     foreach (var p in this.networks)
                     {
-                        if (other.networks.Exists(x => x.network == p.network && x.protocol == p.protocol))
+                        if (other.networks.Exists(x => x.network == p.network && x.chain == p.chain))
                         {
                             _result = true;
                             break;

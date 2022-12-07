@@ -1,5 +1,4 @@
-﻿using CCXT.Simple.Base;
-using CCXT.Simple.Data;
+﻿using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
@@ -34,12 +33,13 @@ namespace CCXT.Simple.Exchanges
 
     public class Exchange
     {
-        public Exchange()
+        public Exchange(string fiatName = "KRW")
         {
             this.UserAgent = "ccxt.simple.sdk";
             this.Volume24hBase = 1000000;
             this.Volume1mBase= 10000;
             this.FiatVSCoinRate = 1;
+            this.FiatName = fiatName;
 
             this.exchangeCs = new ConcurrentDictionary<string, QueueInfo>();
             this.exchangeTs = new ConcurrentDictionary<string, Tickers>();
@@ -96,6 +96,12 @@ namespace CCXT.Simple.Exchanges
             MissingMemberHandling = MissingMemberHandling.Ignore
         };
 
+        public string FiatName
+        {
+            get;
+            set;
+        }
+
         public int ApiCallDelaySeconds
         {
             get; set;
@@ -129,6 +135,17 @@ namespace CCXT.Simple.Exchanges
         public decimal krw_btc_price
         {
             get; set;
+        }
+
+        public decimal fiat_btc_price
+        {
+            get
+            {
+                if (this.FiatName == "KRW")
+                    return krw_btc_price;
+
+                return usd_btc_price;
+            }
         }
 
         public void OnMessageEvent(string exchange, Exception ex, int error_no)
@@ -235,14 +252,14 @@ namespace CCXT.Simple.Exchanges
                             {
                                 foreach (var n in c.networks)
                                 {
-                                    var _b = s.networks.FirstOrDefault(x => x.network == n.network && x.protocol == n.protocol);
+                                    var _b = s.networks.FirstOrDefault(x => x.network == n.network && x.chain == n.chain);
                                     if (_b == null)
                                     {
                                         s.networks.Add(new WNetwork
                                         {
                                             name = $"{s.currency}-{n.network}",
                                             network = n.network,
-                                            protocol = n.protocol,
+                                            chain = n.chain,
 
                                             deposit = s.deposit,
                                             withdraw = s.withdraw
@@ -270,7 +287,10 @@ namespace CCXT.Simple.Exchanges
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public decimal ExchangeRate()
         {
-            return (usd_btc_price > 0.0m ? krw_btc_price / usd_btc_price : 0.0m) * this.FiatVSCoinRate;
+            if (this.FiatName == "KRW")
+                return (usd_btc_price > 0.0m ? krw_btc_price / usd_btc_price : 0.0m) * this.FiatVSCoinRate;
+            else
+                return this.FiatVSCoinRate;
         }
 
         public string ToQueryString2(Dictionary<string, string> args)

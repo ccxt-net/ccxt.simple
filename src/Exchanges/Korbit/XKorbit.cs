@@ -164,7 +164,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                                 {
                                     name = _name,
                                     network = _chain,
-                                    protocol = _protocol,
+                                    chain = _protocol,
 
                                     deposit = _state.deposit,
                                     withdraw = _state.withdraw,

@@ -157,7 +157,7 @@ namespace CCXT.Simple.Exchanges.Okex
                             {
                                 name = _name,
                                 network = c.ccy,
-                                protocol = _splits.Length > 1 ? _splits[1] : c.chain,
+                                chain = _splits.Length > 1 ? _splits[1] : c.chain,
 
                                 deposit = c.canDep,
                                 withdraw = c.canWd,
@@ -282,7 +282,7 @@ namespace CCXT.Simple.Exchanges.Okex
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
                                 }
                             }
                         }
@@ -344,10 +344,10 @@ namespace CCXT.Simple.Exchanges.Okex
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
 
                                 _ticker.askQty = _jitem.askSz;
@@ -406,7 +406,7 @@ namespace CCXT.Simple.Exchanges.Okex
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -478,10 +478,10 @@ namespace CCXT.Simple.Exchanges.Okex
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _ask_price * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _bid_price * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _ask_price * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _bid_price * mainXchg.fiat_btc_price;
                                 }
 
                                 _ticker.askQty = _jitem.askSz;
@@ -496,7 +496,7 @@ namespace CCXT.Simple.Exchanges.Okex
                                 if (_ticker.quoteName == "USDT")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

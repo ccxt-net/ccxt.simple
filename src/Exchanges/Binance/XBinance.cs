@@ -202,18 +202,18 @@ namespace CCXT.Simple.Exchanges.Binance
                             var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                             if (_network == null)
                             {
-                                var _protocol = n.name;
+                                var _chain = n.name;
 
-                                var _l_ndx = _protocol.IndexOf("(");
-                                var _r_ndx = _protocol.IndexOf(")");
+                                var _l_ndx = _chain.IndexOf("(");
+                                var _r_ndx = _chain.IndexOf(")");
                                 if (_l_ndx >= 0 && _r_ndx > _l_ndx)
-                                    _protocol = _protocol.Substring(_l_ndx + 1, _r_ndx - _l_ndx - 1);
+                                    _chain = _chain.Substring(_l_ndx + 1, _r_ndx - _l_ndx - 1);
 
                                 _network = new WNetwork
                                 {
                                     name = _name,
                                     network = n.network,
-                                    protocol = _protocol,
+                                    chain = _chain,
 
                                     deposit = n.depositEnable,
                                     withdraw = n.withdrawEnable,
@@ -308,7 +308,7 @@ namespace CCXT.Simple.Exchanges.Binance
                             }
                             else if (_ticker.quoteName == "BTC")
                             {
-                                _ticker.lastPrice = _jticker.lastPrice * mainXchg.krw_btc_price;
+                                _ticker.lastPrice = _jticker.lastPrice * mainXchg.fiat_btc_price;
                             }
                         }
                         else
@@ -362,8 +362,8 @@ namespace CCXT.Simple.Exchanges.Binance
                             }
                             else if (_ticker.quoteName == "BTC")
                             {
-                                _ticker.askPrice = _jticker.askPrice * mainXchg.krw_btc_price;
-                                _ticker.bidPrice = _jticker.bidPrice * mainXchg.krw_btc_price;
+                                _ticker.askPrice = _jticker.askPrice * mainXchg.fiat_btc_price;
+                                _ticker.bidPrice = _jticker.bidPrice * mainXchg.fiat_btc_price;
                             }
 
                             _ticker.askQty = _jticker.askQty;
@@ -421,7 +421,7 @@ namespace CCXT.Simple.Exchanges.Binance
                                 if (_ticker.quoteName == "USDT" || _ticker.quoteName == "BUSD")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
@@ -493,10 +493,10 @@ namespace CCXT.Simple.Exchanges.Binance
                                 }
                                 else if (_ticker.quoteName == "BTC")
                                 {
-                                    _ticker.lastPrice = _last_price * mainXchg.krw_btc_price;
+                                    _ticker.lastPrice = _last_price * mainXchg.fiat_btc_price;
 
-                                    _ticker.askPrice = _jticker.askPrice * mainXchg.krw_btc_price;
-                                    _ticker.bidPrice = _jticker.bidPrice * mainXchg.krw_btc_price;
+                                    _ticker.askPrice = _jticker.askPrice * mainXchg.fiat_btc_price;
+                                    _ticker.bidPrice = _jticker.bidPrice * mainXchg.fiat_btc_price;
                                 }
 
                                 _ticker.askQty = _jticker.askQty;
@@ -511,7 +511,7 @@ namespace CCXT.Simple.Exchanges.Binance
                                 if (_ticker.quoteName == "USDT" || _ticker.quoteName == "BUSD")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
-                                    _volume *= mainXchg.krw_btc_price;
+                                    _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

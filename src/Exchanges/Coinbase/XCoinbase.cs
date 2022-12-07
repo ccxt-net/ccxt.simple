@@ -161,7 +161,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                                 {
                                     name = _name,
                                     network = n.name.ToUpper(),
-                                    protocol = _protocol,
+                                    chain = _protocol,
 
                                     deposit = n.status == "online",
                                     withdraw = n.status == "online",
@@ -257,10 +257,10 @@ namespace CCXT.Simple.Exchanges.Coinbase
                             }
                             else if (_ticker.quoteName == "BTC")
                             {
-                                _ticker.lastPrice = _price * mainXchg.krw_btc_price;
+                                _ticker.lastPrice = _price * mainXchg.fiat_btc_price;
 
-                                _ticker.askPrice = _price * mainXchg.krw_btc_price;
-                                _ticker.bidPrice = _price * mainXchg.krw_btc_price;
+                                _ticker.askPrice = _price * mainXchg.fiat_btc_price;
+                                _ticker.bidPrice = _price * mainXchg.fiat_btc_price;
                             }
                         }
 
@@ -272,7 +272,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                             if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
                                 _volume *= _price * exchg_rate;
                             else if (_ticker.quoteName == "BTC")
-                                _volume *= _price * mainXchg.krw_btc_price;
+                                _volume *= _price * mainXchg.fiat_btc_price;
 
                             _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 

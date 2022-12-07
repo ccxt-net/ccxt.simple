@@ -156,7 +156,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                             {
                                 name = _name,
                                 network = c.network_type,
-                                protocol = c.token_type,
+                                chain = c.token_type,
 
                                 deposit = _state.deposit,
                                 withdraw = _state.withdraw,

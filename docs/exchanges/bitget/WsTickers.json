@@ -1,0 +1,27 @@
+{
+    "action": "snapshot",
+    "arg": {
+        "instType": "sp",
+        "channel": "ticker",
+        "instId": "ETHUSDT"
+    },
+    "data": [
+        {
+            "instId": "ETHUSDT",
+            "last": "1229.01",
+            "open24h": "1254.24",
+            "high24h": "1277.08",
+            "low24h": "1219.21",
+            "bestBid": "1228.97",
+            "bestAsk": "1229.07",
+            "baseVolume": "63878.8195",
+            "quoteVolume": "80027330.2109",
+            "ts": 1670406684026,
+            "labeId": 0,
+            "openUtc": "1271.2600000000000000",
+            "chgUTC": "-0.03323",
+            "bidSz": "34.6325",
+            "askSz": "0.8"
+        }
+    ]
+}

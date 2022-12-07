@@ -1,20 +1,21 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
+using System.Text;
 
-namespace CCXT.Simple.Exchanges.GateIO
+namespace CCXT.Simple.Exchanges.Bitget
 {
-    public class XGateIO : IExchange
+    public class XBitget : IExchange
     {
         /*
-		 * Gate Support Markets: USDT, BTC
-		 * 
-		 * REST API
-		 *     https://www.gate.io/docs/developers/apiv4/en/#retrieve-ticker-information
+		 * Bitget Support Markets: USDT,USDC,BTC,ETH,BRL
+		 *
+		 * https://bitgetlimited.github.io/apidoc/en/spot/#introduction
 		 * 
 		 */
 
-        public XGateIO(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
+        public XBitget(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
         {
             this.mainXchg = mainXchg;
 
@@ -28,16 +29,39 @@ namespace CCXT.Simple.Exchanges.GateIO
             get;
             set;
         }
-        
-        public string ExchangeName { get; set; } = "gateio";
 
-        public string ExchangeUrl { get; set; } = "https://api.gateio.ws";
+        public string ExchangeName { get; set; } = "bitget";
+
+        public string ExchangeUrl { get; set; } = "https://api.bitget.com";
 
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
+        private HMACSHA256 __encryptor = null;
+
+        public HMACSHA256 Encryptor
+        {
+            get
+            {
+                if (__encryptor == null)
+                    __encryptor = new HMACSHA256(Encoding.UTF8.GetBytes(this.SecretKey));
+
+                return __encryptor;
+            }
+        }
+
+        public string CreateSignature(HttpClient client)
+        {
+            client.DefaultRequestHeaders.Add("USER-AGENT", mainXchg.UserAgent);
+            client.DefaultRequestHeaders.Add("X-MBX-APIKEY", this.ApiKey);
+
+            var _post_data = $"timestamp={CUnixTime.NowMilli}";
+            var _signature = BitConverter.ToString(Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_post_data))).Replace("-", "");
+
+            return _post_data + $"&signature={_signature}";
+        }
 
         /// <summary>
         ///
@@ -51,23 +75,26 @@ namespace CCXT.Simple.Exchanges.GateIO
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currency_pairs");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/public/products");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.CoinInfor>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
                     var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
 
-                    foreach (var s in _jarray)
+                    foreach (var s in _jarray.data)
                     {
-                        if (s.quote == "USDT" || s.quote == "USD" || s.quote == "BTC")
+                        if (s.quoteCoin == "USDT" || s.quoteCoin == "USDC" || s.quoteCoin == "BTC")
                         {
                             _queue_info.symbols.Add(new QueueSymbol
                             {
-                                symbol = s.id,
-                                compName = s.@base,
-                                baseName = s.@base,
-                                quoteName = s.quote,
-                                tickSize = s.min_quote_amount
+                                symbol = s.symbolName,
+                                compName = s.baseCoin,
+                                baseName = s.baseCoin,
+                                quoteName = s.quoteCoin,
+
+                                dispName = s.symbol,
+                                makerFee = s.makerFeeRate,
+                                takerFee= s.takerFeeRate                                
                             });
                         }
                     }
@@ -77,7 +104,7 @@ namespace CCXT.Simple.Exchanges.GateIO
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3701);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4301);
             }
             finally
             {
@@ -99,21 +126,21 @@ namespace CCXT.Simple.Exchanges.GateIO
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/public/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.CoinState>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
-                    foreach (var c in _jarray)
+                    foreach (var c in _jarray.data)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.coinName);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.currency,
-                                active = !c.trade_disabled,
-                                deposit = !c.deposit_disabled,
-                                withdraw = !c.withdraw_disabled,
+                                currency = c.coinName,
+                                active = c.transfer,
+                                deposit = c.transfer,
+                                withdraw = c.transfer,
                                 networks = new List<WNetwork>()
                             };
 
@@ -121,9 +148,9 @@ namespace CCXT.Simple.Exchanges.GateIO
                         }
                         else
                         {
-                            _state.active = !c.trade_disabled;
-                            _state.deposit = !c.deposit_disabled;
-                            _state.withdraw = !c.withdraw_disabled;
+                            _state.active = c.transfer;
+                            _state.deposit = c.transfer;
+                            _state.withdraw = c.transfer;
                         }
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.currency);
@@ -137,50 +164,52 @@ namespace CCXT.Simple.Exchanges.GateIO
                             }
                         }
 
-                        var _name = c.currency + "-" + c.chain;
-
-                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
-                        if (_network == null)
+                        foreach (var n in c.chains)
                         {
-                            _network = new WNetwork
+                            var _name = c.coinName + "-" + n.chain;
+
+                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                            if (_network == null)
                             {
-                                name = _name,
-                                network = c.chain,
-                                chain = c.chain,
+                                _network = new WNetwork
+                                {
+                                    name = _name,
+                                    network = c.coinName,
+                                    chain = n.chain,
 
-                                deposit = !c.deposit_disabled,
-                                withdraw = !c.withdraw_disabled,
+                                    deposit = n.rechargeable,
+                                    withdraw = n.withdrawable,
 
-                                withdrawFee = 0,
-                                minWithdrawal = 0,
-                                maxWithdrawal = 0,
+                                    withdrawFee = n.withdrawFee + n.extraWithDrawFee,
+                                    minWithdrawal = n.minWithdrawAmount,
+                                    
+                                    minConfirm = n.depositConfirm
+                                };
 
-                                minConfirm = 0
-                            };
-
-                            _state.networks.Add(_network);
-                        }
-                        else
-                        {
-                            _network.deposit = !c.deposit_disabled;
-                            _network.withdraw = !c.withdraw_disabled;
+                                _state.networks.Add(_network);
+                            }
+                            else
+                            {
+                                _network.deposit = n.rechargeable;
+                                _network.withdraw = n.withdrawable;
+                            }
                         }
                     }
 
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3702);
+                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4302);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3703);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4303);
             }
 
             return _result;
         }
 
-        public async ValueTask<bool> GetMarkets(Tickers tickers)
+         public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
 
@@ -188,9 +217,9 @@ namespace CCXT.Simple.Exchanges.GateIO
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/market/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring, mainXchg.JsonSettings);
+                    var _jarray = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
                     for (var i = 0; i < tickers.items.Count; i++)
                     {
@@ -198,15 +227,15 @@ namespace CCXT.Simple.Exchanges.GateIO
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jitem = _jarray.SingleOrDefault(x => x.currency_pair == _ticker.symbol);
+                        var _jitem = _jarray.data.SingleOrDefault(x => x.symbol == _ticker.symbol);
                         if (_jitem != null)
                         {
-                            var _last_price = _jitem.last;
+                            var _last_price = _jitem.close;
                             {
-                                var _ask_price = _jitem.lowest_ask;
-                                var _bid_price = _jitem.highest_bid;
+                                var _ask_price = _jitem.sellOne;
+                                var _bid_price = _jitem.buyOne;
 
-                                if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
+                                if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USDC")
                                 {
                                     _ticker.lastPrice = _last_price * tickers.exchgRate;
                                     _ticker.askPrice = _ask_price * tickers.exchgRate;
@@ -220,19 +249,19 @@ namespace CCXT.Simple.Exchanges.GateIO
                                 }
                             }
 
-                            var _volume = _jitem.quote_volume;
+                            var _volume = _jitem.quoteVol;
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
 
-                                if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
+                                if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USDC")
                                     _volume *= tickers.exchgRate;
                                 else if (_ticker.quoteName == "BTC")
                                     _volume *= mainXchg.fiat_btc_price;
 
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
-                                var _curr_timestamp = CUnixTime.NowMilli;
+                                var _curr_timestamp = _jitem.ts;
                                 if (_curr_timestamp > _next_timestamp)
                                 {
                                     _ticker.volume1m = Math.Floor((_prev_volume24h > 0 ? _volume - _prev_volume24h : 0) / mainXchg.Volume1mBase);
@@ -244,7 +273,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3704);
+                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4304);
                             _ticker.symbol = "X";
                         }
                     }
@@ -254,28 +283,28 @@ namespace CCXT.Simple.Exchanges.GateIO
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3705);
+                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4305);
             }
 
             return _result;
         }
 
-        ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)
+        public ValueTask<bool> GetBookTickers(Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<decimal> IExchange.GetPrice(string symbol)
+        public ValueTask<bool> GetTickers(Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetTickers(Tickers tickers)
+        public ValueTask<decimal> GetPrice(string symbol)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetVolumes(Tickers tickers)
+        public ValueTask<bool> GetVolumes(Tickers tickers)
         {
             throw new NotImplementedException();
         }

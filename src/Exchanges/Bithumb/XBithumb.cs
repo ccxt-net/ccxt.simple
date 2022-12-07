@@ -189,7 +189,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                                 {
                                     name = _name,
                                     network = _n.coinSymbolNm,
-                                    protocol = _n.networkType == "Mainnet" ? _n.coinSymbolNm : _n.networkType.Replace("-", ""),
+                                    chain = _n.networkType == "Mainnet" ? _n.coinSymbolNm : _n.networkType.Replace("-", ""),
 
                                     deposit = _state.deposit,
                                     withdraw = _state.withdraw
@@ -329,11 +329,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             var _bid = _b_data[_ticker.baseName]["bids"][0];
                             var _ask = _b_data[_ticker.baseName]["asks"][0];
 
-                            Debug.Assert(this.mainXchg.krw_btc_price != 0.0m);
-
-                            _ticker.askPrice = _ask.Value<decimal>("price") * mainXchg.krw_btc_price;
+                            _ticker.askPrice = _ask.Value<decimal>("price") * mainXchg.fiat_btc_price;
                             _ticker.askQty = _ask.Value<decimal>("quantity");
-                            _ticker.bidPrice = _bid.Value<decimal>("price") * mainXchg.krw_btc_price;
+                            _ticker.bidPrice = _bid.Value<decimal>("price") * mainXchg.fiat_btc_price;
                             _ticker.bidQty = _bid.Value<decimal>("quantity");
                         }
                         else
@@ -410,14 +408,14 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         else if (_ticker.quoteName == "BTC" && _b_jobject.ContainsKey(_ticker.baseName))
                         {
                             var _price = _b_jobject[_ticker.baseName].Value<decimal>("closing_price");
-                            _ticker.lastPrice = _price * mainXchg.krw_btc_price;
+                            _ticker.lastPrice = _price * mainXchg.fiat_btc_price;
 
                             var _volume = _b_jobject[_ticker.baseName].Value<decimal>("acc_trade_value");
                             {
                                 var _prev_volume24h = _ticker.previous24h;
                                 var _next_timestamp = _ticker.timestamp + 60 * 1000;
 
-                                _volume *= mainXchg.krw_btc_price;
+                                _volume *= mainXchg.fiat_btc_price;
                                 _ticker.volume24h = Math.Floor(_volume / mainXchg.Volume24hBase);
 
                                 var _curr_timestamp = CUnixTime.NowMilli;
