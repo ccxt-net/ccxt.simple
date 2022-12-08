@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-
-namespace CCXT.Simple.Exchanges.Bithumb
+﻿namespace CCXT.Simple.Exchanges.Bithumb
 {
     /// <summary>
     /// https://www.bithumb.com/withdraw_address/coincodeinfo 
@@ -23,20 +21,5 @@ namespace CCXT.Simple.Exchanges.Bithumb
         public string scndAddrYn { get; set; }
         public string scndAddrNmKr { get; set; }
         public string scndAddrNmEn { get; set; }
-    }
-
-    /// <summary>
-    /// https://api.bithumb.com/public/assetsstatus/ALL
-    /// </summary>
-    public class CoinAsset
-    {
-        public int status { get; set; }
-        public JObject data { get; set; }
-    }
-
-    public class CaData
-    {
-        public int withdrawal_status { get; set; }
-        public int deposit_status { get; set; }
     }
 }

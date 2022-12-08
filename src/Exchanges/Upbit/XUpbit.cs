@@ -141,28 +141,28 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                var _jstring = await File.ReadAllTextAsync(@"Exchanges\Upbit\CoinState.json");
+                var _cstring = await File.ReadAllTextAsync(@"Exchanges\Upbit\CoinState.json");
+                var _carray = JsonConvert.DeserializeObject<CoinState>(_cstring);
 
-                //using (var _client = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    //var _nonce = CUnixTime.NowMilli;
+                    using HttpResponseMessage _b_response = await _client.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
+                    var _jstring = await _b_response.Content.ReadAsStringAsync();
+                    var _jarray = JsonConvert.DeserializeObject<List<WalletState>>(_jstring);
 
-                    //var _jwt = this.CreateToken(_nonce);
-                    //_client.DefaultRequestHeaders.Add("authorization", _jwt);
-
-                    //using HttpResponseMessage _b_response = await _client.GetAsync($"{ExchangeUrlCc}/api/v1/funds?nonce={_nonce}");
-                    //var _jstring = await _b_response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
-
-                    foreach (var c in _jarray.currencies)
+                    foreach (var c in _carray.currencies)
                     {
                         if (!c.is_coin)
                             continue;
 
+                        var _w = _jarray.SingleOrDefault(x => x.currency == c.code);
+                        if (_w == null)
+                            continue;
+
                         // working, paused, withdraw_only, deposit_only, unsupported
-                        var _active = c.wallet_state != "unsupported";
-                        var _deposit = c.wallet_support.Exists(x => x == "deposit");
-                        var _withdraw = c.wallet_support.Exists(x => x == "withdraw");
+                        var _active = _w.wallet_state != "unsupported" && _w.wallet_state != "paused";
+                        var _deposit = _w.wallet_state == "working" || _w.wallet_state == "deposit_only";
+                        var _withdraw = _w.wallet_state == "working" || _w.wallet_state == "withdraw_only";
 
                         var _state = tickers.states.SingleOrDefault(x => x.currency == c.code);
                         if (_state == null)

@@ -2,6 +2,7 @@
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Security.Cryptography;
@@ -139,11 +140,20 @@ namespace CCXT.Simple.Exchanges.Bithumb
                 {
                     using HttpResponseMessage _response = await _client.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<CoinAsset>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<WalletState>(_jstring);
 
-                    foreach (JProperty s in _jarray.data.Children())
+                    foreach (var s in _carray.data)
                     {
-                        var _currency = s.Name;
+                        var _currency = s.coinSymbolNm;
+
+                        if (!_jarray.data.ContainsKey(_currency))
+                            continue;
+
+                        var _w = JsonConvert.DeserializeObject<WsData>(_jarray.data[_currency].ToString());
+
+                        var _active = _w.deposit_status == 1 || _w.withdrawal_status == 1;
+                        var _deposit = _w.deposit_status == 1;
+                        var _withdraw = _w.withdrawal_status == 1;
 
                         var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
                         if (_state == null)
@@ -151,9 +161,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             _state = new WState
                             {
                                 currency = _currency,
-                                active = true,
-                                deposit = s.Value.Value<int>("deposit_status") > 0,
-                                withdraw = s.Value.Value<int>("withdrawal_status") > 0,
+                                active = _active,
+                                deposit = _deposit,
+                                withdraw = _withdraw,
                                 networks = new List<WNetwork>()
                             };
 
@@ -161,8 +171,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         }
                         else
                         {
-                            _state.deposit = s.Value.Value<int>("deposit_status") > 0;
-                            _state.withdraw = s.Value.Value<int>("withdrawal_status") > 0;
+                            _state.active = _active;
+                            _state.deposit = _deposit;
+                            _state.withdraw = _withdraw;
                         }
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.currency);
@@ -176,30 +187,25 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             }
                         }
 
-                        // "networkType": "Mainnet", "networkType": "ERC-20", "networkType": "EOS-Dapp", "networkType": "OEP-4", "networkType": "BEP-20"
-                        var _n = _carray.data.SingleOrDefault(x => x.coinSymbolNm == _state.currency);
-                        if (_n != null)
+                        var _name = _currency + "-" + s.networkType;
+
+                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_network == null)
                         {
-                            var _name = _currency + "-" + _n.networkType;
-
-                            var _network = _state.networks.SingleOrDefault(x => x.name == _name);
-                            if (_network == null)
+                            _state.networks.Add(new WNetwork
                             {
-                                _state.networks.Add(new WNetwork
-                                {
-                                    name = _name,
-                                    network = _n.coinSymbolNm,
-                                    chain = _n.networkType == "Mainnet" ? _n.coinSymbolNm : _n.networkType.Replace("-", ""),
+                                name = _name,
+                                network = s.coinSymbolNm,
+                                chain = s.networkType == "Mainnet" ? s.coinSymbolNm : s.networkType.Replace("-", ""),
 
-                                    deposit = _state.deposit,
-                                    withdraw = _state.withdraw
-                                });
-                            }
-                            else
-                            {
-                                _state.deposit = _state.deposit;
-                                _state.withdraw = _state.withdraw;
-                            }
+                                deposit = _state.deposit,
+                                withdraw = _state.withdraw
+                            });
+                        }
+                        else
+                        {
+                            _state.deposit = _state.deposit;
+                            _state.withdraw = _state.withdraw;
                         }
                     }
 

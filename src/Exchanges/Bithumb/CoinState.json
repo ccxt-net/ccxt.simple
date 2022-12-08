@@ -107,7 +107,7 @@
       "coinNmKr": "트론",
       "coinNmEn": "TRON",
       "networkType": "Mainnet",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -492,7 +492,7 @@
       "coinNmKr": "비트코인에스브이",
       "coinNmEn": "BITCOINSV",
       "networkType": "Mainnet",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -627,6 +627,17 @@
       "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "N",
+      "scndAddrNmEn": ""
+    },
+    {
+      "coinTypeCd": "C0251",
+      "coinSymbolNm": "WIN",
+      "coinNmKr": "윙크",
+      "coinNmEn": "WINK",
+      "networkType": "TRC-20",
+      "outAvailableYn": "Y",
+      "scndAddrYn": "N",
+      "scndAddrNmKr": "",
       "scndAddrNmEn": ""
     },
     {
@@ -1823,7 +1834,7 @@
       "coinNmKr": "알고랜드",
       "coinNmEn": "Algorand",
       "networkType": "Mainnet",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -1834,7 +1845,7 @@
       "coinNmKr": "저스트",
       "coinNmEn": "JUST",
       "networkType": "TRC20",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -2010,7 +2021,7 @@
       "coinNmKr": "에이피이앤에프티",
       "coinNmEn": "APENFT",
       "networkType": "TRC20",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -2021,7 +2032,7 @@
       "coinNmKr": "썬",
       "coinNmEn": "SUN",
       "networkType": "TRC20",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -2197,7 +2208,7 @@
       "coinNmKr": "비트토렌트",
       "coinNmEn": "BitTorrent",
       "networkType": "TRC20",
-      "outAvailableYn": "N",
+      "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
       "scndAddrNmEn": ""
@@ -2450,6 +2461,17 @@
       "coinNmKr": "이더리움페어",
       "coinNmEn": "EthereumFair",
       "networkType": "Mainnet",
+      "outAvailableYn": "Y",
+      "scndAddrYn": "N",
+      "scndAddrNmKr": "",
+      "scndAddrNmEn": ""
+    },
+    {
+      "coinTypeCd": "C0689",
+      "coinSymbolNm": "FITFI",
+      "coinNmKr": "스텝앱",
+      "coinNmEn": "Step App",
+      "networkType": "AVAX-C",
       "outAvailableYn": "Y",
       "scndAddrYn": "N",
       "scndAddrNmKr": "",
