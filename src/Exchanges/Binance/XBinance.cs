@@ -106,7 +106,7 @@ namespace CCXT.Simple.Exchanges.Binance
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -133,7 +133,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3001);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3001);
             }
             finally
             {
@@ -239,11 +239,11 @@ namespace CCXT.Simple.Exchanges.Binance
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3002);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3002);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3003);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3003);
             }
 
             return _result;
@@ -272,7 +272,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3004);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3004);
             }
 
             return _result;
@@ -302,7 +302,7 @@ namespace CCXT.Simple.Exchanges.Binance
                             if (_ticker.quoteName == "USDT" || _ticker.quoteName == "BUSD")
                             {
                                 if (_ticker.symbol == "BTCUSDT")
-                                    this.mainXchg.OnUsdPriceEvent(_jticker.lastPrice);
+                                    mainXchg.OnUsdPriceEvent(_jticker.lastPrice);
 
                                 _ticker.lastPrice = _jticker.lastPrice * tickers.exchgRate;
                             }
@@ -313,7 +313,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3005);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3005);
                             _ticker.symbol = "X";
                         }
                     }
@@ -323,7 +323,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3006);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3006);
             }
 
             return _result;
@@ -371,7 +371,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3007);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3007);
                             _ticker.symbol = "X";
                         }
                     }
@@ -381,7 +381,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3008);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3008);
             }
 
             return _result;
@@ -437,7 +437,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3009);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3009);
                             _ticker.symbol = "X";
                         }
                     }
@@ -447,7 +447,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3010);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3010);
             }
 
             return _result;
@@ -484,7 +484,7 @@ namespace CCXT.Simple.Exchanges.Binance
                                 if (_ticker.quoteName == "USDT" || _ticker.quoteName == "BUSD")
                                 {
                                     if (_ticker.symbol == "BTCUSDT")
-                                        this.mainXchg.OnUsdPriceEvent(_last_price);
+                                        mainXchg.OnUsdPriceEvent(_last_price);
 
                                     _ticker.lastPrice = _last_price * tickers.exchgRate;
 
@@ -527,7 +527,7 @@ namespace CCXT.Simple.Exchanges.Binance
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3011);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3011);
                             _ticker.symbol = "X";
                         }
                     }
@@ -537,7 +537,7 @@ namespace CCXT.Simple.Exchanges.Binance
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3012);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3012);
             }
 
             return _result;

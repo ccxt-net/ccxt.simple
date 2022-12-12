@@ -80,7 +80,7 @@ namespace CCXT.Simple.Exchanges.Bitget
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray.data)
                     {
@@ -105,7 +105,7 @@ namespace CCXT.Simple.Exchanges.Bitget
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4301);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4301);
             }
             finally
             {
@@ -200,11 +200,11 @@ namespace CCXT.Simple.Exchanges.Bitget
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4302);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4302);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4303);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4303);
             }
 
             return _result;
@@ -274,7 +274,7 @@ namespace CCXT.Simple.Exchanges.Bitget
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4304);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4304);
                             _ticker.symbol = "X";
                         }
                     }
@@ -284,7 +284,7 @@ namespace CCXT.Simple.Exchanges.Bitget
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4305);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4305);
             }
 
             return _result;

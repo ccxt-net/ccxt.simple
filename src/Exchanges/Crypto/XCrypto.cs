@@ -66,7 +66,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
 
-                        var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                        var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                         foreach (var s in _jarray.result.instruments)
                         {
@@ -91,7 +91,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3601);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3601);
             }
             finally
             {
@@ -165,7 +165,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                             }
                             else
                             {
-                                this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3602);
+                                mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3602);
                                 _ticker.symbol = "X";
                             }
                         }
@@ -176,7 +176,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3603);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3603);
             }
 
             return _result;
@@ -310,11 +310,11 @@ namespace CCXT.Simple.Exchanges.Crypto
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3604);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3604);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3605);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3605);
             }
 
             return _result;

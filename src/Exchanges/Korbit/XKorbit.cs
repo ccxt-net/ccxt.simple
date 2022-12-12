@@ -65,7 +65,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jobject)
                     {
@@ -86,7 +86,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3901);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3901);
             }
             finally
             {
@@ -187,11 +187,11 @@ namespace CCXT.Simple.Exchanges.Korbit
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3902);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3902);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3903);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3903);
             }
 
             return _result;
@@ -260,11 +260,11 @@ namespace CCXT.Simple.Exchanges.Korbit
 
                 _result = true;
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3902);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3902);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3903);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3903);
             }
 
             return _result;
@@ -293,7 +293,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3904);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3904);
             }
 
             return _result;
@@ -331,7 +331,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3905);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3905);
                             _ticker.symbol = "X";
                         }
                     }
@@ -341,7 +341,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3906);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3906);
             }
 
             return _result;
@@ -382,7 +382,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3907);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3907);
                             _ticker.symbol = "X";
                         }
                     }
@@ -392,7 +392,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3908);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3908);
             }
 
             return _result;
@@ -445,7 +445,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3909);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3909);
                             _ticker.symbol = "X";
                         }
                     }
@@ -455,7 +455,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3910);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3910);
             }
 
             return _result;
@@ -515,7 +515,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3911);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3911);
                             _ticker.symbol = "X";
                         }
                     }
@@ -525,7 +525,7 @@ namespace CCXT.Simple.Exchanges.Korbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3912);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3912);
             }
 
             return _result;

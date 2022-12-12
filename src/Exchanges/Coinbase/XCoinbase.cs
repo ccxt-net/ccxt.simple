@@ -65,7 +65,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -86,7 +86,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3401);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3401);
             }
             finally
             {
@@ -189,7 +189,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3402);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3402);
             }
 
             return _result;
@@ -292,7 +292,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3403);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3403);
             }
 
             return _result;

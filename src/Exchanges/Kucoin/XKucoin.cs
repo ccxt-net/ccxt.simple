@@ -60,7 +60,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray.data)
                     {
@@ -90,7 +90,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4001);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4001);
             }
             finally
             {
@@ -210,11 +210,11 @@ namespace CCXT.Simple.Exchanges.Kucoin
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4002);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4002);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4003);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4003);
             }
 
             return _result;
@@ -242,7 +242,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4004);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4004);
             }
 
             return _result;
@@ -290,7 +290,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4005);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4005);
                             _ticker.symbol = "X";
                         }
                     }
@@ -300,7 +300,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4006);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4006);
             }
 
             return _result;
@@ -357,7 +357,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4007);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4007);
                             _ticker.symbol = "X";
                         }
                     }
@@ -367,7 +367,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4008);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4008);
             }
 
             return _result;
@@ -425,7 +425,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4009);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4009);
                             _ticker.symbol = "X";
                         }
                     }
@@ -435,7 +435,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4010);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4010);
             }
 
             return _result;
@@ -514,7 +514,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4011);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 4011);
                             _ticker.symbol = "X";
                         }
                     }
@@ -524,7 +524,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4012);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4012);
             }
 
             return _result;

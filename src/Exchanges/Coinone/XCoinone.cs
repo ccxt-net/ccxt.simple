@@ -62,7 +62,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var c in _jarray.tradepairs)
                     {
@@ -85,7 +85,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3501);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3501);
             }
             finally
             {
@@ -180,11 +180,11 @@ namespace CCXT.Simple.Exchanges.Coinone
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3502);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3502);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3503);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3503);
             }
 
             return _result;
@@ -214,7 +214,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3504);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3504);
             }
 
             return _result;
@@ -253,7 +253,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3505);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3505);
             }
 
             return _result;
@@ -311,7 +311,7 @@ namespace CCXT.Simple.Exchanges.Coinone
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3506);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3506);
                             _ticker.symbol = "X";
                         }
                     }
@@ -321,7 +321,7 @@ namespace CCXT.Simple.Exchanges.Coinone
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3507);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3507);
             }
 
             return _result;

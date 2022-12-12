@@ -62,7 +62,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                     var _jobject = JObject.Parse(_jstring);
                     var _jarray = _jobject["data"].ToObject<JArray>();
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (JToken s in _jarray)
                     {
@@ -91,7 +91,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3801);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3801);
             }
             finally
             {
@@ -187,11 +187,11 @@ namespace CCXT.Simple.Exchanges.Huobi
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3802);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3802);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3803);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3803);
             }
 
             return _result;
@@ -216,7 +216,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3804);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3804);
             }
 
             return _result;
@@ -239,7 +239,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3805);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3805);
             }
 
             return _result;
@@ -297,7 +297,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3806);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3806);
                             _ticker.symbol = "X";
                         }
                     }
@@ -307,7 +307,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3807);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3807);
             }
 
             return _result;
@@ -369,7 +369,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3808);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3808);
                             _ticker.symbol = "X";
                         }
                     }
@@ -379,7 +379,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3809);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3809);
             }
 
             return _result;
@@ -455,7 +455,7 @@ namespace CCXT.Simple.Exchanges.Huobi
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3810);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3810);
                             _ticker.symbol = "X";
                         }
                     }
@@ -465,7 +465,7 @@ namespace CCXT.Simple.Exchanges.Huobi
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3811);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3811);
             }
 
             return _result;

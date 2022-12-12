@@ -55,7 +55,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -77,7 +77,7 @@ namespace CCXT.Simple.Exchanges.GateIO
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3701);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3701);
             }
             finally
             {
@@ -170,11 +170,11 @@ namespace CCXT.Simple.Exchanges.GateIO
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3702);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 3702);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3703);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3703);
             }
 
             return _result;
@@ -244,7 +244,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                         }
                         else
                         {
-                            this.mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3704);
+                            mainXchg.OnMessageEvent(ExchangeName, $"not found: {_ticker.symbol}", 3704);
                             _ticker.symbol = "X";
                         }
                     }
@@ -254,7 +254,7 @@ namespace CCXT.Simple.Exchanges.GateIO
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 3705);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3705);
             }
 
             return _result;

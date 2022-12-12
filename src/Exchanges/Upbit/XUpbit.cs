@@ -72,7 +72,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
-                    var _queue_info = this.mainXchg.GetXInfors(ExchangeName);
+                    var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
                     foreach (var s in _jarray)
                     {
@@ -102,7 +102,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4201);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4201);
             }
             finally
             {
@@ -226,11 +226,11 @@ namespace CCXT.Simple.Exchanges.Upbit
                     _result = true;
                 }
 
-                this.mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4202);
+                mainXchg.OnMessageEvent(ExchangeName, $"checking deposit & withdraw status...", 4202);
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4203);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4203);
             }
 
             return _result;
@@ -258,7 +258,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4204);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4204);
             }
 
             return _result;
@@ -295,7 +295,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             var _price = _jitem.trade_price;
 
                             if (_ticker.symbol == "KRW-BTC")
-                                this.mainXchg.OnKrwPriceEvent(_price);
+                                mainXchg.OnKrwPriceEvent(_price);
 
                             if (_ticker.quoteName == "USDT")
                                 _ticker.lastPrice = _price * tickers.exchgRate;
@@ -311,7 +311,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4205);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4205);
             }
 
             return _result;
@@ -374,7 +374,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4206);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4206);
             }
 
             return _result;
@@ -412,7 +412,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             if (_ticker.quoteName == "KRW")
                             {
                                 if (_coin_name == "KRW-BTC")
-                                    this.mainXchg.OnKrwPriceEvent(_price);
+                                    mainXchg.OnKrwPriceEvent(_price);
 
                                 _ticker.lastPrice = _price;
                             }
@@ -455,7 +455,7 @@ namespace CCXT.Simple.Exchanges.Upbit
             }
             catch (Exception ex)
             {
-                this.mainXchg.OnMessageEvent(ExchangeName, ex, 4207);
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4207);
             }
 
             return _result;

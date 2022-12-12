@@ -8,6 +8,11 @@
             this.bids = new List<OrderbookItem>();
         }
 
+        public long timestamp
+        {
+            get; set;
+        }
+
         public List<OrderbookItem> asks
         {
             get;

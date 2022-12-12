@@ -18,10 +18,11 @@ namespace CCXT.Simple.Exchanges
 
         ValueTask<bool> VerifySymbols();
         ValueTask<bool> VerifyStates(Tickers tickers);
+        
+        ValueTask<decimal> GetPrice(string symbol);
 
         ValueTask<bool> GetBookTickers(Tickers tickers);
         ValueTask<bool> GetMarkets(Tickers tickers);
-        ValueTask<decimal> GetPrice(string symbol);
         ValueTask<bool> GetTickers(Tickers tickers);
         ValueTask<bool> GetVolumes(Tickers tickers);
     }
