@@ -1,12 +1,7 @@
-﻿using CCXT.Simple.Base;
-using CCXT.Simple.Data;
+﻿using CCXT.Simple.Data;
+using CCXT.Simple.Exchanges.Crypto;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net;
-using System.Security.Cryptography;
 using System.Text;
 
 namespace CCXT.Simple.Exchanges.Upbit
@@ -397,9 +392,9 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
-                    foreach (var m in _jmarkets)
+                    foreach (var m in _jarray)
                     {
                         var _coin_name = m.market;
 
@@ -456,6 +451,62 @@ namespace CCXT.Simple.Exchanges.Upbit
             catch (Exception ex)
             {
                 mainXchg.OnMessageEvent(ExchangeName, ex, 4207);
+            }
+
+            return _result;
+        }
+
+        public async ValueTask<bool> GetOrderbook(Tickers tickers)
+        {
+            var _result = false;
+
+            try
+            {
+                using (var _wc = new HttpClient())
+                {
+                    var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
+
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jarray = JsonConvert.DeserializeObject<List<UOrderboook>>(_jstring);
+
+                    foreach (var o in _jarray)
+                    {
+                        var _ticker = tickers.items.Find(x => x.symbol == o.market);
+                        if (_ticker == null)
+                            continue;
+
+                        _ticker.orderbook.asks.Clear();
+                        _ticker.orderbook.asks.AddRange(
+                            o.orderbook_units
+                                .OrderBy(x => x.ask_price)
+                                .Select(x => new OrderbookItem
+                                {
+                                    price = x.ask_price,
+                                    quantity = x.ask_size,
+                                    total = 1
+                                })
+                        );
+
+                        _ticker.orderbook.bids.Clear();
+                        _ticker.orderbook.bids.AddRange(
+                            o.orderbook_units
+                                .OrderBy(x => x.bid_price)
+                                .Select(x => new OrderbookItem
+                                {
+                                    price = x.bid_price,
+                                    quantity = x.bid_size,
+                                    total = 1
+                                })
+                        );
+                    }
+                }
+
+                _result = true;
+            }
+            catch (Exception ex)
+            {
+                mainXchg.OnMessageEvent(ExchangeName, ex, 4208);
             }
 
             return _result;

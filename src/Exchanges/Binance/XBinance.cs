@@ -542,5 +542,56 @@ namespace CCXT.Simple.Exchanges.Binance
 
             return _result;
         }
+
+        public async ValueTask<bool> GetOrderbook(Tickers tickers, string symbol, int limit = 5)
+        {
+            var _result = false;
+
+            try
+            {
+                using (var _wc = new HttpClient())
+                {
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v3/depth?symbol={symbol}&limit={limit}");
+                    var _jstring = await _response.Content.ReadAsStringAsync();
+                    var _jorderbook = JsonConvert.DeserializeObject<Orderbook>(_jstring);
+
+                    var _ticker = tickers.items.Where(x => x.symbol == symbol).FirstOrDefault();
+                    if (_ticker != null)
+                    {
+                        _ticker.orderbook.asks.Clear();
+                        _ticker.orderbook.asks.AddRange(
+                            _jorderbook.asks
+                                .OrderBy(x => x[0])
+                                .Select(x => new OrderbookItem
+                                {
+                                    price = x[0],
+                                    quantity= x[1],
+                                    total = 1
+                                })
+                        );
+
+                        _ticker.orderbook.bids.Clear();
+                        _ticker.orderbook.bids.AddRange(
+                            _jorderbook.bids
+                                .OrderBy(x => x[0])
+                                .Select(x => new OrderbookItem
+                                {
+                                    price = x[0],
+                                    quantity = x[1],
+                                    total = 1
+                                })
+                        );
+                    }
+                }
+
+                _result = true;
+            }
+            catch (Exception ex)
+            {
+                mainXchg.OnMessageEvent(ExchangeName, ex, 3013);
+            }
+
+            return _result;
+        }
     }
 }
