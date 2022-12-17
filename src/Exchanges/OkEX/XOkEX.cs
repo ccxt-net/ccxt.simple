@@ -1,7 +1,6 @@
 ﻿using CCXT.Simple.Base;
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -157,7 +156,7 @@ namespace CCXT.Simple.Exchanges.Okex
                             {
                                 name = _name,
                                 network = c.ccy,
-                                chain = _splits.Length > 1 ? _splits[1] : c.chain,
+                                chain = _splits[_splits.Length -1],
 
                                 deposit = c.canDep,
                                 withdraw = c.canWd,
