@@ -119,12 +119,12 @@ namespace CCXT.Simple.Exchanges.Korbit
                             if (c.currency_type != "crypto")
                                 continue;
 
-                            var _state = tickers.states.SingleOrDefault(x => x.currency == c.symbol);
+                            var _state = tickers.states.SingleOrDefault(x => x.baseName == c.symbol);
                             if (_state == null)
                             {
                                 _state = new WState
                                 {
-                                    currency = c.symbol,
+                                    baseName = c.symbol,
                                     active = true,
                                     deposit = c.deposit_status == "launched",
                                     withdraw = c.withdrawal_status == "launched",
@@ -139,7 +139,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                                 _state.withdraw = c.withdrawal_status == "launched";
                             }
 
-                            var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                            var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                             if (_t_items != null)
                             {
                                 foreach (var t in _t_items)
@@ -226,12 +226,12 @@ namespace CCXT.Simple.Exchanges.Korbit
                 {
                     var _currency = c.acronym.ToUpper();
 
-                    var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
+                    var _state = tickers.states.SingleOrDefault(x => x.baseName == _currency);
                     if (_state == null)
                     {
                         _state = new WState
                         {
-                            currency = _currency,
+                            baseName = _currency,
                             active = true,
                             deposit = c.services.deposit,
                             withdraw = c.services.withdrawal,
@@ -246,7 +246,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                         _state.withdraw = c.services.withdrawal;
                     }
 
-                    var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                    var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                     if (_t_items != null)
                     {
                         foreach (var t in _t_items)

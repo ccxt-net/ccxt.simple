@@ -151,12 +151,12 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                     foreach (var c in _jarray.data)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.currency,
+                                baseName = c.currency,
                                 active = true,
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
@@ -171,7 +171,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _state.withdraw = c.isWithdrawEnabled;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

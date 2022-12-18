@@ -163,12 +163,12 @@ namespace CCXT.Simple.Exchanges.Binance
 
                     foreach (var c in _jarray)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.coin);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.coin);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.coin,
+                                baseName = c.coin,
                                 active = c.trading,
                                 deposit = c.depositAllEnable,
                                 withdraw = c.withdrawAllEnable,
@@ -184,7 +184,7 @@ namespace CCXT.Simple.Exchanges.Binance
                             _state.withdraw = c.withdrawAllEnable;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

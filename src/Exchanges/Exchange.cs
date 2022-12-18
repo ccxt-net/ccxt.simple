@@ -245,7 +245,7 @@ namespace CCXT.Simple.Exchanges
                 {
                     foreach (var c in _xls_data.items)
                     {
-                        var _states = tickers.states.Where(x => x.currency == c.baseName);
+                        var _states = tickers.states.Where(x => x.baseName == c.baseName);
                         if (_states.Count() > 0)
                         {
                             foreach (var s in _states)
@@ -257,7 +257,7 @@ namespace CCXT.Simple.Exchanges
                                     {
                                         s.networks.Add(new WNetwork
                                         {
-                                            name = $"{s.currency}-{n.network}",
+                                            name = $"{s.baseName}-{n.network}",
                                             network = n.network,
                                             chain = n.chain,
 

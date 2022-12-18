@@ -105,12 +105,12 @@ namespace CCXT.Simple.Exchanges.GateIO
 
                     foreach (var c in _jarray)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.currency,
+                                baseName = c.currency,
                                 active = !c.trade_disabled,
                                 deposit = !c.deposit_disabled,
                                 withdraw = !c.withdraw_disabled,
@@ -126,7 +126,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                             _state.withdraw = !c.withdraw_disabled;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

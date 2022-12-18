@@ -22,7 +22,7 @@
 
     public class WState
     {
-        public string currency
+        public string baseName
         {
             get;
             set;

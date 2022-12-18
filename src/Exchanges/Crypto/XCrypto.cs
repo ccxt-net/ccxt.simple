@@ -244,12 +244,12 @@ namespace CCXT.Simple.Exchanges.Crypto
                             var _base_name = m.Key;
                             var _c = JsonConvert.DeserializeObject<CurrencyMap>(m.Value.ToString());
 
-                            var _state = tickers.states.SingleOrDefault(x => x.currency == _base_name);
+                            var _state = tickers.states.SingleOrDefault(x => x.baseName == _base_name);
                             if (_state == null)
                             {
                                 _state = new WState
                                 {
-                                    currency = _base_name,
+                                    baseName = _base_name,
                                     active = true,
                                     deposit = true,
                                     withdraw = true,
@@ -259,7 +259,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                                 tickers.states.Add(_state);
                             }
 
-                            var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                            var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                             if (_t_items != null)
                             {
                                 foreach (var t in _t_items)

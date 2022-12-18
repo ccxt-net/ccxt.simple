@@ -100,12 +100,12 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
                     foreach (var c in _jarray)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.symbol);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.symbol);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.symbol,
+                                baseName = c.symbol,
                                 active = c.status == "ONLINE",
                                 deposit = true,
                                 withdraw = true,
@@ -119,7 +119,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                             _state.active = c.status == "ONLINE";
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

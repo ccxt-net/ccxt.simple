@@ -114,12 +114,12 @@ namespace CCXT.Simple.Exchanges.Coinbase
                     {
                         var _currency = c.id;
 
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == _currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
+                                baseName = _currency,
                                 active = c.status == "online",
                                 deposit = true,
                                 withdraw = true,
@@ -133,7 +133,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                             _state.active = c.status == "online";
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

@@ -159,12 +159,12 @@ namespace CCXT.Simple.Exchanges.Upbit
                         var _deposit = _w.wallet_state == "working" || _w.wallet_state == "deposit_only";
                         var _withdraw = _w.wallet_state == "working" || _w.wallet_state == "withdraw_only";
 
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == c.code);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.code);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = c.code,
+                                baseName = c.code,
 
                                 active = _active,
                                 deposit = _deposit,
@@ -183,7 +183,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                             _state.withdraw = _withdraw;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)

@@ -155,12 +155,12 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         var _deposit = _w.deposit_status == 1;
                         var _withdraw = _w.withdrawal_status == 1;
 
-                        var _state = tickers.states.SingleOrDefault(x => x.currency == _currency);
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == _currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                currency = _currency,
+                                baseName = _currency,
                                 active = _active,
                                 deposit = _deposit,
                                 withdraw = _withdraw,
@@ -176,7 +176,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                             _state.withdraw = _withdraw;
                         }
 
-                        var _t_items = tickers.items.Where(x => x.compName == _state.currency);
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
                         {
                             foreach (var t in _t_items)
