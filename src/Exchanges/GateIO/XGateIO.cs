@@ -53,7 +53,7 @@ namespace CCXT.Simple.Exchanges.GateIO
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currency_pairs");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.CoinInfor>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
                     var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
@@ -101,16 +101,18 @@ namespace CCXT.Simple.Exchanges.GateIO
                 {
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
-                    var _jarray = JsonConvert.DeserializeObject<List<Exchanges.GateIO.CoinState>>(_jstring);
+                    var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
                     foreach (var c in _jarray)
                     {
-                        var _state = tickers.states.SingleOrDefault(x => x.baseName == c.currency);
+                        var _currency = c.currency.Split('_')[0];
+
+                        var _state = tickers.states.SingleOrDefault(x => x.baseName == _currency);
                         if (_state == null)
                         {
                             _state = new WState
                             {
-                                baseName = c.currency,
+                                baseName = _currency,
                                 active = !c.trade_disabled,
                                 deposit = !c.deposit_disabled,
                                 withdraw = !c.withdraw_disabled,
@@ -121,9 +123,9 @@ namespace CCXT.Simple.Exchanges.GateIO
                         }
                         else
                         {
-                            _state.active = !c.trade_disabled;
-                            _state.deposit = !c.deposit_disabled;
-                            _state.withdraw = !c.withdraw_disabled;
+                            _state.active |= !c.trade_disabled;
+                            _state.deposit |= !c.deposit_disabled;
+                            _state.withdraw |= !c.withdraw_disabled;
                         }
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
@@ -137,20 +139,23 @@ namespace CCXT.Simple.Exchanges.GateIO
                             }
                         }
 
-                        var _name = c.currency + "-" + c.chain;
+                        var _network = c.chain;
+                        var _chain = c.chain == "ETH" ? "ERC20" : (c.chain == "BSC" ? "BEP20" : c.chain);
 
-                        var _network = _state.networks.SingleOrDefault(x => x.name == _name);
-                        if (_network == null)
+                        var _name = _currency + "-" + _network;
+
+                        var _nw = _state.networks.SingleOrDefault(x => x.name == _name);
+                        if (_nw == null)
                         {
-                            _network = new WNetwork
+                            _nw = new WNetwork
                             {
                                 name = _name,
-                                network = c.chain,
-                                chain = c.chain,
+                                network = _network,
+                                chain = _chain,
 
                                 deposit = !c.deposit_disabled,
                                 withdraw = !c.withdraw_disabled,
-
+                                
                                 withdrawFee = 0,
                                 minWithdrawal = 0,
                                 maxWithdrawal = 0,
@@ -158,12 +163,12 @@ namespace CCXT.Simple.Exchanges.GateIO
                                 minConfirm = 0
                             };
 
-                            _state.networks.Add(_network);
+                            _state.networks.Add(_nw);
                         }
                         else
                         {
-                            _network.deposit = !c.deposit_disabled;
-                            _network.withdraw = !c.withdraw_disabled;
+                            _nw.deposit = !c.deposit_disabled;
+                            _nw.withdraw = !c.withdraw_disabled;
                         }
                     }
 
