@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace CCXT.Simple.Exchanges.Huobi
 {
     public class Chain
@@ -17,8 +19,13 @@ namespace CCXT.Simple.Exchanges.Huobi
         public int withdrawPrecision { get; set; }
         public decimal maxWithdrawAmt { get; set; }
         public decimal withdrawQuotaPerDay { get; set; }
-        public decimal? withdrawQuotaPerYear { get; set; }
-        public decimal? withdrawQuotaTotal { get; set; }
+
+        [JsonConverter(typeof(XDecimalNullConverter))]
+
+        public decimal withdrawQuotaPerYear { get; set; }
+        [JsonConverter(typeof(XDecimalNullConverter))]
+
+        public decimal withdrawQuotaTotal { get; set; }
         public string withdrawFeeType { get; set; }
         public decimal transactFeeWithdraw { get; set; }
         public bool addrWithTag { get; set; }

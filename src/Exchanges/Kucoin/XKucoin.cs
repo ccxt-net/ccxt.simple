@@ -143,9 +143,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
             {
                 using (var _wc = new HttpClient())
                 {
-                    var _end_point = "/_pxapi/pool-currency/currencies";
-
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeWwUrl}{_end_point}");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeWwUrl}/_api/currency/currency/chain-info");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
@@ -157,7 +155,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _state = new WState
                             {
                                 baseName = c.currency,
-                                active = true,
+                                active = c.isChainEnabled,  
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
                                 networks = new List<WNetwork>()
@@ -167,8 +165,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
                         }
                         else
                         {
-                            _state.deposit = c.isDepositEnabled;
-                            _state.withdraw = c.isWithdrawEnabled;
+                            _state.active |= c.isChainEnabled;
+                            _state.deposit |= c.isDepositEnabled;
+                            _state.withdraw |= c.isWithdrawEnabled;
                         }
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
@@ -190,18 +189,15 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _state.networks.Add(new WNetwork
                             {
                                 name = _name,
-                                network = c.chainFullName,
+                                network = c.chain,
                                 chain = c.chainName,
 
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
-
+                                
                                 minWithdrawal = c.withdrawMinSize,
                                 withdrawFee = c.withdrawMinFee,
 
-                                sellFee = c.makerFeeCoefficient,
-                                buyFee = c.takerFeeCoefficient,
-                                
                                 minConfirm = c.confirmationCount
                             });
                         }

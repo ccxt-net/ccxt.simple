@@ -1,5 +1,16 @@
-﻿namespace CCXT.Simple.Exchanges.Kucoin
+﻿using Newtonsoft.Json;
+
+namespace CCXT.Simple.Exchanges.Kucoin
 {
+    /// <summary>
+    /// https://www.kucoin.com/api/v2/symbols
+    /// </summary>
+    public class CoinInfor
+    {
+        public string code { get; set; }
+        public List<Symbol> data { get; set; }
+    }
+
     public class Symbol
     {
         public string symbol { get; set; }
@@ -16,14 +27,9 @@
         public decimal quoteIncrement { get; set; }
         public decimal priceIncrement { get; set; }
         public decimal priceLimitRate { get; set; }
-        public decimal? minFunds { get; set; }
+        [JsonConverter(typeof(XDecimalNullConverter))]
+        public decimal minFunds { get; set; }
         public bool isMarginEnabled { get; set; }
         public bool enableTrading { get; set; }
-    }
-
-    public class CoinInfor
-    {
-        public string code { get; set; }
-        public List<Symbol> data { get; set; }
     }
 }
