@@ -140,8 +140,6 @@ namespace CCXT.Simple.Exchanges.Bitget
                             {
                                 baseName = c.coinName,
                                 active = c.transfer,
-                                deposit = c.transfer,
-                                withdraw = c.transfer,
                                 networks = new List<WNetwork>()
                             };
 
@@ -150,19 +148,6 @@ namespace CCXT.Simple.Exchanges.Bitget
                         else
                         {
                             _state.active = c.transfer;
-                            _state.deposit = c.transfer;
-                            _state.withdraw = c.transfer;
-                        }
-
-                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
-                        if (_t_items != null)
-                        {
-                            foreach (var t in _t_items)
-                            {
-                                t.active = _state.active;
-                                t.deposit = _state.deposit;
-                                t.withdraw = _state.withdraw;
-                            }
                         }
 
                         foreach (var n in c.chains)
@@ -178,21 +163,30 @@ namespace CCXT.Simple.Exchanges.Bitget
                                     network = c.coinName,
                                     chain = n.chain,
 
-                                    deposit = n.rechargeable,
-                                    withdraw = n.withdrawable,
-
                                     withdrawFee = n.withdrawFee + n.extraWithDrawFee,
                                     minWithdrawal = n.minWithdrawAmount,
-                                    
+
                                     minConfirm = n.depositConfirm
                                 };
 
                                 _state.networks.Add(_network);
                             }
-                            else
+
+                            _network.deposit = n.rechargeable;
+                            _network.withdraw = n.withdrawable;
+
+                            _state.deposit |= n.rechargeable;
+                            _state.withdraw |= n.withdrawable;
+                        }
+
+                        var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
+                        if (_t_items != null)
+                        {
+                            foreach (var t in _t_items)
                             {
-                                _network.deposit = n.rechargeable;
-                                _network.withdraw = n.withdrawable;
+                                t.active = _state.active;
+                                t.deposit = _state.deposit;
+                                t.withdraw = _state.withdraw;
                             }
                         }
                     }
