@@ -279,7 +279,7 @@ namespace CCXT.Simple.Exchanges
                 }
             }
 
-            await Task.Delay(0);
+            await Task.Delay(100);
 
             return _result;
         }
