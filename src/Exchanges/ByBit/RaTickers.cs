@@ -1,45 +1,71 @@
 ﻿namespace CCXT.Simple.Exchanges.Bybit
 {
     /// <summary>
-    /// https://api.bybit.com/v2/public/tickers
+    /// https://api.bybit.com/spot/v3/public/quote/ticker/24hr
     /// </summary>
     public class RaTickers
     {
-        public int ret_code { get; set; }
-        public string ret_msg { get; set; }
-        public List<RaResult> result { get; set; }
-        public string ext_code { get; set; }
-        public string ext_info { get; set; }
-        public string time_now { get; set; }
+        public int retCode { get; set; }
+        public string retMsg { get; set; }
+        public RTResult result { get; set; }
+        public long time { get; set; }
     }
 
-    public class RaResult
+    public class RTResult
     {
-        public string symbol { get; set; }
-        public decimal bid_price { get; set; }
-        public decimal ask_price { get; set; }
-        public decimal last_price { get; set; }
-        public string last_tick_direction { get; set; }
-        public decimal prev_price_24h { get; set; }
-        public decimal price_24h_pcnt { get; set; }
-        public decimal high_price_24h { get; set; }
-        public decimal low_price_24h { get; set; }
-        public decimal prev_price_1h { get; set; }
-        public decimal mark_price { get; set; }
-        public decimal index_price { get; set; }
-        public decimal open_interest { get; set; }
-        public int countdown_hour { get; set; }
-        public decimal turnover_24h { get; set; }
-        public decimal volume_24h { get; set; }
-        public decimal funding_rate { get; set; }
-        public decimal predicted_funding_rate { get; set; }
-        public DateTime next_funding_time { get; set; }
-        public decimal predicted_delivery_price { get; set; }
-        public decimal total_turnover { get; set; }
-        public decimal total_volume { get; set; }
-        public decimal delivery_fee_rate { get; set; }
-        public string delivery_time { get; set; }
-        public string price_1h_pcnt { get; set; }
-        public string open_value { get; set; }
+        public List<RaTicker> list { get; set; }
+    }
+
+    public class RaTicker
+    {
+        /// <summary>
+        /// Current timestamp, unit in millisecond
+        /// </summary>
+        public long t { get; set; }
+
+        /// <summary>
+        /// Name of the trading pair
+        /// </summary>
+        public string s { get; set; }
+
+        /// <summary>
+        /// Last traded price
+        /// </summary>
+        public decimal lp { get; set; }
+
+        /// <summary>
+        /// Best bid price
+        /// </summary>
+        public decimal bp { get; set; }
+
+        /// <summary>
+        /// Best ask price
+        /// </summary>
+        public decimal ap { get; set; }
+
+        /// <summary>
+        /// Open price
+        /// </summary>
+        public decimal o { get; set; }
+
+        /// <summary>
+        /// High price
+        /// </summary>
+        public decimal h { get; set; }
+
+        /// <summary>
+        /// Low price
+        /// </summary>
+        public decimal l { get; set; }
+
+        /// <summary>
+        /// Trading volume
+        /// </summary>
+        public decimal v { get; set; }
+
+        /// <summary>
+        /// Trading quote volume
+        /// </summary>
+        public decimal qv { get; set; }
     }
 }

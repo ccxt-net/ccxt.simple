@@ -62,16 +62,16 @@ namespace CCXT.Simple.Exchanges.Bybit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/symbols");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/spot/v3/public/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring, mainXchg.JsonSettings);
 
                     var _queue_info = mainXchg.GetXInfors(ExchangeName);
 
-                    foreach (var c in _jarray.result)
+                    foreach (var c in _jarray.result.list)
                     {
-                        var _base = c.base_currency;
-                        var _quote = c.quote_currency;
+                        var _base = c.baseCoin;
+                        var _quote = c.quoteCoin;
 
                         if (_quote == "USDT" || _quote == "USD")
                         {
@@ -82,16 +82,11 @@ namespace CCXT.Simple.Exchanges.Bybit
                                 baseName = _base,
                                 quoteName = _quote,
 
-                                minPrice = c.price_filter.min_price,
-                                maxPrice = c.price_filter.max_price,
-                                tickSize = c.price_filter.tick_size,
+                                minPrice = c.minTradeAmt,
+                                maxPrice = c.maxTradeAmt,
 
-                                minQty = c.lot_size_filter.min_trading_qty,
-                                maxQty = c.lot_size_filter.max_trading_qty,
-                                qtyStep = c.lot_size_filter.qty_step,
-
-                                makerFee = c.maker_fee,
-                                takerFee = c.taker_fee
+                                minQty = c.minTradeQty,
+                                maxQty = c.maxTradeQty
                             });
                         }
                     }
@@ -144,7 +139,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             client.DefaultRequestHeaders.Add("X-BAPI-RECV-WINDOW", _recv_window.ToString());
         }
 
-        public async ValueTask<bool> VerifyStates(Tickers tickers)
+        public async ValueTask<bool> VerifyStates(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -241,7 +236,7 @@ namespace CCXT.Simple.Exchanges.Bybit
         }
 
 
-        public async ValueTask<bool> GetMarkets(Tickers tickers)
+        public async ValueTask<bool> GetMarkets(Data.Tickers tickers)
         {
             var _result = false;
 
@@ -249,7 +244,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             {
                 using (var _wc = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/tickers");
+                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/spot/v3/public/quote/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
@@ -259,22 +254,22 @@ namespace CCXT.Simple.Exchanges.Bybit
                         if (_ticker.symbol == "X")
                             continue;
 
-                        var _jobject = _jtickers.result.Find(x => x.symbol == _ticker.symbol);
+                        var _jobject = _jtickers.result.list.Find(x => x.s == _ticker.symbol);
                         if (_jobject != null)
                         {
                             if (_ticker.quoteName == "USDT" || _ticker.quoteName == "USD")
                             {
-                                var _price = _jobject.last_price;
+                                var _price = _jobject.lp;
                                 {
-                                    var _ask_price = _jobject.ask_price;
-                                    var _bid_price = _jobject.bid_price;
+                                    var _ask_price = _jobject.ap;
+                                    var _bid_price = _jobject.bp;
 
                                     _ticker.lastPrice = _price * tickers.exchgRate;
                                     _ticker.askPrice = _ask_price * tickers.exchgRate;
                                     _ticker.bidPrice = _bid_price * tickers.exchgRate;
                                 }
 
-                                var _volume = _jobject.turnover_24h;
+                                var _volume = _jobject.qv;
                                 {
                                     var _prev_volume24h = _ticker.previous24h;
                                     var _next_timestamp = _ticker.timestamp + 60 * 1000;
@@ -311,7 +306,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             return _result;
         }
 
-        ValueTask<bool> IExchange.GetBookTickers(Tickers tickers)
+        ValueTask<bool> IExchange.GetBookTickers(Data.Tickers tickers)
         {
             throw new NotImplementedException();
         }
@@ -321,12 +316,12 @@ namespace CCXT.Simple.Exchanges.Bybit
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetTickers(Tickers tickers)
+        ValueTask<bool> IExchange.GetTickers(Data.Tickers tickers)
         {
             throw new NotImplementedException();
         }
 
-        ValueTask<bool> IExchange.GetVolumes(Tickers tickers)
+        ValueTask<bool> IExchange.GetVolumes(Data.Tickers tickers)
         {
             throw new NotImplementedException();
         }
