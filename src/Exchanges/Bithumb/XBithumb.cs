@@ -2,7 +2,6 @@
 using CCXT.Simple.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Diagnostics;
 using System.Net;
 using System.Security.Cryptography;
