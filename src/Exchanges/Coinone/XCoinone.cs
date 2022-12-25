@@ -120,20 +120,15 @@ namespace CCXT.Simple.Exchanges.Coinone
                             _state = new WState
                             {
                                 baseName = c.symbol,
-                                active = c.is_activate,
-                                deposit = c.is_deposit,
-                                withdraw = c.is_withdraw,
                                 networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
                         }
-                        else
-                        {
-                            _state.active = c.is_activate;
-                            _state.deposit = c.is_deposit;
-                            _state.withdraw = c.is_withdraw;
-                        }
+
+                        _state.active = c.is_activate;
+                        _state.deposit = c.is_deposit;
+                        _state.withdraw = c.is_withdraw;
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
@@ -151,30 +146,24 @@ namespace CCXT.Simple.Exchanges.Coinone
                         var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                         if (_network == null)
                         {
-      
                             _network = new WNetwork
                             {
                                 name = _name,
                                 network = c.network_type,
-                                chain = c.token_type,
-
-                                deposit = _state.deposit,
-                                withdraw = _state.withdraw,
+                                chain = c.token_type.Replace("-", ""),
 
                                 depositFee = c.tx_deposit_fee,
                                 minConfirm = c.deposit_confirm_time_min,
-                                
+
                                 withdrawFee = c.tx_withdraw_fee,
                                 minWithdrawal = c.min_withdraw_amount
                             };
 
                             _state.networks.Add(_network);
                         }
-                        else
-                        {
-                            _network.deposit = _state.deposit;
-                            _network.withdraw = _state.withdraw;
-                        }
+
+                        _network.deposit = _state.deposit;
+                        _network.withdraw = _state.withdraw;
                     }
 
                     _result = true;

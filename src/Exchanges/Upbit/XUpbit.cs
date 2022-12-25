@@ -1,5 +1,4 @@
 ﻿using CCXT.Simple.Data;
-using CCXT.Simple.Exchanges.Crypto;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
@@ -165,23 +164,16 @@ namespace CCXT.Simple.Exchanges.Upbit
                             _state = new WState
                             {
                                 baseName = c.code,
-
-                                active = _active,
-                                deposit = _deposit,
-                                withdraw = _withdraw,
-
                                 travelRule = true,
                                 networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
                         }
-                        else
-                        {
-                            _state.active = _active;
-                            _state.deposit = _deposit;
-                            _state.withdraw = _withdraw;
-                        }
+
+                        _state.active = _active;
+                        _state.deposit = _deposit;
+                        _state.withdraw = _withdraw;
 
                         var _t_items = tickers.items.Where(x => x.compName == _state.baseName);
                         if (_t_items != null)
@@ -199,23 +191,20 @@ namespace CCXT.Simple.Exchanges.Upbit
                         var _network = _state.networks.SingleOrDefault(x => x.name == _name);
                         if (_network == null)
                         {
-                            _state.networks.Add(new WNetwork
+                            _network = new WNetwork
                             {
                                 name = _name,
                                 network = c.code,
                                 chain = (c.net_type == null || c.net_type == "메인넷") ? c.code : c.net_type.Replace("-", ""),
 
-                                withdrawFee = c.withdraw_fee,
+                                withdrawFee = c.withdraw_fee
+                            };
 
-                                deposit = _state.deposit,
-                                withdraw = _state.withdraw
-                            });
+                            _state.networks.Add(_network);
                         }
-                        else
-                        {
-                            _state.deposit = _state.deposit;
-                            _state.withdraw = _state.withdraw;
-                        }
+
+                        _network.deposit = _state.deposit;
+                        _network.withdraw = _state.withdraw;
                     }
 
                     _result = true;

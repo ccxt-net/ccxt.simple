@@ -139,16 +139,13 @@ namespace CCXT.Simple.Exchanges.Bitget
                             _state = new WState
                             {
                                 baseName = c.coinName,
-                                active = c.transfer,
                                 networks = new List<WNetwork>()
                             };
 
                             tickers.states.Add(_state);
                         }
-                        else
-                        {
-                            _state.active = c.transfer;
-                        }
+
+                        _state.active = c.transfer;
 
                         foreach (var n in c.chains)
                         {
