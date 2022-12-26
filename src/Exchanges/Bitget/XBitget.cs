@@ -145,8 +145,6 @@ namespace CCXT.Simple.Exchanges.Bitget
                             tickers.states.Add(_state);
                         }
 
-                        _state.active = c.transfer;
-
                         foreach (var n in c.chains)
                         {
                             var _name = c.coinName + "-" + n.chain;
@@ -172,6 +170,7 @@ namespace CCXT.Simple.Exchanges.Bitget
                             _network.deposit = n.rechargeable;
                             _network.withdraw = n.withdrawable;
 
+                            _state.active |= n.rechargeable || n.withdrawable;
                             _state.deposit |= n.rechargeable;
                             _state.withdraw |= n.withdrawable;
                         }

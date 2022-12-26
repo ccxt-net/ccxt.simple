@@ -1,6 +1,27 @@
 ﻿namespace CCXT.Simple.Exchanges.Binance
 {
- public class NetworkList
+    /// <summary>
+    /// https://api.binance.com/sapi/v1/capital/config/getall?signature
+    /// </summary>
+    public class CoinState
+    {
+        public string coin { get; set; }
+        public bool depositAllEnable { get; set; }
+        public bool withdrawAllEnable { get; set; }
+        public string name { get; set; }
+        public decimal free { get; set; }
+        public int locked { get; set; }
+        public int freeze { get; set; }
+        public int withdrawing { get; set; }
+        public int ipoing { get; set; }
+        public int ipoable { get; set; }
+        public int storage { get; set; }
+        public bool isLegalMoney { get; set; }
+        public bool trading { get; set; }
+        public List<NetworkList> networkList { get; set; }
+    }
+
+    public class NetworkList
     {
         public string network { get; set; }
         public string coin { get; set; }
@@ -26,23 +47,5 @@
         public int estimatedArrivalTime { get; set; }
         public bool busy { get; set; }
         public string country { get; set; }
-    }
-
-    public class CoinState
-    {
-        public string coin { get; set; }
-        public bool depositAllEnable { get; set; }
-        public bool withdrawAllEnable { get; set; }
-        public string name { get; set; }
-        public decimal free { get; set; }
-        public int locked { get; set; }
-        public int freeze { get; set; }
-        public int withdrawing { get; set; }
-        public int ipoing { get; set; }
-        public int ipoable { get; set; }
-        public int storage { get; set; }
-        public bool isLegalMoney { get; set; }
-        public bool trading { get; set; }
-        public List<NetworkList> networkList { get; set; }
     }
 }

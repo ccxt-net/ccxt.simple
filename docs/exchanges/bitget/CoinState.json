@@ -22,7 +22,7 @@
           "depositConfirm": "1",
           "extraWithDrawFee": "0",
           "minDepositAmount": "0.0006",
-          "minWithdrawAmount": "0.001",
+          "minWithdrawAmount": "0.008",
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
@@ -122,22 +122,22 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "4",
           "needTag": "false",
-          "rechargeable": "false",
+          "rechargeable": "true",
           "withdrawConfirm": "24",
           "withdrawFee": "0.00039",
-          "withdrawable": "false"
+          "withdrawable": "true"
         },
         {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
+          "browserUrl": "https://solscan.io/tx/",
+          "chain": "SOL",
+          "depositConfirm": "5",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "1",
+          "minDepositAmount": "0.01",
           "minWithdrawAmount": "10",
           "needTag": "false",
           "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "0.29",
+          "withdrawConfirm": "5",
+          "withdrawFee": "0.1",
           "withdrawable": "true"
         },
         {
@@ -154,16 +154,16 @@
           "withdrawable": "true"
         },
         {
-          "browserUrl": "https://solscan.io/tx/",
-          "chain": "SOL",
-          "depositConfirm": "5",
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.01",
+          "minDepositAmount": "1",
           "minWithdrawAmount": "10",
           "needTag": "false",
           "rechargeable": "true",
-          "withdrawConfirm": "5",
-          "withdrawFee": "0.1",
+          "withdrawConfirm": "15",
+          "withdrawFee": "0.29",
           "withdrawable": "true"
         }
       ],
@@ -173,6 +173,19 @@
     },
     {
       "chains": [
+        {
+          "browserUrl": "https://etherscan.io/tx/",
+          "chain": "ETH",
+          "depositConfirm": "12",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.001",
+          "minWithdrawAmount": "0.001",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "1",
+          "withdrawFee": "0.0006144",
+          "withdrawable": "true"
+        },
         {
           "browserUrl": "https://nova-explorer.arbitrum.io/tx/",
           "chain": "ArbitrumNova",
@@ -187,37 +200,11 @@
           "withdrawable": "false"
         },
         {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
-          "extraWithDrawFee": "0",
-          "minDepositAmount": "0.0001",
-          "minWithdrawAmount": "0.0001",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "0.00014",
-          "withdrawable": "true"
-        },
-        {
-          "browserUrl": "https://etherscan.io/tx/",
-          "chain": "ETH",
-          "depositConfirm": "12",
-          "extraWithDrawFee": "0",
-          "minDepositAmount": "0.01",
-          "minWithdrawAmount": "0.001",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "1",
-          "withdrawFee": "0.0006144",
-          "withdrawable": "true"
-        },
-        {
           "browserUrl": "https://optimistic.etherscan.io/tx/",
           "chain": "Optimism",
           "depositConfirm": "50",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.05",
+          "minDepositAmount": "0.0001",
           "minWithdrawAmount": "0.111",
           "needTag": "false",
           "rechargeable": "true",
@@ -230,12 +217,25 @@
           "chain": "ArbitrumOne",
           "depositConfirm": "24",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.05",
+          "minDepositAmount": "0.0001",
           "minWithdrawAmount": "0.111",
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "24",
           "withdrawFee": "0.0001",
+          "withdrawable": "true"
+        },
+        {
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.0001",
+          "minWithdrawAmount": "0.0001",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "15",
+          "withdrawFee": "0.00014",
           "withdrawable": "true"
         }
       ],
@@ -328,7 +328,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.06",
+          "withdrawFee": "0.07",
           "withdrawable": "true"
         }
       ],
@@ -346,7 +346,7 @@
           "minDepositAmount": "100000",
           "minWithdrawAmount": "100000",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "1344086.03",
           "withdrawable": "true"
@@ -368,7 +368,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "74626865.68",
+          "withdrawFee": "104493207.95",
           "withdrawable": "true"
         }
       ],
@@ -408,7 +408,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1174.11",
+          "withdrawFee": "1516.47",
           "withdrawable": "true"
         }
       ],
@@ -428,7 +428,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4.26",
+          "withdrawFee": "5.3",
           "withdrawable": "true"
         }
       ],
@@ -448,7 +448,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "143.68",
+          "withdrawFee": "178.44",
           "withdrawable": "true"
         }
       ],
@@ -468,7 +468,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "75.6",
+          "withdrawFee": "75.19",
           "withdrawable": "true"
         }
       ],
@@ -488,7 +488,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1913.62",
+          "withdrawFee": "2508.07",
           "withdrawable": "true"
         }
       ],
@@ -506,7 +506,7 @@
           "minDepositAmount": "0.1",
           "minWithdrawAmount": "1",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "2.52",
           "withdrawable": "true"
@@ -546,7 +546,7 @@
           "minDepositAmount": "10000",
           "minWithdrawAmount": "1000000",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "1730403.19",
           "withdrawable": "true"
@@ -588,7 +588,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3200.74",
+          "withdrawFee": "3761.42",
           "withdrawable": "true"
         }
       ],
@@ -608,7 +608,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "15.09",
+          "withdrawFee": "18.32",
           "withdrawable": "true"
         }
       ],
@@ -628,7 +628,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "7.91",
+          "withdrawFee": "9.87",
           "withdrawable": "true"
         }
       ],
@@ -648,7 +648,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.53",
+          "withdrawFee": "0.75",
           "withdrawable": "true"
         }
       ],
@@ -668,7 +668,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "945562.61",
+          "withdrawFee": "2627627.63",
           "withdrawable": "true"
         }
       ],
@@ -688,7 +688,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "53.14",
+          "withdrawFee": "49.8",
           "withdrawable": "true"
         }
       ],
@@ -708,8 +708,8 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "565.43",
-          "withdrawable": "true"
+          "withdrawFee": "2491.11",
+          "withdrawable": "false"
         }
       ],
       "coinId": "518",
@@ -728,7 +728,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "9.28",
+          "withdrawFee": "9.65",
           "withdrawable": "true"
         }
       ],
@@ -748,7 +748,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2784.41",
+          "withdrawFee": "2849.01",
           "withdrawable": "true"
         }
       ],
@@ -808,7 +808,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.35",
+          "withdrawFee": "1.84",
           "withdrawable": "true"
         }
       ],
@@ -828,7 +828,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "254.92",
+          "withdrawFee": "200",
           "withdrawable": "true"
         }
       ],
@@ -868,7 +868,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1144.92",
+          "withdrawFee": "1395.82",
           "withdrawable": "true"
         }
       ],
@@ -888,7 +888,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "37837837837.84",
+          "withdrawFee": "44871794871.8",
           "withdrawable": "true"
         }
       ],
@@ -908,7 +908,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "68.2",
+          "withdrawFee": "75.37",
           "withdrawable": "true"
         }
       ],
@@ -966,7 +966,7 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "3000",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "60",
           "withdrawFee": "384.92",
           "withdrawable": "true"
@@ -988,7 +988,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "7.42",
+          "withdrawFee": "9.13",
           "withdrawable": "true"
         }
       ],
@@ -1068,7 +1068,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "83.56",
+          "withdrawFee": "98.54",
           "withdrawable": "true"
         }
       ],
@@ -1088,7 +1088,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "2.19",
+          "withdrawFee": "2.61",
           "withdrawable": "true"
         }
       ],
@@ -1108,7 +1108,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.51",
+          "withdrawFee": "2.18",
           "withdrawable": "true"
         }
       ],
@@ -1129,7 +1129,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "0.06",
-          "withdrawable": "true"
+          "withdrawable": "false"
         },
         {
           "browserUrl": "https://etherscan.io/tx/",
@@ -1161,7 +1161,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "381.89",
+          "withdrawFee": "485.44",
           "withdrawable": "true"
         }
       ],
@@ -1181,7 +1181,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1635.9",
+          "withdrawFee": "1864.68",
           "withdrawable": "true"
         }
       ],
@@ -1201,7 +1201,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "33.51",
+          "withdrawFee": "45.31",
           "withdrawable": "true"
         }
       ],
@@ -1241,7 +1241,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.22",
+          "withdrawFee": "0.25",
           "withdrawable": "true"
         }
       ],
@@ -1281,7 +1281,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "46.64",
+          "withdrawFee": "54.02",
           "withdrawable": "true"
         }
       ],
@@ -1301,7 +1301,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "444.17",
+          "withdrawFee": "583.82",
           "withdrawable": "true"
         }
       ],
@@ -1321,7 +1321,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2.2",
+          "withdrawFee": "2.42",
           "withdrawable": "true"
         }
       ],
@@ -1361,7 +1361,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "18.01",
+          "withdrawFee": "20.13",
           "withdrawable": "true"
         }
       ],
@@ -1401,7 +1401,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "790.28",
+          "withdrawFee": "955.75",
           "withdrawable": "true"
         }
       ],
@@ -1441,7 +1441,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "492.34",
+          "withdrawFee": "524.7",
           "withdrawable": "false"
         }
       ],
@@ -1459,7 +1459,7 @@
           "minDepositAmount": "10",
           "minWithdrawAmount": "300",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "60",
           "withdrawFee": "909.1",
           "withdrawable": "false"
@@ -1521,7 +1521,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "12.13",
+          "withdrawFee": "14.82",
           "withdrawable": "true"
         }
       ],
@@ -1581,7 +1581,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.06",
+          "withdrawFee": "0.07",
           "withdrawable": "true"
         }
       ],
@@ -1641,7 +1641,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "782.65",
+          "withdrawFee": "876.65",
           "withdrawable": "true"
         }
       ],
@@ -1661,7 +1661,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "74.97",
+          "withdrawFee": "86.89",
           "withdrawable": "true"
         }
       ],
@@ -1701,7 +1701,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.27",
+          "withdrawFee": "1.54",
           "withdrawable": "true"
         }
       ],
@@ -1721,7 +1721,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.74",
+          "withdrawFee": "1.7",
           "withdrawable": "true"
         }
       ],
@@ -1741,7 +1741,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "21.46",
+          "withdrawFee": "27.14",
           "withdrawable": "true"
         }
       ],
@@ -1761,7 +1761,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.11",
+          "withdrawFee": "3.75",
           "withdrawable": "true"
         }
       ],
@@ -1781,7 +1781,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "7.61",
+          "withdrawFee": "8.24",
           "withdrawable": "true"
         }
       ],
@@ -1801,7 +1801,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "76.37",
+          "withdrawFee": "92.57",
           "withdrawable": "true"
         }
       ],
@@ -1819,7 +1819,7 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "100",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "270.71",
           "withdrawable": "true"
@@ -1841,7 +1841,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "39.67",
+          "withdrawFee": "53.2",
           "withdrawable": "true"
         }
       ],
@@ -1921,7 +1921,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.69",
+          "withdrawFee": "1.95",
           "withdrawable": "true"
         }
       ],
@@ -1941,7 +1941,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6664.66",
+          "withdrawFee": "6251.92",
           "withdrawable": "true"
         }
       ],
@@ -2001,7 +2001,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "8055.24",
+          "withdrawFee": "7821.23",
           "withdrawable": "true"
         }
       ],
@@ -2021,7 +2021,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "3.6",
+          "withdrawFee": "3.89",
           "withdrawable": "false"
         }
       ],
@@ -2061,7 +2061,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.45",
+          "withdrawFee": "2.08",
           "withdrawable": "true"
         }
       ],
@@ -2101,7 +2101,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.24",
+          "withdrawFee": "2.36",
           "withdrawable": "true"
         }
       ],
@@ -2119,9 +2119,9 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "100",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "3269.2",
+          "withdrawFee": "5710.1",
           "withdrawable": "true"
         }
       ],
@@ -2132,6 +2132,19 @@
     {
       "chains": [
         {
+          "browserUrl": "https://etherscan.io/tx/",
+          "chain": "ERC20",
+          "depositConfirm": "12",
+          "extraWithDrawFee": "0.06",
+          "minDepositAmount": "1",
+          "minWithdrawAmount": "100",
+          "needTag": "false",
+          "rechargeable": "false",
+          "withdrawConfirm": "12",
+          "withdrawFee": "417.19",
+          "withdrawable": "true"
+        },
+        {
           "browserUrl": "https://bscscan.com/tx/",
           "chain": "BEP20",
           "depositConfirm": "15",
@@ -2141,21 +2154,8 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "46.51",
+          "withdrawFee": "59.6",
           "withdrawable": "false"
-        },
-        {
-          "browserUrl": "https://etherscan.io/tx/",
-          "chain": "ERC20",
-          "depositConfirm": "12",
-          "extraWithDrawFee": "0.06",
-          "minDepositAmount": "1",
-          "minWithdrawAmount": "100",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "12",
-          "withdrawFee": "325.51",
-          "withdrawable": "true"
         }
       ],
       "coinId": "430",
@@ -2174,7 +2174,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "224.51",
+          "withdrawFee": "245.1",
           "withdrawable": "true"
         }
       ],
@@ -2194,7 +2194,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "3.99",
+          "withdrawFee": "3.38",
           "withdrawable": "true"
         }
       ],
@@ -2214,7 +2214,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "645.17",
+          "withdrawFee": "324.72",
           "withdrawable": "true"
         }
       ],
@@ -2274,7 +2274,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "27.66",
+          "withdrawFee": "29.89",
           "withdrawable": "true"
         }
       ],
@@ -2294,7 +2294,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10.9",
+          "withdrawFee": "13.66",
           "withdrawable": "true"
         }
       ],
@@ -2314,7 +2314,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "811.13",
+          "withdrawFee": "970.88",
           "withdrawable": "true"
         }
       ],
@@ -2352,10 +2352,10 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "100",
           "needTag": "false",
-          "rechargeable": "false",
+          "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1359.49",
-          "withdrawable": "false"
+          "withdrawFee": "1710.66",
+          "withdrawable": "true"
         }
       ],
       "coinId": "554",
@@ -2394,7 +2394,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "20",
-          "withdrawFee": "6.38",
+          "withdrawFee": "7.47",
           "withdrawable": "true"
         }
       ],
@@ -2414,7 +2414,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.51",
+          "withdrawFee": "0.5",
           "withdrawable": "true"
         }
       ],
@@ -2454,7 +2454,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "16.58",
+          "withdrawFee": "18.88",
           "withdrawable": "true"
         }
       ],
@@ -2474,7 +2474,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.43",
+          "withdrawFee": "0.74",
           "withdrawable": "true"
         }
       ],
@@ -2494,7 +2494,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "73.25",
+          "withdrawFee": "59",
           "withdrawable": "true"
         }
       ],
@@ -2534,7 +2534,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "86.42",
+          "withdrawFee": "102.74",
           "withdrawable": "true"
         }
       ],
@@ -2574,7 +2574,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "26.17",
+          "withdrawFee": "33.45",
           "withdrawable": "true"
         }
       ],
@@ -2594,7 +2594,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "382.52",
+          "withdrawFee": "439.7",
           "withdrawable": "true"
         }
       ],
@@ -2634,7 +2634,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "4.74",
+          "withdrawFee": "5.91",
           "withdrawable": "true"
         }
       ],
@@ -2654,7 +2654,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.21",
+          "withdrawFee": "0.27",
           "withdrawable": "true"
         }
       ],
@@ -2674,7 +2674,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "182.34",
+          "withdrawFee": "235.36",
           "withdrawable": "true"
         }
       ],
@@ -2694,7 +2694,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "8.14",
+          "withdrawFee": "9.73",
           "withdrawable": "true"
         }
       ],
@@ -2734,7 +2734,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2490.47",
+          "withdrawFee": "2491.42",
           "withdrawable": "true"
         }
       ],
@@ -2754,7 +2754,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "2971768202.09",
+          "withdrawFee": "3200000000",
           "withdrawable": "true"
         }
       ],
@@ -2792,9 +2792,9 @@
           "minDepositAmount": "0.1",
           "minWithdrawAmount": "10",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.95",
+          "withdrawFee": "2.6",
           "withdrawable": "true"
         }
       ],
@@ -2834,7 +2834,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "94.34",
+          "withdrawFee": "100.23",
           "withdrawable": "true"
         }
       ],
@@ -2874,7 +2874,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.03",
+          "withdrawFee": "0.04",
           "withdrawable": "true"
         }
       ],
@@ -2914,7 +2914,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "26.03",
+          "withdrawFee": "61.32",
           "withdrawable": "true"
         },
         {
@@ -2927,7 +2927,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "182.16",
+          "withdrawFee": "429.24",
           "withdrawable": "true"
         }
       ],
@@ -2947,7 +2947,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1750.44",
+          "withdrawFee": "2244.31",
           "withdrawable": "true"
         }
       ],
@@ -2967,7 +2967,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.02",
+          "withdrawFee": "0.04",
           "withdrawable": "true"
         }
       ],
@@ -2987,7 +2987,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1310370.65",
+          "withdrawFee": "1227424.17",
           "withdrawable": "true"
         }
       ],
@@ -2998,19 +2998,6 @@
     {
       "chains": [
         {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
-          "extraWithDrawFee": "0",
-          "minDepositAmount": "1",
-          "minWithdrawAmount": "100",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "512.04",
-          "withdrawable": "true"
-        },
-        {
           "browserUrl": "https://etherscan.io/tx/",
           "chain": "ERC20",
           "depositConfirm": "12",
@@ -3018,9 +3005,22 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "100",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "3584.23",
+          "withdrawFee": "4891.69",
+          "withdrawable": "true"
+        },
+        {
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "1",
+          "minWithdrawAmount": "100",
+          "needTag": "false",
+          "rechargeable": "false",
+          "withdrawConfirm": "15",
+          "withdrawFee": "698.82",
           "withdrawable": "true"
         }
       ],
@@ -3041,7 +3041,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "1.17",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "202",
@@ -3113,7 +3113,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.15",
+          "withdrawFee": "0.19",
           "withdrawable": "false"
         }
       ],
@@ -3124,16 +3124,16 @@
     {
       "chains": [
         {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
+          "browserUrl": "https://tonscan.org/tx/",
+          "chain": "TON",
+          "depositConfirm": "100",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.1",
-          "minWithdrawAmount": "0.5",
-          "needTag": "false",
+          "minDepositAmount": "0.01",
+          "minWithdrawAmount": "0.001",
+          "needTag": "true",
           "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "0.56",
+          "withdrawConfirm": "100",
+          "withdrawFee": "0.01",
           "withdrawable": "true"
         },
         {
@@ -3146,7 +3146,20 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.87",
+          "withdrawFee": "2.89",
+          "withdrawable": "true"
+        },
+        {
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.1",
+          "minWithdrawAmount": "0.5",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "15",
+          "withdrawFee": "0.42",
           "withdrawable": "true"
         }
       ],
@@ -3186,7 +3199,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "380.03",
+          "withdrawFee": "447",
           "withdrawable": "true"
         }
       ],
@@ -3224,7 +3237,7 @@
           "minDepositAmount": "2",
           "minWithdrawAmount": "30",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "15",
           "withdrawable": "true"
@@ -3246,7 +3259,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.02",
+          "withdrawFee": "0.03",
           "withdrawable": "true"
         }
       ],
@@ -3287,7 +3300,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "5.29",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "567",
@@ -3344,7 +3357,7 @@
           "minDepositAmount": "10000000",
           "minWithdrawAmount": "2",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "60",
           "withdrawFee": "1075962986.88",
           "withdrawable": "true"
@@ -3406,7 +3419,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "20.91",
+          "withdrawFee": "33.37",
           "withdrawable": "true"
         }
       ],
@@ -3444,7 +3457,7 @@
           "minDepositAmount": "8",
           "minWithdrawAmount": "240",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "239.81",
           "withdrawable": "true"
@@ -3486,7 +3499,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10.77",
+          "withdrawFee": "10.65",
           "withdrawable": "true"
         }
       ],
@@ -3507,7 +3520,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "1.98",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "208",
@@ -3526,7 +3539,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1976.29",
+          "withdrawFee": "2188.19",
           "withdrawable": "true"
         }
       ],
@@ -3566,7 +3579,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4.1",
+          "withdrawFee": "4.16",
           "withdrawable": "true"
         }
       ],
@@ -3606,7 +3619,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "14.73",
+          "withdrawFee": "21.32",
           "withdrawable": "false"
         }
       ],
@@ -3646,7 +3659,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10.05",
+          "withdrawFee": "13.7",
           "withdrawable": "true"
         }
       ],
@@ -3666,7 +3679,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "424.5",
+          "withdrawFee": "403.02",
           "withdrawable": "true"
         }
       ],
@@ -3686,7 +3699,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.79",
+          "withdrawFee": "1.95",
           "withdrawable": "true"
         }
       ],
@@ -3739,7 +3752,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.93",
+          "withdrawFee": "1.25",
           "withdrawable": "true"
         }
       ],
@@ -3757,10 +3770,10 @@
           "minDepositAmount": "0.001",
           "minWithdrawAmount": "0.1",
           "needTag": "true",
-          "rechargeable": "false",
+          "rechargeable": "true",
           "withdrawConfirm": "24",
           "withdrawFee": "0.01",
-          "withdrawable": "false"
+          "withdrawable": "true"
         }
       ],
       "coinId": "573",
@@ -3779,7 +3792,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10956.34",
+          "withdrawFee": "12960.57",
           "withdrawable": "true"
         }
       ],
@@ -3899,7 +3912,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "262.77",
+          "withdrawFee": "307.43",
           "withdrawable": "true"
         }
       ],
@@ -3919,7 +3932,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "153.97",
+          "withdrawFee": "151.15",
           "withdrawable": "true"
         }
       ],
@@ -3937,7 +3950,7 @@
           "minDepositAmount": "0.01",
           "minWithdrawAmount": "1",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "0",
           "withdrawable": "true"
@@ -3959,7 +3972,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "16.76",
+          "withdrawFee": "21.98",
           "withdrawable": "true"
         }
       ],
@@ -4039,7 +4052,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2306.79",
+          "withdrawFee": "3209.57",
           "withdrawable": "true"
         }
       ],
@@ -4145,7 +4158,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "68.48",
+          "withdrawFee": "56.24",
           "withdrawable": "true"
         }
       ],
@@ -4198,7 +4211,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "96.65",
+          "withdrawFee": "120.49",
           "withdrawable": "true"
         }
       ],
@@ -4238,7 +4251,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "7193209.62",
+          "withdrawFee": "7861635.23",
           "withdrawable": "true"
         }
       ],
@@ -4258,7 +4271,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "13.44",
+          "withdrawFee": "16.81",
           "withdrawable": "true"
         }
       ],
@@ -4278,7 +4291,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "31.17",
+          "withdrawFee": "35.66",
           "withdrawable": "true"
         }
       ],
@@ -4318,7 +4331,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "101.13",
+          "withdrawFee": "117.89",
           "withdrawable": "true"
         }
       ],
@@ -4338,7 +4351,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.44",
+          "withdrawFee": "0.78",
           "withdrawable": "true"
         }
       ],
@@ -4358,7 +4371,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "703.81",
+          "withdrawFee": "1253.14",
           "withdrawable": "true"
         }
       ],
@@ -4378,7 +4391,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "2068.69",
+          "withdrawFee": "2085.08",
           "withdrawable": "true"
         }
       ],
@@ -4389,6 +4402,19 @@
     {
       "chains": [
         {
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "1",
+          "minWithdrawAmount": "100",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "15",
+          "withdrawFee": "264.42",
+          "withdrawable": "true"
+        },
+        {
           "browserUrl": "https://etherscan.io/tx/",
           "chain": "ERC20",
           "depositConfirm": "12",
@@ -4396,9 +4422,9 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "10000",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "4375",
+          "withdrawFee": "1850.88",
           "withdrawable": "false"
         }
       ],
@@ -4418,7 +4444,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.32",
+          "withdrawFee": "1.47",
           "withdrawable": "true"
         }
       ],
@@ -4438,7 +4464,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "498.94",
+          "withdrawFee": "660.69",
           "withdrawable": "true"
         }
       ],
@@ -4458,12 +4484,32 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "40.4",
+          "withdrawFee": "37.48",
           "withdrawable": "true"
         }
       ],
       "coinId": "341",
       "coinName": "NYM",
+      "transfer": "false"
+    },
+    {
+      "chains": [
+        {
+          "browserUrl": "https://etherscan.io/tx/",
+          "chain": "ERC20",
+          "depositConfirm": "12",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.01",
+          "minWithdrawAmount": "0.02",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "12",
+          "withdrawFee": "0.093",
+          "withdrawable": "false"
+        }
+      ],
+      "coinId": "583",
+      "coinName": "TIME",
       "transfer": "false"
     },
     {
@@ -4476,7 +4522,7 @@
           "minDepositAmount": "0.5",
           "minWithdrawAmount": "20",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "13",
           "withdrawable": "true"
@@ -4498,7 +4544,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "249.01",
+          "withdrawFee": "315.66",
           "withdrawable": "true"
         }
       ],
@@ -4518,7 +4564,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.12",
+          "withdrawFee": "0.15",
           "withdrawable": "true"
         },
         {
@@ -4531,7 +4577,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.78",
+          "withdrawFee": "1.02",
           "withdrawable": "true"
         }
       ],
@@ -4557,6 +4603,26 @@
       ],
       "coinId": "342",
       "coinName": "MMETA",
+      "transfer": "false"
+    },
+    {
+      "chains": [
+        {
+          "browserUrl": "https://scan.oasys.games/tx/",
+          "chain": "OASYS",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.01",
+          "minWithdrawAmount": "1000",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "15",
+          "withdrawFee": "1",
+          "withdrawable": "true"
+        }
+      ],
+      "coinId": "584",
+      "coinName": "OAS",
       "transfer": "false"
     },
     {
@@ -4591,7 +4657,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6.05",
+          "withdrawFee": "5.31",
           "withdrawable": "true"
         }
       ],
@@ -4611,7 +4677,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "57.41",
+          "withdrawFee": "65.18",
           "withdrawable": "true"
         }
       ],
@@ -4631,12 +4697,32 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "53.71",
+          "withdrawFee": "58.9",
           "withdrawable": "true"
         }
       ],
       "coinId": "343",
       "coinName": "VT",
+      "transfer": "false"
+    },
+    {
+      "chains": [
+        {
+          "browserUrl": "https://etherscan.io/tx/",
+          "chain": "ERC20",
+          "depositConfirm": "12",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "1",
+          "minWithdrawAmount": "20",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "12",
+          "withdrawFee": "414.7",
+          "withdrawable": "false"
+        }
+      ],
+      "coinId": "585",
+      "coinName": "GEAR",
       "transfer": "false"
     },
     {
@@ -4671,7 +4757,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "50",
-          "withdrawFee": "1.87",
+          "withdrawFee": "2.34",
           "withdrawable": "true"
         }
       ],
@@ -4691,7 +4777,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "21.31",
+          "withdrawFee": "26.47",
           "withdrawable": "true"
         }
       ],
@@ -4711,7 +4797,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2190.24",
+          "withdrawFee": "2641.51",
           "withdrawable": "true"
         }
       ],
@@ -4731,7 +4817,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "10.28",
+          "withdrawFee": "13.02",
           "withdrawable": "true"
         }
       ],
@@ -4751,7 +4837,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2329.46",
+          "withdrawFee": "1758.14",
           "withdrawable": "true"
         }
       ],
@@ -4791,7 +4877,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "218.35",
+          "withdrawFee": "292.92",
           "withdrawable": "true"
         }
       ],
@@ -4811,7 +4897,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "9849.17",
+          "withdrawFee": "11571.59",
           "withdrawable": "true"
         }
       ],
@@ -4829,9 +4915,9 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "100",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "447",
+          "withdrawFee": "438.33",
           "withdrawable": "true"
         }
       ],
@@ -4851,7 +4937,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.89",
+          "withdrawFee": "2.18",
           "withdrawable": "true"
         },
         {
@@ -4864,7 +4950,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "13.21",
+          "withdrawFee": "15.24",
           "withdrawable": "true"
         }
       ],
@@ -4884,7 +4970,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "7244.13",
+          "withdrawFee": "9603.52",
           "withdrawable": "true"
         }
       ],
@@ -4904,7 +4990,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "67.29",
+          "withdrawFee": "70.1",
           "withdrawable": "true"
         }
       ],
@@ -4944,7 +5030,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "101045.83",
+          "withdrawFee": "112770.09",
           "withdrawable": "false"
         },
         {
@@ -4957,7 +5043,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "707320.77",
+          "withdrawFee": "789390.6",
           "withdrawable": "true"
         }
       ],
@@ -4977,7 +5063,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "62.73",
+          "withdrawFee": "70.76",
           "withdrawable": "true"
         }
       ],
@@ -4997,7 +5083,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10.63",
+          "withdrawFee": "13.2",
           "withdrawable": "true"
         }
       ],
@@ -5037,7 +5123,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.45",
+          "withdrawFee": "4.64",
           "withdrawable": "true"
         }
       ],
@@ -5090,7 +5176,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "4288164.67",
+          "withdrawFee": "5640157.93",
           "withdrawable": "false"
         },
         {
@@ -5103,7 +5189,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "30017152.66",
+          "withdrawFee": "39481105.48",
           "withdrawable": "true"
         }
       ],
@@ -5123,7 +5209,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "109.09",
+          "withdrawFee": "119.15",
           "withdrawable": "true"
         }
       ],
@@ -5143,7 +5229,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "50.11",
+          "withdrawFee": "42.22",
           "withdrawable": "true"
         }
       ],
@@ -5163,7 +5249,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.38",
+          "withdrawFee": "0.48",
           "withdrawable": "true"
         }
       ],
@@ -5183,7 +5269,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.34",
+          "withdrawFee": "1.71",
           "withdrawable": "true"
         }
       ],
@@ -5203,7 +5289,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1657.99",
+          "withdrawFee": "1744.34",
           "withdrawable": "true"
         }
       ],
@@ -5243,7 +5329,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "104.26",
+          "withdrawFee": "117.27",
           "withdrawable": "true"
         },
         {
@@ -5256,7 +5342,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "104.26",
+          "withdrawFee": "117.27",
           "withdrawable": "false"
         }
       ],
@@ -5276,7 +5362,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1310.38",
+          "withdrawFee": "1241.8",
           "withdrawable": "true"
         }
       ],
@@ -5316,7 +5402,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2.59",
+          "withdrawFee": "3.22",
           "withdrawable": "true"
         }
       ],
@@ -5336,7 +5422,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "82.28",
+          "withdrawFee": "84.5",
           "withdrawable": "true"
         }
       ],
@@ -5356,7 +5442,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "125.93",
+          "withdrawFee": "184.49",
           "withdrawable": "true"
         }
       ],
@@ -5374,7 +5460,7 @@
           "minDepositAmount": "20",
           "minWithdrawAmount": "1000",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "112.1",
           "withdrawable": "true"
@@ -5396,7 +5482,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "22.57",
+          "withdrawFee": "26.44",
           "withdrawable": "true"
         }
       ],
@@ -5476,7 +5562,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.19",
+          "withdrawFee": "1.16",
           "withdrawable": "true"
         },
         {
@@ -5489,7 +5575,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "1",
-          "withdrawFee": "0.19",
+          "withdrawFee": "1.16",
           "withdrawable": "false"
         }
       ],
@@ -5509,7 +5595,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6.65",
+          "withdrawFee": "5.31",
           "withdrawable": "true"
         }
       ],
@@ -5569,7 +5655,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "2.13",
+          "withdrawFee": "2.5",
           "withdrawable": "true"
         }
       ],
@@ -5589,7 +5675,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "65.54",
+          "withdrawFee": "80.09",
           "withdrawable": "true"
         }
       ],
@@ -5629,7 +5715,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "63578564.95",
+          "withdrawFee": "43668122.28",
           "withdrawable": "true"
         }
       ],
@@ -5649,7 +5735,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "20",
-          "withdrawFee": "6.51",
+          "withdrawFee": "8.47",
           "withdrawable": "true"
         }
       ],
@@ -5669,7 +5755,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.26",
+          "withdrawFee": "0.3",
           "withdrawable": "true"
         }
       ],
@@ -5689,7 +5775,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "57.48",
+          "withdrawFee": "61.35",
           "withdrawable": "true"
         }
       ],
@@ -5709,7 +5795,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "436.69",
+          "withdrawFee": "609.76",
           "withdrawable": "true"
         },
         {
@@ -5722,7 +5808,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "3056.77",
+          "withdrawFee": "4268.3",
           "withdrawable": "false"
         }
       ],
@@ -5742,7 +5828,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.74",
+          "withdrawFee": "2",
           "withdrawable": "true"
         }
       ],
@@ -5782,7 +5868,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "5.32",
+          "withdrawFee": "7.7",
           "withdrawable": "true"
         }
       ],
@@ -5802,7 +5888,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "415.19",
+          "withdrawFee": "430.24",
           "withdrawable": "true"
         }
       ],
@@ -5842,7 +5928,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "322.85",
+          "withdrawFee": "405.02",
           "withdrawable": "true"
         }
       ],
@@ -5862,7 +5948,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "424.63",
+          "withdrawFee": "496.28",
           "withdrawable": "true"
         }
       ],
@@ -5883,7 +5969,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "95.5",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "238",
@@ -5915,7 +6001,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "30.8",
+          "withdrawFee": "47.72",
           "withdrawable": "false"
         }
       ],
@@ -5935,8 +6021,8 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4.64",
-          "withdrawable": "false"
+          "withdrawFee": "6.46",
+          "withdrawable": "true"
         }
       ],
       "coinId": "359",
@@ -5953,7 +6039,7 @@
           "minDepositAmount": "0.13",
           "minWithdrawAmount": "5",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "0.58",
           "withdrawable": "true"
@@ -5975,7 +6061,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1666.27",
+          "withdrawFee": "2304.91",
           "withdrawable": "true"
         }
       ],
@@ -6048,7 +6134,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "54.1",
+          "withdrawFee": "46.09",
           "withdrawable": "true"
         }
       ],
@@ -6081,7 +6167,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "44.43",
+          "withdrawFee": "56.45",
           "withdrawable": "true"
         }
       ],
@@ -6101,7 +6187,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "30.22",
+          "withdrawFee": "37.62",
           "withdrawable": "true"
         }
       ],
@@ -6121,7 +6207,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "1.56",
+          "withdrawFee": "1.93",
           "withdrawable": "true"
         }
       ],
@@ -6132,8 +6218,8 @@
     {
       "chains": [
         {
-          "browserUrl": "https://www.confluxscan.io/transaction/",
-          "chain": "CFX",
+          "browserUrl": "https://evm.confluxscan.io/tx/",
+          "chain": "CFXeSpace",
           "depositConfirm": "25",
           "extraWithDrawFee": "0",
           "minDepositAmount": "1",
@@ -6145,8 +6231,8 @@
           "withdrawable": "false"
         },
         {
-          "browserUrl": "https://evm.confluxscan.io/tx/",
-          "chain": "CFXeSpace",
+          "browserUrl": "https://www.confluxscan.io/transaction/",
+          "chain": "CFX",
           "depositConfirm": "25",
           "extraWithDrawFee": "0",
           "minDepositAmount": "1",
@@ -6214,7 +6300,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "69.38",
+          "withdrawFee": "83.55",
           "withdrawable": "true"
         }
       ],
@@ -6274,7 +6360,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "55.31",
+          "withdrawFee": "68.05",
           "withdrawable": "true"
         }
       ],
@@ -6334,7 +6420,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "2341920374.71",
+          "withdrawFee": "2687449610.32",
           "withdrawable": "true"
         }
       ],
@@ -6367,7 +6453,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2231.58",
+          "withdrawFee": "2905.05",
           "withdrawable": "true"
         }
       ],
@@ -6387,7 +6473,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.9",
+          "withdrawFee": "3.08",
           "withdrawable": "true"
         }
       ],
@@ -6440,7 +6526,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "245.1",
+          "withdrawFee": "313.34",
           "withdrawable": "true"
         }
       ],
@@ -6460,7 +6546,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "22.09",
+          "withdrawFee": "25.29",
           "withdrawable": "true"
         }
       ],
@@ -6500,7 +6586,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "36.03",
+          "withdrawFee": "51.03",
           "withdrawable": "true"
         }
       ],
@@ -6520,7 +6606,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2.01",
+          "withdrawFee": "2.11",
           "withdrawable": "true"
         }
       ],
@@ -6592,7 +6678,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "673.34",
+          "withdrawFee": "867.31",
           "withdrawable": "true"
         }
       ],
@@ -6612,7 +6698,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "14.54",
+          "withdrawFee": "15.96",
           "withdrawable": "true"
         }
       ],
@@ -6652,7 +6738,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "40.89",
+          "withdrawFee": "37.26",
           "withdrawable": "true"
         }
       ],
@@ -6750,7 +6836,7 @@
           "minDepositAmount": "0.125",
           "minWithdrawAmount": "6",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "40.82",
           "withdrawable": "true"
@@ -6772,7 +6858,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "378.59",
+          "withdrawFee": "405.33",
           "withdrawable": "true"
         }
       ],
@@ -6925,7 +7011,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "37.96",
+          "withdrawFee": "37.61",
           "withdrawable": "true"
         }
       ],
@@ -6945,7 +7031,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "13.78",
+          "withdrawFee": "11.33",
           "withdrawable": "true"
         }
       ],
@@ -6965,7 +7051,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "4.91",
+          "withdrawFee": "5.81",
           "withdrawable": "true"
         }
       ],
@@ -6985,7 +7071,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.25",
+          "withdrawFee": "0.23",
           "withdrawable": "true"
         }
       ],
@@ -7005,7 +7091,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "259.13",
+          "withdrawFee": "329.91",
           "withdrawable": "true"
         }
       ],
@@ -7025,7 +7111,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "207.04",
+          "withdrawFee": "290.03",
           "withdrawable": "true"
         }
       ],
@@ -7085,7 +7171,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "6.37",
+          "withdrawFee": "9.11",
           "withdrawable": "false"
         }
       ],
@@ -7145,7 +7231,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "49.3",
+          "withdrawFee": "47.98",
           "withdrawable": "true"
         }
       ],
@@ -7203,7 +7289,7 @@
           "minDepositAmount": "0.0028",
           "minWithdrawAmount": "0.1",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "0.1",
           "withdrawable": "true"
@@ -7225,7 +7311,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.68",
+          "withdrawFee": "0.69",
           "withdrawable": "true"
         }
       ],
@@ -7285,7 +7371,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "74.08",
+          "withdrawFee": "78.37",
           "withdrawable": "true"
         }
       ],
@@ -7305,7 +7391,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "414.7",
+          "withdrawFee": "402.54",
           "withdrawable": "true"
         }
       ],
@@ -7365,7 +7451,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.08",
+          "withdrawFee": "0.09",
           "withdrawable": "true"
         }
       ],
@@ -7438,7 +7524,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.39",
+          "withdrawFee": "0.42",
           "withdrawable": "true"
         }
       ],
@@ -7458,7 +7544,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6.78",
+          "withdrawFee": "6.96",
           "withdrawable": "true"
         }
       ],
@@ -7509,10 +7595,10 @@
           "minDepositAmount": "0.01",
           "minWithdrawAmount": "1",
           "needTag": "true",
-          "rechargeable": "false",
+          "rechargeable": "true",
           "withdrawConfirm": "30",
           "withdrawFee": "4",
-          "withdrawable": "false"
+          "withdrawable": "true"
         }
       ],
       "coinId": "377",
@@ -7531,7 +7617,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "11.07",
+          "withdrawFee": "12.49",
           "withdrawable": "true"
         }
       ],
@@ -7551,7 +7637,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "57.48",
+          "withdrawFee": "68.43",
           "withdrawable": "true"
         }
       ],
@@ -7569,7 +7655,7 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "30",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "4.42",
           "withdrawable": "true"
@@ -7582,7 +7668,7 @@
           "minDepositAmount": "1",
           "minWithdrawAmount": "30",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "30.88",
           "withdrawable": "true"
@@ -7602,10 +7688,10 @@
           "minDepositAmount": "0.1",
           "minWithdrawAmount": "50",
           "needTag": "true",
-          "rechargeable": "false",
+          "rechargeable": "true",
           "withdrawConfirm": "30",
           "withdrawFee": "1.5",
-          "withdrawable": "false"
+          "withdrawable": "true"
         }
       ],
       "coinId": "378",
@@ -7624,7 +7710,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "58.16",
+          "withdrawFee": "64.81",
           "withdrawable": "true"
         }
       ],
@@ -7644,7 +7730,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "29.83",
+          "withdrawFee": "40.81",
           "withdrawable": "true"
         }
       ],
@@ -7684,7 +7770,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "881834215.17",
+          "withdrawFee": "1013171225.94",
           "withdrawable": "true"
         }
       ],
@@ -7704,7 +7790,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6.61",
+          "withdrawFee": "7.15",
           "withdrawable": "true"
         }
       ],
@@ -7724,7 +7810,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "512.79",
+          "withdrawFee": "627.25",
           "withdrawable": "true"
         }
       ],
@@ -7744,7 +7830,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "307.56",
+          "withdrawFee": "334.45",
           "withdrawable": "true"
         }
       ],
@@ -7784,7 +7870,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "36.39",
+          "withdrawFee": "42.53",
           "withdrawable": "true"
         }
       ],
@@ -7804,7 +7890,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "27.56",
+          "withdrawFee": "33.53",
           "withdrawable": "true"
         }
       ],
@@ -7824,7 +7910,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "33.87",
+          "withdrawFee": "44.76",
           "withdrawable": "true"
         }
       ],
@@ -7844,7 +7930,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "5.78",
+          "withdrawFee": "6.83",
           "withdrawable": "true"
         }
       ],
@@ -7897,7 +7983,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.33",
+          "withdrawFee": "0.38",
           "withdrawable": "true"
         }
       ],
@@ -7957,7 +8043,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "21.92",
+          "withdrawFee": "25.74",
           "withdrawable": "true"
         }
       ],
@@ -7977,7 +8063,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "4.74",
+          "withdrawFee": "13.68",
           "withdrawable": "true"
         }
       ],
@@ -7997,7 +8083,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "43.48",
+          "withdrawFee": "53.73",
           "withdrawable": "true"
         }
       ],
@@ -8017,7 +8103,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4",
+          "withdrawFee": "6.05",
           "withdrawable": "true"
         }
       ],
@@ -8057,7 +8143,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "4.3",
+          "withdrawFee": "5.86",
           "withdrawable": "true"
         },
         {
@@ -8070,7 +8156,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "30.1",
+          "withdrawFee": "40.99",
           "withdrawable": "true"
         }
       ],
@@ -8081,19 +8167,6 @@
     {
       "chains": [
         {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
-          "extraWithDrawFee": "0",
-          "minDepositAmount": "600",
-          "minWithdrawAmount": "1000",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "4524.69",
-          "withdrawable": "true"
-        },
-        {
           "browserUrl": "https://etherscan.io/tx/",
           "chain": "ERC20",
           "depositConfirm": "12",
@@ -8103,8 +8176,21 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "31672.78",
+          "withdrawFee": "39487.79",
           "withdrawable": "false"
+        },
+        {
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "600",
+          "minWithdrawAmount": "1000",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "15",
+          "withdrawFee": "5641.12",
+          "withdrawable": "true"
         }
       ],
       "coinId": "142",
@@ -8156,7 +8242,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "5.81",
+          "withdrawFee": "7.73",
           "withdrawable": "true"
         }
       ],
@@ -8176,7 +8262,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "11.38",
+          "withdrawFee": "14.41",
           "withdrawable": "true"
         },
         {
@@ -8189,7 +8275,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "79.65",
+          "withdrawFee": "100.83",
           "withdrawable": "true"
         }
       ],
@@ -8242,7 +8328,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.16",
+          "withdrawFee": "0.18",
           "withdrawable": "true"
         }
       ],
@@ -8294,7 +8380,7 @@
       "chains": [
         {
           "browserUrl": "https://explorer.wemix.com/tx/",
-          "chain": "WEMIX",
+          "chain": "WEMIXMainnet",
           "depositConfirm": "60",
           "extraWithDrawFee": "0",
           "minDepositAmount": "0.01",
@@ -8315,7 +8401,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "20",
-          "withdrawFee": "1",
+          "withdrawFee": "0",
           "withdrawable": "false"
         }
       ],
@@ -8335,7 +8421,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "2.11",
+          "withdrawFee": "2.59",
           "withdrawable": "true"
         }
       ],
@@ -8355,7 +8441,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "949126.81",
+          "withdrawFee": "1181334.91",
           "withdrawable": "true"
         },
         {
@@ -8368,7 +8454,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "6643887.63",
+          "withdrawFee": "8269344.36",
           "withdrawable": "true"
         }
       ],
@@ -8408,7 +8494,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.81",
+          "withdrawFee": "1.02",
           "withdrawable": "true"
         },
         {
@@ -8421,7 +8507,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "5.66",
+          "withdrawFee": "7.08",
           "withdrawable": "false"
         }
       ],
@@ -8441,7 +8527,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "298.25",
+          "withdrawFee": "329.17",
           "withdrawable": "false"
         }
       ],
@@ -8461,7 +8547,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "57.52",
+          "withdrawFee": "67.38",
           "withdrawable": "true"
         }
       ],
@@ -8481,7 +8567,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "114.82",
+          "withdrawFee": "144.31",
           "withdrawable": "true"
         }
       ],
@@ -8501,7 +8587,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.19",
+          "withdrawFee": "3.28",
           "withdrawable": "true"
         }
       ],
@@ -8521,7 +8607,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2610",
+          "withdrawFee": "3240.75",
           "withdrawable": "true"
         }
       ],
@@ -8541,7 +8627,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "37.27",
+          "withdrawFee": "53.76",
           "withdrawable": "true"
         },
         {
@@ -8554,7 +8640,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "260.84",
+          "withdrawFee": "376.31",
           "withdrawable": "true"
         }
       ],
@@ -8574,7 +8660,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.93",
+          "withdrawFee": "5.33",
           "withdrawable": "true"
         }
       ],
@@ -8594,7 +8680,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "141.59",
+          "withdrawFee": "160.45",
           "withdrawable": "true"
         }
       ],
@@ -8614,7 +8700,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "105.65",
+          "withdrawFee": "131.78",
           "withdrawable": "true"
         }
       ],
@@ -8674,7 +8760,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "244.36",
+          "withdrawFee": "264.48",
           "withdrawable": "true"
         }
       ],
@@ -8727,7 +8813,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "4.83",
+          "withdrawFee": "7.61",
           "withdrawable": "true"
         }
       ],
@@ -8747,7 +8833,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "12",
-          "withdrawFee": "5.63",
+          "withdrawFee": "7",
           "withdrawable": "false"
         },
         {
@@ -8760,7 +8846,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "39.39",
+          "withdrawFee": "48.95",
           "withdrawable": "true"
         }
       ],
@@ -8780,7 +8866,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "74.32",
+          "withdrawFee": "86.11",
           "withdrawable": "true"
         }
       ],
@@ -8800,7 +8886,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "11.39",
+          "withdrawFee": "15.73",
           "withdrawable": "true"
         }
       ],
@@ -8840,7 +8926,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "7.33",
+          "withdrawFee": "8.47",
           "withdrawable": "true"
         },
         {
@@ -8853,7 +8939,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "51.3",
+          "withdrawFee": "59.24",
           "withdrawable": "true"
         }
       ],
@@ -8873,7 +8959,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "0.75",
+          "withdrawFee": "0.93",
           "withdrawable": "true"
         },
         {
@@ -8886,7 +8972,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "5.21",
+          "withdrawFee": "6.51",
           "withdrawable": "true"
         }
       ],
@@ -8906,7 +8992,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "69.53",
+          "withdrawFee": "74.63",
           "withdrawable": "true"
         }
       ],
@@ -8926,7 +9012,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "8.18",
+          "withdrawFee": "8.72",
           "withdrawable": "true"
         },
         {
@@ -8939,7 +9025,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "57.2",
+          "withdrawFee": "60.98",
           "withdrawable": "true"
         }
       ],
@@ -8959,7 +9045,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "15",
-          "withdrawFee": "62.5",
+          "withdrawFee": "78.75",
           "withdrawable": "true"
         },
         {
@@ -8972,7 +9058,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "437.5",
+          "withdrawFee": "551.19",
           "withdrawable": "true"
         }
       ],
@@ -8992,7 +9078,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "42.43",
+          "withdrawFee": "51.69",
           "withdrawable": "false"
         }
       ],
@@ -9090,7 +9176,7 @@
           "minDepositAmount": "0.002",
           "minWithdrawAmount": "0.07",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "0.16",
           "withdrawable": "true"
@@ -9112,7 +9198,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "16.68",
+          "withdrawFee": "20.65",
           "withdrawable": "true"
         }
       ],
@@ -9132,7 +9218,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.27",
+          "withdrawFee": "1.86",
           "withdrawable": "true"
         }
       ],
@@ -9172,7 +9258,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "60",
-          "withdrawFee": "0.06",
+          "withdrawFee": "0.07",
           "withdrawable": "true"
         }
       ],
@@ -9212,7 +9298,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "114.12",
+          "withdrawFee": "133.67",
           "withdrawable": "true"
         }
       ],
@@ -9232,7 +9318,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "5",
-          "withdrawFee": "456.49",
+          "withdrawFee": "602.66",
           "withdrawable": "true"
         }
       ],
@@ -9252,7 +9338,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "132.38",
+          "withdrawFee": "124.41",
           "withdrawable": "true"
         }
       ],
@@ -9272,7 +9358,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "570.36",
+          "withdrawFee": "677.18",
           "withdrawable": "true"
         }
       ],
@@ -9292,7 +9378,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "16.84",
+          "withdrawFee": "21.06",
           "withdrawable": "true"
         }
       ],
@@ -9312,7 +9398,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "22.19",
+          "withdrawFee": "26.74",
           "withdrawable": "true"
         }
       ],
@@ -9373,7 +9459,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "6",
           "withdrawFee": "0.001",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "281",
@@ -9412,7 +9498,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "55859.69",
+          "withdrawFee": "68082.79",
           "withdrawable": "true"
         }
       ],
@@ -9452,7 +9538,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "903.18",
+          "withdrawFee": "954.75",
           "withdrawable": "true"
         }
       ],
@@ -9470,7 +9556,7 @@
           "minDepositAmount": "0.5",
           "minWithdrawAmount": "20",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "50.22",
           "withdrawable": "true"
@@ -9492,7 +9578,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "68.66",
+          "withdrawFee": "82.91",
           "withdrawable": "true"
         }
       ],
@@ -9532,7 +9618,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.1",
+          "withdrawFee": "0.11",
           "withdrawable": "true"
         }
       ],
@@ -9590,7 +9676,7 @@
           "minDepositAmount": "15",
           "minWithdrawAmount": "50",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "30",
           "withdrawable": "true"
@@ -9616,7 +9702,7 @@
           "minDepositAmount": "3",
           "minWithdrawAmount": "10",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "5",
           "withdrawFee": "7",
           "withdrawable": "true"
@@ -9638,7 +9724,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "97.11",
+          "withdrawFee": "103.25",
           "withdrawable": "true"
         }
       ],
@@ -9696,7 +9782,7 @@
           "minDepositAmount": "0.2",
           "minWithdrawAmount": "10",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "5",
           "withdrawable": "true"
@@ -9719,7 +9805,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "10",
           "withdrawFee": "3",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "169",
@@ -9798,7 +9884,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "29.37",
+          "withdrawFee": "32.64",
           "withdrawable": "true"
         }
       ],
@@ -9818,7 +9904,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "14.29",
+          "withdrawFee": "17.91",
           "withdrawable": "true"
         }
       ],
@@ -9838,7 +9924,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "5106134.66",
+          "withdrawFee": "6119951.05",
           "withdrawable": "true"
         }
       ],
@@ -9864,7 +9950,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "2476999.3",
+          "withdrawFee": "2677888.3",
           "withdrawable": "true"
         }
       ],
@@ -9964,7 +10050,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "14.44",
+          "withdrawFee": "16.59",
           "withdrawable": "true"
         }
       ],
@@ -9982,7 +10068,7 @@
           "minDepositAmount": "0.1",
           "minWithdrawAmount": "30",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "60",
           "withdrawFee": "69.09",
           "withdrawable": "true"
@@ -10057,7 +10143,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "10",
-          "withdrawFee": "372.19",
+          "withdrawFee": "336.23",
           "withdrawable": "true"
         }
       ],
@@ -10108,6 +10194,19 @@
     {
       "chains": [
         {
+          "browserUrl": "https://arbiscan.io/tx/",
+          "chain": "ArbitrumOne",
+          "depositConfirm": "24",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.1",
+          "minWithdrawAmount": "1",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "24",
+          "withdrawFee": "0.8",
+          "withdrawable": "true"
+        },
+        {
           "browserUrl": "https://optimistic.etherscan.io/tx/",
           "chain": "Optimism",
           "depositConfirm": "50",
@@ -10134,6 +10233,19 @@
           "withdrawable": "true"
         },
         {
+          "browserUrl": "https://solscan.io/tx/",
+          "chain": "SOL",
+          "depositConfirm": "5",
+          "extraWithDrawFee": "0",
+          "minDepositAmount": "0.01",
+          "minWithdrawAmount": "10",
+          "needTag": "false",
+          "rechargeable": "true",
+          "withdrawConfirm": "5",
+          "withdrawFee": "0.1",
+          "withdrawable": "true"
+        },
+        {
           "browserUrl": "https://tronscan.org/#/transaction/",
           "chain": "TRC20",
           "depositConfirm": "1",
@@ -10144,19 +10256,6 @@
           "rechargeable": "true",
           "withdrawConfirm": "1",
           "withdrawFee": "0.5",
-          "withdrawable": "true"
-        },
-        {
-          "browserUrl": "https://bscscan.com/tx/",
-          "chain": "BEP20",
-          "depositConfirm": "15",
-          "extraWithDrawFee": "0",
-          "minDepositAmount": "1",
-          "minWithdrawAmount": "10",
-          "needTag": "false",
-          "rechargeable": "true",
-          "withdrawConfirm": "15",
-          "withdrawFee": "0.29",
           "withdrawable": "true"
         },
         {
@@ -10173,16 +10272,16 @@
           "withdrawable": "true"
         },
         {
-          "browserUrl": "https://solscan.io/tx/",
-          "chain": "SOL",
-          "depositConfirm": "5",
+          "browserUrl": "https://bscscan.com/tx/",
+          "chain": "BEP20",
+          "depositConfirm": "15",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.01",
+          "minDepositAmount": "1",
           "minWithdrawAmount": "10",
           "needTag": "false",
           "rechargeable": "true",
-          "withdrawConfirm": "5",
-          "withdrawFee": "0.1",
+          "withdrawConfirm": "15",
+          "withdrawFee": "0.29",
           "withdrawable": "true"
         }
       ],
@@ -10242,7 +10341,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "5.53",
+          "withdrawFee": "7.41",
           "withdrawable": "true"
         }
       ],
@@ -10262,7 +10361,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "0.19",
+          "withdrawFee": "0.22",
           "withdrawable": "true"
         }
       ],
@@ -10282,7 +10381,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "1",
-          "withdrawFee": "0.11",
+          "withdrawFee": "0.13",
           "withdrawable": "true"
         }
       ],
@@ -10302,7 +10401,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.52",
+          "withdrawFee": "0.63",
           "withdrawable": "true"
         }
       ],
@@ -10322,7 +10421,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "8.49",
+          "withdrawFee": "10.03",
           "withdrawable": "true"
         }
       ],
@@ -10362,7 +10461,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "30.48",
+          "withdrawFee": "30.41",
           "withdrawable": "true"
         }
       ],
@@ -10380,7 +10479,7 @@
           "minDepositAmount": "0.5",
           "minWithdrawAmount": "20",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "61.17",
           "withdrawable": "true"
@@ -10402,7 +10501,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "46.6",
+          "withdrawFee": "59.71",
           "withdrawable": "false"
         },
         {
@@ -10415,7 +10514,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "326.19",
+          "withdrawFee": "417.92",
           "withdrawable": "true"
         }
       ],
@@ -10435,7 +10534,7 @@
           "needTag": "false",
           "rechargeable": "false",
           "withdrawConfirm": "15",
-          "withdrawFee": "2.52",
+          "withdrawFee": "2.96",
           "withdrawable": "false"
         },
         {
@@ -10448,7 +10547,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "17.59",
+          "withdrawFee": "20.67",
           "withdrawable": "true"
         }
       ],
@@ -10466,7 +10565,7 @@
           "minDepositAmount": "0.02",
           "minWithdrawAmount": "0.6",
           "needTag": "false",
-          "rechargeable": "true",
+          "rechargeable": "false",
           "withdrawConfirm": "12",
           "withdrawFee": "0.95",
           "withdrawable": "true"
@@ -10489,7 +10588,7 @@
           "rechargeable": "false",
           "withdrawConfirm": "15",
           "withdrawFee": "146284376.83",
-          "withdrawable": "true"
+          "withdrawable": "false"
         }
       ],
       "coinId": "189",
@@ -10561,7 +10660,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "43.32",
+          "withdrawFee": "63.16",
           "withdrawable": "true"
         }
       ],
@@ -10581,7 +10680,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4050.93",
+          "withdrawFee": "4753.83",
           "withdrawable": "true"
         }
       ],
@@ -10601,7 +10700,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1092.9",
+          "withdrawFee": "1325.51",
           "withdrawable": "true"
         }
       ],
@@ -10649,7 +10748,7 @@
           "chain": "Polygon",
           "depositConfirm": "60",
           "extraWithDrawFee": "0",
-          "minDepositAmount": "0.5",
+          "minDepositAmount": "0.001",
           "minWithdrawAmount": "1",
           "needTag": "false",
           "rechargeable": "true",
@@ -10674,7 +10773,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "14.82",
+          "withdrawFee": "17.49",
           "withdrawable": "true"
         }
       ],
@@ -10794,7 +10893,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "46891.75",
+          "withdrawFee": "34779.16",
           "withdrawable": "true"
         }
       ],
@@ -10814,7 +10913,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "4629.63",
+          "withdrawFee": "4844.3",
           "withdrawable": "true"
         }
       ],
@@ -10847,7 +10946,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "103.13",
+          "withdrawFee": "117.04",
           "withdrawable": "true"
         }
       ],
@@ -10907,7 +11006,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.62",
+          "withdrawFee": "4.69",
           "withdrawable": "true"
         }
       ],
@@ -10947,7 +11046,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "3.54",
+          "withdrawFee": "4.4",
           "withdrawable": "true"
         }
       ],
@@ -10967,7 +11066,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "74.76",
+          "withdrawFee": "109.63",
           "withdrawable": "true"
         }
       ],
@@ -10987,7 +11086,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "1.15",
+          "withdrawFee": "1.29",
           "withdrawable": "true"
         }
       ],
@@ -11007,7 +11106,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "18.26",
+          "withdrawFee": "20.4",
           "withdrawable": "true"
         }
       ],
@@ -11027,7 +11126,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.47",
+          "withdrawFee": "0.53",
           "withdrawable": "true"
         }
       ],
@@ -11047,7 +11146,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "10.2",
+          "withdrawFee": "13.34",
           "withdrawable": "true"
         }
       ],
@@ -11087,7 +11186,7 @@
           "needTag": "false",
           "rechargeable": "true",
           "withdrawConfirm": "12",
-          "withdrawFee": "0.62",
+          "withdrawFee": "0.83",
           "withdrawable": "true"
         }
       ],
