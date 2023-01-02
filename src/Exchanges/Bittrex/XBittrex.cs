@@ -135,7 +135,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
                         if (c.coinType.StartsWith("ETH_"))
                         {
                             _cointype = "ETH";
-                            if (c.notice.Contains("ERC-20"))
+                            if (c.notice.Contains("ERC-20") || c.notice.Contains("ERC20"))
                                 _protocol = "ERC20";
                         }
 
