@@ -90,12 +90,6 @@ namespace CCXT.Simple.Exchanges
             set;
         }
 
-        public JsonSerializerSettings JsonSettings = new JsonSerializerSettings
-        {
-            NullValueHandling = NullValueHandling.Ignore,
-            MissingMemberHandling = MissingMemberHandling.Ignore
-        };
-
         public string FiatName
         {
             get;
@@ -293,15 +287,10 @@ namespace CCXT.Simple.Exchanges
                 return this.FiatVSCoinRate;
         }
 
-        public string ToQueryString2(Dictionary<string, string> args)
+        public JsonSerializerSettings JsonSettings = new JsonSerializerSettings
         {
-            return args != null ? String.Join("&", args.Select(a => $"{a.Key}={Uri.EscapeDataString((a.Value ?? "").ToString())}"))
-                                : "";
-        }
-
-        public string ConvertHexString(byte[] buffer)
-        {
-            return BitConverter.ToString(buffer).Replace("-", "");
-        }
+            NullValueHandling = NullValueHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore
+        };
     }
 }

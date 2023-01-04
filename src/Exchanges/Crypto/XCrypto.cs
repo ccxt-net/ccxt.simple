@@ -203,7 +203,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             if (args == null)
                 args = new Dictionary<string, string>();
 
-            var _post_data = mainXchg.ToQueryString2(args);
+            var _post_data = args.ToQueryString2();
             var _nonce = CUnixTime.NowMilli;
 
             var _sign_data = $"{endpoint}{id}{this.ApiKey}{_post_data}{_nonce}";

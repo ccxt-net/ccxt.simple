@@ -2,6 +2,17 @@
 {
     public static partial class CExtension
     {
+        public static string ToQueryString2(this Dictionary<string, string> args)
+        {
+            return args != null ? String.Join("&", args.Select(a => $"{a.Key}={Uri.EscapeDataString((a.Value ?? "").ToString())}"))
+                                : "";
+        }
+
+        public static string ConvertHexString(this byte[] buffer)
+        {
+            return BitConverter.ToString(buffer).Replace("-", "");
+        }
+
         public static bool IsNumber(this string s)
         {
             return s.All(char.IsDigit);

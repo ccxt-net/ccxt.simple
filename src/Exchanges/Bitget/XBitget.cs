@@ -55,7 +55,7 @@ namespace CCXT.Simple.Exchanges.Bitget
         public string CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args = null)
         {
             var _timestamp = CUnixTime.NowMilli;
-            var _query_string = mainXchg.ToQueryString2(args);
+            var _query_string = args.ToQueryString2();
 
             var _sign_data = $"{_timestamp}GET{endpoint}{_query_string}";
             var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));

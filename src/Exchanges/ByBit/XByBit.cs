@@ -122,7 +122,7 @@ namespace CCXT.Simple.Exchanges.Bybit
 
         public void CreateSignature(HttpClient client, Dictionary<string, string> args = null)
         {
-            var _post_data = mainXchg.ToQueryString2(args);
+            var _post_data = args.ToQueryString2();
             var _nonce = CUnixTime.NowMilli;
             var _recv_window = 5000;
 
@@ -130,7 +130,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
 
             //var _sign = Convert.ToBase64String(Encoding.UTF8.GetBytes(mainXchg.ConvertHexString(_sign_hash).ToLower()));
-            var _sign = mainXchg.ConvertHexString(_sign_hash).ToLower();
+            var _sign = _sign_hash.ConvertHexString().ToLower();
 
             client.DefaultRequestHeaders.Add("X-BAPI-SIGN-TYPE", "2");
             client.DefaultRequestHeaders.Add("X-BAPI-SIGN", _sign);

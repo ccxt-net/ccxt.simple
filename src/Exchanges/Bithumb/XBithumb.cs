@@ -479,13 +479,13 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
         public FormUrlEncodedContent CreateSignature(HttpClient client, string endpoint, Dictionary<string, string> args)
         {
-            var _post_data = mainXchg.ToQueryString2(args);
+            var _post_data = args.ToQueryString2();
             var _nonce = CUnixTime.NowMilli.ToString();
 
             var _sign_data = $"{endpoint};{_post_data};{_nonce}";
             var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
 
-            var _signature = Convert.ToBase64String(Encoding.UTF8.GetBytes(mainXchg.ConvertHexString(_sign_hash).ToLower()));
+            var _signature = Convert.ToBase64String(Encoding.UTF8.GetBytes(_sign_hash.ConvertHexString().ToLower()));
          
             client.DefaultRequestHeaders.Add("api-client-type", "2");
             client.DefaultRequestHeaders.Add("Api-Sign", _signature);
