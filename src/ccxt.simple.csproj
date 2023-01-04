@@ -9,7 +9,7 @@
 		<Product>CCXT</Product>
 		<Company>ODINSOFT</Company>
 		<Description>CCXT.SIMPLE – CryptoCurrency eXchange Trading Library for .NET</Description>
-		<Copyright>Copyright OdinSoft Co., Ltd. 2015~2022</Copyright>
+		<Copyright>Copyright OdinSoft Co., Ltd. 2015~2023</Copyright>
 		<AssemblyTitle>CCXT.SIMPLE</AssemblyTitle>
 		<Authors>SEONG AHN LEE</Authors>
 		<PackageId>CCXT.SIMPLE</PackageId>
@@ -20,10 +20,10 @@
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.3</Version>
-		<AssemblyVersion>1.0.3.3</AssemblyVersion>
-		<FileVersion>1.0.3.3</FileVersion>
-		<PackageReleaseNotes>ccxt.net의 간단한 버전(simple version) 입니다. </PackageReleaseNotes>
+		<Version>1.1.3</Version>
+		<AssemblyVersion>1.1.3.4</AssemblyVersion>
+		<FileVersion>1.1.3.4</FileVersion>
+		<PackageReleaseNotes>ccxt.net simple version</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>

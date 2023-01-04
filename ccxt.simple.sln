@@ -33,8 +33,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bitget", "bitget", "{01F8A5
 	ProjectSection(SolutionItems) = preProject
 		docs\exchanges\bitget\CoinInfor.json = docs\exchanges\bitget\CoinInfor.json
 		docs\exchanges\bitget\CoinState.json = docs\exchanges\bitget\CoinState.json
-		docs\exchanges\bitget\Tickers.json = docs\exchanges\bitget\Tickers.json
-		docs\exchanges\bitget\WsTicker.json = docs\exchanges\bitget\WsTicker.json
+		docs\exchanges\bitget\RaTickers.json = docs\exchanges\bitget\RaTickers.json
+		docs\exchanges\bitget\WsTickers.json = docs\exchanges\bitget\WsTickers.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bithumb", "bithumb", "{6BEB8974-A10E-4A28-88BD-EE55F23E4A56}"
+	ProjectSection(SolutionItems) = preProject
+		docs\exchanges\bithumb\CoinInfor.json = docs\exchanges\bithumb\CoinInfor.json
+		docs\exchanges\bithumb\CoinState.json = docs\exchanges\bithumb\CoinState.json
+		docs\exchanges\bithumb\Orderbook.json = docs\exchanges\bithumb\Orderbook.json
+		docs\exchanges\bithumb\WalletState.json = docs\exchanges\bithumb\WalletState.json
 	EndProjectSection
 EndProject
 Global
@@ -65,6 +73,7 @@ Global
 		{1AB45E04-7269-4CBB-AD33-23F05C3BBD28} = {5CFF9EB6-24F9-4119-812E-FEF29D600887}
 		{84454372-E406-4CE3-AA92-5DD61FD0C183} = {BD060379-51BD-40C9-9B57-DA65393CAD0E}
 		{01F8A5E6-FD57-4F90-B3FE-4036EC01B4A4} = {84454372-E406-4CE3-AA92-5DD61FD0C183}
+		{6BEB8974-A10E-4A28-88BD-EE55F23E4A56} = {84454372-E406-4CE3-AA92-5DD61FD0C183}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A43CE4D-B9B0-41CE-82A0-0D2F87CA10E5}
