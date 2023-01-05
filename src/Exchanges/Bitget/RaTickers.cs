@@ -1,7 +1,7 @@
 ﻿namespace CCXT.Simple.Exchanges.Bitget
 {
     /// <summary>
-    /// https://api.bitget.com/api/spot/v1/market/tickers
+    /// GET /api/spot/v1/market/tickers
     /// </summary>
     public class RaTickers
     {

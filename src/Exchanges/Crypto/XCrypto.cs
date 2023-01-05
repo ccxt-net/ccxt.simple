@@ -234,7 +234,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                     var _request = this.CreateSignature(_client, 1, _endpoint);
 
                     var _response = await _client.PostAsJsonAsync($"{ExchangeUrl}/v2/{_endpoint}", _request);
-                    if (_response.StatusCode == HttpStatusCode.OK)
+                    if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring, mainXchg.JsonSettings);

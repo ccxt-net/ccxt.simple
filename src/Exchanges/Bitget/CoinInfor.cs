@@ -1,7 +1,7 @@
 ﻿namespace CCXT.Simple.Exchanges.Bitget
 {
     /// <summary>
-    /// https://api.bitget.com/api/spot/v1/public/products
+    /// GET /api/spot/v1/public/products
     /// </summary>
     public class CoinInfor
     {

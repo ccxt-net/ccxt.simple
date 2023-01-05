@@ -241,7 +241,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
                     _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
                     using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlPro}/products/{_ticker.symbol}/ticker");
-                    if (_response.StatusCode == System.Net.HttpStatusCode.OK)
+                    if (_response.IsSuccessStatusCode)
                     {
                         var _tstring = await _response.Content.ReadAsStringAsync();
                         var _jobject = JObject.Parse(_tstring);

@@ -541,7 +541,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                     var _content = this.CreateSignature(_client, _endpoint, _args);
 
                     var _response = await _client.PostAsync($"{ExchangeUrl}{_endpoint}", _content);
-                    if (_response.StatusCode == HttpStatusCode.OK)
+                    if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         

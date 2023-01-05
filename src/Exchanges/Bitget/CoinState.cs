@@ -1,7 +1,7 @@
 ﻿namespace CCXT.Simple.Exchanges.Bitget
 {
     /// <summary>
-    /// https://api.bitget.com/api/spot/v1/public/currencies
+    /// GET /api/spot/v1/public/currencies
     /// </summary>
     public class CoinState
     {
