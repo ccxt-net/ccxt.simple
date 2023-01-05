@@ -1,11 +1,8 @@
-# ccxt.simple
-
-
-
+# CCXT.Simple
 
 ### Add Reference
 
- > dotnet add package CCXT.SIMPLE -Version 1.0.1
+ > dotnet add package CCXT.Simple
 
 
 ### Donations gratefully accepted.
@@ -15,6 +12,6 @@
 
 ### Contact
 
-home-page: http://www.odinsoft.co.kr
+home-page: https://www.odinsoft.co.kr
 
 e-mail: help@odinsoft.co.kr
