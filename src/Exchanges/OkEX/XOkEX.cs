@@ -21,7 +21,7 @@ namespace CCXT.Simple.Exchanges.Okex
             this.mainXchg = mainXchg;
 
             this.ApiKey = apiKey;
-            this.SecretKey = secretKey; 
+            this.SecretKey = secretKey;
             this.PassPhrase = passPhrase;
         }
 
@@ -39,7 +39,7 @@ namespace CCXT.Simple.Exchanges.Okex
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -51,9 +51,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/public/instruments?instType=SPOT");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/public/instruments?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring, mainXchg.JsonSettings);
 
@@ -102,11 +102,11 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    this.CreateSignature(_wc);
+                    this.CreateSignature(_client);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/asset/currencies");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/asset/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
@@ -156,7 +156,7 @@ namespace CCXT.Simple.Exchanges.Okex
                             {
                                 name = _name,
                                 network = c.ccy,
-                                chain = _splits[_splits.Length -1],
+                                chain = _splits[_splits.Length - 1],
 
                                 deposit = c.canDep,
                                 withdraw = c.canWd,
@@ -228,9 +228,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/market/ticker?instId=" + symbol);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/market/ticker?instId=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
@@ -258,9 +258,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
@@ -314,9 +314,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
@@ -382,9 +382,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 
@@ -448,9 +448,9 @@ namespace CCXT.Simple.Exchanges.Okex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v5/market/tickers?instType=SPOT");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring);
 

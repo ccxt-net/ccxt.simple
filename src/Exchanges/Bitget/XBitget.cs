@@ -12,7 +12,7 @@ namespace CCXT.Simple.Exchanges.Bitget
 		 * Bitget Support Markets: USDT,USDC,BTC,ETH,BRL
 		 *
 		 * https://bitgetlimited.github.io/apidoc/en/spot/#introduction
-		 * 
+		 *
 		 */
 
         public XBitget(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
@@ -74,9 +74,9 @@ namespace CCXT.Simple.Exchanges.Bitget
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/public/products");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/spot/v1/public/products");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
@@ -95,7 +95,7 @@ namespace CCXT.Simple.Exchanges.Bitget
 
                                 dispName = s.symbol,
                                 makerFee = s.makerFeeRate,
-                                takerFee= s.takerFeeRate                                
+                                takerFee = s.takerFeeRate
                             });
                         }
                     }
@@ -125,9 +125,9 @@ namespace CCXT.Simple.Exchanges.Bitget
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/public/currencies");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/spot/v1/public/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
@@ -200,15 +200,15 @@ namespace CCXT.Simple.Exchanges.Bitget
             return _result;
         }
 
-         public async ValueTask<bool> GetMarkets(Tickers tickers)
+        public async ValueTask<bool> GetMarkets(Tickers tickers)
         {
             var _result = false;
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/spot/v1/market/tickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/spot/v1/market/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 

@@ -39,7 +39,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             set;
         }
 
-        
+
         public string ExchangeName { get; set; } = "bybit";
 
         public string ExchangeUrl { get; set; } = "https://api.bybit.com";
@@ -48,7 +48,7 @@ namespace CCXT.Simple.Exchanges.Bybit
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -60,9 +60,9 @@ namespace CCXT.Simple.Exchanges.Bybit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/spot/v3/public/symbols");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/spot/v3/public/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring, mainXchg.JsonSettings);
 
@@ -151,7 +151,7 @@ namespace CCXT.Simple.Exchanges.Bybit
 
                     this.CreateSignature(_client);
 
-                    using HttpResponseMessage _response = await _client.GetAsync($"{ExchangeUrl}{_end_point}");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}{_end_point}");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring, mainXchg.JsonSettings);
 
@@ -208,7 +208,7 @@ namespace CCXT.Simple.Exchanges.Bybit
 
                                     minWithdrawal = n.withdrawMin,
                                     withdrawFee = n.withdrawFee,
-                                    
+
                                     minConfirm = n.confirmation != null ? n.confirmation.Value : 0
                                 });
                             }
@@ -242,9 +242,9 @@ namespace CCXT.Simple.Exchanges.Bybit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/spot/v3/public/quote/ticker/24hr");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/spot/v3/public/quote/ticker/24hr");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 

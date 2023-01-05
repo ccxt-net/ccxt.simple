@@ -38,17 +38,17 @@ namespace CCXT.Simple.Exchanges.Upbit
             get;
             set;
         }
-        
+
         public string ExchangeName { get; set; } = "upbit";
 
         public string ExchangeUrl { get; set; } = "https://api.upbit.com";
         public string ExchangeUrlCc { get; set; } = "https://ccx.upbit.com";
-        
+
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -60,9 +60,9 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/v1/market/all?isDetails=true");
+                    var _b_response = await _client.GetAsync($"{ExchangeUrl}/v1/market/all?isDetails=true");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -114,7 +114,7 @@ namespace CCXT.Simple.Exchanges.Upbit
                 { "access_key", this.ApiKey },
                 { "nonce", nonce }
             };
-            
+
             var _security_key = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.Default.GetBytes(this.SecretKey));
             var _credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(_security_key, "HS256");
 
@@ -140,7 +140,7 @@ namespace CCXT.Simple.Exchanges.Upbit
 
                 using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _b_response = await _client.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
+                    var _b_response = await _client.GetAsync($"{ExchangeUrlCc}/api/v1/status/wallet");
                     var _jstring = await _b_response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<WalletState>>(_jstring);
 
@@ -230,9 +230,9 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + symbol);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -259,11 +259,11 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -312,11 +312,11 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jmarkets = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -375,11 +375,11 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring);
 
@@ -451,11 +451,11 @@ namespace CCXT.Simple.Exchanges.Upbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
                     var _request = String.Join(",", tickers.items.Where(x => x.symbol != "X").Select(x => x.symbol));
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?markets=" + _request);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<UOrderboook>>(_jstring);
 

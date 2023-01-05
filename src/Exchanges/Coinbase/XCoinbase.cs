@@ -36,7 +36,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
             get;
             set;
         }
-        
+
         public string ExchangeName { get; set; } = "coinbase";
         public string ExchangeUrl { get; set; } = "https://api.exchange.coinbase.com";
         public string ExchangeUrlPro { get; set; } = "https://api.pro.coinbase.com";
@@ -45,7 +45,7 @@ namespace CCXT.Simple.Exchanges.Coinbase
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -57,11 +57,11 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
+                    _client.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/products");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/products");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -102,11 +102,11 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
+                    _client.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/currencies");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
@@ -236,12 +236,12 @@ namespace CCXT.Simple.Exchanges.Coinbase
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    _wc.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
+                    _client.DefaultRequestHeaders.Add("User-Agent", mainXchg.UserAgent);
 
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrlPro}/products/{_ticker.symbol}/ticker");
-                    if (_response.IsSuccessStatusCode)
+                    var _response = await _client.GetAsync($"{ExchangeUrlPro}/products/{_ticker.symbol}/ticker");
+                    //if (_response.IsSuccessStatusCode)
                     {
                         var _tstring = await _response.Content.ReadAsStringAsync();
                         var _jobject = JObject.Parse(_tstring);

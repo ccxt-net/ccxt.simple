@@ -9,10 +9,10 @@ namespace CCXT.Simple.Exchanges.Bittrex
     {
         /*
 		 * Bittrex Support Markets: USDT,BTC
-		 * 
+		 *
 		 * Rate Limit
 		 *     https://bittrex.github.io/api/v3#/definitions/Ticker
-		 * 
+		 *
 		 */
 
         public XBittrex(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
@@ -30,7 +30,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
             set;
         }
 
-        
+
         public string ExchangeName { get; set; } = "bittrex";
 
         public string ExchangeUrl { get; set; } = "https://api.bittrex.com";
@@ -39,7 +39,7 @@ namespace CCXT.Simple.Exchanges.Bittrex
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         public async ValueTask<bool> VerifySymbols()
         {
@@ -47,9 +47,9 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v3/markets");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -92,9 +92,9 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/currencies");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v3/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
@@ -184,9 +184,9 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets/tickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v3/markets/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jdata = JArray.Parse(_jstring);
 
@@ -242,9 +242,9 @@ namespace CCXT.Simple.Exchanges.Bittrex
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v3/markets/summaries");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v3/markets/summaries");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jdata = JArray.Parse(_jstring);
 

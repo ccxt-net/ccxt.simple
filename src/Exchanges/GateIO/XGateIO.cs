@@ -8,10 +8,10 @@ namespace CCXT.Simple.Exchanges.GateIO
     {
         /*
 		 * Gate Support Markets: USDT, BTC
-		 * 
+		 *
 		 * REST API
 		 *     https://www.gate.io/docs/developers/apiv4/en/#retrieve-ticker-information
-		 * 
+		 *
 		 */
 
         public XGateIO(Exchange mainXchg, string apiKey = "", string secretKey = "", string passPhrase = "")
@@ -28,7 +28,7 @@ namespace CCXT.Simple.Exchanges.GateIO
             get;
             set;
         }
-        
+
         public string ExchangeName { get; set; } = "gateio";
 
         public string ExchangeUrl { get; set; } = "https://api.gateio.ws";
@@ -37,7 +37,7 @@ namespace CCXT.Simple.Exchanges.GateIO
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -49,9 +49,9 @@ namespace CCXT.Simple.Exchanges.GateIO
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currency_pairs");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v4/spot/currency_pairs");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinInfor>>(_jstring);
 
@@ -97,9 +97,9 @@ namespace CCXT.Simple.Exchanges.GateIO
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v4/spot/currencies");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring);
 
@@ -155,7 +155,7 @@ namespace CCXT.Simple.Exchanges.GateIO
 
                                 deposit = !c.deposit_disabled,
                                 withdraw = !c.withdraw_disabled,
-                                
+
                                 withdrawFee = 0,
                                 minWithdrawal = 0,
                                 maxWithdrawal = 0,
@@ -191,9 +191,9 @@ namespace CCXT.Simple.Exchanges.GateIO
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v4/spot/tickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v4/spot/tickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<List<RaTicker>>(_jstring, mainXchg.JsonSettings);
 

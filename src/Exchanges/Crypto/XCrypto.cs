@@ -46,7 +46,7 @@ namespace CCXT.Simple.Exchanges.Crypto
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -58,10 +58,10 @@ namespace CCXT.Simple.Exchanges.Crypto
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/get-instruments");
-                    if (_response.IsSuccessStatusCode)
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v2/public/get-instruments");
+                    //if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<Market>(_jstring);
@@ -107,9 +107,9 @@ namespace CCXT.Simple.Exchanges.Crypto
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v2/public/get-ticker");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v2/public/get-ticker");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jticker = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
@@ -212,7 +212,7 @@ namespace CCXT.Simple.Exchanges.Crypto
             var _sign = Convert.ToHexString(_sign_hash).ToLower();
 
             return new Request
-            { 
+            {
                 id = id,
                 api_key = this.ApiKey,
                 method = endpoint,
@@ -234,7 +234,7 @@ namespace CCXT.Simple.Exchanges.Crypto
                     var _request = this.CreateSignature(_client, 1, _endpoint);
 
                     var _response = await _client.PostAsJsonAsync($"{ExchangeUrl}/v2/{_endpoint}", _request);
-                    if (_response.IsSuccessStatusCode)
+                    //if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring, mainXchg.JsonSettings);

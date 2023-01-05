@@ -49,7 +49,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -61,9 +61,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
+                    var _k_response = await _client.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jarray = JsonConvert.DeserializeObject<CoinInfor>(_k_jstring);
 
@@ -71,7 +71,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                     foreach (JProperty s in _k_jarray.data.Children())
                     {
-                       var _o = s.Value;
+                        var _o = s.Value;
                         if (_o.Type != JTokenType.Object || !((JObject)_o).ContainsKey("opening_price"))
                             continue;
 
@@ -86,7 +86,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
                         });
                     }
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
+                    var _b_response = await _client.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
                     var _b_jstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jarray = JsonConvert.DeserializeObject<CoinInfor>(_b_jstring);
 
@@ -137,7 +137,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
                 using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _client.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/public/assetsstatus/ALL");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<WalletState>(_jstring);
 
@@ -231,9 +231,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/" + symbol);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/public/ticker/" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -256,9 +256,9 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/" + symbol + "?count=30");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/public/orderbook/" + symbol + "?count=30");
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -299,16 +299,16 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_KRW?count=1");
+                    var _k_response = await _client.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_KRW?count=1");
                     var _k_jstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jobject = JObject.Parse(_k_jstring);
                     var _k_data = _k_jobject["data"].ToObject<JObject>();
 
                     await Task.Delay(100);
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_BTC?count=1");
+                    var _b_response = await _client.GetAsync($"{ExchangeUrl}/public/orderbook/ALL_BTC?count=1");
                     var _b_jstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jobject = JObject.Parse(_b_jstring);
                     var _b_data = _b_jobject["data"].ToObject<JObject>();
@@ -368,16 +368,16 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _k_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
+                    var _k_response = await _client.GetAsync($"{ExchangeUrl}/public/ticker/ALL_KRW");
                     var _k_tstring = await _k_response.Content.ReadAsStringAsync();
                     var _k_jstring = _k_tstring.Substring(24, _k_tstring.Length - 25);
                     var _k_jobject = JObject.Parse(_k_jstring);
 
                     await Task.Delay(100);
 
-                    using HttpResponseMessage _b_response = await _wc.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
+                    var _b_response = await _client.GetAsync($"{ExchangeUrl}/public/ticker/ALL_BTC");
                     var _b_tstring = await _b_response.Content.ReadAsStringAsync();
                     var _b_jstring = _b_tstring.Substring(24, _b_tstring.Length - 25);
                     var _b_jobject = JObject.Parse(_b_jstring);
@@ -486,7 +486,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
             var _sign_hash = Encryptor.ComputeHash(Encoding.UTF8.GetBytes(_sign_data));
 
             var _signature = Convert.ToBase64String(Encoding.UTF8.GetBytes(_sign_hash.ConvertHexString().ToLower()));
-         
+
             client.DefaultRequestHeaders.Add("api-client-type", "2");
             client.DefaultRequestHeaders.Add("Api-Sign", _signature);
             client.DefaultRequestHeaders.Add("Api-Nonce", _nonce);
@@ -494,7 +494,7 @@ namespace CCXT.Simple.Exchanges.Bithumb
 
             return new FormUrlEncodedContent(args);
         }
-        
+
         private (bool success, string message) ParsingResponse(string jstring)
         {
             var _result = (success: false, message: "");
@@ -541,10 +541,10 @@ namespace CCXT.Simple.Exchanges.Bithumb
                     var _content = this.CreateSignature(_client, _endpoint, _args);
 
                     var _response = await _client.PostAsync($"{ExchangeUrl}{_endpoint}", _content);
-                    if (_response.IsSuccessStatusCode)
+                    //if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
-                        
+
                         var _json_result = this.ParsingResponse(_jstring);
                         if (_json_result.success)
                         {

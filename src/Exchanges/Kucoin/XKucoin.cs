@@ -32,17 +32,17 @@ namespace CCXT.Simple.Exchanges.Kucoin
             get;
             set;
         }
-        
+
         public string ExchangeName { get; set; } = "kucoin";
 
         public string ExchangeUrl { get; set; } = "https://api.kucoin.com";
         public string ExchangeWwUrl { get; set; } = "https://www.kucoin.com";
-        
+
         public bool Alive { get; set; }
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -54,9 +54,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v2/symbols");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v2/symbols");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinInfor>(_jstring);
 
@@ -141,9 +141,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeWwUrl}/_api/currency/currency/chain-info");
+                    var _response = await _client.GetAsync($"{ExchangeWwUrl}/_api/currency/currency/chain-info");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JsonConvert.DeserializeObject<CoinState>(_jstring);
 
@@ -155,7 +155,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
                             _state = new WState
                             {
                                 baseName = c.currency,
-                                active = c.isChainEnabled,  
+                                active = c.isChainEnabled,
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
                                 networks = new List<WNetwork>()
@@ -194,7 +194,7 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
                                 deposit = c.isDepositEnabled,
                                 withdraw = c.isWithdrawEnabled,
-                                
+
                                 minWithdrawal = c.withdrawMinSize,
                                 withdrawFee = c.withdrawMinFee,
 
@@ -226,9 +226,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/orderbook/level1?symbol=" + symbol);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v1/market/orderbook/level1?symbol=" + symbol);
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -255,9 +255,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -313,9 +313,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -380,9 +380,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -448,9 +448,9 @@ namespace CCXT.Simple.Exchanges.Kucoin
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/api/v1/market/allTickers");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 

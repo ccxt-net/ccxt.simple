@@ -47,7 +47,7 @@ namespace CCXT.Simple.Exchanges.Korbit
         public string ApiKey { get; set; }
         public string SecretKey { get; set; }
         public string PassPhrase { get; set; }
-        
+
 
         /// <summary>
         ///
@@ -59,9 +59,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_jstring);
 
@@ -109,7 +109,7 @@ namespace CCXT.Simple.Exchanges.Korbit
                     _client.DefaultRequestHeaders.Add("platform-identifier", "witcher_android");
 
                     var _response = await _client.GetAsync($"{ExchangePpUrl}{_endpoint}");
-                    if (_response.IsSuccessStatusCode)
+                    //if (_response.IsSuccessStatusCode)
                     {
                         var _jstring = await _response.Content.ReadAsStringAsync();
                         var _jarray = JsonConvert.DeserializeObject<List<CoinState>>(_jstring, mainXchg.JsonSettings);
@@ -280,9 +280,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker?currency_pair=" + symbol);
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker?currency_pair=" + symbol);
                     var _tstring = await _response.Content.ReadAsStringAsync();
                     var _jobject = JObject.Parse(_tstring);
 
@@ -309,9 +309,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -357,9 +357,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -408,9 +408,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
@@ -472,9 +472,9 @@ namespace CCXT.Simple.Exchanges.Korbit
 
             try
             {
-                using (var _wc = new HttpClient())
+                using (var _client = new HttpClient())
                 {
-                    using HttpResponseMessage _response = await _wc.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v1/ticker/detailed/all");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jarray = JObject.Parse(_jstring).Properties();
 
