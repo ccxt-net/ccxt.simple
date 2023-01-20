@@ -10,7 +10,7 @@
         public bool withdrawAllEnable { get; set; }
         public string name { get; set; }
         public decimal free { get; set; }
-        public int locked { get; set; }
+        public decimal locked { get; set; }
         public int freeze { get; set; }
         public int withdrawing { get; set; }
         public int ipoing { get; set; }
