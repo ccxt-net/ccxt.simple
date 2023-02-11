@@ -6,7 +6,7 @@ I thought ccxt.net was complicated so I made a simpler ccxt. Easy access to the 
 
 ## Install
 
-You can also clone it into your project directory from [ccxt.net GitHub repository](https://github.com/ccxt-net/ccxt.simple):
+You can also clone it into your project directory from [ccxt.simple github repository](https://github.com/ccxt-net/ccxt.simple):
 
 ```shell
 git clone https://github.com/ccxt-net/ccxt.simple.git
