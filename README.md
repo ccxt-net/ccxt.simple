@@ -1,5 +1,7 @@
 # CCXT.Simple
 
+I thought ccxt.net was complicated so I made a simpler ccxt. Easy access to the exchange API.
+
 ### Add Reference
 
  > dotnet add package CCXT.Simple
