@@ -2,6 +2,28 @@
 
 I thought ccxt.net was complicated so I made a simpler ccxt. Easy access to the exchange API.
 
+
+
+## Install
+
+You can also clone it into your project directory from [ccxt.net GitHub repository](https://github.com/ccxt-net/ccxt.simple):
+
+```shell
+git clone https://github.com/ccxt-net/ccxt.simple.git
+```
+
+
+## Documentation
+
+Read the [Manual](https://github.com/ccxt-net/ccxt.simple/wiki) for more details.
+
+
+## Relase
+
+ - [CCXT.SIMPLE](https://github.com/ccxt-net/ccxt.simple/releases)
+
+
+
 ## Contributing
 
 Please read the [CONTRIBUTING](https://github.com/ccxt-net/ccxt.simple/blob/master/CONTRIBUTING.md) document before making changes that you would like adopted in the code. Also, read the [Manual](https://github.com/ccxt-net/ccxt.simple/wiki) for more details.
