@@ -1,18 +1,19 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using CCXT.Simple.Exchanges.Bitget.RA.Private;
+using CCXT.Simple.Exchanges.Bitget.RA.Public;
+using CCXT.Simple.Exchanges.Bitget.RA.Trade;
+using CCXT.Simple.Exchanges.Bitget.WS;
 using CCXT.Simple.Base;
-using System.Net.WebSockets;
-using System.Text;
+using CCXT.Simple.Exchanges;
 
-namespace bitget;
+namespace CCXT.Bitget;
+
 class Program
 {
-    static async Task Main(string[] args)
-    {
-        var _p = new Program();
-        await _p.Start(MainTokenSource.Token, new List<string> { "BTCUSDT", "ETHUSDT" });
-    }
+    public const string _api_key = "api_key";
+    public const string _secret_key = "secret_key";
+    public const string _pass_phrase = "pass_phrase";
 
-    private static CancellationTokenSource? __main_token_source;
+    private static CancellationTokenSource __main_token_source;
 
     public static CancellationTokenSource MainTokenSource
     {
@@ -25,122 +26,111 @@ class Program
         }
     }
 
-    public async Task Start(CancellationToken token, List<string> symbols)
+    static Exchange _exchange = new Exchange();
+
+
+    static async Task Main(string[] args)
     {
-        while (true)
+        try
         {
-            var _buffer_size = 1024 * 16;
-            var _buffer = new byte[_buffer_size];
+            Console.Write("ws: web socket, pu: public, pr: private, tr: trade => ");
 
-            var _offset = 0;
-            var _free = _buffer.Length;
-
-            var _ping_timestamp = 0L;
-            var _ping_sent = false;
-
-            try
+            var _command = Console.ReadLine();
+            if (_command == "ws")
             {
-                using (var _cws = new ClientWebSocket())
+                while (true)
                 {
-                    await OpenWSAsync(token, _cws, symbols);
+                    Console.Write("enter instrument type => ");
 
-                    while (!token.IsCancellationRequested)
-                    {
-                        var _result = await _cws.ReceiveAsync(new ArraySegment<byte>(_buffer, _offset, _free), token);
+                    var _inst_type = Console.ReadLine();
+                    if (_inst_type.IsEmpty())
+                        break;
 
-                        _offset += _result.Count;
-                        _free -= _result.Count;
+                    Console.Write("enter channel name => ");
 
-                        if (_result.EndOfMessage == false)
-                        {
-                            if (_free == 0)
-                            {
-                                Array.Resize(ref _buffer, _buffer.Length + _buffer_size);
-                                _free = _buffer.Length - _offset;
-                            }
+                    var _channel = Console.ReadLine();
+                    if (_channel.IsEmpty())
+                        break;
 
-                            continue;
-                        }
+                    Console.Write("enter instrument id => ");
 
-                        if (_result.MessageType == WebSocketMessageType.Close)
-                        {
-                            await _cws.CloseOutputAsync(WebSocketCloseStatus.NormalClosure, "", token);
-                            Console.WriteLine($"receive close message from server...");
+                    var _inst_id = Console.ReadLine();
+                    if (_inst_id.IsEmpty())
+                        break;
 
-                            await Task.Delay(100);
-                            break;
-                        }
+                    var _symbols = _inst_id.Split(',');
+                    if (_symbols.Length < 1)
+                        break;
 
-                        var _jstring = Encoding.UTF8.GetString(_buffer, 0, _offset);
-                        Console.WriteLine(_jstring);
+                    var _ws = new WebSocket(_exchange, _api_key, _secret_key, _pass_phrase);
+                    await _ws.Start(MainTokenSource.Token, _inst_type, _channel, _symbols);
 
-                        var _curr_timestamp = CUnixTime.Now;
-                        {
-                            if (_jstring == "pong")
-                            {
-                                _ping_timestamp = _curr_timestamp + 30;
-                                _ping_sent = false;
-                            }
-                            else
-                            {
-                                if (_ping_timestamp < _curr_timestamp)
-                                {
-                                    if (!_ping_sent)
-                                    {
-                                        _ping_timestamp = _curr_timestamp + 30;
-                                        _ping_sent = true;
-
-                                        await SendAsync(token, _cws, "ping");
-                                        Console.WriteLine("ping");
-                                    }
-                                    else if (_ping_timestamp + 30 < _curr_timestamp)
-                                    {
-                                        Console.WriteLine("close...");
-
-                                        await _cws.CloseAsync(WebSocketCloseStatus.NormalClosure, "close web-socket", token);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-
-                        _offset = 0;
-                        _free = _buffer.Length;
-                    }
+                    break;
                 }
             }
-            catch (Exception ex)
+            else if (_command == "pu")
             {
-                Console.WriteLine(ex.Message);
+                var _pu = new PublicAPI(_exchange, _api_key, _secret_key, _pass_phrase);
+
+                var _tickers = await _pu.TickersAsync();
+                if (_tickers.code == 0)
+                    Console.WriteLine($"number of ticker: {_tickers.data.Count}");
+                else
+                    Console.WriteLine($"error: {_tickers.json}");
+
+                var _orderbook = await _pu.OrderbooksAsync("BTCUSDT_SPBL", "step0");
+                if (_orderbook.code == 0)
+                    Console.WriteLine($"best ask price: {_orderbook.data.asks[0][0]}");
+                else
+                    Console.WriteLine($"error: {_orderbook.json}");
             }
-            finally
+            else if (_command == "pr")
             {
-                await Task.Delay(1000 * 3);         // waiting for reconnect
+                var _pr = new PrivatePI(_exchange, _api_key, _secret_key, _pass_phrase);
+
+                var _bills = await _pr.BillsAsync(2, "deposit", "deposit", "987952085712531455", "987952085712531457");
+                if (_bills.code == 0)
+                    Console.WriteLine($"number of bill: {_bills.data.Count}");
+                else
+                    Console.WriteLine($"error: {_bills.json}");
+
+                var _adrs = await _pr.AddressAsync("USDT", "trc20");
+                if (_adrs.code == 0)
+                    Console.WriteLine($"address of address: {_adrs.data.address}");
+                else
+                    Console.WriteLine($"error: {_adrs.json}");
+
+                var _asset = await _pr.AssetsAsync("USDT");
+                if (_asset.code == 0)
+                    Console.WriteLine($"number of asset: {_asset.data.Count}");
+                else
+                    Console.WriteLine($"error: {_asset.json}");
+
+                var _withdraw = await _pr.WithdrawAsync("USDT", "TUaVaANmmoxjdTEvZ3T7Akah6Ybda1Shr3", "trc20", 1m);
+                if (_withdraw.code == 0)
+                    Console.WriteLine($"withdraw: {_withdraw.data}");
+                else
+                    Console.WriteLine($"error: {_withdraw.json}");
+            }
+            else if (_command == "tr")
+            {
+                var _tr = new TradeAPI(_exchange, _api_key, _secret_key, _pass_phrase);
+
+                var _cancel = await _tr.CancelBatchOrdersAsync("BTCUSDT_SPBL", new List<string> { "34923828882" });
+                if (_cancel.code == 0)
+                    Console.WriteLine($"result of cancel-batch-orders: {_cancel.data}");
+                else
+                    Console.WriteLine($"error: {_cancel.json}");
             }
         }
-    }
-
-    private async ValueTask SendAsync(CancellationToken cancelToken, ClientWebSocket cws, string message)
-    {
-        var _cmd_bytes = Encoding.UTF8.GetBytes(message.Replace('\'', '\"'));
-        await cws.SendAsync(
-                    new ArraySegment<byte>(_cmd_bytes),
-                    WebSocketMessageType.Text,
-                    endOfMessage: true,
-                    cancellationToken: cancelToken
-                );
-    }
-
-    private async ValueTask OpenWSAsync(CancellationToken cancelToken, ClientWebSocket cws, List<string> symbols)
-    {
-        if (cws.State == WebSocketState.Open)
-            await cws.CloseAsync(WebSocketCloseStatus.NormalClosure, "reopen", cancelToken);
-
-        await cws.ConnectAsync(new Uri("wss://ws.bitget.com/spot/v1/stream"), cancelToken);
-
-        var _args = String.Join(",", symbols.Select(x => $"{{'instType':'SP','channel':'ticker','instId':'{x}'}}"));
-
-        var _message = "{'op':'subscribe', 'args':[" + _args + "]}";
-        await this.SendAsync(cancelToken, cws, _message);
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("hit return to exit...");
+            Console.ReadLine();
+        }
     }
 }
