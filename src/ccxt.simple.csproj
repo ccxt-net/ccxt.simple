@@ -58,9 +58,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-		<PackageReference Include="GraphQL.Client" Version="5.1.0" />
-		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="GraphQL.Client" Version="6.0.0" />
+		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="6.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
 	</ItemGroup>
 </Project>
