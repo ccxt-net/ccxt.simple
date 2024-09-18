@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<AssemblyName>CCXT.Simple</AssemblyName>
 		<RootNamespace>CCXT.Simple</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -9,40 +9,37 @@
 		<Product>CCXT</Product>
 		<Company>ODINSOFT</Company>
 		<Description>CCXT.SIMPLE – CryptoCurrency eXchange Trading Library for .NET</Description>
-		<Copyright>Copyright OdinSoft Co., Ltd. 2015~2023</Copyright>
+		<Copyright>Copyright OdinSoft Co., Ltd. 2015~2024</Copyright>
 		<AssemblyTitle>CCXT.SIMPLE</AssemblyTitle>
-		<Authors>SEONG AHN LEE</Authors>
+		<Authors>SEONGAHN LEE</Authors>
 		<PackageId>CCXT.SIMPLE</PackageId>
-		<PackageTags>bitcoin;cryptocurrency;exchange;trading;market-data;ccxt;exchange-markets;altcoin;api;arbitrage;bot;crypto;e-commerce;invest;library;strategy;trade;merchant;cryptocoin;korean</PackageTags>
+		<PackageTags>bitcoin;cryptocurrency;exchange;trading;market-data;ccxt;exchange-markets;altcoin;api;arbitrage;bot;crypto;e-commerce;invest;library;strategy;trade;merchant;cryptocoin</PackageTags>
 		<PackageProjectUrl>https://github.com/ccxt.net/ccxt.simple</PackageProjectUrl>
 		<PackageIcon>ccxt.simple.api.png</PackageIcon>
 		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.1.4</Version>
-		<AssemblyVersion>1.1.4.5</AssemblyVersion>
-		<FileVersion>1.1.4.5</FileVersion>
+		<Version>1.1.5</Version>
+		<AssemblyVersion>1.1.5.6</AssemblyVersion>
+		<FileVersion>1.1.5.6</FileVersion>
 		<PackageReleaseNotes>ccxt.net simple version</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/ccxt.net/ccxt.simple</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<ApplicationIcon>ccxt.simple.ico</ApplicationIcon>
 	</PropertyGroup>
+
 	<ItemGroup>
-	  <None Remove="Exchanges\Bithumb\CoinState.json" />
-	  <None Remove="Exchanges\Upbit\CoinState.json" />
-	</ItemGroup>
-	<ItemGroup>
+	  <Content Include="ccxt.simple.ico" />
 	  <Content Include="Exchanges\Bithumb\CoinState.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
 	  <Content Include="Exchanges\Upbit\CoinState.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
-	</ItemGroup>
-	<ItemGroup>
 	  <None Include="..\docs\ccxt.simple.api.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
@@ -59,8 +56,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="GraphQL.Client" Version="6.0.0" />
-		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="6.0.0" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
+		<PackageReference Include="GraphQL.Client" Version="6.1.0" />
+		<PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="6.1.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />
 	</ItemGroup>
 </Project>
