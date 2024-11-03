@@ -244,7 +244,7 @@ namespace CCXT.Simple.Exchanges.Bybit
             {
                 using (var _client = new HttpClient())
                 {
-                    var _response = await _client.GetAsync($"{ExchangeUrl}/spot/v3/public/quote/ticker/24hr");
+                    var _response = await _client.GetAsync($"{ExchangeUrl}/v5/market/tickers?category=spot");
                     var _jstring = await _response.Content.ReadAsStringAsync();
                     var _jtickers = JsonConvert.DeserializeObject<RaTickers>(_jstring, mainXchg.JsonSettings);
 
